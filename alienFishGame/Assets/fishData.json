@@ -1,0 +1,25 @@
+{
+    "fishes":
+    [
+        {
+            "index": 0,
+            "name": "fish0",
+            "rarity": 1,
+            "price": 16,
+            "description": "placeholder",
+            "weight": "15g - 23g",
+            "length": "2ft - 5ft"
+        },
+
+        {
+            "index": 1,
+            "name": "fish1",
+            "rarity": 1,
+            "price": 17,
+            "description": "placeholder",
+            "weight": "15g - 23g",
+            "length": "2ft - 5ft"
+        }
+    ]
+        
+}
