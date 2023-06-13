@@ -12,4 +12,6 @@ public class Fish
     public string description;
     public string weight;
     public string length;
+    public int totalCaught;
+    public int totalSold;
 }

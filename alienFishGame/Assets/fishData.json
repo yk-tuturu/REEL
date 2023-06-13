@@ -3,23 +3,61 @@
     [
         {
             "index": 0,
-            "name": "fish0",
+            "name": "commonfish0",
             "rarity": 1,
             "price": 16,
-            "description": "placeholder",
+            "description": "placeholder description",
             "weight": "15g - 23g",
-            "length": "2ft - 5ft"
+            "length": "2ft - 5ft",
+            "totalCaught": 0,
+            "totalSold": 0  
         },
 
         {
             "index": 1,
-            "name": "fish1",
+            "name": "commonfish1",
             "rarity": 1,
             "price": 17,
-            "description": "placeholder",
+            "description": "placeholder description",
             "weight": "15g - 23g",
-            "length": "2ft - 5ft"
+            "length": "2ft - 5ft",
+            "totalCaught": 0,
+            "totalSold": 0
+        },
+        {
+            "index": 2,
+            "name": "commonfish2",
+            "rarity": 1,
+            "price": 17,
+            "description": "placeholder description",
+            "weight": "15g - 23g",
+            "length": "2ft - 5ft",
+            "totalCaught": 0,
+            "totalSold": 0
+        },
+        {
+            "index": 3,
+            "name": "uncommonfish",
+            "rarity": 2,
+            "price": 17,
+            "description": "placeholder description",
+            "weight": "15g - 23g",
+            "length": "2ft - 5ft",
+            "totalCaught": 0,
+            "totalSold": 0
+        },
+        {
+            "index": 4,
+            "name": "rarefish",
+            "rarity": 3,
+            "price": 17,
+            "description": "placeholder description",
+            "weight": "15g - 23g",
+            "length": "2ft - 5ft",
+            "totalCaught": 0,
+            "totalSold": 0
         }
+        
     ]
         
 }

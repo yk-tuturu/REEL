@@ -24,12 +24,21 @@ public class FishDataManager : MonoBehaviour
 
     void Update()
     {
-        
+    
     }
 
     // utility function, probably
     public Fish GetFish(int index)
     {
         return (fishes[index]);
+    }
+
+    public void ClaimFish(Dictionary<int, int> fishCaught)
+    {
+        foreach(var fish in fishCaught)
+        {
+            fishes[fish.Key].totalCaught += fish.Value;
+            Debug.Log("You have caught " + fish.Value.ToString() + " " + fishes[fish.Key].name);
+        }
     }
 }

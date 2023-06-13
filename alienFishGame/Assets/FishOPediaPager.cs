@@ -29,4 +29,9 @@ public class FishOPediaPager : MonoBehaviour
         page1.SetActive(true);
         page2.SetActive(false);
     }
+
+    public void Close()
+    {
+        gameObject.SetActive(false);
+    }
 }
