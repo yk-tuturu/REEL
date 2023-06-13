@@ -4,9 +4,23 @@ using UnityEngine;
 
 public class FishDataManager : MonoBehaviour
 {
+    public static FishDataManager instance;
+
     public TextAsset jsonFile;
     public Fishes fishList;
     public Fish[] fishes;
+
+    void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else 
+        {
+            Destroy(gameObject);
+        }  
+    }
  
     void Start()
     {
@@ -30,6 +44,7 @@ public class FishDataManager : MonoBehaviour
     // utility function, probably
     public Fish GetFish(int index)
     {
+        Debug.Log(index);
         return (fishes[index]);
     }
 

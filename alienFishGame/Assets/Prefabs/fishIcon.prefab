@@ -151,13 +151,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e61996e1ae2c9446ade09d631b09600, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fish:
-    index: 0
-    name: 
-    rarity: 0
-    price: 0
-    description: 
-    weight: 
-    length: 
+  index: 0
+  image: {fileID: 0}
   sprite: {fileID: 0}
   infoPanel: {fileID: 0}
+  fishData: {fileID: 5199195392097081670, guid: 53b64b323f640e54995b1756b7da4b16, type: 3}

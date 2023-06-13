@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.EventSystems;
 
 public class FishingPole : MonoBehaviour
 {
@@ -20,7 +21,6 @@ public class FishingPole : MonoBehaviour
     public GameObject panel;
     public TextMeshProUGUI panel_text;
     public GameObject capturesMenu;
-    public FishDataManager fishData;
 
     private float timer;
     public bool menuOpen;
@@ -78,6 +78,7 @@ public class FishingPole : MonoBehaviour
         }
 
         currentCapacity += 1;
+        panel_text.text = currentCapacity.ToString() + " / " + maxCapacity.ToString();
 
         // If the menu was open while a fish is caught
         if (menuOpen)
@@ -86,22 +87,14 @@ public class FishingPole : MonoBehaviour
         }
     }
 
-
-    void OnMouseEnter()
-    {
-        // come back and implement alpha tween if you have time
-        panel.SetActive(true);
-    }
-
-    void OnMouseExit()
-    {
-        panel.SetActive(false);
-    }
-
     void OnMouseOver()
     {
         if (Input.GetMouseButtonDown(0))
         {
+            if (EventSystem.current.IsPointerOverGameObject()) 
+            {
+                return;
+            }
             capturesMenu.SetActive(true);
             capturesMenu.transform.localScale = new Vector3 (0, 0, 0);
 
@@ -112,6 +105,5 @@ public class FishingPole : MonoBehaviour
             menuOpen = true;
         }
 
-        panel_text.text = currentCapacity.ToString() + " / " + maxCapacity.ToString();
-    }
+    }   
 }

@@ -8,7 +8,6 @@ public class captureMenu : MonoBehaviour
 {
     public GameObject panel;
     public GameObject scrollPanel;
-    public FishDataManager fishData;
     public GameObject fishingrods;
 
     // may not need this variable anymore, but just in case
@@ -24,7 +23,7 @@ public class captureMenu : MonoBehaviour
         {
             GameObject listItem = Instantiate(panel, new Vector3(0, 0, 0), Quaternion.identity, scrollPanel.transform);
             TextMeshProUGUI text = listItem.transform.GetChild(0).GetComponent<TextMeshProUGUI>();
-            Fish fish = fishData.GetFish(fishType.Key);
+            Fish fish = FishDataManager.instance.GetFish(fishType.Key);
             text.text = fish.name + " X " + fishType.Value.ToString();
         }
 
@@ -60,7 +59,7 @@ public class captureMenu : MonoBehaviour
 
     public void ClaimFish()
     {
-        fishData.ClaimFish(fishDict);
+        FishDataManager.instance.ClaimFish(fishDict);
 
         foreach (Transform child in fishingrods.transform)
         {
