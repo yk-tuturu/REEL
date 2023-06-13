@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{14cbdc91-fbf2-479a-8b7e-dc02a94afe32}">
+		<property name="name">
+			<value>Catch rarity</value>
+		</property>
+		<relationship name="folder">
+			<destination>{2205353c-0254-442d-8bde-81d690e9309b}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{c4730bf3-7413-4a97-8894-8964a6b5d717}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{c4730bf3-7413-4a97-8894-8964a6b5d717}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>3</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>Common</value>
+			<value>Uncommon</value>
+			<value>Rare</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
