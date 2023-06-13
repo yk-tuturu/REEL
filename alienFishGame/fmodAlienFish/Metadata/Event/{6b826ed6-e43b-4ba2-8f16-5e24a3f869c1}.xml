@@ -2,10 +2,10 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{6b826ed6-e43b-4ba2-8f16-5e24a3f869c1}">
 		<property name="name">
-			<value>Cancel</value>
+			<value>Close</value>
 		</property>
 		<property name="outputFormat">
-			<value>0</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{5883c365-9e1f-4d53-b048-fdcfc0e066b3}</destination>
@@ -90,7 +90,11 @@
 			<destination>{f724438e-e163-4bcb-a63c-61ba7b0933e1}</destination>
 		</relationship>
 	</object>
-	<object class="MultiSound" id="{ed72d67f-1a50-43a3-a41a-5342a0a066b3}" />
+	<object class="MultiSound" id="{ed72d67f-1a50-43a3-a41a-5342a0a066b3}">
+		<relationship name="sounds">
+			<destination>{ffd2b1c0-af62-4c63-b1a0-090cc42185b5}</destination>
+		</relationship>
+	</object>
 	<object class="MixerBusEffectChain" id="{24dc1c4c-4acf-466d-8539-c80f4ab7dbf2}">
 		<relationship name="effects">
 			<destination>{72b84161-f963-4bf5-b178-1695f91f699f}</destination>
@@ -117,6 +121,11 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{bdd39dc9-364d-4e71-8fde-d27574481ebf}" />
+	<object class="SingleSound" id="{ffd2b1c0-af62-4c63-b1a0-090cc42185b5}">
+		<relationship name="audioFile">
+			<destination>{d2e134c3-8564-4bcd-9823-e4f0932e6b83}</destination>
+		</relationship>
+	</object>
 	<object class="MixerBusFader" id="{72b84161-f963-4bf5-b178-1695f91f699f}" />
 	<object class="MixerBusEffectChain" id="{75c28f0f-da89-41b2-8b58-c4b708abcf42}">
 		<relationship name="effects">

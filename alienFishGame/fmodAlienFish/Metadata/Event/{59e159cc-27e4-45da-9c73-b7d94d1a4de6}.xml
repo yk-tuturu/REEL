@@ -59,7 +59,11 @@
 			<destination>{61b855b7-c7b9-47fa-a596-71d7b38a0443}</destination>
 		</relationship>
 	</object>
-	<object class="EventAutomatableProperties" id="{f45fb062-7770-4de5-b79a-aebbd7842cea}" />
+	<object class="EventAutomatableProperties" id="{f45fb062-7770-4de5-b79a-aebbd7842cea}">
+		<property name="triggerCooldown">
+			<value>1000</value>
+		</property>
+	</object>
 	<object class="MarkerTrack" id="{3a093904-f52f-44b9-88dd-d92e1437c115}" />
 	<object class="GroupTrack" id="{026ad61c-f3de-4b54-9f81-b65ba462cab1}">
 		<relationship name="modules">
@@ -118,6 +122,13 @@
 		<property name="start">
 			<value>2</value>
 		</property>
+		<property name="volume">
+			<value>-3</value>
+		</property>
+		<relationship name="modulators">
+			<destination>{349a94ec-dd03-45d8-867d-7991fd0d7d54}</destination>
+			<destination>{f4667243-d4f6-4f6d-a953-d6c85c36dc07}</destination>
+		</relationship>
 		<relationship name="audioFile">
 			<destination>{20f65387-3e02-4e3e-bea1-5a1fee9bf2dd}</destination>
 		</relationship>
@@ -126,11 +137,9 @@
 		<property name="start">
 			<value>1</value>
 		</property>
-		<property name="volume">
-			<value>-16</value>
-		</property>
 		<relationship name="modulators">
 			<destination>{333b18c2-5318-4cde-a4c1-5769cf735c7d}</destination>
+			<destination>{d978ac55-0273-48cb-ba19-8b27a690bc2b}</destination>
 		</relationship>
 		<relationship name="audioFile">
 			<destination>{fabee64a-cf7b-4ed9-94e1-b8dfbd57d3c2}</destination>
@@ -190,12 +199,48 @@
 			<destination>{7abda245-4e82-4536-b7d4-451add86000d}</destination>
 		</relationship>
 	</object>
+	<object class="ADSRModulator" id="{349a94ec-dd03-45d8-867d-7991fd0d7d54}">
+		<property name="nameOfPropertyBeingModulated">
+			<value>volume</value>
+		</property>
+		<property name="initialValue">
+			<value>-80</value>
+		</property>
+		<property name="attackTime">
+			<value>260</value>
+		</property>
+		<property name="finalValue">
+			<value>-80</value>
+		</property>
+	</object>
+	<object class="RandomizerModulator" id="{f4667243-d4f6-4f6d-a953-d6c85c36dc07}">
+		<property name="nameOfPropertyBeingModulated">
+			<value>pitch</value>
+		</property>
+		<property name="amount">
+			<value>0.625</value>
+		</property>
+	</object>
 	<object class="RandomizerModulator" id="{333b18c2-5318-4cde-a4c1-5769cf735c7d}">
 		<property name="nameOfPropertyBeingModulated">
 			<value>pitch</value>
 		</property>
 		<property name="amount">
 			<value>2.08333349</value>
+		</property>
+	</object>
+	<object class="ADSRModulator" id="{d978ac55-0273-48cb-ba19-8b27a690bc2b}">
+		<property name="nameOfPropertyBeingModulated">
+			<value>volume</value>
+		</property>
+		<property name="initialValue">
+			<value>-80</value>
+		</property>
+		<property name="attackTime">
+			<value>380</value>
+		</property>
+		<property name="finalValue">
+			<value>-80</value>
 		</property>
 	</object>
 	<object class="MixerBusEffectChain" id="{e96f931c-b4e2-449c-8d57-a248423808bd}">
