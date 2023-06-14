@@ -21,11 +21,16 @@ public class tween : MonoBehaviour
     
         LeanTween.moveLocal(gameObject, new Vector3(transform.localPosition.x, transform.localPosition.y + 30, transform.localPosition.z), 1f).setEase(LeanTweenType.easeOutCirc);
         LeanTween.value(text.gameObject, callback, fadeOut, initial, 0.5f);
-        LeanTween.value(text.gameObject, callback, initial, fadeOut, 0.4f).setDelay(0.6f);
+        LeanTween.value(text.gameObject, callback, initial, fadeOut, 0.4f).setDelay(0.6f).setOnComplete(OnComplete);
     }
 
     void callback(Color val)
     {
         text.color = val;
+    }
+
+    void OnComplete()
+    {
+        Destroy(gameObject);
     }
 }

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class fishOPediaButton : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class fishOPediaButton : MonoBehaviour
     public Vector3 maxScale;
     
     private Vector3 originalScale;
+    public UnityEvent onClick;
     // Start is called before the first frame update
     void Start()
     {
@@ -37,6 +39,7 @@ public class fishOPediaButton : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             canvas.gameObject.SetActive(true);
+            onClick.Invoke();
         }
     }
 }

@@ -9,6 +9,7 @@ public class FishDataManager : MonoBehaviour
     public TextAsset jsonFile;
     public Fishes fishList;
     public Fish[] fishes;
+    public int money;
 
     void Awake()
     {

@@ -7,32 +7,40 @@ using UnityEngine.EventSystems;
 
 public class FishingPole : MonoBehaviour
 {
-    public float minTime = 2.5f;
-    public float maxTime = 4.5f;
+    public float minTime;
+    public float maxTime;
     public float timeToNextFish;
     public int currentCapacity;
-    public int maxCapacity = 5;
+    public int maxCapacity;
+    public string type;
+
+    public int rodLevel;
+    public int trapLevel;
+    public int baitLevel;
 
     // fish rarity rng
-    public float commonProb = 0.95f;
-    public float uncommonProb = 0.045f;
-    public float rareProb = 0.005f;
+    public float uncommonProb;
+    public float rareProb;
 
     public GameObject panel;
     public TextMeshProUGUI panel_text;
+    
     public GameObject capturesMenu;
-    public GameObject plusOneLabel;
-    public Vector3 labelPosition;
-
-    private float timer;
     public bool menuOpen;
 
+    public GameObject plusOneLabel;
+    public Transform labelSpawner;
+
+    private float timer;
+    
     // dictionary, key is the fishIndex and value is how many caught
     public Dictionary<int, int> fishCaught = new Dictionary<int, int>();
 
     // Start is called before the first frame update
     void Start()
     {
+        fetchStats();
+
         timeToNextFish = Random.Range(minTime, maxTime);
         panel_text = panel.transform.GetChild(0).GetComponent<TextMeshProUGUI>();
     }
@@ -51,21 +59,21 @@ public class FishingPole : MonoBehaviour
             timeToNextFish = Random.Range(minTime, maxTime);
 
             float rng = Random.value;
-            if (rng < commonProb)
+            if (rng < rareProb)
             {
-                AddFish(0, 2);
+                AddFish(4, 4);
             }
-            else if (rng < uncommonProb + commonProb)
+            else if (rng < uncommonProb)
             {
                 AddFish(3, 3);
             }
             else 
             {
-                AddFish(4, 4);
+                AddFish(0, 3);
             }
         }
 
-        panel_text.text = currentCapacity.ToString() + " / " + maxCapacity.ToString();
+        panel_text.text = currentCapacity.ToString() + "/" + maxCapacity.ToString();
     }
 
     void AddFish(int minIndex, int maxIndex)
@@ -82,7 +90,6 @@ public class FishingPole : MonoBehaviour
         }
 
         currentCapacity += 1;
-        panel_text.text = currentCapacity.ToString() + " / " + maxCapacity.ToString();
 
         // If the menu was open while a fish is caught
         if (menuOpen)
@@ -91,8 +98,8 @@ public class FishingPole : MonoBehaviour
         }
 
         // Summons the +1
-        GameObject temp = Instantiate(plusOneLabel, labelPosition, Quaternion.identity, panel.transform.parent);
-        temp.transform.localPosition = labelPosition;
+        GameObject temp = Instantiate(plusOneLabel, labelSpawner.position, Quaternion.identity, panel.transform.parent);
+        temp.transform.localPosition = labelSpawner.localPosition;
         temp.GetComponent<tween>().tweenIn();
     }
 
@@ -100,6 +107,7 @@ public class FishingPole : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
+            // make sure you dont accidentally click on the fishing rod while on a UI element
             if (EventSystem.current.IsPointerOverGameObject()) 
             {
                 return;
@@ -113,6 +121,29 @@ public class FishingPole : MonoBehaviour
             capturesMenu.GetComponent<captureMenu>().UpdateInfo(fishCaught);
             menuOpen = true;
         }
+    } 
 
-    }   
+    public void fetchStats()
+    {
+        if (type == "rod")
+        {
+            minTime = RodStatManager.instance.minTime;
+            maxTime = RodStatManager.instance.maxTime;
+            maxCapacity = RodStatManager.instance.maxCapacity;
+            rodLevel = RodStatManager.instance.rodLevel;
+            baitLevel = RodStatManager.instance.baitLevel;
+            uncommonProb = RodStatManager.instance.uncommonProb;
+            rareProb = RodStatManager.instance.rareProb;
+        }
+        else if (type == "trap")
+        {
+            minTime = TrapStatManager.instance.minTime;
+            maxTime = TrapStatManager.instance.maxTime;
+            maxCapacity = TrapStatManager.instance.maxCapacity;
+            trapLevel = TrapStatManager.instance.trapLevel;
+            baitLevel = TrapStatManager.instance.baitLevel;
+            uncommonProb = TrapStatManager.instance.uncommonProb;
+            rareProb = TrapStatManager.instance.rareProb;
+        }
+    }  
 }
