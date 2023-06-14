@@ -21,6 +21,8 @@ public class FishingPole : MonoBehaviour
     public GameObject panel;
     public TextMeshProUGUI panel_text;
     public GameObject capturesMenu;
+    public GameObject plusOneLabel;
+    public Vector3 labelPosition;
 
     private float timer;
     public bool menuOpen;
@@ -62,6 +64,8 @@ public class FishingPole : MonoBehaviour
                 AddFish(4, 4);
             }
         }
+
+        panel_text.text = currentCapacity.ToString() + " / " + maxCapacity.ToString();
     }
 
     void AddFish(int minIndex, int maxIndex)
@@ -85,6 +89,11 @@ public class FishingPole : MonoBehaviour
         {
             capturesMenu.GetComponent<captureMenu>().UpdateInfo(fishCaught);
         }
+
+        // Summons the +1
+        GameObject temp = Instantiate(plusOneLabel, labelPosition, Quaternion.identity, panel.transform.parent);
+        temp.transform.localPosition = labelPosition;
+        temp.GetComponent<tween>().tweenIn();
     }
 
     void OnMouseOver()

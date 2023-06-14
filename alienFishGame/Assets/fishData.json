@@ -56,6 +56,17 @@
             "length": "2ft - 5ft",
             "totalCaught": 0,
             "totalSold": 0
+        },
+        {
+            "index": 5,
+            "name": "CyberSalmon",
+            "rarity": 3,
+            "price": 17,
+            "description": "placeholder description",
+            "weight": "15g - 23g",
+            "length": "2ft - 5ft",
+            "totalCaught": 0,
+            "totalSold": 0
         }
         
     ]
