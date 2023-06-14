@@ -23,6 +23,7 @@ public class FishingPole : MonoBehaviour
     public GameObject capturesMenu;
     public GameObject plusOneLabel;
     public Vector3 labelPosition;
+    public GameObject spawner;
 
     private float timer;
     public bool menuOpen;
@@ -91,8 +92,8 @@ public class FishingPole : MonoBehaviour
         }
 
         // Summons the +1
-        GameObject temp = Instantiate(plusOneLabel, labelPosition, Quaternion.identity, panel.transform.parent);
-        temp.transform.localPosition = labelPosition;
+        GameObject temp = Instantiate(plusOneLabel, spawner.transform.position, Quaternion.identity, panel.transform.parent);
+        temp.transform.localPosition = spawner.transform.localPosition;
         temp.GetComponent<tween>().tweenIn();
     }
 
