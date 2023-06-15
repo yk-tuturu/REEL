@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{a9fc74d9-492d-4d77-b3ff-4224208114b9}">
 		<property name="name">
-			<value>Fishopedia open</value>
+			<value>Pedia open</value>
 		</property>
 		<property name="outputFormat">
 			<value>0</value>

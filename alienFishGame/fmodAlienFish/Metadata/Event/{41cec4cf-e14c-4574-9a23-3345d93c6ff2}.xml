@@ -4,7 +4,14 @@
 		<property name="note">
 			<value>0 = menu
 1 = start game
-1.1 = after 1st loop</value>
+1.1 = after 1st loop (reverb tail)
+2 = shop opens
+3 = first upgrade
+4 = first rare fish
+5 = 50% of fish caught
+6 = 75% of fish caught
+
+shop = overrides everything</value>
 		</property>
 		<property name="name">
 			<value>Main loop</value>
@@ -37,6 +44,9 @@
 		</relationship>
 		<relationship name="timeline">
 			<destination>{165349e2-9281-4876-a2f9-5544c2e17904}</destination>
+		</relationship>
+		<relationship name="parameters">
+			<destination>{d6aceb95-5fd3-4766-b16e-6b42b23bc227}</destination>
 		</relationship>
 		<relationship name="banks">
 			<destination>{c46deea7-ddde-4dad-917e-878b11ad66d8}</destination>
@@ -105,6 +115,11 @@
 			<destination>{f54fae23-1c91-4670-8580-053a3e88d83f}</destination>
 			<destination>{b80a9064-5a72-415b-85b5-67a1c7ed8398}</destination>
 			<destination>{9f930829-4f51-48a7-b3d7-5b8abb480111}</destination>
+		</relationship>
+	</object>
+	<object class="ParameterProxy" id="{d6aceb95-5fd3-4766-b16e-6b42b23bc227}">
+		<relationship name="preset">
+			<destination>{e5dd1e99-e7a7-4365-923b-211edc1cba95}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{21777420-3f13-45c4-a59a-644472434d14}">

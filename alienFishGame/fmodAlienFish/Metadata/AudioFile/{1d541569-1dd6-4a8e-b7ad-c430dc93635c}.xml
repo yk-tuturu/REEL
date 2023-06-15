@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
-	<object class="AudioFile" id="{8d8bcb6a-bdc3-423d-a945-39efba8daf08}">
+	<object class="AudioFile" id="{1d541569-1dd6-4a8e-b7ad-c430dc93635c}">
 		<property name="assetPath">
-			<value>Character/chr_pedia_pageturnleft.wav</value>
+			<value>Character/chr_shop_bell.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>44.0999985</value>
@@ -11,7 +11,7 @@
 			<value>2</value>
 		</property>
 		<property name="length">
-			<value>0.70512471655328801</value>
+			<value>2.0512698412698414</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{c4e797fd-b290-48c0-ab29-ab4f101b2e7d}</destination>
