@@ -9,7 +9,8 @@ public class FishDataManager : MonoBehaviour
     public TextAsset jsonFile;
     public Fishes fishList;
     public Fish[] fishes;
-    public int money;
+    public int fishTypeCount = 5;
+    public float money;
 
     void Awake()
     {
@@ -56,5 +57,11 @@ public class FishDataManager : MonoBehaviour
             fishes[fish.Key].totalCaught += fish.Value;
             Debug.Log("You have caught " + fish.Value.ToString() + " " + fishes[fish.Key].name);
         }
+    }
+
+    public void SellFish(int index, int number)
+    {
+        fishes[index].totalSold += number;
+        money += fishes[index].price * number;
     }
 }

@@ -30,6 +30,13 @@ public class FishIcon : MonoBehaviour
         }
     }
 
+    public void UpdateFishDisplayed()
+    {
+        image = GetComponent<Image>();
+        sprite = Resources.Load<Sprite>("fishIcons/" + "fish" + index.ToString());
+        fish = FishDataManager.instance.GetFish(index);
+    }
+
     public void OnHoverEnter()
     {
         LeanTween.scale(gameObject, new Vector3(0.9f, 0.9f, 0.9f), 0.1f);

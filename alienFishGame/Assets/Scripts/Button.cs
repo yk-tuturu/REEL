@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
+using UnityEngine.EventSystems;
 
 public class fishOPediaButton : MonoBehaviour
 {
@@ -38,6 +39,10 @@ public class fishOPediaButton : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
+            if (EventSystem.current.IsPointerOverGameObject()) 
+            {
+                return;
+            }
             canvas.gameObject.SetActive(true);
             onClick.Invoke();
         }

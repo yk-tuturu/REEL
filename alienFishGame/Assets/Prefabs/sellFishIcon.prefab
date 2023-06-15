@@ -164,5 +164,5 @@ MonoBehaviour:
     totalSold: 0
   image: {fileID: 0}
   sprite: {fileID: 0}
-  sellConfirmMenu: {fileID: 0}
+  sellConfirmMenu: {fileID: 6729032550696587886, guid: 0d6dd78b76d183044b7730ca379e5fde, type: 3}
   fishData: {fileID: 0}

@@ -32,10 +32,16 @@ public class purchaseMenu : MonoBehaviour
         priceText.text = "Price: " + price.ToString();
     }
 
+    public void Close()
+    {
+        LeanTween.scale(gameObject, new Vector3(0, 0, 0), 0.15f).setOnComplete(OnComplete);
+    }
+
     public void Purchase()
     {
         // I am aware of how yandev-style this is but pls bear with me
         // unfortunately i cant think of any better way to do this
+        // maybe will change this to a switch statement later
 
         if (type == "rod")
         {

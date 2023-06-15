@@ -30,6 +30,16 @@ public class SellFishIcon : MonoBehaviour
         }
     }
 
+    public void UpdateFishDisplayed()
+    {
+        image = GetComponent<Image>();
+        sprite = Resources.Load<Sprite>("fishIcons/" + "fish" + index.ToString());
+        fish = FishDataManager.instance.GetFish(index);
+
+        // very skull emoji line of code
+        sellConfirmMenu = transform.parent.parent.parent.Find("sellConfirmMenu").gameObject;
+    }
+
     public void OnHoverEnter()
     {
         LeanTween.scale(gameObject, new Vector3(0.9f, 0.9f, 0.9f), 0.1f);
@@ -42,6 +52,7 @@ public class SellFishIcon : MonoBehaviour
 
     public void OnClick()
     {
+        Debug.Log("clicked");
         sellConfirmMenu.SetActive(true);
         LeanTween.scale(sellConfirmMenu, new Vector3(1, 1, 1), 0.2f);
         sellConfirmMenu.GetComponent<SellConfirmMenu>().UpdateInfo(index);
