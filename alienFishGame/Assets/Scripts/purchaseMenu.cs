@@ -65,7 +65,7 @@ public class purchaseMenu : MonoBehaviour
         }
         else if (type == "sales")
         {
-            // code to upgrade sales
+            FishDataManager.instance.UpgradeSales();
         }
 
         else if (type == "extra rod")

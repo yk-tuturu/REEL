@@ -69,4 +69,12 @@ public class FishDataManager : MonoBehaviour
     {
         money -= spentAmount;
     }
+
+    public void UpgradeSales()
+    {
+        foreach (Fish fish in fishes)
+        {
+            fish.price = Mathf.Round(fish.price * 1.7f);
+        }
+    }
 }
