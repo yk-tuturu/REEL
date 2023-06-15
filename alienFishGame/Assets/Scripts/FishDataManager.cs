@@ -50,12 +50,11 @@ public class FishDataManager : MonoBehaviour
         return (fishes[index]);
     }
 
-    public void ClaimFish(Dictionary<int, int> fishCaught)
+    public void ClaimFish(List<int> fishCaught)
     {
-        foreach(var fish in fishCaught)
+        foreach(var index in fishCaught)
         {
-            fishes[fish.Key].totalCaught += fish.Value;
-            Debug.Log("You have caught " + fish.Value.ToString() + " " + fishes[fish.Key].name);
+            fishes[index].totalCaught += 1;
         }
     }
 

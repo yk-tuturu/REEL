@@ -35,7 +35,7 @@ public class FishingPole : MonoBehaviour
     private float timer;
     
     // dictionary, key is the fishIndex and value is how many caught
-    public Dictionary<int, int> fishCaught = new Dictionary<int, int>();
+    public List<int> fishCaught = new List<int>();
 
     // Start is called before the first frame update
     void Start()
@@ -81,14 +81,7 @@ public class FishingPole : MonoBehaviour
     {
         int fishIndex = Random.Range(minIndex, maxIndex);
 
-        if (fishCaught.ContainsKey(fishIndex))
-        {
-            fishCaught[fishIndex] += 1;
-        }
-        else
-        {
-            fishCaught.Add(fishIndex, 1);
-        }
+        fishCaught.Add(fishIndex);
 
         currentCapacity += 1;
 

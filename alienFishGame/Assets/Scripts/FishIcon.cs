@@ -11,6 +11,9 @@ public class FishIcon : MonoBehaviour
     public Sprite sprite;
     public GameObject infoPanel;
 
+    public GameObject star;
+    public Transform starContainer;
+
     public FishDataManager fishData;
     
     // Start is called before the first frame update
@@ -34,7 +37,13 @@ public class FishIcon : MonoBehaviour
     {
         image = GetComponent<Image>();
         sprite = Resources.Load<Sprite>("fishIcons/" + "fish" + index.ToString());
+        image.sprite = sprite;
         fish = FishDataManager.instance.GetFish(index);
+        
+        for (var i = 0; i < fish.rarity; i++)
+        {
+            Instantiate(star, new Vector3(0,0,0), Quaternion.identity, starContainer);
+        }
     }
 
     public void OnHoverEnter()
