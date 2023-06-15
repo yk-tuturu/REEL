@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{273163a8-2722-4f90-8a69-e78832bd4110}">
 		<property name="name">
-			<value>Fishopedia pageturn</value>
+			<value>Pedia pageturn left</value>
 		</property>
 		<property name="outputFormat">
 			<value>1</value>
@@ -121,6 +121,7 @@
 	</object>
 	<object class="MixerBusEffectChain" id="{f58b05e3-0f3f-4892-8a32-75e1fa51c7ec}">
 		<relationship name="effects">
+			<destination>{50a9116c-e28c-41c2-9867-941b8c851f11}</destination>
 			<destination>{6f16a440-99d1-46ca-9e27-6409cd03b035}</destination>
 		</relationship>
 	</object>
@@ -140,6 +141,17 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{a65f9a77-227b-4bed-bbfd-65a5d1a03578}" />
+	<object class="MixerSend" id="{50a9116c-e28c-41c2-9867-941b8c851f11}">
+		<property name="level">
+			<value>-33</value>
+		</property>
+		<property name="inputFormat">
+			<value>1</value>
+		</property>
+		<relationship name="mixerReturn">
+			<destination>{527b02ae-225b-4c59-98c3-3a17c66a2598}</destination>
+		</relationship>
+	</object>
 	<object class="MixerBusFader" id="{6f16a440-99d1-46ca-9e27-6409cd03b035}" />
 	<object class="RandomizerModulator" id="{860e8f51-2fb3-4e76-b663-030056791812}">
 		<property name="nameOfPropertyBeingModulated">

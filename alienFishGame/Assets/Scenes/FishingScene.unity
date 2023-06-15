@@ -14054,7 +14054,7 @@ MonoBehaviour:
       Data2: 1165287756
       Data3: 1160979354
       Data4: -227590951
-    Path: event:/Music/Test music
+    Path: event:/Music/Main loop
   Event: 
   PlayEvent: 1
   StopEvent: 0
