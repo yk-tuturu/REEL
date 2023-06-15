@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class SellFishIcon : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class SellFishIcon : MonoBehaviour
     public GameObject sellConfirmMenu;
     public GameObject star;
     public Transform starContainer;
+    public TextMeshProUGUI numberOwned;
 
     public FishDataManager fishData;
     
@@ -29,6 +31,7 @@ public class SellFishIcon : MonoBehaviour
         sprite = Resources.Load<Sprite>("fishIcons/" + "fish" + index.ToString());
         image.sprite = sprite;
         fish = FishDataManager.instance.GetFish(index);
+        numberOwned.text = (fish.totalCaught - fish.totalSold).ToString();
 
         for (var i = 0; i < fish.rarity; i++)
         {
