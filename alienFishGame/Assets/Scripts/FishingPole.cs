@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine.EventSystems;
 
+// I dubbed this the fishing pole script but it functions for both rods and traps
 public class FishingPole : MonoBehaviour
 {
     public float minTime;

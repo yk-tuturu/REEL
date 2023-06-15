@@ -10,6 +10,7 @@ public class purchaseMenu : MonoBehaviour
     public string type;
     public TextMeshProUGUI descriptionText;
     public TextMeshProUGUI priceText;
+    public int price;
 
     public Transform fishingRodParent;
     public Transform upgradeParent;
@@ -25,9 +26,10 @@ public class purchaseMenu : MonoBehaviour
         
     }
 
-    public void UpdatePurchaseInfo(string updateType, int price, string description)
+    public void UpdatePurchaseInfo(string updateType, int updatePrice, string description)
     {
         type = updateType;
+        price = updatePrice;
         descriptionText.text = description;
         priceText.text = "Price: " + price.ToString();
     }
@@ -39,10 +41,15 @@ public class purchaseMenu : MonoBehaviour
 
     public void Purchase()
     {
+        // do nothing if not enough money
+        if (FishDataManager.instance.money < price)
+        {
+            return;
+        }
+        
         // I am aware of how yandev-style this is but pls bear with me
         // unfortunately i cant think of any better way to do this
         // maybe will change this to a switch statement later
-
         if (type == "rod")
         {
             RodStatManager.instance.UpgradeRod();
@@ -61,6 +68,32 @@ public class purchaseMenu : MonoBehaviour
             // code to upgrade sales
         }
 
+        else if (type == "extra rod")
+        {
+            foreach(Transform child in fishingRodParent)
+            {
+                FishingPole rod = child.GetComponent<FishingPole>();
+                if (rod.type == "rod")
+                {
+                    child.gameObject.SetActive(true);
+                    rod.panel.SetActive(true);
+                }
+            }
+        }
+
+        else if (type == "extra trap")
+        {
+            foreach(Transform child in fishingRodParent)
+            {
+                FishingPole rod = child.GetComponent<FishingPole>();
+                if (rod.type == "trap")
+                {
+                    child.gameObject.SetActive(true);
+                    rod.panel.SetActive(true);
+                }
+            }
+        }
+
         // closes menu
         LeanTween.scale(gameObject, new Vector3(0, 0, 0), 0.15f).setOnComplete(OnComplete);
 
@@ -76,6 +109,10 @@ public class purchaseMenu : MonoBehaviour
             Upgrades upgrade = child.GetComponent<Upgrades>();
             if (type == upgrade.upgradeType)
             {
+                // spends money and increases price
+                FishDataManager.instance.SpendMoney(price);
+                upgrade.price = price * 2;
+
                 upgrade.nextLevel += 1;
                 if (upgrade.nextLevel > upgrade.maxLevel)
                 {
@@ -83,6 +120,8 @@ public class purchaseMenu : MonoBehaviour
                     child.GetComponent<EventTrigger>().enabled = false;
                 }
                 // prolly also increase price here
+                
+                
             }
         }
     }

@@ -64,4 +64,9 @@ public class FishDataManager : MonoBehaviour
         fishes[index].totalSold += number;
         money += fishes[index].price * number;
     }
+
+    public void SpendMoney(int spentAmount)
+    {
+        money -= spentAmount;
+    }
 }

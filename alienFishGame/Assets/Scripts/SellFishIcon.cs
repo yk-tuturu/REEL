@@ -10,6 +10,8 @@ public class SellFishIcon : MonoBehaviour
     public Image image;
     public Sprite sprite;
     public GameObject sellConfirmMenu;
+    public GameObject star;
+    public Transform starContainer;
 
     public FishDataManager fishData;
     
@@ -21,20 +23,17 @@ public class SellFishIcon : MonoBehaviour
         fish = FishDataManager.instance.GetFish(index);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (fish.totalCaught > 0)
-        {
-            image.sprite = sprite;
-        }
-    }
-
     public void UpdateFishDisplayed()
     {
         image = GetComponent<Image>();
         sprite = Resources.Load<Sprite>("fishIcons/" + "fish" + index.ToString());
+        image.sprite = sprite;
         fish = FishDataManager.instance.GetFish(index);
+
+        for (var i = 0; i < fish.rarity; i++)
+        {
+            Instantiate(star, new Vector3(0,0,0), Quaternion.identity, starContainer);
+        }
 
         // very skull emoji line of code
         sellConfirmMenu = transform.parent.parent.parent.Find("sellConfirmMenu").gameObject;
