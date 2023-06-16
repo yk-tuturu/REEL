@@ -4,9 +4,25 @@ using UnityEngine;
 
 public class FishDataManager : MonoBehaviour
 {
+    public static FishDataManager instance;
+
     public TextAsset jsonFile;
     public Fishes fishList;
     public Fish[] fishes;
+    public int fishTypeCount = 5;
+    public float money;
+
+    void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else 
+        {
+            Destroy(gameObject);
+        }  
+    }
  
     void Start()
     {
@@ -30,15 +46,34 @@ public class FishDataManager : MonoBehaviour
     // utility function, probably
     public Fish GetFish(int index)
     {
+        Debug.Log(index);
         return (fishes[index]);
     }
 
-    public void ClaimFish(Dictionary<int, int> fishCaught)
+    public void ClaimFish(List<int> fishCaught)
     {
-        foreach(var fish in fishCaught)
+        foreach(var index in fishCaught)
         {
-            fishes[fish.Key].totalCaught += fish.Value;
-            Debug.Log("You have caught " + fish.Value.ToString() + " " + fishes[fish.Key].name);
+            fishes[index].totalCaught += 1;
+        }
+    }
+
+    public void SellFish(int index, int number)
+    {
+        fishes[index].totalSold += number;
+        money += fishes[index].price * number;
+    }
+
+    public void SpendMoney(int spentAmount)
+    {
+        money -= spentAmount;
+    }
+
+    public void UpgradeSales()
+    {
+        foreach (Fish fish in fishes)
+        {
+            fish.price = Mathf.Round(fish.price * 1.7f);
         }
     }
 }

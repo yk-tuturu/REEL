@@ -1,23 +1,49 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class FishIcon : MonoBehaviour
 {
+    public int index;
     public Fish fish;
+    public Image image;
     public Sprite sprite;
     public GameObject infoPanel;
+
+    public GameObject star;
+    public Transform starContainer;
+
+    public FishDataManager fishData;
     
     // Start is called before the first frame update
     void Start()
     {
-        
+        image = GetComponent<Image>();
+        sprite = Resources.Load<Sprite>("fishIcons/" + "fish" + index.ToString());
+        fish = FishDataManager.instance.GetFish(index);
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (fish.totalCaught > 0)
+        {
+            image.sprite = sprite;
+        }
+    }
+
+    public void UpdateFishDisplayed()
+    {
+        image = GetComponent<Image>();
+        sprite = Resources.Load<Sprite>("fishIcons/" + "fish" + index.ToString());
+        image.sprite = sprite;
+        fish = FishDataManager.instance.GetFish(index);
         
+        for (var i = 0; i < fish.rarity; i++)
+        {
+            Instantiate(star, new Vector3(0,0,0), Quaternion.identity, starContainer);
+        }
     }
 
     public void OnHoverEnter()
