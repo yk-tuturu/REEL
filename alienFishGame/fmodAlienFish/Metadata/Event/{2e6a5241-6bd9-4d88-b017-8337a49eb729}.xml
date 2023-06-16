@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{2e6a5241-6bd9-4d88-b017-8337a49eb729}">
 		<property name="name">
-			<value>Save confirm</value>
+			<value>Save file chosen</value>
 		</property>
 		<property name="outputFormat">
 			<value>1</value>
