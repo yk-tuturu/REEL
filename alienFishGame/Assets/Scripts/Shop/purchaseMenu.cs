@@ -119,9 +119,6 @@ public class purchaseMenu : MonoBehaviour
                     upgrade.enabled = false;
                     child.GetComponent<EventTrigger>().enabled = false;
                 }
-                // prolly also increase price here
-                
-                
             }
         }
     }

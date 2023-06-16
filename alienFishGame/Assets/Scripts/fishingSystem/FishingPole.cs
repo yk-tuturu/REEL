@@ -14,6 +14,7 @@ public class FishingPole : MonoBehaviour
     public int currentCapacity;
     public int maxCapacity;
     public string type;
+    public int index;
 
     public int rodLevel;
     public int trapLevel;
@@ -95,6 +96,8 @@ public class FishingPole : MonoBehaviour
         GameObject temp = Instantiate(plusOneLabel, labelSpawner.position, Quaternion.identity, panel.transform.parent);
         temp.transform.localPosition = labelSpawner.localPosition;
         temp.GetComponent<tween>().tweenIn();
+
+        // updates the stat managers
     }
 
     void OnMouseEnter()

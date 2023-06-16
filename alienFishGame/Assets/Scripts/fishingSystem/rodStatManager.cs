@@ -15,6 +15,11 @@ public class RodStatManager : MonoBehaviour
     public float uncommonProb = 0.05f;
     public float rareProb = 0f;
 
+    // maybe turn this into a struct in the future. contains index for level and the dict
+    // public Dictionary<string, float> level1Stats = new Dictionary<string, float>() {"minTime" = 4f, "maxTime" = 10f, "uncommonProb" = 0.05f, "rareProb" = 0f};
+    // public Dictionary<string, float> level2Stats = new Dictionary<string, float>() {"minTime" = 2.5f, "maxTime" = 6.5f, "uncommonProb" = 0.1f, "rareProb" = 0.02f};
+    // public Dictionary<string, float> level3Stats = new Dictionary<string, float>() {"minTime" = 1f, "maxTime" = 3f, "uncommonProb" = 0.2f, "rareProb" = 0.05f};
+
     public static RodStatManager instance;
 
     void Awake()
@@ -30,19 +35,21 @@ public class RodStatManager : MonoBehaviour
     }
 
     // to whoever looks at this section of the code, i am sorry for breaking all fundamental laws of programming
+    // okay we definitely need to fix this up somehow
     public void UpgradeRod()
     {
         rodLevel += 1; 
-        maxCapacity += 3;
         if (rodLevel == 2)
         {
             minTime = 2.5f;
             maxTime = 6f;
+            maxCapacity = 6;
         }
         else if (rodLevel == 3)
         {
             minTime = 1f;
             maxTime = 3f;
+            maxCapacity = 9;
         }
     }
 
@@ -59,5 +66,24 @@ public class RodStatManager : MonoBehaviour
             rareProb = 0.05f;
             uncommonProb = 0.2f;
         }
+    }
+
+    public void LoadData(SaveData saveData)
+    {
+        foreach(var upgrade in saveData.upgradeLevels)
+        {
+            if (upgrade.type == "rod")
+            {
+                rodLevel = upgrade.currentLevel - 1;
+            }
+
+            if (upgrade.type == "bait")
+            {
+                baitLevel = upgrade.currentLevel - 1;
+            }
+        }
+
+        UpgradeRod();
+        UpgradeBait();
     }
 }

@@ -32,17 +32,19 @@ public class TrapStatManager : MonoBehaviour
     // to whoever looks at this section of the code, i am sorry for breaking all fundamental laws of programming
     public void UpgradeTrap()
     {
-        rodLevel += 1; 
-        maxCapacity += 3;
-        if (rodLevel == 2)
+        trapLevel += 1; 
+        
+        if (trapLevel == 2)
         {
             minTime = 2.5f;
             maxTime = 6f;
+            maxCapacity = 6;
         }
-        else if (rodLevel == 3)
+        else if (trapLevel == 3)
         {
             minTime = 1f;
             maxTime = 3f;
+            maxCapacity = 9;
         }
     }
 
@@ -59,5 +61,24 @@ public class TrapStatManager : MonoBehaviour
             rareProb = 0.05f;
             uncommonProb = 0.2f;
         }
+    }
+
+    public void LoadData(SaveData saveData)
+    {
+        foreach(var upgrade in saveData.upgradeLevels)
+        {
+            if (upgrade.type == "trap")
+            {
+                trapLevel = upgrade.currentLevel - 1;
+            }
+
+            if (upgrade.type == "bait")
+            {
+                baitLevel = upgrade.currentLevel - 1;
+            }
+        }
+
+        UpgradeTrap();
+        UpgradeBait();
     }
 }
