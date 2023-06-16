@@ -97,6 +97,16 @@ public class FishingPole : MonoBehaviour
         temp.GetComponent<tween>().tweenIn();
     }
 
+    void OnMouseEnter()
+    {
+        LeanTween.scale(panel, new Vector3(1.2f, 1.2f, 1.2f), 0.1f);
+    }
+
+    void OnMouseExit()
+    {
+        LeanTween.scale(panel, new Vector3(1f, 1f, 1f), 0.1f);
+    }
+
     void OnMouseOver()
     {
         if (Input.GetMouseButtonDown(0))
