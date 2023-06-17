@@ -168,7 +168,8 @@ MonoBehaviour:
   infoPanel: {fileID: 0}
   star: {fileID: 4551389533511297161, guid: 26b92092740d10245bb5536b7f9fd27b, type: 3}
   starContainer: {fileID: 2789705570883017635}
-  fishData: {fileID: 5199195392097081670, guid: 53b64b323f640e54995b1756b7da4b16, type: 3}
+  numberOwned: {fileID: 0}
+  stackDisplay: {fileID: 0}
 --- !u!1 &6112453566787890746
 GameObject:
   m_ObjectHideFlags: 0

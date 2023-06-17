@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class FishIcon : MonoBehaviour
 {
@@ -14,7 +15,14 @@ public class FishIcon : MonoBehaviour
     public GameObject star;
     public Transform starContainer;
 
-    public FishDataManager fishData;
+    public TextMeshProUGUI numberOwned;
+    public GameObject stackDisplay;
+
+    public GameObject hoverLabelPrefab;
+    public GameObject hoverLabel;
+
+    public Material grayOut;
+    public Material none;
     
     // Start is called before the first frame update
     void Start()
@@ -25,11 +33,17 @@ public class FishIcon : MonoBehaviour
     }
 
     // Update is called once per frame
+    // mainly to handle fishopedia shenanigans
     void Update()
     {
-        if (fish.totalCaught > 0)
+        if (fish.totalCaught == 0 && infoPanel != null)
+        {
+            image.material = grayOut;
+        }
+        else
         {
             image.sprite = sprite;
+            image.material = none;
         }
     }
 
@@ -44,22 +58,45 @@ public class FishIcon : MonoBehaviour
         {
             Instantiate(star, new Vector3(0,0,0), Quaternion.identity, starContainer);
         }
+
+        numberOwned.text = (fish.totalCaught - fish.totalSold).ToString();
     }
 
     public void OnHoverEnter()
     {
         LeanTween.scale(gameObject, new Vector3(0.9f, 0.9f, 0.9f), 0.1f);
+
+        if (infoPanel != null && fish.totalCaught == 0)
+        {
+            return;
+        }
+
+        // name displayed when you hover over the icon
+        // yeah that's a lot of calcs to figure out the position of the label
+        var height = GetComponent<RectTransform>().sizeDelta.y;
+        hoverLabel = Instantiate(hoverLabelPrefab, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity, transform);
+        var rect = hoverLabel.GetComponent<RectTransform>();
+        var pos = rect.anchoredPosition;
+        rect.anchoredPosition = new Vector2(pos.x, pos.y + height/2);
+
+        var text = hoverLabel.transform.GetChild(0).GetComponent<TextMeshProUGUI>();
+        text.text = FishDataManager.instance.GetFish(index).name;
     }
 
     public void OnHoverExit()
     {
         LeanTween.scale(gameObject, new Vector3(1f, 1f, 1f), 0.1f);
+        GameObject.Destroy(hoverLabel);
     }
 
     public void OnClick()
     {
-        infoPanel.SetActive(true);
-        LeanTween.scale(infoPanel, new Vector3(1, 1, 1), 0.2f);
+        if (infoPanel != null && fish.totalCaught > 0)
+        {
+            infoPanel.SetActive(true);
+            LeanTween.scale(infoPanel, new Vector3(1, 1, 1), 0.2f);
+            infoPanel.GetComponent<infoPanel>().UpdateInfo(index);
+        }
     }
 
     public void OnExit()
