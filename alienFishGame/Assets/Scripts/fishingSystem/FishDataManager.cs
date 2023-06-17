@@ -27,6 +27,7 @@ public class FishDataManager : MonoBehaviour
         Fishes fishList = JsonUtility.FromJson<Fishes>(jsonFile.text);
 
         fishes = fishList.fishes;
+        fishTypeCount = fishes.Length;
     }
  
     void Start()

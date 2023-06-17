@@ -26,7 +26,7 @@ public class SellConfirmMenu : MonoBehaviour
     public void UpdateInfo(int index)
     {
         fish = FishDataManager.instance.GetFish(index);
-        priceText.text = "Price: " + fish.price.ToString();
+        priceText.text = fish.price.ToString();
         numberText.text = "1";
 
         fishIcon.index = index;
@@ -38,14 +38,14 @@ public class SellConfirmMenu : MonoBehaviour
     {
         numberToSell = Mathf.Min(numberToSell + 1, fish.totalCaught - fish.totalSold);
         numberText.text = numberToSell.ToString();
-        priceText.text = "Price: " + (fish.price * numberToSell).ToString();
+        priceText.text = (fish.price * numberToSell).ToString();
     }
 
     public void RemoveFish()
     {
         numberToSell = Mathf.Max(numberToSell - 1, 1);
         numberText.text = numberToSell.ToString();
-        priceText.text = "Price: " + (fish.price * numberToSell).ToString();
+        priceText.text = (fish.price * numberToSell).ToString();
     }
 
     public void SellFish()

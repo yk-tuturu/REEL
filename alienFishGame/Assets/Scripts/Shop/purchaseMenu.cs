@@ -31,7 +31,7 @@ public class purchaseMenu : MonoBehaviour
         type = updateType;
         price = updatePrice;
         descriptionText.text = description;
-        priceText.text = "Price: " + price.ToString();
+        priceText.text = price.ToString();
     }
 
     public void Close()

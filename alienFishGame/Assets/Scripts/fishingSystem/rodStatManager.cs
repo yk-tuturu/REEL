@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class RodStatManager : MonoBehaviour
 {
-    public float minTime = 4f;
-    public float maxTime = 10f;
+    public float minTime = 5.5f;
+    public float maxTime = 11f;
     public int maxCapacity = 3;
 
     public int rodLevel = 1;
@@ -41,14 +41,14 @@ public class RodStatManager : MonoBehaviour
         rodLevel += 1; 
         if (rodLevel == 2)
         {
-            minTime = 2.5f;
-            maxTime = 6f;
+            minTime = 3.5f;
+            maxTime = 7f;
             maxCapacity = 6;
         }
         else if (rodLevel == 3)
         {
-            minTime = 1f;
-            maxTime = 3f;
+            minTime = 2.5f;
+            maxTime = 5f;
             maxCapacity = 9;
         }
     }

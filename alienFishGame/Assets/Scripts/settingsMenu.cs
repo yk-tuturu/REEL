@@ -25,18 +25,6 @@ public class settingsMenu : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        // autosaves
-        timer += Time.deltaTime;
-        if (timer >= autosaveTime)
-        {
-            Save(0);
-            timer = 0;
-        }
-    }
-
     public void CloseMenu()
     {
         gameObject.SetActive(false);
@@ -63,6 +51,7 @@ public class settingsMenu : MonoBehaviour
             string[] files = Directory.GetFiles(savePath);
             foreach (var file in files)
             {
+                Debug.Log("reading save file at " + file);
                 string jsonString = File.ReadAllText(file);
                 SaveData saveData = JsonUtility.FromJson<SaveData>(jsonString);
                 saveDates[saveData.saveIndex].text = saveData.date;

@@ -6,7 +6,7 @@ using TMPro;
 
 public class captureMenu : MonoBehaviour
 {
-    public GameObject icon;
+    public GameObject fishIcon;
     public GameObject scrollPanel;
     public GameObject fishingrods;
 
@@ -21,9 +21,11 @@ public class captureMenu : MonoBehaviour
         fishList = fishCaught;
         foreach (var index in fishCaught)
         {
-            GameObject listItem = Instantiate(icon, new Vector3(0, 0, 0), Quaternion.identity, scrollPanel.transform);
-            listItem.GetComponent<FishIcon>().index = index;
-            listItem.GetComponent<FishIcon>().UpdateFishDisplayed();
+            GameObject listItem = Instantiate(fishIcon, new Vector3(0, 0, 0), Quaternion.identity, scrollPanel.transform);
+            FishIcon icon = listItem.GetComponent<FishIcon>();
+            icon.index = index;
+            icon.UpdateFishDisplayed();
+            icon.starContainer.gameObject.SetActive(true);
         }
     }
 

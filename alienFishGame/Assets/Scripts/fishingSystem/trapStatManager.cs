@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class TrapStatManager : MonoBehaviour
 {
-    public float minTime = 4f;
-    public float maxTime = 10f;
+    public float minTime = 5.5f;
+    public float maxTime = 11f;
     public int maxCapacity = 3;
 
     public int rodLevel = 1;
@@ -36,14 +36,14 @@ public class TrapStatManager : MonoBehaviour
         
         if (trapLevel == 2)
         {
-            minTime = 2.5f;
-            maxTime = 6f;
+            minTime = 3.5f;
+            maxTime = 7f;
             maxCapacity = 6;
         }
         else if (trapLevel == 3)
         {
-            minTime = 1f;
-            maxTime = 3f;
+            minTime = 2.5f;
+            maxTime = 5f;
             maxCapacity = 9;
         }
     }

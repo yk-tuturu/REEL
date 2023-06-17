@@ -20,6 +20,9 @@ public class SaveSystem : MonoBehaviour
 
     public static SaveSystem instance;
 
+    public float autosaveTime = 2f;
+    private float timer;
+
     void Awake()
     {
         if (instance == null)
@@ -45,6 +48,17 @@ public class SaveSystem : MonoBehaviour
         upgradeList = FindObjectsByType<Upgrades>(FindObjectsInactive.Include, FindObjectsSortMode.None);
         fishingRodList = FindObjectsByType<FishingPole>(FindObjectsInactive.Include, FindObjectsSortMode.None);
         LoadData();
+    }
+
+    void Update()
+    {
+        // autosaves
+        timer += Time.deltaTime;
+        if (timer >= autosaveTime)
+        {
+            Save(0);
+            timer = 0;
+        }
     }
 
     public void Save(int index = 0)
