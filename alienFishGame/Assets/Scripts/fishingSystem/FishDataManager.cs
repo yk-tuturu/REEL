@@ -23,20 +23,16 @@ public class FishDataManager : MonoBehaviour
         {
             Destroy(gameObject);
         }  
+
+        Fishes fishList = JsonUtility.FromJson<Fishes>(jsonFile.text);
+
+        fishes = fishList.fishes;
     }
  
     void Start()
     {
         // reads fish data from json file
-        Fishes fishList = JsonUtility.FromJson<Fishes>(jsonFile.text);
- 
-        foreach (Fish fish in fishList.fishes)
-        {
-            Debug.Log(fish.name);
-            Debug.Log(fish.index);
-        }
-
-        fishes = fishList.fishes;
+        
     }
 
     void Update()
@@ -47,7 +43,6 @@ public class FishDataManager : MonoBehaviour
     // utility function, probably
     public Fish GetFish(int index)
     {
-        Debug.Log(index);
         return (fishes[index]);
     }
 
@@ -79,7 +74,7 @@ public class FishDataManager : MonoBehaviour
     }
 
     public void LoadData(SaveData saveData)
-    {
+    {   
         int salesLevel = 0;
         foreach (var upgrade in saveData.upgradeLevels)
         {

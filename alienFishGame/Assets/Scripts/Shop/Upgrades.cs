@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 
 public class Upgrades : MonoBehaviour
 {
-    public int price; 
+    public int price;
     public string upgradeType;
     public string upgradeDescription;
     public int nextLevel = 2;
@@ -40,6 +40,8 @@ public class Upgrades : MonoBehaviour
                 nextLevel = upgrade.currentLevel + 1;
             }
         }
+
+        price = price * (int)(Mathf.Pow(2, nextLevel - 2));
 
         if (nextLevel <= maxLevel)
         {

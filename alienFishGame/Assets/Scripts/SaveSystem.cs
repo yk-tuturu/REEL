@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
+using UnityEngine.SceneManagement;
 
 // have to use this to circumvent the fact that WE CANT FUCKING PUT A DICT IN A JSON FILE
 [System.Serializable]
@@ -12,28 +13,41 @@ public struct Upgrade{
 
 public class SaveSystem : MonoBehaviour
 {
-    public Transform fishingRodParent;
-    public Transform upgradeParent;
-    public string saveFolder;
-    // Start is called before the first frame update
-    void Start()
+    public string saveFolder = Application.dataPath + "/Saves";
+    public int loadIndex;
+    public Upgrades[] upgradeList;
+    public FishingPole[] fishingRodList;
+
+    public static SaveSystem instance;
+
+    void Awake()
     {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else 
+        {
+            Destroy(gameObject);
+        }  
+
+        DontDestroyOnLoad(this.gameObject);
+        Debug.Log("awake function called");
+
         // change this to persistent file path later
         saveFolder = Application.dataPath + "/Saves";
-        
+        Debug.Log(saveFolder);
         if (!Directory.Exists(saveFolder))
         {
             Directory.CreateDirectory(saveFolder);
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
         
+        upgradeList = FindObjectsByType<Upgrades>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+        fishingRodList = FindObjectsByType<FishingPole>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+        LoadData();
     }
 
-    public void Save()
+    public void Save(int index = 0)
     {
         List<int> totalCaught = new List<int>();
         List<int> totalSold = new List<int>();
@@ -45,9 +59,8 @@ public class SaveSystem : MonoBehaviour
         }
 
         List<Upgrade> upgradeLevels = new List<Upgrade>();
-        foreach (Transform child in upgradeParent)
+        foreach (var upgrade in upgradeList)
         {
-            Upgrades upgrade = child.GetComponent<Upgrades>();
             Upgrade temp = new Upgrade() {
                 type = upgrade.upgradeType,
                 currentLevel = upgrade.nextLevel - 1,
@@ -61,14 +74,12 @@ public class SaveSystem : MonoBehaviour
         List<int> Rod1Capacity = new List<int>();
         List<int> Trap0Capacity = new List<int>();
         List<int> Trap1Capacity = new List<int>();
-        foreach (Transform child in fishingRodParent)
+        foreach (var item in fishingRodList)
         {
-            FishingPole item = child.GetComponent<FishingPole>();
             if (item.index == 0)
             {
                 if (item.type == "rod")
                 {
-                    Debug.Log("rod saved");
                     Rod0Capacity = item.fishCaught;
                 }
                 else if (item.type == "trap")
@@ -100,10 +111,12 @@ public class SaveSystem : MonoBehaviour
             Rod1Capacity = Rod1Capacity,
             Trap0Capacity = Trap0Capacity,
             Trap1Capacity = Trap1Capacity,
+            date = System.DateTime.UtcNow.ToLocalTime().ToString("dd-MM-yyyy  HH:mm"),
+            saveIndex = index
         };
 
         string jsonString = JsonUtility.ToJson(saveData);
-        string savePath = saveFolder + "/save0.json";
+        string savePath = saveFolder + "/save" + index.ToString() + ".json";
         File.WriteAllText(savePath, jsonString);
         Debug.Log("saved!");
     }
@@ -111,9 +124,26 @@ public class SaveSystem : MonoBehaviour
     public void Load(int index = 0)
     {
         string savePath = saveFolder + "/save" + index.ToString() + ".json";
+        Debug.Log(savePath);
         if (!File.Exists(savePath))
         {
             Debug.Log("save file could not be found!");
+            return;
+        }
+
+        loadIndex = index;
+
+        // reloads scene to refresh everything
+        SceneManager.LoadScene("Scenes/FishingScene");
+    }
+
+    public void LoadData()
+    {
+        string savePath = saveFolder + "/save" + loadIndex.ToString() + ".json";
+        Debug.Log(savePath);
+        if (!File.Exists(savePath))
+        {
+            Debug.Log("save file could not be found upon reload");
             return;
         }
 
@@ -122,14 +152,14 @@ public class SaveSystem : MonoBehaviour
         Debug.Log(jsonString);
         Debug.Log(saveData);
 
-        // implement actually entering the data here
+        // implement actually loading in the data here
         FishDataManager.instance.LoadData(saveData);
         RodStatManager.instance.LoadData(saveData);
         TrapStatManager.instance.LoadData(saveData);
 
-        foreach (Transform child in upgradeParent)
+        foreach (var upgrade in upgradeList)
         {
-            child.GetComponent<Upgrades>().LoadData(saveData);
+            upgrade.LoadData(saveData);
         }
 
         bool extraRod = false;
@@ -146,9 +176,8 @@ public class SaveSystem : MonoBehaviour
             }
         }
 
-        foreach (Transform child in fishingRodParent)
+        foreach (var rod in fishingRodList)
         {
-            FishingPole rod = child.GetComponent<FishingPole>();
             rod.fetchStats();
             if (rod.type == "rod")
             {
@@ -192,6 +221,5 @@ public class SaveSystem : MonoBehaviour
                 }
             }
         }
-
     }
 }

@@ -16,4 +16,7 @@ public class SaveData
     public List<int> Rod1Capacity;
     public List<int> Trap0Capacity;
     public List<int> Trap1Capacity;
+
+    public string date;
+    public int saveIndex;
 }
