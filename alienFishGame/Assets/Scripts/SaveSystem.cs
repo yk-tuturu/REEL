@@ -45,9 +45,7 @@ public class SaveSystem : MonoBehaviour
         {
             Directory.CreateDirectory(saveFolder);
         }
-        
-        upgradeList = FindObjectsByType<Upgrades>(FindObjectsInactive.Include, FindObjectsSortMode.None);
-        fishingRodList = FindObjectsByType<FishingPole>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+
         LoadData();
     }
 
@@ -176,6 +174,9 @@ public class SaveSystem : MonoBehaviour
             Debug.Log("save file could not be found upon reload");
             return;
         }
+
+        upgradeList = FindObjectsByType<Upgrades>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+        fishingRodList = FindObjectsByType<FishingPole>(FindObjectsInactive.Include, FindObjectsSortMode.None);
 
         string jsonString = File.ReadAllText(savePath);
         SaveData saveData = JsonUtility.FromJson<SaveData>(jsonString);
