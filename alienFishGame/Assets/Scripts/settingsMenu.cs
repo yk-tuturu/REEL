@@ -43,6 +43,12 @@ public class settingsMenu : MonoBehaviour
         saveImages[index].sprite = bgImage;
     }
 
+    public void Load(int index)
+    {
+        Debug.Log("loading file at index " + index.ToString());
+        SaveSystem.instance.Load(index);
+    }
+
     public void FetchSaves()
     {
         string savePath = SaveSystem.instance.saveFolder;
@@ -51,9 +57,14 @@ public class settingsMenu : MonoBehaviour
             string[] files = Directory.GetFiles(savePath);
             foreach (var file in files)
             {
+                if (file.Contains(".meta"))
+                {
+                    continue;
+                }
                 Debug.Log("reading save file at " + file);
                 string jsonString = File.ReadAllText(file);
                 SaveData saveData = JsonUtility.FromJson<SaveData>(jsonString);
+                Debug.Log(jsonString);
                 saveDates[saveData.saveIndex].text = saveData.date;
                 saveImages[saveData.saveIndex].sprite = bgImage;
             }

@@ -32,6 +32,8 @@ public class RodStatManager : MonoBehaviour
         {
             Destroy(gameObject);
         }  
+
+        DontDestroyOnLoad(this.gameObject);
     }
 
     // to whoever looks at this section of the code, i am sorry for breaking all fundamental laws of programming

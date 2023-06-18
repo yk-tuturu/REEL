@@ -22,7 +22,7 @@ public class FishDataManager : MonoBehaviour
         else 
         {
             Destroy(gameObject);
-        }  
+        } 
 
         Fishes fishList = JsonUtility.FromJson<Fishes>(jsonFile.text);
 
@@ -86,9 +86,11 @@ public class FishDataManager : MonoBehaviour
         }
         for (int i = 0; i < fishTypeCount; i++)
         {
+            Debug.Log("on load, fishtypecount is " + fishTypeCount.ToString());
             fishes[i].totalCaught = saveData.totalCaught[i];
             fishes[i].totalSold = saveData.totalSold[i];
             fishes[i].price = Mathf.Round(fishes[i].price * (Mathf.Pow(salesMultiplier, salesLevel -1)));
+            Debug.Log("fish " +  fishes[i].index.ToString() + " has data " + fishes[i].totalCaught.ToString() + " and " + fishes[i].totalSold.ToString());
         }
 
         money = saveData.money;

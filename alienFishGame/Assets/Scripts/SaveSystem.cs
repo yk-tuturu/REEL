@@ -17,7 +17,7 @@ public class SaveSystem : MonoBehaviour
     public int loadIndex;
     public Upgrades[] upgradeList;
     public FishingPole[] fishingRodList;
-
+    public SaveData currentSaveData;
     public static SaveSystem instance;
 
     public float autosaveTime = 2f;
@@ -29,9 +29,10 @@ public class SaveSystem : MonoBehaviour
         {
             instance = this;
         }
-        else 
+        else if (instance != this)
         {
-            Destroy(gameObject);
+            Destroy(this.gameObject);
+            return;
         }  
 
         DontDestroyOnLoad(this.gameObject);
@@ -48,6 +49,13 @@ public class SaveSystem : MonoBehaviour
         upgradeList = FindObjectsByType<Upgrades>(FindObjectsInactive.Include, FindObjectsSortMode.None);
         fishingRodList = FindObjectsByType<FishingPole>(FindObjectsInactive.Include, FindObjectsSortMode.None);
         LoadData();
+    }
+
+    void Start()
+    {
+        Debug.Log("start function called");
+        // implement actually loading in the data here
+        
     }
 
     void Update()
@@ -132,7 +140,7 @@ public class SaveSystem : MonoBehaviour
         string jsonString = JsonUtility.ToJson(saveData);
         string savePath = saveFolder + "/save" + index.ToString() + ".json";
         File.WriteAllText(savePath, jsonString);
-        Debug.Log("saved!");
+        Debug.Log("saved! at " + savePath);
     }
 
     public void Load(int index = 0)
@@ -146,13 +154,21 @@ public class SaveSystem : MonoBehaviour
         }
 
         loadIndex = index;
+        Debug.Log(loadIndex);
 
         // reloads scene to refresh everything
         SceneManager.LoadScene("Scenes/FishingScene");
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        LoadData();
     }
 
     public void LoadData()
     {
+        Debug.Log("after reload, load index is " + loadIndex.ToString());
         string savePath = saveFolder + "/save" + loadIndex.ToString() + ".json";
         Debug.Log(savePath);
         if (!File.Exists(savePath))
@@ -166,10 +182,11 @@ public class SaveSystem : MonoBehaviour
         Debug.Log(jsonString);
         Debug.Log(saveData);
 
-        // implement actually loading in the data here
-        FishDataManager.instance.LoadData(saveData);
-        RodStatManager.instance.LoadData(saveData);
-        TrapStatManager.instance.LoadData(saveData);
+        currentSaveData = saveData;
+
+        FishDataManager.instance.LoadData(currentSaveData);
+        RodStatManager.instance.LoadData(currentSaveData);
+        TrapStatManager.instance.LoadData(currentSaveData);
 
         foreach (var upgrade in upgradeList)
         {
