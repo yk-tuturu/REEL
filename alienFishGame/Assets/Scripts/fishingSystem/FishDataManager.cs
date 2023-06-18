@@ -28,6 +28,8 @@ public class FishDataManager : MonoBehaviour
 
         fishes = fishList.fishes;
         fishTypeCount = fishes.Length;
+
+        Debug.Log("fish data setup complete");
     }
  
     void Start()

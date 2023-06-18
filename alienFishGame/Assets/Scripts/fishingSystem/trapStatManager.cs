@@ -23,7 +23,7 @@ public class TrapStatManager : MonoBehaviour
         {
             instance = this;
         }
-        else 
+        else if (instance != this)
         {
             Destroy(gameObject);
         }  

@@ -37,7 +37,11 @@ public class SaveSystem : MonoBehaviour
 
         DontDestroyOnLoad(this.gameObject);
         Debug.Log("awake function called");
+    }
 
+    void Start()
+    {
+        Debug.Log("start function called");
         // change this to persistent file path later
         saveFolder = Application.dataPath + "/Saves";
         Debug.Log(saveFolder);
@@ -47,12 +51,6 @@ public class SaveSystem : MonoBehaviour
         }
 
         LoadData();
-    }
-
-    void Start()
-    {
-        Debug.Log("start function called");
-        // implement actually loading in the data here
         
     }
 
@@ -77,6 +75,9 @@ public class SaveSystem : MonoBehaviour
             totalCaught.Add(fish.totalCaught);
             totalSold.Add(fish.totalSold);
         }
+
+        upgradeList = FindObjectsByType<Upgrades>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+        fishingRodList = FindObjectsByType<FishingPole>(FindObjectsInactive.Include, FindObjectsSortMode.None);
 
         List<Upgrade> upgradeLevels = new List<Upgrade>();
         foreach (var upgrade in upgradeList)
@@ -189,9 +190,12 @@ public class SaveSystem : MonoBehaviour
         RodStatManager.instance.LoadData(currentSaveData);
         TrapStatManager.instance.LoadData(currentSaveData);
 
+        Debug.Log("fish data loaded successfully");
+
         foreach (var upgrade in upgradeList)
         {
             upgrade.LoadData(saveData);
+            Debug.Log("loading upgrade");
         }
 
         bool extraRod = false;
@@ -207,6 +211,8 @@ public class SaveSystem : MonoBehaviour
                 extraTrap = true;
             }
         }
+
+        Debug.Log("checked if rods and traps unlocked");
 
         foreach (var rod in fishingRodList)
         {
@@ -252,6 +258,10 @@ public class SaveSystem : MonoBehaviour
                     rod.currentCapacity = rod.fishCaught.Count;
                 }
             }
+
+            Debug.Log("loaded data for rod" + rod.index.ToString());
         }
+
+        Debug.Log("load completed!");
     }
 }
