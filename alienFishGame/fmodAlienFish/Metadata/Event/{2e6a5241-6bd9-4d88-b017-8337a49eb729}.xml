@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{2e6a5241-6bd9-4d88-b017-8337a49eb729}">
 		<property name="name">
-			<value>Save confirm</value>
+			<value>Save file chosen</value>
 		</property>
 		<property name="outputFormat">
 			<value>1</value>
@@ -59,7 +59,7 @@
 			<destination>{839038de-fa44-4564-97c0-7b613a4b1431}</destination>
 		</relationship>
 		<relationship name="output">
-			<destination>{61b855b7-c7b9-47fa-a596-71d7b38a0443}</destination>
+			<destination>{fa03937e-8ce1-4de6-a06f-b96adb45239b}</destination>
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{ec13f611-2cf0-4cba-8778-46290f5f97ee}" />
