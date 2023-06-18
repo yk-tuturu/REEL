@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="ParameterPreset" id="{056ff3c0-d2f6-4dc5-af0f-7ffc6c91d540}">
 		<property name="name">
-			<value>Location</value>
+			<value>Fade</value>
 		</property>
 		<relationship name="folder">
 			<destination>{2205353c-0254-442d-8bde-81d690e9309b}</destination>
@@ -12,18 +12,14 @@
 		</relationship>
 	</object>
 	<object class="GameParameter" id="{e5dd1e99-e7a7-4365-923b-211edc1cba95}">
-		<property name="parameterType">
-			<value>2</value>
-		</property>
-		<property name="maximum">
-			<value>2</value>
-		</property>
-		<property name="enumerationLabels">
-			<value>Normal</value>
-			<value>Shop</value>
-		</property>
 		<property name="initialValue">
-			<value>0</value>
+			<value>1</value>
+		</property>
+		<property name="seekSpeed">
+			<value>0.79999995231628418</value>
+		</property>
+		<property name="isExposedRecursively">
+			<value>false</value>
 		</property>
 	</object>
 </objects>

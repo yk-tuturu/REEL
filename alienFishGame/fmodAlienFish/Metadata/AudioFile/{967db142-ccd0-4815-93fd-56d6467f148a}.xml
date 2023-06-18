@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="AudioFile" id="{967db142-ccd0-4815-93fd-56d6467f148a}">
 		<property name="assetPath">
-			<value>Character/chr_fishcatch_small_2.wav</value>
+			<value>Character/chr_fishcatch_large_2.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>44.0999985</value>
