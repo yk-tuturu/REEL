@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{59e159cc-27e4-45da-9c73-b7d94d1a4de6}">
 		<property name="name">
-			<value>Fish catch small</value>
+			<value>Fish catch large</value>
 		</property>
 		<property name="outputFormat">
 			<value>1</value>
@@ -56,7 +56,7 @@
 			<destination>{7f943adc-0dd3-4e50-96ec-72b7865c823b}</destination>
 		</relationship>
 		<relationship name="output">
-			<destination>{61b855b7-c7b9-47fa-a596-71d7b38a0443}</destination>
+			<destination>{fa03937e-8ce1-4de6-a06f-b96adb45239b}</destination>
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{f45fb062-7770-4de5-b79a-aebbd7842cea}">
@@ -255,7 +255,7 @@
 	<object class="MixerBusPanner" id="{785cc544-a797-4e30-8b80-7f7a14f0a704}" />
 	<object class="MixerSend" id="{82242d4c-c11c-476d-9ba8-a395d2306a24}">
 		<property name="level">
-			<value>-14</value>
+			<value>-24</value>
 		</property>
 		<property name="inputFormat">
 			<value>1</value>

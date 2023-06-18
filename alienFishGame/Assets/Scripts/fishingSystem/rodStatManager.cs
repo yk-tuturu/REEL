@@ -28,10 +28,10 @@ public class RodStatManager : MonoBehaviour
         {
             instance = this;
         }
-        else 
+        else if (instance != this)
         {
             Destroy(gameObject);
-        }  
+        }
     }
 
     // to whoever looks at this section of the code, i am sorry for breaking all fundamental laws of programming

@@ -45,4 +45,14 @@ public class infoPanel : MonoBehaviour
             Instantiate(star, new Vector3(0,0,0), Quaternion.identity, starContainer);
         }
     }
+
+    public void Close()
+    {
+        LeanTween.scale(gameObject, new Vector3(0,0,0), 0.15f).setOnComplete(OnComplete);
+    }
+
+    void OnComplete()
+    {
+        gameObject.SetActive(false);
+    }
 }
