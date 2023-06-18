@@ -15,7 +15,7 @@ public class debug : MonoBehaviour
             string d = System.Environment.GetFolderPath(
               System.Environment.SpecialFolder.Desktop) + "/UnityDebug";
             System.IO.Directory.CreateDirectory(d);
-            filename = d + "/heres the fucking log.txt";
+            filename = d + "/log.txt";
         }
  
         try {

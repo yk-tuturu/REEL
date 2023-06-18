@@ -44,7 +44,7 @@ public class captureMenu : MonoBehaviour
             FishingPole rod = child.GetComponent<FishingPole>();
             rod.menuOpen = false;
         }
-        gameObject.SetActive(false);
+        LeanTween.scale(gameObject, new Vector3(0,0,0), 0.15f).setOnComplete(OnComplete);
     }
 
     public void ClaimFish()
@@ -62,6 +62,11 @@ public class captureMenu : MonoBehaviour
         }
 
         ClearChildren();
+    }
+
+    void OnComplete()
+    {
+        gameObject.SetActive(false);
     }
 
 }

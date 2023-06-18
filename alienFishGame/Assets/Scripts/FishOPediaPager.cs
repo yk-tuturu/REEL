@@ -6,6 +6,7 @@ public class FishOPediaPager : MonoBehaviour
 {
     public GameObject page1;
     public GameObject page2;
+    public GameObject activePage;
     // Start is called before the first frame update
     void Start()
     {

@@ -2,6 +2,7 @@ Shader "Unlit/grayOut"
 {
 	Properties {
 		_Colour ("Totally Rad Colour!", Color) = (1, 1, 1, 1)
+		_MainTex("Main Texture", 2D) = "white" {}
 	}
 
 	SubShader {
