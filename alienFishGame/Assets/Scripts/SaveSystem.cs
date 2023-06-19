@@ -37,20 +37,22 @@ public class SaveSystem : MonoBehaviour
 
         DontDestroyOnLoad(this.gameObject);
         Debug.Log("awake function called");
-    }
 
-    void Start()
-    {
-        Debug.Log("start function called");
-        // change this to persistent file path later
         saveFolder = Application.dataPath + "/Saves";
         Debug.Log(saveFolder);
         if (!Directory.Exists(saveFolder))
         {
             Directory.CreateDirectory(saveFolder);
         }
+    }
 
-        LoadData();
+    void Start()
+    {
+        Debug.Log("start function called");
+        // change this to persistent file path later
+        
+
+        // LoadData();
         
     }
 
@@ -67,6 +69,11 @@ public class SaveSystem : MonoBehaviour
 
     public void Save(int index = 0)
     {
+        if (!SceneManager.GetSceneByName("FishingScene").isLoaded)
+        {
+            return;
+        }
+
         List<int> totalCaught = new List<int>();
         List<int> totalSold = new List<int>();
         for (int i = 0; i < FishDataManager.instance.fishTypeCount; i++)
