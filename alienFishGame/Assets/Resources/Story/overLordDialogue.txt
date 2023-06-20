@@ -1,6 +1,37 @@
 ?????
-insert dialogue
+Who dares lay a finger on my underlings??
+shake
+
+The shadowy figure you had just fished up from the depths snarled, clearly displeased at this predicament.
+
 Overlord
-testing 1 2 3 4 5 6 7 8 9 10
+They call me the ruler of the sea, the protector of all fish--
+
 Overlord
-bye
+And yet you dare tarnish these sacred waters with your filthy hands. You've taken thousands of my underlings away from their homeland, and yet you feel no remorse. 
+
+
+You didn't understand. You were just trying to make a living. Just as people needed food on their tables and money to pay their bills, so did you. 
+
+You
+I was just doing my job. 
+
+Overlord
+Flimsy excuses. How would you feel if I devoured everything on this dock right now? Would you remain unconcerned? And yet this is nothing compared to the casualties you have caused to my kingdom. 
+
+
+The hypothetical situation it described didn't seem too good. Where else would you fish if this entire dock was gone?
+
+You
+Calm down... maybe we can talk this out?
+ 
+Overlord
+This injustice must be punished. All of you shall suffer the wrath of the fish!!
+
+
+There didn't seem to be any room for argument. All you could do was to prepare what equipment you have and attack.
+
+
+
+onIntroComplete
+ 

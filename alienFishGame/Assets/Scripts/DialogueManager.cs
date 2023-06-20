@@ -9,11 +9,13 @@ public class DialogueManager : MonoBehaviour
 {
     public Queue<Dialogue> sentences = new Queue<Dialogue>();
     public bool currentlyInDialogue = false;
+    public bool currentlyTyping = false;
+
+    public Dialogue currentLine;
 
     public TextMeshProUGUI speakerText;
     public TextMeshProUGUI speechText;
-    public GameObject canvas;
-    public UnityEvent onDialogueComplete;
+    public GameObject dialoguePanel;
 
     void Awake()
     {
@@ -22,18 +24,26 @@ public class DialogueManager : MonoBehaviour
 
     void Update()
     {
-        if (currentlyInDialogue && Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            DisplayNextSentence();
+            if (currentlyTyping)
+            {
+                StopAllCoroutines();
+                speechText.text = currentLine.sentence;
+                currentlyTyping = false;
+            }
+            else
+            {
+                DisplayNextSentence();
+            }
         }
     }
 
-    public void StartDialogue(List<Dialogue> story, UnityEvent onComplete)
+    public void StartDialogue(List<Dialogue> story)
     {
         sentences.Clear();
-        canvas.SetActive(true);
+        dialoguePanel.SetActive(true);
         currentlyInDialogue = true;
-        onDialogueComplete = onComplete;
 
         foreach (Dialogue dialogue in story) {
             sentences.Enqueue(dialogue);    
@@ -52,8 +62,13 @@ public class DialogueManager : MonoBehaviour
 
         Debug.Log("displaying next sentence");
         Debug.Log(sentences.Count.ToString());
-        Dialogue currentLine = sentences.Dequeue();
+        currentLine = sentences.Dequeue();
         speakerText.text = currentLine.speaker;
+
+        foreach (string command in currentLine.commands)
+        {
+            commandManager.instance.Execute(command);
+        }
 
         currentlyInDialogue = true;
         StopAllCoroutines();
@@ -64,12 +79,13 @@ public class DialogueManager : MonoBehaviour
     {
         // play text audio here
         speechText.text = "";
+        currentlyTyping = true;
         foreach(char letter in sentence.ToCharArray())
         {
             speechText.text += letter;
             yield return null;
         }
-
+        currentlyTyping = false;
     }
 
     public void EndDialogue()
@@ -79,10 +95,5 @@ public class DialogueManager : MonoBehaviour
 
         speakerText.text = "";
         speechText.text = "";
-        
-        if (onDialogueComplete != null)
-        {
-            onDialogueComplete.Invoke();
-        }
     }
 }

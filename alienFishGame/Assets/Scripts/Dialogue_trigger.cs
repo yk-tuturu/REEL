@@ -11,7 +11,6 @@ public class Dialogue_trigger : MonoBehaviour
     public List<Dialogue> story = new List<Dialogue>();
     public DialogueManager dialogueManager;
     public UnityEvent onIntroComplete;
-    public UnityEvent onReleaseChosen;
     public UnityEvent onAttackLanded;
     public UnityEvent onAttackFinished;
 
@@ -26,25 +25,8 @@ public class Dialogue_trigger : MonoBehaviour
 
         // fix this later
         UnityEvent onComplete = new UnityEvent();
-        if (filename == "overLordDialogue")
-        {
-            onComplete = onIntroComplete;
-        }
 
-        else if (filename == "releaseEnding")
-        {
-            onComplete = onReleaseChosen;
-        }
-        else if (filename == "attackLanded")
-        {
-            onComplete = onAttackLanded;
-        }
-        else if (filename == "attackFinished")
-        {
-            onComplete = onAttackFinished;
-        }
-
-        dialogueManager.StartDialogue(story, onComplete);
+        dialogueManager.StartDialogue(story);
         Debug.Log("dialogueTriggered " + filename);
         story = new List<Dialogue>();
     }
@@ -66,6 +48,11 @@ public class Dialogue_trigger : MonoBehaviour
                 else if (counter == 2)
                 {
                     temp.sentence = s;
+                    
+                }
+                else if (counter == 3)
+                {
+                    temp.commands = s.Split(", ");
                     story.Add(temp);
                     temp = new Dialogue();
                     counter = 0;

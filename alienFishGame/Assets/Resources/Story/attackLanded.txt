@@ -1,2 +1,6 @@
 
-Overlord was hit by Fisherman's attack! It was super effective!
+Overlord was hit by Fisherman's attack! A high-pitched howl rose from the depths of its slimy throat.
+
+
+
+onAttackLanded
