@@ -17,6 +17,9 @@ public class mainMenuManager : MonoBehaviour
     public List<TextMeshProUGUI> saveDates = new List<TextMeshProUGUI>();
     public List<Image> saveImages = new List<Image>();
     public Sprite bgImage;
+
+    // why
+    public GameObject panelToBeShrunk;
     // Start is called before the first frame update
     void Start()
     {
@@ -56,6 +59,7 @@ public class mainMenuManager : MonoBehaviour
         {
             // asks player to overwrite save files
             confirmPanel.SetActive(true);
+            LeanTween.scale(confirmPanel, new Vector3(1,1,1), 0.15f);
         }
         else
         {
@@ -67,6 +71,7 @@ public class mainMenuManager : MonoBehaviour
     {
         FetchSaves();
         loadScreen.SetActive(true);
+        LeanTween.scale(loadScreen, new Vector3(1,1,1), 0.15f);
     }
 
     public void Exit()
@@ -89,7 +94,7 @@ public class mainMenuManager : MonoBehaviour
 
     public void CloseConfirmMenu()
     {
-        confirmPanel.SetActive(false);
+        Shrink(confirmPanel);
     }
 
     public void FetchSaves()
@@ -122,7 +127,7 @@ public class mainMenuManager : MonoBehaviour
 
     public void CloseLoadMenu()
     {
-        loadScreen.SetActive(false);
+        Shrink(loadScreen);
     }
 
     public void OnHoverEnter(GameObject item)
@@ -133,5 +138,16 @@ public class mainMenuManager : MonoBehaviour
     public void OnHoverExit(GameObject item)
     {
         LeanTween.scale(item, new Vector3(1,1,1), 0.15f);
+    }
+
+    void Shrink(GameObject panel)
+    {
+        panelToBeShrunk = panel;
+        LeanTween.scale(panel, new Vector3(0,0,0), 0.15f).setOnComplete(OnComplete);
+    }
+
+    void OnComplete()
+    {
+        panelToBeShrunk.SetActive(false);
     }
 }

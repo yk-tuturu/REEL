@@ -2280,6 +2280,7 @@ MonoBehaviour:
   - {fileID: 175798601}
   - {fileID: 870078021}
   bgImage: {fileID: 0}
+  panelToBeShrunk: {fileID: 0}
 --- !u!4 &1010718708
 Transform:
   m_ObjectHideFlags: 0
@@ -2322,7 +2323,7 @@ RectTransform:
   m_GameObject: {fileID: 1044371720}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1839414570}
@@ -2406,7 +2407,7 @@ RectTransform:
   m_GameObject: {fileID: 1045584542}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 590497696}
