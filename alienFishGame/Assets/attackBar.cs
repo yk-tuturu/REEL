@@ -42,14 +42,7 @@ public class attackBar : MonoBehaviour
         if (slider.value >= slider.maxValue)
         {
             attackHit = true;
-
-            var parameter = new Hashtable(){
-	        {"amount", new Vector3(22, 22, 22)},
-	        {"oncomplete", "OnComplete"},
-            {"oncompletetarget", this.gameObject},
-            {"time", 0.25f},
-            };
-            iTween.ShakePosition(attackPanel, parameter);
+            iTween.ShakePosition(attackPanel, iTween.Hash("amount", new Vector3(22, 22, 22), "oncomplete", "OnComplete", "oncompletetarget", this.gameObject, "time", 0.25f));
         }
     }
 
@@ -73,13 +66,7 @@ public class attackBar : MonoBehaviour
     public void AttackFailed()
     {
         attackHit = true;
-        var parameter = new Hashtable(){
-	        {"amount", new Vector3(22, 22, 22)},
-	        {"oncomplete", "OnCompleteFail"},
-            {"oncompletetarget", this.gameObject},
-            {"time", 0.25f},
-            };
-        iTween.ShakePosition(attackPanel, parameter);
+        iTween.ShakePosition(attackPanel, iTween.Hash("amount", new Vector3(22, 22, 22), "oncomplete", "OnCompleteFail", "oncompletetarget", this.gameObject, "time", 0.25f));
     }
 
     public void OnCompleteFail()
