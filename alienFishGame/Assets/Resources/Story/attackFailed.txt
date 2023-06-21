@@ -1,0 +1,9 @@
+
+Your attack bounced off the overlord's tough scales. It was ineffective!
+shake
+You
+(I need to try harder...!)
+ 
+
+
+onAttackLanded

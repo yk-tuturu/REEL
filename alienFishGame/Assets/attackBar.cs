@@ -11,7 +11,11 @@ public class attackBar : MonoBehaviour
     public float attackValue;
     public UnityEvent attackLanded;
     public UnityEvent attackFinished;
+    public UnityEvent attackFailed;
     public int attackNumber = 0;
+    public GameObject attackPanel;
+
+    public bool attackHit = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +25,15 @@ public class attackBar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        slider.value -= decreaseValue * Time.deltaTime;
+        if (!attackHit)
+        {
+            slider.value -= decreaseValue * Time.deltaTime;
+
+            if (slider.value <= 0)
+            {
+                AttackFailed();
+            }
+        }
     }
 
     public void Attack()
@@ -29,16 +41,51 @@ public class attackBar : MonoBehaviour
         slider.value += attackValue;
         if (slider.value >= slider.maxValue)
         {
-            slider.value = 0.5f;
-            attackNumber += 1;
-            if (attackNumber == 3)
-            {
-                attackFinished.Invoke();
-            }
-            else 
-            {
-                attackLanded.Invoke();
-            }
+            attackHit = true;
+
+            var parameter = new Hashtable(){
+	        {"amount", new Vector3(22, 22, 22)},
+	        {"oncomplete", "OnComplete"},
+            {"oncompletetarget", this.gameObject},
+            {"time", 0.25f},
+            };
+            iTween.ShakePosition(attackPanel, parameter);
         }
+    }
+
+    public void OnComplete()
+    {
+        Debug.Log("onComplete called");
+        slider.value = 0.5f;
+        attackNumber += 1;
+        if (attackNumber == 3)
+        {
+            attackFinished.Invoke();
+        }
+        else 
+        {
+            attackLanded.Invoke();
+        }
+
+        attackHit = false;
+    }
+
+    public void AttackFailed()
+    {
+        attackHit = true;
+        var parameter = new Hashtable(){
+	        {"amount", new Vector3(22, 22, 22)},
+	        {"oncomplete", "OnCompleteFail"},
+            {"oncompletetarget", this.gameObject},
+            {"time", 0.25f},
+            };
+        iTween.ShakePosition(attackPanel, parameter);
+    }
+
+    public void OnCompleteFail()
+    {
+        slider.value = 0.5f;
+        attackFailed.Invoke();
+        attackHit = false;
     }
 }

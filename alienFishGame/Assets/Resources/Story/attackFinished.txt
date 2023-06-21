@@ -1,6 +1,6 @@
 Overlord
 How....??! You cannot defeat me-- not like this--!!
-
+shake
 
 Armed with your fishing equipment, you have reduced the overlord down to a pitiful state. 
 
@@ -10,8 +10,14 @@ It seems like you have won. Maybe the gigantic fish would finally understand the
 Overlord
 You--pitiful--- human!!
 
+You
+(I wonder which one of us is more pitiful at this moment...)
 
-Now, what would you do with the fish overlord?
+
+The overlord continued to struggle in the net you've trapped him in, becoming more and more entangled. You were ready to land the finishing blow. 
+
+
+What do you do now?
 
 
 
