@@ -407,6 +407,125 @@ Grid:
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 0
   m_CellSwizzle: 0
+--- !u!1 &52313680
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 52313681}
+  - component: {fileID: 52313685}
+  - component: {fileID: 52313684}
+  - component: {fileID: 52313683}
+  - component: {fileID: 52313682}
+  m_Layer: 5
+  m_Name: Scroll
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &52313681
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 52313680}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 467424227}
+  m_Father: {fileID: 1135709889}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.00092506, y: -24.942}
+  m_SizeDelta: {x: 972.95, y: 294.8}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &52313682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 52313680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShowMaskGraphic: 1
+--- !u!114 &52313683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 52313680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.003921569}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Texture: {fileID: 0}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+--- !u!222 &52313684
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 52313680}
+  m_CullTransparentMesh: 1
+--- !u!114 &52313685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 52313680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1aa08ab6e0800fa44ae55d278d1423e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Content: {fileID: 467424227}
+  m_Horizontal: 0
+  m_Vertical: 1
+  m_MovementType: 2
+  m_Elasticity: 0.1
+  m_Inertia: 1
+  m_DecelerationRate: 0.135
+  m_ScrollSensitivity: 25
+  m_Viewport: {fileID: 52313681}
+  m_HorizontalScrollbar: {fileID: 0}
+  m_VerticalScrollbar: {fileID: 0}
+  m_HorizontalScrollbarVisibility: 0
+  m_VerticalScrollbarVisibility: 0
+  m_HorizontalScrollbarSpacing: 0
+  m_VerticalScrollbarSpacing: 0
+  m_OnValueChanged:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &57857191
 GameObject:
   m_ObjectHideFlags: 0
@@ -1802,7 +1921,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 496.2043, y: -93.639305}
+  m_AnchoredPosition: {x: 496.2043, y: -101.12238}
   m_SizeDelta: {x: 133.527, y: 200.963}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &303682461
@@ -1820,7 +1939,7 @@ MonoBehaviour:
   price: 500
   upgradeType: trap
   upgradeDescription: Improves trap efficiency
-  nextLevel: 2
+  currentLevel: 1
   maxLevel: 3
   purchaseMenu: {fileID: 2019131443}
 --- !u!114 &303682462
@@ -3324,6 +3443,7 @@ GameObject:
   - component: {fileID: 467424230}
   - component: {fileID: 467424229}
   - component: {fileID: 467424228}
+  - component: {fileID: 467424231}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -3338,18 +3458,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 467424226}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1135709889}
+  m_Father: {fileID: 52313681}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.058000002, y: 0.13122398}
-  m_AnchorMax: {x: 0.94900006, y: 0.76666534}
-  m_AnchoredPosition: {x: -1.9190063, y: 3.6029968}
-  m_SizeDelta: {x: -7.5269775, y: -2.2460022}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.09438658, y: -0.000045776367}
+  m_SizeDelta: {x: 859.473, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &467424228
 MonoBehaviour:
@@ -3368,7 +3488,7 @@ MonoBehaviour:
     m_Right: 0
     m_Top: 0
     m_Bottom: 0
-  m_ChildAlignment: 0
+  m_ChildAlignment: 1
   m_StartCorner: 0
   m_StartAxis: 0
   m_CellSize: {x: 135, y: 135}
@@ -3413,6 +3533,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 467424226}
   m_CullTransparentMesh: 1
+--- !u!114 &467424231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 467424226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalFit: 0
+  m_VerticalFit: 1
 --- !u!224 &470692390 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6749756576491119119, guid: 0272ee0654138e64a9ea783b5657180e, type: 3}
@@ -5519,7 +5653,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 639.35126, y: -93.639305}
+  m_AnchoredPosition: {x: 639.35126, y: -101.12238}
   m_SizeDelta: {x: 133.527, y: 200.963}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &712519002
@@ -5537,7 +5671,7 @@ MonoBehaviour:
   price: 750
   upgradeType: bait
   upgradeDescription: Improves bait. Maybe you'll catch something different?
-  nextLevel: 2
+  currentLevel: 1
   maxLevel: 3
   purchaseMenu: {fileID: 2019131443}
 --- !u!114 &712519003
@@ -6071,7 +6205,7 @@ RectTransform:
   m_GameObject: {fileID: 738747202}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 251562344}
@@ -6649,7 +6783,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 66.7635, y: -93.639305}
+  m_AnchoredPosition: {x: 66.7635, y: -101.12238}
   m_SizeDelta: {x: 133.527, y: 200.963}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &790111038
@@ -6705,7 +6839,7 @@ MonoBehaviour:
   price: 500
   upgradeType: extra rod
   upgradeDescription: Adds 1 rod to dock
-  nextLevel: 2
+  currentLevel: 1
   maxLevel: 2
   purchaseMenu: {fileID: 2019131443}
 --- !u!114 &790111041
@@ -7165,6 +7299,8 @@ MonoBehaviour:
   baitLevel: 1
   uncommonProb: 0.05
   rareProb: 0
+  levelJson: {fileID: 4900000, guid: 1cfb03bc3bf603248b5a2845b8fc7768, type: 3}
+  levels: []
 --- !u!4 &888381410
 Transform:
   m_ObjectHideFlags: 0
@@ -7801,6 +7937,8 @@ MonoBehaviour:
   baitLevel: 1
   uncommonProb: 0.05
   rareProb: 0
+  levelJson: {fileID: 4900000, guid: 1cfb03bc3bf603248b5a2845b8fc7768, type: 3}
+  levels: []
 --- !u!4 &924837890
 Transform:
   m_ObjectHideFlags: 0
@@ -8921,7 +9059,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1133911424}
-  - {fileID: 467424227}
+  - {fileID: 52313681}
   - {fileID: 976372747}
   m_Father: {fileID: 2127090226}
   m_RootOrder: -1
@@ -8983,6 +9121,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sellFishIcon: {fileID: 5344601620840401231, guid: 45087d2c8b6f68e48b18fd24a075e1f0, type: 3}
   sellPanel: {fileID: 467424227}
+  blankIcon: {fileID: 5344601620840401231, guid: 02a6b8237a9cb3844a3e44bc7b56d3f6, type: 3}
 --- !u!1 &1155646485
 GameObject:
   m_ObjectHideFlags: 0
@@ -9020,7 +9159,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 209.91043, y: -93.639305}
+  m_AnchoredPosition: {x: 209.91043, y: -101.12238}
   m_SizeDelta: {x: 133.527, y: 200.963}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1155646487
@@ -9076,7 +9215,7 @@ MonoBehaviour:
   price: 500
   upgradeType: extra trap
   upgradeDescription: Adds 1 trap to dock
-  nextLevel: 2
+  currentLevel: 1
   maxLevel: 2
   purchaseMenu: {fileID: 2019131443}
 --- !u!114 &1155646490
@@ -12842,7 +12981,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 353.05737, y: -93.639305}
+  m_AnchoredPosition: {x: 353.05737, y: -101.12238}
   m_SizeDelta: {x: 133.527, y: 200.963}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1561434264
@@ -12860,7 +12999,7 @@ MonoBehaviour:
   price: 500
   upgradeType: rod
   upgradeDescription: Improves rod efficiency
-  nextLevel: 2
+  currentLevel: 1
   maxLevel: 3
   purchaseMenu: {fileID: 2019131443}
 --- !u!114 &1561434265
@@ -18049,7 +18188,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 782.4982, y: -93.639305}
+  m_AnchoredPosition: {x: 782.4982, y: -101.12238}
   m_SizeDelta: {x: 133.527, y: 200.963}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2002638481
@@ -18067,7 +18206,7 @@ MonoBehaviour:
   price: 1000
   upgradeType: sales
   upgradeDescription: Better marketing, better profits
-  nextLevel: 2
+  currentLevel: 1
   maxLevel: 3
   purchaseMenu: {fileID: 2019131443}
 --- !u!114 &2002638482

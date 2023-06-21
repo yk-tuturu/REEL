@@ -51,8 +51,8 @@ public class SaveSystem : MonoBehaviour
         Debug.Log("start function called");
         // change this to persistent file path later
         
-
-        // LoadData();
+        // remove this line later!!!!
+        LoadData();
         
     }
 
@@ -91,7 +91,7 @@ public class SaveSystem : MonoBehaviour
         {
             Upgrade temp = new Upgrade() {
                 type = upgrade.upgradeType,
-                currentLevel = upgrade.nextLevel - 1,
+                currentLevel = upgrade.currentLevel
             };
             upgradeLevels.Add(temp);
         }

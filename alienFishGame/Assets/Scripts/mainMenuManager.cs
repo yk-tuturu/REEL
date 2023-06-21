@@ -81,13 +81,13 @@ public class mainMenuManager : MonoBehaviour
 
     public void OverwriteSaves()
     {
-        string path = SaveSystem.instance.saveFolder;
+        // string path = SaveSystem.instance.saveFolder;
  
-        DirectoryInfo directory = new DirectoryInfo(path);
+        // DirectoryInfo directory = new DirectoryInfo(path);
  
-        foreach (FileInfo file in directory.GetFiles()) {
-            file.Delete();
-        }
+        // foreach (FileInfo file in directory.GetFiles()) {
+        //     file.Delete();
+        // }
 
         SceneManager.LoadScene("Scenes/FishingScene");
     }

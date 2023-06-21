@@ -8,7 +8,8 @@ public class Upgrades : MonoBehaviour
     public int price;
     public string upgradeType;
     public string upgradeDescription;
-    public int nextLevel = 2;
+    // remove this later
+    public int currentLevel = 1;
     public int maxLevel;
 
     public purchaseMenu purchaseMenu;
@@ -37,13 +38,13 @@ public class Upgrades : MonoBehaviour
         {
             if (upgrade.type == upgradeType)
             {
-                nextLevel = upgrade.currentLevel + 1;
+                currentLevel = upgrade.currentLevel;
             }
         }
 
-        price = price * (int)(Mathf.Pow(2, nextLevel - 2));
+        price = price * (int)(Mathf.Pow(2, currentLevel - 1));
 
-        if (nextLevel <= maxLevel)
+        if (currentLevel < maxLevel)
         {
             this.enabled = true;
             GetComponent<EventTrigger>().enabled = true;

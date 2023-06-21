@@ -52,16 +52,16 @@ public class purchaseMenu : MonoBehaviour
         // maybe will change this to a switch statement later
         if (type == "rod")
         {
-            RodStatManager.instance.UpgradeRod();
+            RodStatManager.instance.SetRodLevel(RodStatManager.instance.rodLevel + 1);
         }
         else if (type == "bait")
         {
-            RodStatManager.instance.UpgradeBait();
-            TrapStatManager.instance.UpgradeBait();
+            RodStatManager.instance.SetBaitLevel(RodStatManager.instance.baitLevel + 1);
+            TrapStatManager.instance.SetBaitLevel(TrapStatManager.instance.baitLevel + 1);
         }
         else if (type == "trap")
         {
-            TrapStatManager.instance.UpgradeTrap();
+            TrapStatManager.instance.SetTrapLevel(TrapStatManager.instance.trapLevel + 1);
         }
         else if (type == "sales")
         {
@@ -113,8 +113,8 @@ public class purchaseMenu : MonoBehaviour
                 FishDataManager.instance.SpendMoney(price);
                 upgrade.price = price * 2;
 
-                upgrade.nextLevel += 1;
-                if (upgrade.nextLevel > upgrade.maxLevel)
+                upgrade.currentLevel += 1;
+                if (upgrade.currentLevel >= upgrade.maxLevel)
                 {
                     upgrade.enabled = false;
                     child.GetComponent<EventTrigger>().enabled = false;

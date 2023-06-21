@@ -6,6 +6,7 @@ public class SellMenu : MonoBehaviour
 {
     public GameObject sellFishIcon;
     public Transform sellPanel;
+    public GameObject blankIcon;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +27,7 @@ public class SellMenu : MonoBehaviour
             GameObject.Destroy(child.gameObject);
         }
 
+        var iconCounter = 0;
         for (var i = 0; i < 5; i++)
         {
             Fish fish = FishDataManager.instance.GetFish(i);
@@ -34,7 +36,13 @@ public class SellMenu : MonoBehaviour
                 GameObject icon = Instantiate(sellFishIcon, new Vector3(0, 0, 0), Quaternion.identity, sellPanel);
                 icon.GetComponent<SellFishIcon>().index = i;
                 icon.GetComponent<SellFishIcon>().UpdateFishDisplayed();
+                iconCounter += 1;
             }
+        }
+
+        for (var i = 0; i < 12 - iconCounter; i++)
+        {
+            GameObject icon = Instantiate(blankIcon, new Vector3(0, 0, 0), Quaternion.identity, sellPanel);
         }
     }
 

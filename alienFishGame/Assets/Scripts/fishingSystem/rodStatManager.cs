@@ -4,16 +4,19 @@ using UnityEngine;
 
 public class RodStatManager : MonoBehaviour
 {
-    public float minTime = 5.5f;
-    public float maxTime = 11f;
-    public int maxCapacity = 3;
+    public float minTime;
+    public float maxTime ;
+    public int maxCapacity;
 
     public int rodLevel = 1;
     public int trapLevel = 1;
     public int baitLevel = 1;
 
-    public float uncommonProb = 0.05f;
-    public float rareProb = 0f;
+    public float uncommonProb;
+    public float rareProb;
+
+    public TextAsset levelJson;
+    public Level[] levels;
 
     // maybe turn this into a struct in the future. contains index for level and the dict
     // public Dictionary<string, float> level1Stats = new Dictionary<string, float>() {"minTime" = 4f, "maxTime" = 10f, "uncommonProb" = 0.05f, "rareProb" = 0f};
@@ -32,6 +35,14 @@ public class RodStatManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        Levels levelList = JsonUtility.FromJson<Levels>(levelJson.text);
+        levels = levelList.levels;
+
+        Debug.Log(levels[0]);
+
+        SetRodLevel(1);
+        SetBaitLevel(1);
     }
 
     // to whoever looks at this section of the code, i am sorry for breaking all fundamental laws of programming
@@ -68,22 +79,38 @@ public class RodStatManager : MonoBehaviour
         }
     }
 
+    public void SetRodLevel(int level)
+    {
+        rodLevel = level;
+        var levelStats = levels[level - 1];
+        minTime = levelStats.minTime;
+        maxTime = levelStats.maxTime;
+        maxCapacity = levelStats.maxCapacity;
+    }
+
+    public void SetBaitLevel(int level)
+    {
+        baitLevel = level;
+        var levelStats = levels[level - 1];
+        uncommonProb = levelStats.uncommonProb;
+        rareProb = levelStats.rareProb;
+    }
+
     public void LoadData(SaveData saveData)
     {
         foreach(var upgrade in saveData.upgradeLevels)
         {
             if (upgrade.type == "rod")
             {
-                rodLevel = upgrade.currentLevel - 1;
+                rodLevel = upgrade.currentLevel;
+                SetRodLevel(rodLevel);
             }
 
             if (upgrade.type == "bait")
             {
-                baitLevel = upgrade.currentLevel - 1;
+                baitLevel = upgrade.currentLevel;
+                SetBaitLevel(baitLevel);
             }
         }
-
-        UpgradeRod();
-        UpgradeBait();
     }
 }
