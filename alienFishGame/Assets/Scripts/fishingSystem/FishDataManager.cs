@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class FishDataManager : MonoBehaviour
 {
@@ -12,6 +13,11 @@ public class FishDataManager : MonoBehaviour
     public int fishTypeCount = 5;
     public float money;
     public float salesMultiplier = 1.7f;
+    public int allFishCaught = 0;
+    public int rareCaught = 0;
+    public bool bossAvailable = false;
+
+    public UnityEvent unlockBoss;
 
     void Awake()
     {
@@ -34,13 +40,16 @@ public class FishDataManager : MonoBehaviour
  
     void Start()
     {
-        // reads fish data from json file
         
     }
 
     void Update()
     {
-    
+        if (rareCaught >= 1 && allFishCaught >= 500 && !bossAvailable)
+        {
+            unlockBoss.Invoke();
+            bossAvailable = true;
+        }
     }
 
     // utility function, probably
@@ -54,6 +63,13 @@ public class FishDataManager : MonoBehaviour
         foreach(var index in fishCaught)
         {
             fishes[index].totalCaught += 1;
+            allFishCaught += 1;
+
+            // checks if it's a first time catching a new rare fish
+            if (fishes[index].rarity == 3 && fishes[index].totalCaught == 1)
+            {
+                rareCaught += 1;
+            }
         }
     }
 
@@ -93,6 +109,12 @@ public class FishDataManager : MonoBehaviour
             fishes[i].totalSold = saveData.totalSold[i];
             fishes[i].price = Mathf.Round(fishes[i].price * (Mathf.Pow(salesMultiplier, salesLevel -1)));
             Debug.Log("fish " +  fishes[i].index.ToString() + " has data " + fishes[i].totalCaught.ToString() + " and " + fishes[i].totalSold.ToString());
+
+            allFishCaught += fishes[i].totalCaught;
+            if (fishes[i].rarity == 3 && fishes[i].totalCaught > 0)
+            {
+                rareCaught += 1;
+            }
         }
 
         money = saveData.money;

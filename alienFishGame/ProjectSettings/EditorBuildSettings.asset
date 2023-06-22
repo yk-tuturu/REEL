@@ -6,9 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/loadingScene.unity
+    guid: fb874ba4762c316498857ce24967d152
+  - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 7117f4cdd538b3347ae5dc777040a1ca
   - enabled: 1
     path: Assets/Scenes/FishingScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/fishOverlord.unity
+    guid: be64490b24b769d4384c7b3bbefa0c9e
   m_configObjects: {}

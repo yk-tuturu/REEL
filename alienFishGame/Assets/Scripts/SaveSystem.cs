@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 using UnityEngine.SceneManagement;
+using System.Runtime.InteropServices;
+
 
 // have to use this to circumvent the fact that WE CANT FUCKING PUT A DICT IN A JSON FILE
 [System.Serializable]
@@ -11,9 +13,14 @@ public struct Upgrade{
     public int currentLevel;
 }
 
+
+
 public class SaveSystem : MonoBehaviour
 {
-    public string saveFolder = Application.dataPath + "/Saves";
+    // [DllImport("__Internal")]
+    // private static extern void JS_FileSystem_Sync();
+
+    public string saveFolder;
     public int loadIndex;
     public Upgrades[] upgradeList;
     public FishingPole[] fishingRodList;
@@ -38,11 +45,12 @@ public class SaveSystem : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
         Debug.Log("awake function called");
 
-        saveFolder = Application.dataPath + "/Saves";
+        saveFolder = "idbfs/alienFishSaves69420727";
+
         Debug.Log(saveFolder);
         if (!Directory.Exists(saveFolder))
         {
-            Directory.CreateDirectory(saveFolder);
+            Directory.CreateDirectory("idbfs/alienFishSaves69420727");
         }
     }
 
@@ -52,7 +60,7 @@ public class SaveSystem : MonoBehaviour
         // change this to persistent file path later
         
         // remove this line later!!!!
-        LoadData();
+        // LoadData();
         
     }
 
@@ -147,6 +155,9 @@ public class SaveSystem : MonoBehaviour
         string savePath = saveFolder + "/save" + index.ToString() + ".json";
         File.WriteAllText(savePath, jsonString);
         Debug.Log("saved! at " + savePath);
+
+        // JS_FileSystem_Sync();
+        // Debug.Log("files synced!");
     }
 
     public void Load(int index = 0)

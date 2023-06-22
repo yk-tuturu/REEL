@@ -39,12 +39,12 @@ MonoBehaviour:
   Path: fmodAlienFish/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638223607172925834
+  lastModified: 638230505198468980
   FileSizes:
   - Name: Desktop
-    Value: 2699104
+    Value: 27884288
   Exists: 1
---- !u!114 &-7991857405360586647
+--- !u!114 &-6880688709899036290
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -54,14 +54,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Character/Fishopedia open
+  m_Name: event:/UI/Save file chosen
   m_EditorClassIdentifier: 
-  Path: event:/Character/Fishopedia open
+  Path: event:/UI/Save file chosen
   Guid:
-    Data1: -1443072807
-    Data2: 1299663149
-    Data3: 608370611
-    Data4: -1189838560
+    Data1: 778719809
+    Data2: 1300786137
+    Data3: 931338160
+    Data4: 699899556
   Banks:
   - {fileID: -8118221467567189640}
   IsStream: 0
@@ -85,10 +85,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Character/Fish catch small
   Guid:
-    Data1: 1507940812
-    Data2: 1171924964
-    Data3: -642288740
-    Data4: -431154611
+    Data1: 511818313
+    Data2: 1296885140
+    Data3: -1547712882
+    Data4: -314924451
   Banks:
   - {fileID: -8118221467567189640}
   IsStream: 0
@@ -181,6 +181,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-4163580258112930883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character/Shop opens
+  m_EditorClassIdentifier: 
+  Path: event:/Character/Shop opens
+  Guid:
+    Data1: -831551656
+    Data2: 1258057995
+    Data3: 259493049
+    Data4: -410368790
+  Banks:
+  - {fileID: -8118221467567189640}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-3387030775533605024
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -223,12 +250,12 @@ MonoBehaviour:
   Path: fmodAlienFish/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638223607172966301
+  lastModified: 638230505198506680
   FileSizes:
   - Name: Desktop
-    Value: 1782
+    Value: 2540
   Exists: 1
---- !u!114 &-2756631534142539029
+--- !u!114 &-3191173858633887730
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -238,23 +265,104 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/Test music
+  m_Name: event:/Character/Rod
   m_EditorClassIdentifier: 
-  Path: event:/Music/Test music
+  Path: event:/Character/Rod
   Guid:
-    Data1: 1104069839
-    Data2: 1165287756
-    Data3: 1160979354
-    Data4: -227590951
+    Data1: 1424164611
+    Data2: 1080231082
+    Data3: -1790923618
+    Data4: -1880406132
   Banks:
   - {fileID: -8118221467567189640}
-  IsStream: 1
+  IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 133674
+  Length: 0
+--- !u!114 &-3166307151164025296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/UI/Sold
+  m_EditorClassIdentifier: 
+  Path: event:/UI/Sold
+  Guid:
+    Data1: 1978581742
+    Data2: 1321397961
+    Data3: 889052606
+    Data4: 1169405624
+  Banks:
+  - {fileID: -8118221467567189640}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-2549731148405526472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character/Pedia pageturn left
+  m_EditorClassIdentifier: 
+  Path: event:/Character/Pedia pageturn left
+  Guid:
+    Data1: 657548200
+    Data2: 1334847266
+    Data3: -1998100086
+    Data4: 272743730
+  Banks:
+  - {fileID: -8118221467567189640}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-1905554221285957718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/UI/Saved game
+  m_EditorClassIdentifier: 
+  Path: event:/UI/Saved game
+  Guid:
+    Data1: -2023752395
+    Data2: 1225110762
+    Data3: -1568111177
+    Data4: -1451663046
+  Banks:
+  - {fileID: -8118221467567189640}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-410959640472231788
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -269,10 +377,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Character/Trap
   Guid:
-    Data1: 2042701862
-    Data2: 1165600271
-    Data3: 513698697
-    Data4: -2137153421
+    Data1: -1846896226
+    Data2: 1318666688
+    Data3: 1299539124
+    Data4: 1338628451
   Banks:
   - {fileID: -8118221467567189640}
   IsStream: 0
@@ -301,8 +409,6 @@ MonoBehaviour:
   - {fileID: 7695217187316634723}
   - {fileID: -410959640472231788}
   - {fileID: 2837425660391645959}
-  - {fileID: 1965525198499960719}
-  - {fileID: 5404070820504285651}
   - {fileID: -5975453946619344588}
   - {fileID: 592396098381931842}
   - {fileID: 4914131676444590533}
@@ -314,17 +420,83 @@ MonoBehaviour:
   - {fileID: 2792810153067709568}
   - {fileID: -4439892428553396220}
   - {fileID: 6465863383616861279}
-  - {fileID: 8069115200587324811}
-  - {fileID: 2734329080421118200}
-  - {fileID: -2756631534142539029}
-  - {fileID: -7991857405360586647}
+  - {fileID: -3191173858633887730}
+  - {fileID: -1905554221285957718}
+  - {fileID: -6880688709899036290}
+  - {fileID: 2778113274541523234}
+  - {fileID: -4163580258112930883}
+  - {fileID: 2839588361860976224}
+  - {fileID: -2549731148405526472}
+  - {fileID: 1033829446036471975}
+  - {fileID: 1363873127229499928}
+  - {fileID: 145647700118078914}
+  - {fileID: 475352563155808602}
+  - {fileID: 5432774588312889639}
+  - {fileID: 8898501736328170364}
+  - {fileID: 9080460135557666807}
+  - {fileID: 1361400561122300136}
+  - {fileID: -3166307151164025296}
   EditorParameters: []
   MasterBanks:
   - {fileID: -8118221467567189640}
   StringsBanks:
   - {fileID: -3322401045978192045}
-  cacheTime: 638223607172966301
+  cacheTime: 638230505198506680
   cacheVersion: 131603
+--- !u!114 &145647700118078914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character/Pedia pageturn right
+  m_EditorClassIdentifier: 
+  Path: event:/Character/Pedia pageturn right
+  Guid:
+    Data1: -513916484
+    Data2: 1128328098
+    Data3: 1570585533
+    Data4: -1268532301
+  Banks:
+  - {fileID: -8118221467567189640}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &475352563155808602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: snapshot:/Displays
+  m_EditorClassIdentifier: 
+  Path: snapshot:/Displays
+  Guid:
+    Data1: 389438916
+    Data2: 1285470258
+    Data3: -1742627446
+    Data4: 1359386305
+  Banks:
+  - {fileID: -8118221467567189640}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &592396098381931842
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -352,7 +524,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &1965525198499960719
+--- !u!114 &1033829446036471975
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -362,24 +534,48 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/UI/Save confirm
+  m_Name: event:/Music/Shop
   m_EditorClassIdentifier: 
-  Path: event:/UI/Save confirm
+  Path: event:/Music/Shop
   Guid:
-    Data1: 778719809
-    Data2: 1300786137
-    Data3: 931338160
-    Data4: 699899556
+    Data1: 1454647724
+    Data2: 1163435160
+    Data3: -1088333175
+    Data4: -1520977467
   Banks:
   - {fileID: -8118221467567189640}
-  IsStream: 0
+  IsStream: 1
   Is3D: 0
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
---- !u!114 &2734329080421118200
+  Length: 56441
+--- !u!114 &1039667037190149394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Main loop/End
+  m_EditorClassIdentifier: 
+  Name: End
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 650918959
+    data2: 2047985415
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &1361400561122300136
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -389,18 +585,99 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Character/Fishopedia pageturn
+  m_Name: snapshot:/Mute sfx
   m_EditorClassIdentifier: 
-  Path: event:/Character/Fishopedia pageturn
+  Path: snapshot:/Mute sfx
   Guid:
-    Data1: 657548200
-    Data2: 1334847266
-    Data3: -1998100086
-    Data4: 272743730
+    Data1: -1002424613
+    Data2: 1093786751
+    Data3: 152814980
+    Data4: -621247180
   Banks:
   - {fileID: -8118221467567189640}
   IsStream: 0
   Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &1363873127229499928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: snapshot:/Pause
+  m_EditorClassIdentifier: 
+  Path: snapshot:/Pause
+  Guid:
+    Data1: 566353079
+    Data2: 1078120750
+    Data3: -149429316
+    Data4: 834599231
+  Banks:
+  - {fileID: -8118221467567189640}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &2672192216822849081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Fish catch large/Catch rarity
+  m_EditorClassIdentifier: 
+  Name: Catch rarity
+  StudioPath: 
+  Min: 0
+  Max: 2
+  Default: 0
+  ID:
+    data1: 1127871054
+    data2: 1738141927
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - Common
+  - Uncommon
+  - Rare
+  Exists: 1
+--- !u!114 &2778113274541523234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Creatures/Cyborg fish 1
+  m_EditorClassIdentifier: 
+  Path: event:/Creatures/Cyborg fish 1
+  Guid:
+    Data1: -422786477
+    Data2: 1101779077
+    Data3: -1916531305
+    Data4: -1693412557
+  Banks:
+  - {fileID: -8118221467567189640}
+  IsStream: 0
+  Is3D: 1
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
@@ -433,6 +710,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &2798434396022365465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Main loop/Fade
+  m_EditorClassIdentifier: 
+  Name: Fade
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 2940318387
+    data2: 1198795979
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &2837425660391645959
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -459,6 +760,33 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
+  Length: 0
+--- !u!114 &2839588361860976224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: snapshot:/Mute music
+  m_EditorClassIdentifier: 
+  Path: snapshot:/Mute music
+  Guid:
+    Data1: -2026083465
+    Data2: 1203821776
+    Data3: 1843111594
+    Data4: 1122481355
+  Banks:
+  - {fileID: -8118221467567189640}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
   Length: 0
 --- !u!114 &3694487649142777179
 MonoBehaviour:
@@ -487,6 +815,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &3870966462206146524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Main loop/Music progression
+  m_EditorClassIdentifier: 
+  Name: Music progression
+  StudioPath: 
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 2978565684
+    data2: 1008503969
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &4914131676444590533
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -514,7 +866,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &5404070820504285651
+--- !u!114 &5432774588312889639
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -524,23 +876,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Creatures/Fish 1
+  m_Name: event:/Character/Fish catch large
   m_EditorClassIdentifier: 
-  Path: event:/Creatures/Fish 1
+  Path: event:/Character/Fish catch large
   Guid:
-    Data1: -422786477
-    Data2: 1101779077
-    Data3: -1916531305
-    Data4: -1693412557
+    Data1: 1507940812
+    Data2: 1171924964
+    Data3: -642288740
+    Data4: -431154611
   Banks:
   - {fileID: -8118221467567189640}
   IsStream: 0
-  Is3D: 1
+  Is3D: 0
   IsOneShot: 1
-  Parameters: []
+  Parameters:
+  - {fileID: 2672192216822849081}
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 1000
 --- !u!114 &6465863383616861279
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -649,7 +1002,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &8069115200587324811
+--- !u!114 &8898501736328170364
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -659,14 +1012,44 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Character/Shop exit
+  m_Name: event:/Music/Main loop
   m_EditorClassIdentifier: 
-  Path: event:/Character/Shop exit
+  Path: event:/Music/Main loop
   Guid:
-    Data1: -831551656
-    Data2: 1258057995
-    Data3: 259493049
-    Data4: -410368790
+    Data1: 1104069839
+    Data2: 1165287756
+    Data3: 1160979354
+    Data4: -227590951
+  Banks:
+  - {fileID: -8118221467567189640}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 1039667037190149394}
+  - {fileID: 2798434396022365465}
+  - {fileID: 3870966462206146524}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 703189
+--- !u!114 &9080460135557666807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character/Pedia open
+  m_EditorClassIdentifier: 
+  Path: event:/Character/Pedia open
+  Guid:
+    Data1: -1443072807
+    Data2: 1299663149
+    Data3: 608370611
+    Data4: -1189838560
   Banks:
   - {fileID: -8118221467567189640}
   IsStream: 0

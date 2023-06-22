@@ -7,6 +7,7 @@ using TMPro;
 public class captureMenu : MonoBehaviour
 {
     public GameObject fishIcon;
+    public GameObject blankIcon;
     public GameObject scrollPanel;
     public GameObject fishingrods;
 
@@ -19,6 +20,7 @@ public class captureMenu : MonoBehaviour
         ClearChildren();
 
         fishList = fishCaught;
+        var counter = 0;
         foreach (var index in fishCaught)
         {
             GameObject listItem = Instantiate(fishIcon, new Vector3(0, 0, 0), Quaternion.identity, scrollPanel.transform);
@@ -26,6 +28,13 @@ public class captureMenu : MonoBehaviour
             icon.index = index;
             icon.UpdateFishDisplayed();
             icon.starContainer.gameObject.SetActive(true);
+            counter += 1;
+        }
+
+        // hacky fix for the scrollbar 
+        for (int i = 0; i < 9 - counter; i++)
+        {
+            Instantiate(blankIcon, new Vector3(0, 0, 0), Quaternion.identity, scrollPanel.transform);
         }
     }
 

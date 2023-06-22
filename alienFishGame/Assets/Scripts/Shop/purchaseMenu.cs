@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using UnityEngine.Events;
 
 public class purchaseMenu : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class purchaseMenu : MonoBehaviour
 
     public Transform fishingRodParent;
     public Transform upgradeParent;
+
+    public UnityEvent bossTransition;
     // Start is called before the first frame update
     void Start()
     {
@@ -118,6 +121,11 @@ public class purchaseMenu : MonoBehaviour
                 {
                     upgrade.enabled = false;
                     child.GetComponent<EventTrigger>().enabled = false;
+                }
+
+                if (type == "bait" && upgrade.currentLevel == 4)
+                {
+                    bossTransition.Invoke();
                 }
             }
         }

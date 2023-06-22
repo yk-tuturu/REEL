@@ -6,7 +6,7 @@ using TMPro;
 
 public class infoPanel : MonoBehaviour
 {
-    public TextMeshProUGUI name;
+    public TextMeshProUGUI fishName;
     public TextMeshProUGUI weight;
     public TextMeshProUGUI length;
     public TextMeshProUGUI description;
@@ -27,13 +27,24 @@ public class infoPanel : MonoBehaviour
 
     public void UpdateInfo(int index)
     {
+        Debug.Log("getting fish at index" + index.ToString());
         Fish fish = FishDataManager.instance.GetFish(index);
-        name.text = fish.name;
+        Debug.Log("got fish, index not out of range");
+        fishName.text = fish.name;
         weight.text = "Weight: " + fish.weight;
         length.text = "Length: " + fish.length;
         description.text = fish.description;
+
+        Debug.Log("text set, now loading sprite");
         
-        fishImage.sprite = Resources.Load<Sprite>("fishIcons/" + "fish" + index.ToString());
+        var sprite = Resources.Load<Sprite>("fishIcons/" + "fish" + index.ToString());
+
+        if (sprite != null)
+        {
+            fishImage.sprite = sprite;
+        }
+
+        Debug.Log("sprite loaded");
 
         foreach (Transform child in starContainer)
         {
@@ -44,6 +55,8 @@ public class infoPanel : MonoBehaviour
         {
             Instantiate(star, new Vector3(0,0,0), Quaternion.identity, starContainer);
         }
+
+        Debug.Log("stars instantiated, setup complete");
     }
 
     public void Close()

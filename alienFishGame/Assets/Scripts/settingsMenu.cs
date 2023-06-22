@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using System.IO;
+using UnityEngine.SceneManagement;
 
 public class settingsMenu : MonoBehaviour
 {
@@ -18,7 +19,7 @@ public class settingsMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        bgImage = Resources.Load<Sprite>("placeholderSprites/background");
+        bgImage = Resources.Load<Sprite>("finalSprites/main_starting");
 
         // fetch previous saves
         FetchSaves();
@@ -33,7 +34,7 @@ public class settingsMenu : MonoBehaviour
 
     public void QuitGame()
     {
-        Application.Quit();
+        SceneManager.LoadScene("Scenes/MainMenu");
     }
 
     public void Save(int index)

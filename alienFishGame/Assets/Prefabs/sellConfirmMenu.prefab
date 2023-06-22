@@ -66,9 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '1
-
-'
+  m_text: 1
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -203,7 +201,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Price:'
+  m_text: 16
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -939,7 +937,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &7812829155184638823
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1021,16 +1019,17 @@ MonoBehaviour:
   numberText: {fileID: 6561803291777299863}
   fish:
     index: 0
-    name: 
-    rarity: 0
-    price: 0
-    description: 
-    weight: 
-    length: 
+    name: commonfish0
+    rarity: 1
+    price: 27
+    description: placeholder description
+    weight: 15g - 23g
+    length: 2ft - 5ft
     totalCaught: 0
     totalSold: 0
   numberToSell: 1
   fishIcon: {fileID: 2873664414062981609}
+  sellMenu: {fileID: 0}
 --- !u!1 &6956382462773296750
 GameObject:
   m_ObjectHideFlags: 0
@@ -1296,9 +1295,49 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7812829155184638823}
     m_Modifications:
+    - target: {fileID: 3046761073051314723, guid: 0272ee0654138e64a9ea783b5657180e, type: 3}
+      propertyPath: image
+      value: 
+      objectReference: {fileID: 4672148542698452484}
+    - target: {fileID: 3046761073051314723, guid: 0272ee0654138e64a9ea783b5657180e, type: 3}
+      propertyPath: sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 88fc32574f5171f4c82a8ddf1ab3c842, type: 3}
+    - target: {fileID: 3046761073051314723, guid: 0272ee0654138e64a9ea783b5657180e, type: 3}
+      propertyPath: fish.name
+      value: commonfish0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3046761073051314723, guid: 0272ee0654138e64a9ea783b5657180e, type: 3}
+      propertyPath: fish.price
+      value: 27
+      objectReference: {fileID: 0}
+    - target: {fileID: 3046761073051314723, guid: 0272ee0654138e64a9ea783b5657180e, type: 3}
+      propertyPath: fish.length
+      value: 2ft - 5ft
+      objectReference: {fileID: 0}
+    - target: {fileID: 3046761073051314723, guid: 0272ee0654138e64a9ea783b5657180e, type: 3}
+      propertyPath: fish.rarity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3046761073051314723, guid: 0272ee0654138e64a9ea783b5657180e, type: 3}
+      propertyPath: fish.weight
+      value: 15g - 23g
+      objectReference: {fileID: 0}
+    - target: {fileID: 3046761073051314723, guid: 0272ee0654138e64a9ea783b5657180e, type: 3}
+      propertyPath: fish.description
+      value: placeholder description
+      objectReference: {fileID: 0}
     - target: {fileID: 5214003376819968407, guid: 0272ee0654138e64a9ea783b5657180e, type: 3}
       propertyPath: m_Name
       value: fishIcon
+      objectReference: {fileID: 0}
+    - target: {fileID: 5584399606952226254, guid: 0272ee0654138e64a9ea783b5657180e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 88fc32574f5171f4c82a8ddf1ab3c842, type: 3}
+    - target: {fileID: 6130405679817479073, guid: 0272ee0654138e64a9ea783b5657180e, type: 3}
+      propertyPath: m_text
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6749756576491119119, guid: 0272ee0654138e64a9ea783b5657180e, type: 3}
       propertyPath: m_Pivot.x
@@ -1398,6 +1437,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1e61996e1ae2c9446ade09d631b09600, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4672148542698452484 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5584399606952226254, guid: 0272ee0654138e64a9ea783b5657180e, type: 3}
+  m_PrefabInstance: {fileID: 984330649103080394}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!224 &5765443541359507909 stripped

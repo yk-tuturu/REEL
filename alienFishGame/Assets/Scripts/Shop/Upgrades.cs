@@ -6,6 +6,7 @@ using UnityEngine.EventSystems;
 public class Upgrades : MonoBehaviour
 {
     public int price;
+    public int basePrice;
     public string upgradeType;
     public string upgradeDescription;
     // remove this later
@@ -13,6 +14,21 @@ public class Upgrades : MonoBehaviour
     public int maxLevel;
 
     public purchaseMenu purchaseMenu;
+
+    void Awake()
+    {
+        Debug.Log("on reload, " + upgradeType + " price is" + price.ToString());
+    }
+
+    // checks for the ultimate bait upgrade
+    void Update()
+    {
+        if (upgradeType == "bait" && maxLevel == 4 && currentLevel == 3)
+        {
+            upgradeDescription = "A mysterious aura emanates from the bait. You wonder what wondrous fish you might fish up with this.";
+            price = 3000;
+        }
+    }
     
     public void OnHoverEnter()
     {
@@ -42,7 +58,8 @@ public class Upgrades : MonoBehaviour
             }
         }
 
-        price = price * (int)(Mathf.Pow(2, currentLevel - 1));
+        price = basePrice * (int)(Mathf.Pow(2, currentLevel - 1));
+        Debug.Log("on load data, " + upgradeType + "price is " + price.ToString());
 
         if (currentLevel < maxLevel)
         {
@@ -54,5 +71,12 @@ public class Upgrades : MonoBehaviour
             this.enabled = false;
             GetComponent<EventTrigger>().enabled = false;
         }
+    }
+
+    public void UnlockBoss()
+    {
+        maxLevel = 4;
+        this.enabled = true;
+        gameObject.GetComponent<EventTrigger>().enabled = true;
     }
 }

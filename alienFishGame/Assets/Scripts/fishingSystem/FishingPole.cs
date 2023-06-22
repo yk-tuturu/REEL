@@ -34,6 +34,8 @@ public class FishingPole : MonoBehaviour
     public Transform labelSpawner;
 
     private float timer;
+
+    private Vector3 ogScale;
     
     // dictionary, key is the fishIndex and value is how many caught
     public List<int> fishCaught = new List<int>();
@@ -103,11 +105,16 @@ public class FishingPole : MonoBehaviour
     void OnMouseEnter()
     {
         LeanTween.scale(panel, new Vector3(1.2f, 1.2f, 1.2f), 0.1f);
+
+        ogScale = transform.localScale;
+        var endScale = transform.localScale * 1.1f; 
+        LeanTween.scale(gameObject, endScale, 0.1f);
     }
 
     void OnMouseExit()
     {
         LeanTween.scale(panel, new Vector3(1f, 1f, 1f), 0.1f);
+        LeanTween.scale(gameObject, ogScale, 0.1f);
     }
 
     void OnMouseOver()

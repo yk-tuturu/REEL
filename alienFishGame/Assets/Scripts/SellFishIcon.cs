@@ -39,7 +39,7 @@ public class SellFishIcon : MonoBehaviour
         }
 
         // very skull emoji line of code
-        sellConfirmMenu = GameObject.Find("sellConfirmMenu");
+        sellConfirmMenu = transform.parent.parent.parent.parent.Find("sellConfirmMenu").gameObject;
     }
 
     public void OnHoverEnter()

@@ -18,6 +18,8 @@ public class mainMenuManager : MonoBehaviour
     public List<Image> saveImages = new List<Image>();
     public Sprite bgImage;
 
+    public menuTransition menuTransition;
+
     // why
     public GameObject panelToBeShrunk;
     // Start is called before the first frame update
@@ -63,7 +65,7 @@ public class mainMenuManager : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadScene("Scenes/FishingScene");
+            menuTransition.StartNewGame();
         }
     }
 
@@ -89,7 +91,7 @@ public class mainMenuManager : MonoBehaviour
         //     file.Delete();
         // }
 
-        SceneManager.LoadScene("Scenes/FishingScene");
+        menuTransition.StartNewGame();
     }
 
     public void CloseConfirmMenu()
@@ -122,7 +124,7 @@ public class mainMenuManager : MonoBehaviour
     public void Load(int index)
     {
         Debug.Log("loading file at index " + index.ToString());
-        SaveSystem.instance.Load(index);
+        menuTransition.LoadGame(index);
     }
 
     public void CloseLoadMenu()
