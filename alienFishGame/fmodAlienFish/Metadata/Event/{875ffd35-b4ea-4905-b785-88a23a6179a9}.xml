@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{875ffd35-b4ea-4905-b785-88a23a6179a9}">
 		<property name="name">
-			<value>Saved game</value>
+			<value>Pause menu file saved</value>
 		</property>
 		<property name="outputFormat">
 			<value>1</value>
@@ -122,6 +122,9 @@
 	</object>
 	<object class="MixerBusPanner" id="{77af9686-1372-4535-a142-b6caf284dda0}" />
 	<object class="SingleSound" id="{bbbfa747-dd24-4e67-8113-db8d03ca18d9}">
+		<property name="volume">
+			<value>-3</value>
+		</property>
 		<relationship name="audioFile">
 			<destination>{dc246ddc-8ff9-4bab-9d1d-de5a9514f464}</destination>
 		</relationship>
