@@ -48,7 +48,6 @@ public class attackBar : MonoBehaviour
 
     public void OnComplete()
     {
-        Debug.Log("onComplete called");
         slider.value = 0.5f;
         attackNumber += 1;
         if (attackNumber == 3)

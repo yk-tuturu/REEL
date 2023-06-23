@@ -28,7 +28,7 @@ public class SellMenu : MonoBehaviour
         }
 
         var iconCounter = 0;
-        for (var i = 0; i < 5; i++)
+        for (var i = 0; i < FishDataManager.instance.fishTypeCount; i++)
         {
             Fish fish = FishDataManager.instance.GetFish(i);
             if (fish.totalCaught - fish.totalSold > 0)
@@ -40,6 +40,7 @@ public class SellMenu : MonoBehaviour
             }
         }
 
+        // hacky fix for the scrollbar
         for (var i = 0; i < 12 - iconCounter; i++)
         {
             GameObject icon = Instantiate(blankIcon, new Vector3(0, 0, 0), Quaternion.identity, sellPanel);

@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+// this is for the +1 labels
 public class tween : MonoBehaviour
 {
     TextMeshProUGUI text;

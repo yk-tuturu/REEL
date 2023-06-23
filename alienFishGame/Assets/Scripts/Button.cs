@@ -5,6 +5,8 @@ using UnityEngine.UI;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
+// this isnt just the fishopedia button, it's used for all clickable items in the main scene
+// just forgot to rename it
 public class fishOPediaButton : MonoBehaviour
 {
     public Canvas canvas;
@@ -28,6 +30,7 @@ public class fishOPediaButton : MonoBehaviour
 
     void OnMouseEnter()
     {
+        maxScale = originalScale * multiplier;
         LeanTween.scale(gameObject, maxScale, 0.1f);
     }
 

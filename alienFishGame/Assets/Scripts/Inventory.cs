@@ -22,7 +22,9 @@ public class Inventory : MonoBehaviour
     public void OpenInventory()
     {
         gameObject.SetActive(true);
-        LeanTween.scale(transform.GetChild(0).gameObject, new Vector3(1, 1, 1), 0.2f);
+        var mainPanel = transform.GetChild(0);
+        mainPanel.localScale = new Vector3(0, 0, 0);
+        LeanTween.scale(mainPanel.gameObject, new Vector3(1, 1, 1), 0.2f);
         
         // Destroy stuff from previous iterations
         foreach(Transform child in gridContainer)
@@ -32,7 +34,6 @@ public class Inventory : MonoBehaviour
 
         for (int i = 0 ; i < FishDataManager.instance.fishTypeCount; i++)
         {
-            Debug.Log("instantializing fish");
             Fish fish = FishDataManager.instance.GetFish(i);
             if (fish.totalCaught - fish.totalSold > 0)
             {

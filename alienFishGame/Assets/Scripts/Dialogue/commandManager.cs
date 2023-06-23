@@ -23,10 +23,7 @@ public class commandManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Z))
-        {
-            Execute("shake");
-        }
+
     }
 
     public void Execute(string commandName)

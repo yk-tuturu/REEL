@@ -54,8 +54,8 @@ public class SellFishIcon : MonoBehaviour
 
     public void OnClick()
     {
-        Debug.Log("clicked");
         sellConfirmMenu.SetActive(true);
+        sellConfirmMenu.transform.localScale = new Vector3(0, 0, 0);
         LeanTween.scale(sellConfirmMenu, new Vector3(1, 1, 1), 0.2f);
         sellConfirmMenu.GetComponent<SellConfirmMenu>().UpdateInfo(index);
     }

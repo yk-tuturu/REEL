@@ -94,6 +94,7 @@ public class FishIcon : MonoBehaviour
         if (infoPanel != null && fish.totalCaught > 0)
         {
             infoPanel.SetActive(true);
+            infoPanel.transform.localScale = new Vector3(0, 0, 0);
             LeanTween.scale(infoPanel, new Vector3(1, 1, 1), 0.2f);
             infoPanel.GetComponent<infoPanel>().UpdateInfo(index);
         }
@@ -102,7 +103,6 @@ public class FishIcon : MonoBehaviour
     public void OnExit()
     {
         LeanTween.scale(infoPanel, new Vector3(0, 0, 0), 0.2f).setOnComplete(OnTweenComplete);
-        
     }
 
     void OnTweenComplete()

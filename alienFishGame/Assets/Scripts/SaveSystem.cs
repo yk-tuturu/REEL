@@ -171,7 +171,6 @@ public class SaveSystem : MonoBehaviour
         }
 
         loadIndex = index;
-        Debug.Log(loadIndex);
 
         // reloads scene to refresh everything
         SceneManager.LoadScene("Scenes/FishingScene");
@@ -185,7 +184,6 @@ public class SaveSystem : MonoBehaviour
 
     public void LoadData()
     {
-        Debug.Log("after reload, load index is " + loadIndex.ToString());
         string savePath = saveFolder + "/save" + loadIndex.ToString() + ".json";
         Debug.Log(savePath);
         if (!File.Exists(savePath))
@@ -208,12 +206,9 @@ public class SaveSystem : MonoBehaviour
         RodStatManager.instance.LoadData(currentSaveData);
         TrapStatManager.instance.LoadData(currentSaveData);
 
-        Debug.Log("fish data loaded successfully");
-
         foreach (var upgrade in upgradeList)
         {
             upgrade.LoadData(saveData);
-            Debug.Log("loading upgrade");
         }
 
         bool extraRod = false;
@@ -229,8 +224,6 @@ public class SaveSystem : MonoBehaviour
                 extraTrap = true;
             }
         }
-
-        Debug.Log("checked if rods and traps unlocked");
 
         foreach (var rod in fishingRodList)
         {
@@ -276,8 +269,6 @@ public class SaveSystem : MonoBehaviour
                     rod.currentCapacity = rod.fishCaught.Count;
                 }
             }
-
-            Debug.Log("loaded data for rod" + rod.index.ToString());
         }
 
         Debug.Log("load completed!");

@@ -11,7 +11,7 @@ public class captureMenu : MonoBehaviour
     public GameObject scrollPanel;
     public GameObject fishingrods;
 
-    // may not need this variable anymore, but just in case
+    
     public List<int> fishList;
 
     public void UpdateInfo(List<int> fishCaught)
@@ -20,7 +20,6 @@ public class captureMenu : MonoBehaviour
         ClearChildren();
 
         fishList = fishCaught;
-        var counter = 0;
         foreach (var index in fishCaught)
         {
             GameObject listItem = Instantiate(fishIcon, new Vector3(0, 0, 0), Quaternion.identity, scrollPanel.transform);
@@ -28,7 +27,6 @@ public class captureMenu : MonoBehaviour
             icon.index = index;
             icon.UpdateFishDisplayed();
             icon.starContainer.gameObject.SetActive(true);
-            counter += 1;
         }
 
         // hacky fix for the scrollbar 

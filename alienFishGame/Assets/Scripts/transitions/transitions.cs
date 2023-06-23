@@ -32,7 +32,12 @@ public class transitions : MonoBehaviour
 
     IEnumerator transition()
     {
-        // GameObject.Find("ShopScreen").SetActive(false);
+        var shopScreen = GameObject.Find("ShopScreen");
+        if (shopScreen != null)
+        {
+            shopScreen.SetActive(false);
+        }
+        
         iTween.ShakePosition(gameCamera, new Vector3(20, 20, 20), 6f);
 
         yield return new WaitForSeconds(1f);
@@ -60,27 +65,6 @@ public class transitions : MonoBehaviour
         yield return new WaitForSeconds(1.1f);
 
         iTween.ValueTo(panel, iTween.Hash("from", 0f, "to", 1f, "time", 1.2f, "delay", 0.1f, "onupdate", "updateColor", "onupdatetarget", this.gameObject, "oncomplete", "changeScene", "oncompletetarget", this.gameObject));
-        // rect.localScale = new Vector3(0, 1, 1);
-        // iTween.ScaleTo(panel, iTween.Hash("x", 1f, "time", 1f, "delay", 0.3f));
-
-        // yield return new WaitForSeconds(1.1f);
-
-        // GameObject panel1 = Instantiate(panelPrefab, new Vector3(0, 0, 0), Quaternion.identity, this.transform);
-        // var rect1 = panel1.GetComponent<RectTransform>();
-        // rect1.anchoredPosition = new Vector3(0, 0, 0);
-        // rect1.localScale = new Vector3(0, 1, 1);
-        // iTween.ScaleTo(panel1, iTween.Hash("x", 1f, "time", 1f, "delay", 0.1f));
-
-        // yield return new WaitForSeconds(1.1f);
-
-        // GameObject panel2 = Instantiate(panelPrefab, new Vector3(0, 0, 0), Quaternion.identity, this.transform);
-        // finalRect = panel2;
-        // var rect2 = panel2.GetComponent<RectTransform>();
-        // rect2.anchoredPosition = new Vector3(0, 0, 0);
-        // rect2.localScale = new Vector3(0, 1, 1);
-        // iTween.ScaleTo(panel2, iTween.Hash("x", 1f, "time", 1f, "delay", 0.1f));
-
-        
     }
 
     public void updateColor(float val)

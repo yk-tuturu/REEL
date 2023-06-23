@@ -76,10 +76,10 @@ public class FishingPole : MonoBehaviour
                 AddFish(0, 3);
             }
         }
-
         panel_text.text = currentCapacity.ToString() + "/" + maxCapacity.ToString();
     }
 
+    // might need to change this to take in a list of fish afterwards
     void AddFish(int minIndex, int maxIndex)
     {
         int fishIndex = Random.Range(minIndex, maxIndex);
@@ -98,8 +98,6 @@ public class FishingPole : MonoBehaviour
         GameObject temp = Instantiate(plusOneLabel, labelSpawner.position, Quaternion.identity, panel.transform.parent);
         temp.transform.localPosition = labelSpawner.localPosition;
         temp.GetComponent<tween>().tweenIn();
-
-        // updates the stat managers
     }
 
     void OnMouseEnter()

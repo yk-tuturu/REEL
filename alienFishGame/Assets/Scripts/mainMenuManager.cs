@@ -25,26 +25,7 @@ public class mainMenuManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        var counter = 0;
-        string savePath = SaveSystem.instance.saveFolder;
-        if (Directory.Exists(savePath))
-        {
-            string[] files = Directory.GetFiles(savePath);
-            foreach (var file in files)
-            {
-                if (file.Contains(".meta"))
-                {
-                    continue;
-                }
-                counter += 1;
-                Debug.Log("reading save file at " + file);
-            }
-        }
-
-        if (counter <= 0)
-        {
-            noSave = true;
-        }
+        FetchSaves();
     }
 
     // Update is called once per frame
@@ -59,6 +40,7 @@ public class mainMenuManager : MonoBehaviour
         {
             // asks player to overwrite save files
             confirmPanel.SetActive(true);
+            confirmPanel.transform.localScale = new Vector3(0, 0, 0);
             LeanTween.scale(confirmPanel, new Vector3(1,1,1), 0.15f);
         }
         else
@@ -69,9 +51,13 @@ public class mainMenuManager : MonoBehaviour
 
     public void LoadButton()
     {
-        FetchSaves();
-        loadScreen.SetActive(true);
-        LeanTween.scale(loadScreen, new Vector3(1,1,1), 0.15f);
+        if (!noSave)
+        {
+            FetchSaves();
+            loadScreen.SetActive(true);
+            loadScreen.transform.localScale = new Vector3(0, 0, 0);
+            LeanTween.scale(loadScreen, new Vector3(1,1,1), 0.15f);
+        }   
     }
 
     public void Exit()
@@ -81,14 +67,6 @@ public class mainMenuManager : MonoBehaviour
 
     public void OverwriteSaves()
     {
-        // string path = SaveSystem.instance.saveFolder;
- 
-        // DirectoryInfo directory = new DirectoryInfo(path);
- 
-        // foreach (FileInfo file in directory.GetFiles()) {
-        //     file.Delete();
-        // }
-
         menuTransition.StartNewGame();
     }
 
@@ -102,9 +80,12 @@ public class mainMenuManager : MonoBehaviour
         string savePath = SaveSystem.instance.saveFolder;
         if (Directory.Exists(savePath))
         {
+            var counter = 0;
+
             string[] files = Directory.GetFiles(savePath);
             foreach (var file in files)
             {
+                counter += 1;
                 if (file.Contains(".meta"))
                 {
                     continue;
@@ -115,6 +96,11 @@ public class mainMenuManager : MonoBehaviour
                 Debug.Log(jsonString);
                 saveDates[saveData.saveIndex].text = saveData.date;
                 saveImages[saveData.saveIndex].sprite = bgImage;
+            }
+            
+            if (counter <= 0)
+            {
+                noSave = true;
             }
         }
     }
@@ -130,16 +116,6 @@ public class mainMenuManager : MonoBehaviour
         Shrink(loadScreen);
     }
 
-    public void OnHoverEnter(GameObject item)
-    {
-        LeanTween.scale(item, new Vector3(0.9f, 0.9f, 0.9f), 0.15f);
-    }
-
-    public void OnHoverExit(GameObject item)
-    {
-        LeanTween.scale(item, new Vector3(1,1,1), 0.15f);
-    }
-
     void Shrink(GameObject panel)
     {
         panelToBeShrunk = panel;
@@ -149,5 +125,15 @@ public class mainMenuManager : MonoBehaviour
     void OnComplete()
     {
         panelToBeShrunk.SetActive(false);
+    }
+
+    public void OnHoverEnter(GameObject item)
+    {
+        LeanTween.scale(item, new Vector3(0.9f, 0.9f, 0.9f), 0.15f);
+    }
+
+    public void OnHoverExit(GameObject item)
+    {
+        LeanTween.scale(item, new Vector3(1,1,1), 0.15f);
     }
 }

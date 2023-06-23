@@ -25,17 +25,15 @@ public class FishDataManager : MonoBehaviour
         {
             instance = this;
         }
-        else 
+        else if (instance != null && instance != this)
         {
-            Destroy(gameObject);
+            Destroy(this.gameObject);
         } 
 
         Fishes fishList = JsonUtility.FromJson<Fishes>(jsonFile.text);
 
         fishes = fishList.fishes;
         fishTypeCount = fishes.Length;
-
-        Debug.Log("fish data setup complete");
     }
  
     void Start()
@@ -93,7 +91,14 @@ public class FishDataManager : MonoBehaviour
     }
 
     public void LoadData(SaveData saveData)
-    {   
+    { 
+        // refreshes fish data
+        Fishes fishList = JsonUtility.FromJson<Fishes>(jsonFile.text);
+
+        fishes = fishList.fishes;
+        fishTypeCount = fishes.Length;
+
+        // sales upgrade
         int salesLevel = 0;
         foreach (var upgrade in saveData.upgradeLevels)
         {
@@ -102,20 +107,24 @@ public class FishDataManager : MonoBehaviour
                 salesLevel = upgrade.currentLevel;
             }
         }
+
+        var total = 0;
+        var rareTotal = 0;
         for (int i = 0; i < fishTypeCount; i++)
         {
-            Debug.Log("on load, fishtypecount is " + fishTypeCount.ToString());
             fishes[i].totalCaught = saveData.totalCaught[i];
             fishes[i].totalSold = saveData.totalSold[i];
             fishes[i].price = Mathf.Round(fishes[i].price * (Mathf.Pow(salesMultiplier, salesLevel -1)));
-            Debug.Log("fish " +  fishes[i].index.ToString() + " has data " + fishes[i].totalCaught.ToString() + " and " + fishes[i].totalSold.ToString());
 
-            allFishCaught += fishes[i].totalCaught;
+            total += fishes[i].totalCaught;
             if (fishes[i].rarity == 3 && fishes[i].totalCaught > 0)
             {
-                rareCaught += 1;
+                rareTotal += 1;
             }
         }
+
+        allFishCaught = total;
+        rareCaught = rareTotal;
 
         money = saveData.money;
 

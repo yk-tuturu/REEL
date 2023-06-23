@@ -51,7 +51,7 @@ public class purchaseMenu : MonoBehaviour
             return;
         }
         
-        // I am aware of how yandev-style this is but pls bear with me
+        // I am aware of how horrible this is but pls bear with me
         // unfortunately i cant think of any better way to do this
         // maybe will change this to a switch statement later
         if (type == "rod")
@@ -108,6 +108,7 @@ public class purchaseMenu : MonoBehaviour
             rod.fetchStats();
         }
 
+        // finds the correct upgrade instance and updates its data
         foreach(Transform child in upgradeParent)
         {
             Upgrades upgrade = child.GetComponent<Upgrades>();
@@ -118,11 +119,13 @@ public class purchaseMenu : MonoBehaviour
                 upgrade.price = price * upgrade.multiplier;
 
                 upgrade.currentLevel += 1;
+
+                // if max level reached
                 if (upgrade.currentLevel >= upgrade.maxLevel)
                 {
                     upgrade.enabled = false;
                     child.GetComponent<EventTrigger>().enabled = false;
-                    Instantiate(soldOverlay, upgrade.transform.position, Quaternion.identity, child);
+                    upgrade.soldOverlay.SetActive(true);
                 }
 
                 if (type == "bait" && upgrade.currentLevel == 4)

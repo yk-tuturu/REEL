@@ -16,20 +16,31 @@ public class settingsMenu : MonoBehaviour
 
     public Sprite bgImage;
 
+    public GameObject mainPanel;
+
     // Start is called before the first frame update
     void Start()
     {
-        bgImage = Resources.Load<Sprite>("finalSprites/main_starting");
-
         // fetch previous saves
         FetchSaves();
 
     }
 
+    public void OpenMenu()
+    {
+        gameObject.SetActive(true);
+        LeanTween.scale(mainPanel, new Vector3(1, 1, 1), 0.15f);
+        FetchSaves();
+    }
+
     public void CloseMenu()
     {
-        gameObject.SetActive(false);
-        
+        LeanTween.scale(mainPanel, new Vector3(0, 0, 0), 0.15f).setOnComplete(onComplete);
+    }
+
+    void onComplete()
+    {
+        gameObject.SetActive(false); 
     }
 
     public void QuitGame()

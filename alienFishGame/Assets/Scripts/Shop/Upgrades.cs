@@ -13,12 +13,12 @@ public class Upgrades : MonoBehaviour
     // remove this later
     public int currentLevel = 1;
     public int maxLevel;
+    public GameObject soldOverlay;
 
     public purchaseMenu purchaseMenu;
 
     void Awake()
     {
-        Debug.Log("on reload, " + upgradeType + " price is" + price.ToString());
     }
 
     // checks for the ultimate bait upgrade
@@ -43,6 +43,7 @@ public class Upgrades : MonoBehaviour
 
     public void OnClick()
     {
+        purchaseMenu.transform.localScale = new Vector3(0, 0, 0);
         purchaseMenu.gameObject.SetActive(true);
         LeanTween.scale(purchaseMenu.gameObject, new Vector3(1, 1, 1), 0.15f);
 
@@ -69,8 +70,8 @@ public class Upgrades : MonoBehaviour
         }
         else
         {
-            this.enabled = false;
             GetComponent<EventTrigger>().enabled = false;
+            soldOverlay.SetActive(true);
         }
     }
 
