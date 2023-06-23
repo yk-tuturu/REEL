@@ -7,6 +7,11 @@ public class Inventory : MonoBehaviour
 {
     public Transform gridContainer;
     public GameObject fishIcon;
+
+    // Audio
+    public FMODUnity.EventReference uiInventoryOpenEvent;
+    public FMODUnity.EventReference uiInventoryCloseEvent;
+
     // Start is called before the first frame update 
     void Start()
     {
@@ -25,6 +30,8 @@ public class Inventory : MonoBehaviour
         var mainPanel = transform.GetChild(0);
         mainPanel.localScale = new Vector3(0, 0, 0);
         LeanTween.scale(mainPanel.gameObject, new Vector3(1, 1, 1), 0.2f);
+
+        FMODUnity.RuntimeManager.PlayOneShot(uiInventoryOpenEvent, transform.position);
         
         // Destroy stuff from previous iterations
         foreach(Transform child in gridContainer)
@@ -50,6 +57,7 @@ public class Inventory : MonoBehaviour
     public void CloseInventory()
     {
         LeanTween.scale(transform.GetChild(0).gameObject, new Vector3(0, 0, 0), 0.2f).setOnComplete(OnComplete);
+        FMODUnity.RuntimeManager.PlayOneShot(uiInventoryCloseEvent, transform.position);
     }
 
     void OnComplete()

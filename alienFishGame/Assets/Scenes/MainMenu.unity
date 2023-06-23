@@ -133,7 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 48659964}
   - component: {fileID: 48659963}
-  - component: {fileID: 48659962}
+  - component: {fileID: 48659965}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -141,14 +141,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &48659962
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 48659961}
-  m_Enabled: 1
 --- !u!20 &48659963
 Camera:
   m_ObjectHideFlags: 0
@@ -215,6 +207,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &48659965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 48659961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attenuationObject: {fileID: 0}
 --- !u!1 &70140078
 GameObject:
   m_ObjectHideFlags: 0
@@ -1669,6 +1674,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b131df9259b9fba40a93f86f75535e7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  uiMainMenuStartGameEvent:
+    Guid:
+      Data1: -340793125
+      Data2: 1307754841
+      Data3: 1851998087
+      Data4: -213579417
+    Path: event:/UI/Main menu start game
+  uiMainMenuLoadEvent:
+    Guid:
+      Data1: 1212014808
+      Data2: 1294938503
+      Data3: -499694970
+      Data4: 390975847
+    Path: event:/UI/Main menu load
   panel: {fileID: 206828234}
 --- !u!114 &368691984
 MonoBehaviour:
@@ -2475,6 +2494,20 @@ MonoBehaviour:
   bgImage: {fileID: 21300000, guid: 5ac90ee9975e6094d9e377a51ef3a795, type: 3}
   menuTransition: {fileID: 368691983}
   panelToBeShrunk: {fileID: 0}
+  uiMenuHoverEvent:
+    Guid:
+      Data1: 186939258
+      Data2: 1245914863
+      Data3: 616051872
+      Data4: 1636089026
+    Path: event:/UI/Pause menu hover
+  uiMenuClickEvent:
+    Guid:
+      Data1: 878842710
+      Data2: 1165943643
+      Data3: -1609063289
+      Data4: -1674672043
+    Path: event:/UI/Pause menu click
 --- !u!4 &1010718708
 Transform:
   m_ObjectHideFlags: 0
@@ -2507,7 +2540,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1044371721
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2591,7 +2624,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1045584543
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5166,6 +5199,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2092539227}
   - component: {fileID: 2092539228}
+  - component: {fileID: 2092539229}
+  - component: {fileID: 2092539230}
   m_Layer: 0
   m_Name: audio
   m_TagString: Untagged
@@ -5214,6 +5249,43 @@ MonoBehaviour:
       Data3: 1160979354
       Data4: -227590951
     Path: event:/Music/Main loop
+--- !u!114 &2092539229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2092539225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9468c5f457ace64f8d4df6d642b107f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LoadEvent: 1
+  UnloadEvent: 2
+  Banks:
+  - Master
+  CollisionTag: 
+  PreloadSamples: 0
+--- !u!114 &2092539230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2092539225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 981f1e06702184e5eb229945436de56f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uiMainMenuStartGameEvent:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!1 &2092825660
 GameObject:
   m_ObjectHideFlags: 0

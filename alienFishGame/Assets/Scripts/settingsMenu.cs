@@ -18,6 +18,9 @@ public class settingsMenu : MonoBehaviour
 
     public GameObject mainPanel;
 
+    // Audio
+    public FMODUnity.EventReference uiSettingsCloseEvent;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,6 +39,7 @@ public class settingsMenu : MonoBehaviour
     public void CloseMenu()
     {
         LeanTween.scale(mainPanel, new Vector3(0, 0, 0), 0.15f).setOnComplete(onComplete);
+        FMODUnity.RuntimeManager.PlayOneShot(uiSettingsCloseEvent, transform.position);
     }
 
     void onComplete()

@@ -60,6 +60,9 @@
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{92044931-85ba-46b1-b891-f6dde8d1b657}">
+		<property name="maxVoices">
+			<value>2</value>
+		</property>
 		<property name="triggerCooldown">
 			<value>1000</value>
 		</property>

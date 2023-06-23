@@ -6,6 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class menuTransition : MonoBehaviour
 {
+    // Audio
+    public FMODUnity.EventReference uiMainMenuStartGameEvent;
+    public FMODUnity.EventReference uiMainMenuLoadEvent;
+    
     public GameObject panel;
     // Start is called before the first frame update
     void Start()
@@ -22,12 +26,14 @@ public class menuTransition : MonoBehaviour
     public void StartNewGame()
     {
         bgmScript.instance.SetParameter(1f);
+        FMODUnity.RuntimeManager.PlayOneShot(uiMainMenuStartGameEvent, transform.position);
         iTween.ValueTo(panel, iTween.Hash("from", 0f, "to", 1f, "time", 1f, "onupdate", "updateColor", "onupdatetarget", this.gameObject, "oncomplete", "loadNewScene", "oncompletetarget", this.gameObject));
     }
 
     public void LoadGame(int index)
     {
         bgmScript.instance.SetParameter(1f);
+        FMODUnity.RuntimeManager.PlayOneShot(uiMainMenuStartGameEvent, transform.position);
         iTween.ValueTo(panel, iTween.Hash("from", 0f, "to", 1f, "time", 1f, "onupdate", "updateColor", "onupdatetarget", this.gameObject, "oncomplete", "loadSaveFile", "oncompletetarget", this.gameObject, "oncompleteparams", index));
     }
 

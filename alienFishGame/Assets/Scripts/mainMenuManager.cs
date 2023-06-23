@@ -22,6 +22,11 @@ public class mainMenuManager : MonoBehaviour
 
     // why
     public GameObject panelToBeShrunk;
+
+    // Audio
+    public FMODUnity.EventReference uiMenuHoverEvent;
+    public FMODUnity.EventReference uiMenuClickEvent;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -125,11 +130,13 @@ public class mainMenuManager : MonoBehaviour
     void OnComplete()
     {
         panelToBeShrunk.SetActive(false);
+        FMODUnity.RuntimeManager.PlayOneShot(uiMenuClickEvent, transform.position);
     }
 
     public void OnHoverEnter(GameObject item)
     {
         LeanTween.scale(item, new Vector3(0.9f, 0.9f, 0.9f), 0.15f);
+        FMODUnity.RuntimeManager.PlayOneShot(uiMenuHoverEvent, transform.position);
     }
 
     public void OnHoverExit(GameObject item)

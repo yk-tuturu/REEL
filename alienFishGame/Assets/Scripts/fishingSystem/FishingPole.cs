@@ -40,6 +40,10 @@ public class FishingPole : MonoBehaviour
     // dictionary, key is the fishIndex and value is how many caught
     public List<int> fishCaught = new List<int>();
 
+    // Audio
+    public FMODUnity.EventReference fishCatchSmallEvent;
+    public FMODUnity.EventReference fishCatchLargeEvent;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -87,6 +91,8 @@ public class FishingPole : MonoBehaviour
         fishCaught.Add(fishIndex);
 
         currentCapacity += 1;
+
+        FMODUnity.RuntimeManager.PlayOneShot(fishCatchSmallEvent, transform.position);
 
         // If the menu was open while a fish is caught
         if (menuOpen)
