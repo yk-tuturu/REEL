@@ -2,10 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class bossTransition : MonoBehaviour
 {
-    public GameObject panel;
+    public Image panel;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,20 +21,29 @@ public class bossTransition : MonoBehaviour
 
     public void FadeIn()
     {
-        iTween.ValueTo(panel, iTween.Hash("from", 1f, "to", 0f, "time", 1.3f, "onupdate", "updateColor", "onupdatetarget", this.gameObject, "oncomplete", "beginDialogue", "oncompletetarget", this.gameObject));
+        iTween.ValueTo(panel.gameObject, iTween.Hash("from", 1f, "to", 0f, "time", 1.3f, "onupdate", "updateColor", "onupdatetarget", this.gameObject, "oncomplete", "beginDialogue", "oncompletetarget", this.gameObject));
+    }
+
+    public void FadeToBlack()
+    {
+        panel.color = new Color(0, 0, 0, 0);
+        iTween.ValueTo(panel.gameObject, iTween.Hash("from", 0f, "to", 1f, "time", 1f, "onupdate", "updateColor", "onupdatetarget", this.gameObject, "oncomplete", "LoadMenu", "oncompletetarget", this.gameObject));
     }
 
     void updateColor(float val)
     {
         Debug.Log(val.ToString());
-        Image image = panel.GetComponent<Image>();
-        image.color = new Color(1, 1, 1, val);
+        panel.color = new Color(panel.color.r, panel.color.g, panel.color.b, val);
     }
 
     void beginDialogue()
     {
         var trigger = GameObject.Find("DialogueManager").GetComponent<Dialogue_trigger>();
         trigger.TriggerDialogue("overLordDialogue");
-        GameObject.Destroy(panel);
+    }
+
+    void LoadMenu()
+    {
+        SceneManager.LoadScene("Scenes/MainMenu");
     }
 }

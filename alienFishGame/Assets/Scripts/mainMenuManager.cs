@@ -45,8 +45,6 @@ public class mainMenuManager : MonoBehaviour
         {
             noSave = true;
         }
-
-        bgImage = Resources.Load<Sprite>("placeholderSprites/background");
     }
 
     // Update is called once per frame

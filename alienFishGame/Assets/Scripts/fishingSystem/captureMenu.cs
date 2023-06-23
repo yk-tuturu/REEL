@@ -32,10 +32,10 @@ public class captureMenu : MonoBehaviour
         }
 
         // hacky fix for the scrollbar 
-        for (int i = 0; i < 9 - counter; i++)
-        {
-            Instantiate(blankIcon, new Vector3(0, 0, 0), Quaternion.identity, scrollPanel.transform);
-        }
+        // for (int i = 0; i < 9 - counter; i++)
+        // {
+        //     Instantiate(blankIcon, new Vector3(0, 0, 0), Quaternion.identity, scrollPanel.transform);
+        // }
     }
 
     public void ClearChildren()

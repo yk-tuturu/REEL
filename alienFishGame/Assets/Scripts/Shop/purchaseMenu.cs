@@ -17,6 +17,7 @@ public class purchaseMenu : MonoBehaviour
     public Transform upgradeParent;
 
     public UnityEvent bossTransition;
+    public GameObject soldOverlay;
     // Start is called before the first frame update
     void Start()
     {
@@ -114,13 +115,14 @@ public class purchaseMenu : MonoBehaviour
             {
                 // spends money and increases price
                 FishDataManager.instance.SpendMoney(price);
-                upgrade.price = price * 2;
+                upgrade.price = price * upgrade.multiplier;
 
                 upgrade.currentLevel += 1;
                 if (upgrade.currentLevel >= upgrade.maxLevel)
                 {
                     upgrade.enabled = false;
                     child.GetComponent<EventTrigger>().enabled = false;
+                    Instantiate(soldOverlay, upgrade.transform.position, Quaternion.identity, child);
                 }
 
                 if (type == "bait" && upgrade.currentLevel == 4)

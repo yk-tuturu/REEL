@@ -39,10 +39,10 @@ MonoBehaviour:
   Path: fmodAlienFish/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638230505198468980
+  lastModified: 638231108215876660
   FileSizes:
   - Name: Desktop
-    Value: 27884288
+    Value: 32665312
   Exists: 1
 --- !u!114 &-6880688709899036290
 MonoBehaviour:
@@ -250,7 +250,7 @@ MonoBehaviour:
   Path: fmodAlienFish/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638230505198506680
+  lastModified: 638231108216006062
   FileSizes:
   - Name: Desktop
     Value: 2540
@@ -441,7 +441,7 @@ MonoBehaviour:
   - {fileID: -8118221467567189640}
   StringsBanks:
   - {fileID: -3322401045978192045}
-  cacheTime: 638230505198506680
+  cacheTime: 638231108216006062
   cacheVersion: 131603
 --- !u!114 &145647700118078914
 MonoBehaviour:
@@ -830,7 +830,7 @@ MonoBehaviour:
   Name: Music progression
   StudioPath: 
   Min: 0
-  Max: 10
+  Max: 15
   Default: 0
   ID:
     data1: 2978565684
@@ -1031,7 +1031,7 @@ MonoBehaviour:
   - {fileID: 3870966462206146524}
   MinDistance: 1
   MaxDistance: 20
-  Length: 703189
+  Length: 677849
 --- !u!114 &9080460135557666807
 MonoBehaviour:
   m_ObjectHideFlags: 0

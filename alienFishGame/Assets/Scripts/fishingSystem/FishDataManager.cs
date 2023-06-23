@@ -45,7 +45,7 @@ public class FishDataManager : MonoBehaviour
 
     void Update()
     {
-        if (rareCaught >= 1 && allFishCaught >= 500 && !bossAvailable)
+        if (rareCaught >= 1 && allFishCaught >= 300 && !bossAvailable)
         {
             unlockBoss.Invoke();
             bossAvailable = true;

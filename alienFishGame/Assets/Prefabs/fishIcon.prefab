@@ -251,6 +251,7 @@ MonoBehaviour:
   hoverLabelPrefab: {fileID: 9174143741689569418, guid: 2d3521a942dc47d40878156255c83bba, type: 3}
   hoverLabel: {fileID: 0}
   grayOut: {fileID: 2100000, guid: 06f6c8a3a89f84644b355e1e6d82f281, type: 2}
+  none: {fileID: 0}
 --- !u!1 &6291589483961911505
 GameObject:
   m_ObjectHideFlags: 0
@@ -287,8 +288,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 37.617584, y: 14.227402}
-  m_SizeDelta: {x: 75.2351, y: 28.455}
+  m_AnchoredPosition: {x: 49.86, y: 19.404194}
+  m_SizeDelta: {x: 99.7209, y: 38.8083}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4688639505703213242
 CanvasRenderer:
@@ -346,7 +347,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 0
-  m_Spacing: 0
+  m_Spacing: 3
   m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0

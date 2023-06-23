@@ -16,6 +16,7 @@ public class commandExtend : MonoBehaviour
         commandManager.instance.commandData.Add("onIntroComplete", new Action(onIntroComplete));
         commandManager.instance.commandData.Add("onAttackLanded", new Action(onAttackLanded));
         commandManager.instance.commandData.Add("onAttackFinished", new Action(onAttackFinished));
+        commandManager.instance.commandData.Add("backToMenu", new Action(backToMenu));
     }
 
     // Update is called once per frame
@@ -50,5 +51,14 @@ public class commandExtend : MonoBehaviour
     public void onAttackFinished()
     {
         choicePanel.SetActive(true);
+    }
+
+    public void backToMenu()
+    {
+        var transition = GameObject.Find("transitions");
+        if (transition != null)
+        {
+            transition.GetComponent<bossTransition>().FadeToBlack();
+        }
     }
 }

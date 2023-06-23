@@ -7,6 +7,7 @@ public class Upgrades : MonoBehaviour
 {
     public int price;
     public int basePrice;
+    public int multiplier;
     public string upgradeType;
     public string upgradeDescription;
     // remove this later

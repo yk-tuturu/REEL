@@ -6,24 +6,24 @@
             "minTime": 6.5,
             "maxTime": 13,
             "maxCapacity": 3,
-            "uncommonProb": 0.05,
+            "uncommonProb": 0,
             "rareProb": 0
         },
         {
             "level": 2,
             "minTime": 5,
-            "maxTime": 10,
+            "maxTime": 9,
             "maxCapacity": 6,
             "uncommonProb": 0.12,
-            "rareProb": 0.03
+            "rareProb": 0
         },
         {
             "level": 3,
-            "minTime": 4,
-            "maxTime": 8,
+            "minTime": 3.5,
+            "maxTime": 7,
             "maxCapacity": 9,
-            "uncommonProb": 0.22,
-            "rareProb": 0.09
+            "uncommonProb": 0.24,
+            "rareProb": 0.1
         },
         {
             "level": 4,
