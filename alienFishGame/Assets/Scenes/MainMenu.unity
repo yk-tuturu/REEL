@@ -1947,8 +1947,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Starting a new game will overwrite existing save files.(Manual saves will
-    remain) Are you sure you wish to proceed?
+  m_text: Starting a new game will overwrite the existing autosave file.<br>Do you
+    wish to proceed?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ed598c93ca4bc7845945cd76d24906df, type: 2}
   m_sharedMaterial: {fileID: 2238865619179278504, guid: ed598c93ca4bc7845945cd76d24906df, type: 2}
@@ -2591,7 +2591,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1045584543
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2601,7 +2601,7 @@ RectTransform:
   m_GameObject: {fileID: 1045584542}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 590497696}
