@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{6b826ed6-e43b-4ba2-8f16-5e24a3f869c1}">
 		<property name="name">
-			<value>Close</value>
+			<value>Pause menu close</value>
 		</property>
 		<property name="outputFormat">
 			<value>1</value>

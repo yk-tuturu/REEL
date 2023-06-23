@@ -5,10 +5,10 @@
 			<value>Pedia open</value>
 		</property>
 		<property name="outputFormat">
-			<value>0</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
-			<destination>{d8926fb4-e062-44d5-8e1b-00e8c1da33c6}</destination>
+			<destination>{5883c365-9e1f-4d53-b048-fdcfc0e066b3}</destination>
 		</relationship>
 		<relationship name="mixer">
 			<destination>{13061b0e-7222-472b-a604-b86caf363d5e}</destination>
@@ -90,7 +90,11 @@
 			<destination>{13061b0e-7222-472b-a604-b86caf363d5e}</destination>
 		</relationship>
 	</object>
-	<object class="MultiSound" id="{cbec0597-e99f-4122-8bfc-a14973f7fb22}" />
+	<object class="MultiSound" id="{cbec0597-e99f-4122-8bfc-a14973f7fb22}">
+		<relationship name="sounds">
+			<destination>{68b7f034-779d-4dc2-9a62-0b79c1620dda}</destination>
+		</relationship>
+	</object>
 	<object class="MixerBusEffectChain" id="{c951d234-9987-4191-ab64-04fb25043f52}">
 		<relationship name="effects">
 			<destination>{f19b57f4-178b-45b4-bae5-166c9dc3cdfe}</destination>
@@ -117,6 +121,11 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{416e836d-7424-4616-8282-3b59c3ea05c6}" />
+	<object class="SingleSound" id="{68b7f034-779d-4dc2-9a62-0b79c1620dda}">
+		<relationship name="audioFile">
+			<destination>{f7e59b77-1c9d-4d12-a881-affa66d9ba78}</destination>
+		</relationship>
+	</object>
 	<object class="MixerBusFader" id="{f19b57f4-178b-45b4-bae5-166c9dc3cdfe}" />
 	<object class="MixerBusEffectChain" id="{3b16b0b4-1d93-4626-b31a-1085ccbde927}">
 		<relationship name="effects">
