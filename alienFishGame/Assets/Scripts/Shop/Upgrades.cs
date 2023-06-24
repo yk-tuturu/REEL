@@ -80,5 +80,6 @@ public class Upgrades : MonoBehaviour
         maxLevel = 4;
         this.enabled = true;
         gameObject.GetComponent<EventTrigger>().enabled = true;
+        soldOverlay.SetActive(false);
     }
 }

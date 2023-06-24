@@ -272,5 +272,7 @@ public class SaveSystem : MonoBehaviour
         }
 
         Debug.Log("load completed!");
+
+        SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 }
