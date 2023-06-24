@@ -17,6 +17,8 @@ public class Upgrades : MonoBehaviour
 
     public purchaseMenu purchaseMenu;
 
+    public bool bossUnlocked;
+
     void Awake()
     {
     }
@@ -24,10 +26,14 @@ public class Upgrades : MonoBehaviour
     // checks for the ultimate bait upgrade
     void Update()
     {
-        if (upgradeType == "bait" && maxLevel == 4 && currentLevel == 3)
+        if (upgradeType == "bait" && maxLevel == 4 && currentLevel == 3 && !bossUnlocked)
         {
             upgradeDescription = "A mysterious aura emanates from the bait. You wonder what wondrous fish you might fish up with this.";
             price = 3000;
+            bgmScript.instance.SetParameter(8);
+
+            // makes sure this is only done once
+            bossUnlocked = true;
         }
     }
     

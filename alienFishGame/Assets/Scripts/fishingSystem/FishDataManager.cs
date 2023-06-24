@@ -17,6 +17,8 @@ public class FishDataManager : MonoBehaviour
     public int rareCaught = 0;
     public bool bossAvailable = false;
 
+    public int nextMilestone = 50;
+
     public UnityEvent unlockBoss;
 
     void Awake()
@@ -68,6 +70,12 @@ public class FishDataManager : MonoBehaviour
             {
                 rareCaught += 1;
             }
+        }
+
+        if (allFishCaught >= nextMilestone)
+        {
+            nextMilestone += 50;
+            CheckMusicParameters(RodStatManager.instance.baitLevel);
         }
     }
 
@@ -127,6 +135,23 @@ public class FishDataManager : MonoBehaviour
         rareCaught = rareTotal;
 
         money = saveData.money;
+    }
 
+    public void CheckMusicParameters(int baitLevel)
+    {
+        float value = allFishCaught / 50;
+        float param = Mathf.Min(7, Mathf.Floor(value + 1));
+        if (allFishCaught >= 250)
+        {
+            param = 7f;
+        }
+
+        float currentParam = bgmScript.instance.GetParameter();
+        if (currentParam > param)
+        {
+            return;
+        }
+
+        bgmScript.instance.SetParameter(param);
     }
 }

@@ -17,6 +17,9 @@ public class bgmScript : MonoBehaviour
     public EventReference MusicEvent;
 
     FMOD.Studio.PARAMETER_ID musicParameterId;
+    FMOD.Studio.PARAMETER_ID resetParameterId;
+
+    private float timer;
     // Start is called before the first frame update
     void Awake()
     {
@@ -43,6 +46,21 @@ public class bgmScript : MonoBehaviour
         FMOD.Studio.PARAMETER_DESCRIPTION musicParameterDescription;
         musicEventDescription.getParameterDescriptionByName("Music progression", out musicParameterDescription);
         musicParameterId = musicParameterDescription.id;
+
+        FMOD.Studio.PARAMETER_DESCRIPTION resetParameterDescription;
+        musicEventDescription.getParameterDescriptionByName("Reset", out resetParameterDescription);
+        resetParameterId = resetParameterDescription.id;
+    }
+
+    // Debug function -- prints parameter every 4 secs
+    void Update()
+    {
+        timer += Time.deltaTime;
+        if (timer >= 4f)
+        {
+            Debug.Log(GetParameter());
+            timer = 0;
+        }
     }
 
     public void SetParameter(float index)
@@ -55,5 +73,10 @@ public class bgmScript : MonoBehaviour
         float id;
         Music.getParameterByID(musicParameterId, out id);
         return id;
+    }
+
+    public void Reset()
+    {
+        Music.setParameterByID(resetParameterId, 1);
     }
 }
