@@ -52,6 +52,7 @@ shop = overrides everything</value>
 			<destination>{cbd51255-e023-47c7-aa8d-f57e9c894335}</destination>
 			<destination>{b5728219-f4e9-4081-87d8-e9146c786678}</destination>
 			<destination>{2cabef74-a206-4bed-b683-3ad8cdfa73ea}</destination>
+			<destination>{7f1da450-8686-4217-9846-d45c576afcd6}</destination>
 		</relationship>
 		<relationship name="groupTracks">
 			<destination>{17ebe225-5fa4-4e8b-9662-6e03094718d8}</destination>
@@ -143,6 +144,7 @@ shop = overrides everything</value>
 	<object class="MarkerTrack" id="{cbd51255-e023-47c7-aa8d-f57e9c894335}" />
 	<object class="MarkerTrack" id="{b5728219-f4e9-4081-87d8-e9146c786678}" />
 	<object class="MarkerTrack" id="{2cabef74-a206-4bed-b683-3ad8cdfa73ea}" />
+	<object class="MarkerTrack" id="{7f1da450-8686-4217-9846-d45c576afcd6}" />
 	<object class="GroupTrack" id="{17ebe225-5fa4-4e8b-9662-6e03094718d8}">
 		<relationship name="modules">
 			<destination>{54958ed3-b030-4f34-9792-f57abb480910}</destination>
@@ -655,6 +657,7 @@ shop = overrides everything</value>
 			<destination>{28c43729-b383-49e4-8d6e-37f05012e2bb}</destination>
 			<destination>{efb3406d-140a-4f64-93da-c8be7dfc2de0}</destination>
 			<destination>{9a53dab1-53c5-4756-96c9-4ee612ff4c72}</destination>
+			<destination>{41298ec5-9529-477c-97a2-d473493c9ed9}</destination>
 		</relationship>
 	</object>
 	<object class="ParameterProxy" id="{d6aceb95-5fd3-4766-b16e-6b42b23bc227}">
@@ -3265,7 +3268,6 @@ shop = overrides everything</value>
 		<property name="length">
 			<value>8.3478260869565801</value>
 		</property>
-		<property name="name" />
 		<property name="commandType">
 			<value>3</value>
 		</property>
@@ -3362,7 +3364,7 @@ shop = overrides everything</value>
 			<value>79.5</value>
 		</property>
 		<property name="name">
-			<value>3 &amp; 3.1</value>
+			<value>3 &amp; 3.1 &amp; 4 &amp; 4.1</value>
 		</property>
 		<relationship name="timeline">
 			<destination>{165349e2-9281-4876-a2f9-5544c2e17904}</destination>
@@ -3536,7 +3538,7 @@ shop = overrides everything</value>
 			<value>85.333333333333314</value>
 		</property>
 		<property name="name">
-			<value>6 &amp; 7</value>
+			<value>6 &amp; 7 &amp; 8</value>
 		</property>
 		<relationship name="timeline">
 			<destination>{165349e2-9281-4876-a2f9-5544c2e17904}</destination>
@@ -3820,7 +3822,7 @@ shop = overrides everything</value>
 			<value>1.9725711954166849</value>
 		</property>
 		<property name="length">
-			<value>1139.6739130434783</value>
+			<value>1139.6739130434776</value>
 		</property>
 		<property name="quantizationInterval">
 			<value>5</value>
@@ -3829,7 +3831,7 @@ shop = overrides everything</value>
 			<destination>{165349e2-9281-4876-a2f9-5544c2e17904}</destination>
 		</relationship>
 		<relationship name="markerTrack">
-			<destination>{2cabef74-a206-4bed-b683-3ad8cdfa73ea}</destination>
+			<destination>{7f1da450-8686-4217-9846-d45c576afcd6}</destination>
 		</relationship>
 		<relationship name="destination">
 			<destination>{b493f867-11ad-4542-acfb-a1f3bffae970}</destination>
@@ -4001,6 +4003,9 @@ shop = overrides everything</value>
 		<property name="length">
 			<value>200.3478260869565</value>
 		</property>
+		<property name="name">
+			<value>14</value>
+		</property>
 		<relationship name="timeline">
 			<destination>{165349e2-9281-4876-a2f9-5544c2e17904}</destination>
 		</relationship>
@@ -4023,6 +4028,29 @@ shop = overrides everything</value>
 		</relationship>
 		<relationship name="markerTrack">
 			<destination>{b5728219-f4e9-4081-87d8-e9146c786678}</destination>
+		</relationship>
+	</object>
+	<object class="TransitionRegion" id="{41298ec5-9529-477c-97a2-d473493c9ed9}">
+		<property name="position">
+			<value>135.53778858672104</value>
+		</property>
+		<property name="length">
+			<value>1006.108695652174</value>
+		</property>
+		<property name="quantizationInterval">
+			<value>5</value>
+		</property>
+		<relationship name="timeline">
+			<destination>{165349e2-9281-4876-a2f9-5544c2e17904}</destination>
+		</relationship>
+		<relationship name="markerTrack">
+			<destination>{2cabef74-a206-4bed-b683-3ad8cdfa73ea}</destination>
+		</relationship>
+		<relationship name="destination">
+			<destination>{9f930829-4f51-48a7-b3d7-5b8abb480111}</destination>
+		</relationship>
+		<relationship name="triggerConditions">
+			<destination>{44c5bef6-9b7d-45aa-ac1e-a53cc39235da}</destination>
 		</relationship>
 	</object>
 	<object class="Automator" id="{2fdde6b0-8672-45a9-a282-03954de66e29}">
@@ -5140,6 +5168,17 @@ shop = overrides everything</value>
 		</property>
 		<property name="maximum">
 			<value>15</value>
+		</property>
+		<relationship name="parameter">
+			<destination>{98644c0f-c6dc-4038-9521-31cd7e19cc67}</destination>
+		</relationship>
+	</object>
+	<object class="ParameterCondition" id="{44c5bef6-9b7d-45aa-ac1e-a53cc39235da}">
+		<property name="minimum">
+			<value>1</value>
+		</property>
+		<property name="maximum">
+			<value>2</value>
 		</property>
 		<relationship name="parameter">
 			<destination>{98644c0f-c6dc-4038-9521-31cd7e19cc67}</destination>
