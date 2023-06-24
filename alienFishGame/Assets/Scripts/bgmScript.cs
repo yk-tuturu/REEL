@@ -28,10 +28,7 @@ public class bgmScript : MonoBehaviour
         {
             instance = this;
         }
-        else if (instance != null && instance != this)
-        {
-            Destroy(this.gameObject);
-        }
+
         DontDestroyOnLoad(this.gameObject);
 
         // starts playing music
@@ -81,7 +78,7 @@ public class bgmScript : MonoBehaviour
 
     public void Reset()
     {
-        Music.setParameterByID(resetParameterId, 1);
+        Music.setTimelinePosition(0);
     }
 
     public void UndoReset()

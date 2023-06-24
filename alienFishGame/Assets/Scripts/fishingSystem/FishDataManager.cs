@@ -50,6 +50,12 @@ public class FishDataManager : MonoBehaviour
             unlockBoss.Invoke();
             bossAvailable = true;
         }
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            Debug.Log("i have been called!!");
+            bgmScript.instance.SetParameter(7);
+        }
     }
 
     // utility function, probably
@@ -151,11 +157,12 @@ public class FishDataManager : MonoBehaviour
         }
 
         float currentParam = bgmScript.instance.GetParameter();
-        if (currentParam > param)
-        {
-            return;
-        }
+        // if (currentParam > param)
+        // {
+        //     return;
+        // }
 
+        Debug.Log("fish param is " + param.ToString());
         bgmScript.instance.SetParameter(param);
     }
 }
