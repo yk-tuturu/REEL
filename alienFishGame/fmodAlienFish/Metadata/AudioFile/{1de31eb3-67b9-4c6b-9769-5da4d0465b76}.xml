@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{1de31eb3-67b9-4c6b-9769-5da4d0465b76}">
+		<property name="assetPath">
+			<value>Vox/vox_man1_yawn_2.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.4529931972789116</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{c4e797fd-b290-48c0-ab29-ab4f101b2e7d}</destination>
+		</relationship>
+	</object>
+</objects>

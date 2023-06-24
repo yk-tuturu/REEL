@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{833da3e9-62ad-441f-90fd-f5b6a49dca7e}">
+		<property name="assetPath">
+			<value>Vox/vox_man2_sneeze.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.51281179138321997</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{c4e797fd-b290-48c0-ab29-ab4f101b2e7d}</destination>
+		</relationship>
+	</object>
+</objects>

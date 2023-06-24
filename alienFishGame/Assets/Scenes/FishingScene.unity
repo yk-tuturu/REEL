@@ -1786,9 +1786,9 @@ RectTransform:
   m_Father: {fileID: 1933682768}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 496.20428, y: -95.932655}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 133.527, y: 189.733}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &303682461
@@ -2822,6 +2822,93 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 443698188}
   m_CullTransparentMesh: 1
+--- !u!1 &450294765
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 450294766}
+  - component: {fileID: 450294768}
+  - component: {fileID: 450294767}
+  m_Layer: 0
+  m_Name: fishermanr
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &450294766
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 450294765}
+  m_LocalRotation: {x: 0, y: 0, z: -0.043619405, w: 0.9990483}
+  m_LocalPosition: {x: 8, y: 1.41, z: 0}
+  m_LocalScale: {x: 2.5566216, y: 5, z: 0.051899727}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 652952370}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -5}
+--- !u!70 &450294767
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 450294765}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.5, y: 1}
+  m_Direction: 0
+--- !u!114 &450294768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 450294765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3138d8c7c7f994be494f99c796387738, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chrFishermanEvent:
+    Guid:
+      Data1: -2076515231
+      Data2: 1189271781
+      Data3: 902802092
+      Data4: -990089547
+    Path: event:/Character/Fisherman r
 --- !u!1001 &453369546
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2972,7 +3059,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.259, y: -0.000045776367}
+  m_AnchoredPosition: {x: 1.259, y: -684450.8}
   m_SizeDelta: {x: 857.144, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &467424228
@@ -3367,7 +3454,6 @@ GameObject:
   - component: {fileID: 485310158}
   - component: {fileID: 485310161}
   - component: {fileID: 485310163}
-  - component: {fileID: 485310162}
   m_Layer: 0
   m_Name: fishingrod
   m_TagString: Untagged
@@ -3406,6 +3492,20 @@ MonoBehaviour:
   plusOneLabel: {fileID: 5501419889903863046, guid: faf94c16728397a47b6cd1b9d6f7fa90, type: 3}
   labelSpawner: {fileID: 289078593}
   fishCaught: 
+  fishPoleClickEvent:
+    Guid:
+      Data1: 1424164611
+      Data2: 1080231082
+      Data3: -1790923618
+      Data4: -1880406132
+    Path: event:/Character/Rod
+  fishTrapClickEvent:
+    Guid:
+      Data1: -1846896226
+      Data2: 1318666688
+      Data3: 1299539124
+      Data4: 1338628451
+    Path: event:/Character/Trap
   fishCatchSmallEvent:
     Guid:
       Data1: 511818313
@@ -3494,7 +3594,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 485310157}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -3532,37 +3632,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 15.90744, y: 31.384298}
   m_EdgeRadius: 0
---- !u!114 &485310162
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 485310157}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: 
-  EventReference:
-    Guid:
-      Data1: 1424164611
-      Data2: 1080231082
-      Data3: -1790923618
-      Data4: -1880406132
-    Path: event:/Character/Rod
-  Event: 
-  PlayEvent: 15
-  StopEvent: 0
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  AllowNonRigidbodyDoppler: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
 --- !u!60 &485310163
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -3570,7 +3639,7 @@ PolygonCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 485310157}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -6333,7 +6402,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5ac90ee9975e6094d9e377a51ef3a795, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3242996377ee84ef587f50cfdd2352c5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -6362,6 +6431,8 @@ Transform:
   - {fileID: 812785480}
   - {fileID: 1718168429}
   - {fileID: 20804375}
+  - {fileID: 988800057}
+  - {fileID: 450294766}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6857,9 +6928,9 @@ RectTransform:
   m_Father: {fileID: 1933682768}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 639.3512, y: -95.932655}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 133.527, y: 189.733}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &712519002
@@ -7425,7 +7496,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.000061035156, y: -9.849}
+  m_AnchoredPosition: {x: 0.00012207031, y: -9.848999}
   m_SizeDelta: {x: 0, y: 19.698}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &738747204
@@ -7991,9 +8062,9 @@ RectTransform:
   m_Father: {fileID: 1933682768}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 66.7635, y: -95.932655}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 133.527, y: 189.733}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &790111038
@@ -10140,7 +10211,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4450255891798369658, guid: 999a011653c7be844bb4611a9c2f3c5f, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.0000019073486
+      value: 0.0000038146973
       objectReference: {fileID: 0}
     - target: {fileID: 4989760126580278267, guid: 999a011653c7be844bb4611a9c2f3c5f, type: 3}
       propertyPath: m_Color.a
@@ -10560,6 +10631,93 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0272ee0654138e64a9ea783b5657180e, type: 3}
+--- !u!1 &988800056
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 988800057}
+  - component: {fileID: 988800059}
+  - component: {fileID: 988800058}
+  m_Layer: 0
+  m_Name: fishermanl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &988800057
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 988800056}
+  m_LocalRotation: {x: -0, y: -0, z: 0.08715578, w: 0.9961947}
+  m_LocalPosition: {x: -14.917491, y: -3.4111748, z: 0}
+  m_LocalScale: {x: 2.5566216, y: 4.601067, z: 0.051899727}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 652952370}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 10}
+--- !u!70 &988800058
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 988800056}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.5, y: 1}
+  m_Direction: 0
+--- !u!114 &988800059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 988800056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3138d8c7c7f994be494f99c796387738, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chrFishermanEvent:
+    Guid:
+      Data1: -191444823
+      Data2: 1134997642
+      Data3: -1959434355
+      Data4: 355558992
+    Path: event:/Character/Fisherman l
 --- !u!1 &1038620929
 GameObject:
   m_ObjectHideFlags: 0
@@ -11009,9 +11167,9 @@ RectTransform:
   m_Father: {fileID: 1933682768}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 209.91043, y: -95.932655}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 133.527, y: 189.733}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1155646487
@@ -12799,7 +12957,6 @@ GameObject:
   - component: {fileID: 1362690520}
   - component: {fileID: 1362690519}
   - component: {fileID: 1362690524}
-  - component: {fileID: 1362690523}
   m_Layer: 0
   m_Name: crabTrap1
   m_TagString: Untagged
@@ -12814,7 +12971,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1362690518}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -12883,6 +13040,20 @@ MonoBehaviour:
   plusOneLabel: {fileID: 5501419889903863046, guid: faf94c16728397a47b6cd1b9d6f7fa90, type: 3}
   labelSpawner: {fileID: 1805844366}
   fishCaught: 
+  fishPoleClickEvent:
+    Guid:
+      Data1: 1424164611
+      Data2: 1080231082
+      Data3: -1790923618
+      Data4: -1880406132
+    Path: event:/Character/Rod
+  fishTrapClickEvent:
+    Guid:
+      Data1: -1846896226
+      Data2: 1318666688
+      Data3: 1299539124
+      Data4: 1338628451
+    Path: event:/Character/Trap
   fishCatchSmallEvent:
     Guid:
       Data1: 511818313
@@ -12964,37 +13135,6 @@ Transform:
   m_Father: {fileID: 1622642471}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1362690523
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1362690518}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: 
-  EventReference:
-    Guid:
-      Data1: -1846896226
-      Data2: 1318666688
-      Data3: 1299539124
-      Data4: 1338628451
-    Path: event:/Character/Trap
-  Event: 
-  PlayEvent: 15
-  StopEvent: 0
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  AllowNonRigidbodyDoppler: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
 --- !u!60 &1362690524
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -13002,7 +13142,7 @@ PolygonCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1362690518}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -13356,7 +13496,6 @@ GameObject:
   - component: {fileID: 1375840930}
   - component: {fileID: 1375840931}
   - component: {fileID: 1375840933}
-  - component: {fileID: 1375840932}
   m_Layer: 0
   m_Name: inventory
   m_TagString: Untagged
@@ -13506,37 +13645,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 26.5, y: 21.505371}
   m_EdgeRadius: 0
---- !u!114 &1375840932
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1375840927}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: 
-  EventReference:
-    Guid:
-      Data1: -1819455171
-      Data2: 1248387827
-      Data3: 697938818
-      Data4: -64504945
-    Path: event:/UI/Inventory open
-  Event: 
-  PlayEvent: 15
-  StopEvent: 0
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  AllowNonRigidbodyDoppler: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
 --- !u!60 &1375840933
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -13942,7 +14050,6 @@ GameObject:
   - component: {fileID: 1376530691}
   - component: {fileID: 1376530690}
   - component: {fileID: 1376530695}
-  - component: {fileID: 1376530694}
   m_Layer: 0
   m_Name: crabTrap2
   m_TagString: Untagged
@@ -13957,7 +14064,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1376530689}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -14026,6 +14133,20 @@ MonoBehaviour:
   plusOneLabel: {fileID: 5501419889903863046, guid: faf94c16728397a47b6cd1b9d6f7fa90, type: 3}
   labelSpawner: {fileID: 1616789062}
   fishCaught: 
+  fishPoleClickEvent:
+    Guid:
+      Data1: 1424164611
+      Data2: 1080231082
+      Data3: -1790923618
+      Data4: -1880406132
+    Path: event:/Character/Rod
+  fishTrapClickEvent:
+    Guid:
+      Data1: -1846896226
+      Data2: 1318666688
+      Data3: 1299539124
+      Data4: 1338628451
+    Path: event:/Character/Trap
   fishCatchSmallEvent:
     Guid:
       Data1: 511818313
@@ -14107,37 +14228,6 @@ Transform:
   m_Father: {fileID: 1622642471}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1376530694
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1376530689}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: 
-  EventReference:
-    Guid:
-      Data1: -1846896226
-      Data2: 1318666688
-      Data3: 1299539124
-      Data4: 1338628451
-    Path: event:/Character/Trap
-  Event: 
-  PlayEvent: 15
-  StopEvent: 0
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  AllowNonRigidbodyDoppler: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
 --- !u!60 &1376530695
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -14145,7 +14235,7 @@ PolygonCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1376530689}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -14660,7 +14750,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.12900001, y: 0.15737036}
   m_AnchorMax: {x: 0.87100005, y: 0.84066665}
-  m_AnchoredPosition: {x: 0.000061035156, y: 1.0603943}
+  m_AnchoredPosition: {x: 0, y: 1.0604248}
   m_SizeDelta: {x: 495.36, y: 341.91}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1394076416
@@ -15052,7 +15142,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.9512292, y: 0.92300004}
   m_AnchorMax: {x: 0.98700005, y: 0.9760001}
-  m_AnchoredPosition: {x: 1.2249756, y: 0.56759644}
+  m_AnchoredPosition: {x: 1.2249756, y: 0.5675659}
   m_SizeDelta: {x: -3.2040005, y: -2.1520004}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1429491646
@@ -15471,7 +15561,6 @@ GameObject:
   - component: {fileID: 1489500033}
   - component: {fileID: 1489500032}
   - component: {fileID: 1489500037}
-  - component: {fileID: 1489500036}
   m_Layer: 0
   m_Name: fishingrod (1)
   m_TagString: Untagged
@@ -15486,7 +15575,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1489500031}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -15555,6 +15644,20 @@ MonoBehaviour:
   plusOneLabel: {fileID: 5501419889903863046, guid: faf94c16728397a47b6cd1b9d6f7fa90, type: 3}
   labelSpawner: {fileID: 1323823515}
   fishCaught: 
+  fishPoleClickEvent:
+    Guid:
+      Data1: 1424164611
+      Data2: 1080231082
+      Data3: -1790923618
+      Data4: -1880406132
+    Path: event:/Character/Rod
+  fishTrapClickEvent:
+    Guid:
+      Data1: -1846896226
+      Data2: 1318666688
+      Data3: 1299539124
+      Data4: 1338628451
+    Path: event:/Character/Trap
   fishCatchSmallEvent:
     Guid:
       Data1: 511818313
@@ -15636,37 +15739,6 @@ Transform:
   m_Father: {fileID: 1622642471}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1489500036
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1489500031}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: 
-  EventReference:
-    Guid:
-      Data1: 1424164611
-      Data2: 1080231082
-      Data3: -1790923618
-      Data4: -1880406132
-    Path: event:/Character/Rod
-  Event: 
-  PlayEvent: 15
-  StopEvent: 0
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  AllowNonRigidbodyDoppler: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
 --- !u!60 &1489500037
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -15674,7 +15746,7 @@ PolygonCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1489500031}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -17328,9 +17400,9 @@ RectTransform:
   m_Father: {fileID: 1933682768}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 353.05734, y: -95.932655}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 133.527, y: 189.733}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1561434264
@@ -19077,11 +19149,11 @@ MonoBehaviour:
     Path: event:/UI/Pedia pageturn right
   uiFishopediaCloseEvent:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: '{25734a5f-6f2d-43fd-8d9f-40137b6f1275}'
+      Data1: 628312671
+      Data2: 1140682541
+      Data3: 323002253
+      Data4: 1964142459
+    Path: event:/UI/Pedia close
 --- !u!1 &1680231526
 GameObject:
   m_ObjectHideFlags: 0
@@ -19310,7 +19382,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1718168428}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -12.83275, y: 3.44, z: 0}
+  m_LocalPosition: {x: -12.73, y: 3.62, z: 0}
   m_LocalScale: {x: 0.48430207, y: 0.48430207, z: 0.48430207}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -19331,7 +19403,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 2127090225}
   maxScale: {x: 0, y: 0, z: 0}
-  multiplier: 1.05
+  multiplier: 1.04
   onClick:
     m_PersistentCalls:
       m_Calls:
@@ -19444,7 +19516,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 41ff9f7eacde76546846065a0cff398d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -22474,7 +22546,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.05174026, y: 0.19700001}
   m_AnchorMax: {x: 0.9406537, y: 0.7104292}
-  m_AnchoredPosition: {x: 12, y: 0.89499664}
+  m_AnchoredPosition: {x: 12, y: 0.894989}
   m_SizeDelta: {x: -5.097, y: -19.158}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1933682769
@@ -23149,9 +23221,9 @@ RectTransform:
   m_Father: {fileID: 1933682768}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 782.4981, y: -95.932655}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 133.527, y: 189.733}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2002638481
@@ -24167,7 +24239,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2127090223
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24184,7 +24256,7 @@ MonoBehaviour:
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 0
 --- !u!114 &2127090224
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24266,6 +24338,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bgPanel: {fileID: 1758393016}
   dialogueText: {fileID: 1197487281}
+  chrShopEnterEvent:
+    Guid:
+      Data1: 1462797288
+      Data2: 1103497280
+      Data3: 1659410333
+      Data4: 1849545290
+    Path: event:/Character/Shop enter
+  chrShopExitEvent:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!1 &2129806886
 GameObject:
   m_ObjectHideFlags: 0

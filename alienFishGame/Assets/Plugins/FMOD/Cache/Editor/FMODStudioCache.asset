@@ -66,10 +66,10 @@ MonoBehaviour:
   Path: fmodAlienFish/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638231353525003676
+  lastModified: 638231806784675322
   FileSizes:
   - Name: Desktop
-    Value: 38225280
+    Value: 40194624
   Exists: 1
 --- !u!114 &-7667037229141787075
 MonoBehaviour:
@@ -144,6 +144,33 @@ MonoBehaviour:
     Data2: 1245914863
     Data3: 616051872
     Data4: 1636089026
+  Banks:
+  - {fileID: -8118221467567189640}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-5278828901430087131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/UI/Shop upgrade marketing
+  m_EditorClassIdentifier: 
+  Path: event:/UI/Shop upgrade marketing
+  Guid:
+    Data1: -568004617
+    Data2: 1244199752
+    Data3: 1587766958
+    Data4: 723078897
   Banks:
   - {fileID: -8118221467567189640}
   IsStream: 0
@@ -331,10 +358,10 @@ MonoBehaviour:
   Path: fmodAlienFish/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638231353525045651
+  lastModified: 638231806784734224
   FileSizes:
   - Name: Desktop
-    Value: 2762
+    Value: 3160
   Exists: 1
 --- !u!114 &-3251712521573484721
 MonoBehaviour:
@@ -444,6 +471,60 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-2481175684430036876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/UI/Pedia closed
+  m_EditorClassIdentifier: 
+  Path: event:/UI/Pedia closed
+  Guid:
+    Data1: 1054597283
+    Data2: 1185207880
+    Data3: -1403218532
+    Data4: 1574929914
+  Banks:
+  - {fileID: -8118221467567189640}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-1732865807043925923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/UI/Shop upgrade trap
+  m_EditorClassIdentifier: 
+  Path: event:/UI/Shop upgrade trap
+  Guid:
+    Data1: -379860037
+    Data2: 1127301045
+    Data3: 1505313441
+    Data4: -1387189204
+  Banks:
+  - {fileID: -8118221467567189640}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-1722659682378446777
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -462,6 +543,33 @@ MonoBehaviour:
     Data2: 1321397961
     Data3: 889052606
     Data4: 1169405624
+  Banks:
+  - {fileID: -8118221467567189640}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-1645977325657375635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/UI/Shop upgrade reel
+  m_EditorClassIdentifier: 
+  Path: event:/UI/Shop upgrade reel
+  Guid:
+    Data1: -1678707929
+    Data2: 1293751087
+    Data3: -222080361
+    Data4: 1808386294
   Banks:
   - {fileID: -8118221467567189640}
   IsStream: 0
@@ -574,12 +682,21 @@ MonoBehaviour:
   - {fileID: -2792267129593207220}
   - {fileID: -1722659682378446777}
   - {fileID: -3183723293657408996}
+  - {fileID: 1371482141832377747}
+  - {fileID: -2481175684430036876}
+  - {fileID: -1645977325657375635}
+  - {fileID: 5940676449591877008}
+  - {fileID: 1207380316983957833}
+  - {fileID: 6296703080570774401}
+  - {fileID: -1732865807043925923}
+  - {fileID: -5278828901430087131}
+  - {fileID: 7060473695696803722}
   EditorParameters: []
   MasterBanks:
   - {fileID: -8118221467567189640}
   StringsBanks:
   - {fileID: -3322401045978192045}
-  cacheTime: 638231353526735897
+  cacheTime: 638231806786792193
   cacheVersion: 131603
 --- !u!114 &31058536319723278
 MonoBehaviour:
@@ -635,6 +752,60 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
+  Length: 0
+--- !u!114 &1207380316983957833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/UI/Shop upgrade bait
+  m_EditorClassIdentifier: 
+  Path: event:/UI/Shop upgrade bait
+  Guid:
+    Data1: -1002032491
+    Data2: 1145523503
+    Data3: 1882513085
+    Data4: 1741090504
+  Banks:
+  - {fileID: -8118221467567189640}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &1371482141832377747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/UI/Pedia close
+  m_EditorClassIdentifier: 
+  Path: event:/UI/Pedia close
+  Guid:
+    Data1: 628312671
+    Data2: 1140682541
+    Data3: 323002253
+    Data4: 1964142459
+  Banks:
+  - {fileID: -8118221467567189640}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
   Length: 0
 --- !u!114 &1375538011515515879
 MonoBehaviour:
@@ -941,11 +1112,65 @@ MonoBehaviour:
   Path: fmodAlienFish/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638231353526735897
+  lastModified: 638231806786792193
   FileSizes:
   - Name: Desktop
     Value: 35030336
   Exists: 1
+--- !u!114 &5940676449591877008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character/Fisherman r
+  m_EditorClassIdentifier: 
+  Path: event:/Character/Fisherman r
+  Guid:
+    Data1: -2076515231
+    Data2: 1189271781
+    Data3: 902802092
+    Data4: -990089547
+  Banks:
+  - {fileID: -8118221467567189640}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1000
+--- !u!114 &6296703080570774401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character/Fisherman l
+  m_EditorClassIdentifier: 
+  Path: event:/Character/Fisherman l
+  Guid:
+    Data1: -191444823
+    Data2: 1134997642
+    Data3: -1959434355
+    Data4: 355558992
+  Banks:
+  - {fileID: -8118221467567189640}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1000
 --- !u!114 &6415912729299706576
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1018,6 +1243,33 @@ MonoBehaviour:
     Data2: 1225110762
     Data3: -1568111177
     Data4: -1451663046
+  Banks:
+  - {fileID: -8118221467567189640}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &7060473695696803722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character/Shopkeeper
+  m_EditorClassIdentifier: 
+  Path: event:/Character/Shopkeeper
+  Guid:
+    Data1: -1036222033
+    Data2: 1219398993
+    Data3: 778465719
+    Data4: -1875267540
   Banks:
   - {fileID: -8118221467567189640}
   IsStream: 0

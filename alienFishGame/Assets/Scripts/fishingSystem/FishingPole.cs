@@ -41,6 +41,8 @@ public class FishingPole : MonoBehaviour
     public List<int> fishCaught = new List<int>();
 
     // Audio
+    public FMODUnity.EventReference fishPoleClickEvent;
+    public FMODUnity.EventReference fishTrapClickEvent;
     public FMODUnity.EventReference fishCatchSmallEvent;
     public FMODUnity.EventReference fishCatchLargeEvent;
 
@@ -49,6 +51,7 @@ public class FishingPole : MonoBehaviour
     {
         fetchStats();
 
+        ogScale = transform.localScale;
         timeToNextFish = Random.Range(minTime, maxTime);
         panel_text = panel.transform.GetChild(0).GetComponent<TextMeshProUGUI>();
     }
@@ -92,6 +95,7 @@ public class FishingPole : MonoBehaviour
 
         currentCapacity += 1;
 
+        // Possible code to differentiate large & small fish
         FMODUnity.RuntimeManager.PlayOneShot(fishCatchSmallEvent, transform.position);
 
         // If the menu was open while a fish is caught
@@ -110,8 +114,8 @@ public class FishingPole : MonoBehaviour
     {
         LeanTween.scale(panel, new Vector3(1.2f, 1.2f, 1.2f), 0.1f);
 
-        ogScale = transform.localScale;
-        var endScale = transform.localScale * 1.1f; 
+        
+        var endScale = ogScale * 1.1f; 
         LeanTween.scale(gameObject, endScale, 0.1f);
     }
 
@@ -138,6 +142,15 @@ public class FishingPole : MonoBehaviour
             // some code to update the menu info
             capturesMenu.GetComponent<captureMenu>().UpdateInfo(fishCaught);
             menuOpen = true;
+
+            if (type == "rod")
+            {
+                FMODUnity.RuntimeManager.PlayOneShot(fishPoleClickEvent, transform.position);
+            }
+            else if (type == "trap")
+            {
+                FMODUnity.RuntimeManager.PlayOneShot(fishTrapClickEvent, transform.position);
+            }
         }
     } 
 

@@ -9,6 +9,11 @@ public class ShopScreen : MonoBehaviour
 {
     public GameObject bgPanel;
     public TextMeshProUGUI dialogueText;
+
+    // Audio
+    public FMODUnity.EventReference chrShopEnterEvent;
+    public FMODUnity.EventReference chrShopExitEvent;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +29,7 @@ public class ShopScreen : MonoBehaviour
     public void Close()
     {
         LeanTween.scale(bgPanel, new Vector3(0, 0, 0), 0.15f).setOnComplete(OnComplete);
+        FMODUnity.RuntimeManager.PlayOneShot(chrShopExitEvent, transform.position);
     }
 
     public void OnComplete()
@@ -35,6 +41,8 @@ public class ShopScreen : MonoBehaviour
     {
         bgPanel.transform.localScale = new Vector3(0, 0, 0);
         LeanTween.scale(bgPanel, new Vector3(1, 1, 1), 0.15f);
+
+        FMODUnity.RuntimeManager.PlayOneShot(chrShopEnterEvent, transform.position);
 
         // reads the text file
         TextAsset file = (TextAsset)Resources.Load("Story/shopkeep");
