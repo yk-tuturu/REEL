@@ -35,8 +35,8 @@ public class bgmScript : MonoBehaviour
         DontDestroyOnLoad(gameObject);
 
         // starts playing music
-        Ambience = RuntimeManager.CreateInstance(AmbienceEvent);
-        Ambience.start();
+        //Ambience = RuntimeManager.CreateInstance(AmbienceEvent);
+        //Ambience.start();
 
         Music = RuntimeManager.CreateInstance(MusicEvent);
         Music.start();
@@ -59,6 +59,10 @@ public class bgmScript : MonoBehaviour
         if (timer >= 4f)
         {
             Debug.Log(GetParameter());
+
+            float resetValue;
+            Music.getParameterByID(resetParameterId, out resetValue);
+            Debug.Log(resetValue);
             timer = 0;
         }
     }

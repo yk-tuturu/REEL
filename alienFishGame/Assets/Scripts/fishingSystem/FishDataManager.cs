@@ -75,7 +75,7 @@ public class FishDataManager : MonoBehaviour
         if (allFishCaught >= nextMilestone)
         {
             nextMilestone += 50;
-            CheckMusicParameters(RodStatManager.instance.baitLevel);
+            CheckMusicParameters();
         }
     }
 
@@ -135,9 +135,13 @@ public class FishDataManager : MonoBehaviour
         rareCaught = rareTotal;
 
         money = saveData.money;
+
+        // set audio back to its correct param
+        nextMilestone = (int)(Mathf.Floor(allFishCaught / 50) + 1)* 50;
+        CheckMusicParameters();
     }
 
-    public void CheckMusicParameters(int baitLevel)
+    public void CheckMusicParameters()
     {
         float value = allFishCaught / 50;
         float param = Mathf.Min(7, Mathf.Floor(value + 1));
