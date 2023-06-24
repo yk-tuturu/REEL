@@ -20,6 +20,7 @@ public class settingsMenu : MonoBehaviour
 
     // Audio
     public FMODUnity.EventReference uiSettingsCloseEvent;
+    public FMODUnity.EventReference uiSettingsOpenEvent;
 
     // Start is called before the first frame update
     void Start()
@@ -31,6 +32,7 @@ public class settingsMenu : MonoBehaviour
 
     public void OpenMenu()
     {
+        FMODUnity.RuntimeManager.PlayOneShot(uiSettingsOpenEvent, transform.position);
         gameObject.SetActive(true);
         LeanTween.scale(mainPanel, new Vector3(1, 1, 1), 0.15f);
         FetchSaves();
@@ -62,6 +64,7 @@ public class settingsMenu : MonoBehaviour
     public void Load(int index)
     {
         Debug.Log("loading file at index " + index.ToString());
+        bgmScript.instance.Reset();
         SaveSystem.instance.Load(index);
     }
 
