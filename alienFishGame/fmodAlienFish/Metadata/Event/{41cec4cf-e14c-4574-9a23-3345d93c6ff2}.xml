@@ -43,6 +43,7 @@ shop = overrides everything</value>
 			<destination>{aa4da299-32a9-4029-85df-42fa2c510fda}</destination>
 		</relationship>
 		<relationship name="markerTracks">
+			<destination>{3ba65684-169d-41ad-9a5d-2884a8d4c7e3}</destination>
 			<destination>{569d7087-6f5c-48c7-9f6a-76966927610f}</destination>
 			<destination>{f8068ef7-c849-403f-87d6-c0ba0f5e268f}</destination>
 			<destination>{a1c6d12c-e745-4a11-864f-685ed0e9ec11}</destination>
@@ -130,6 +131,7 @@ shop = overrides everything</value>
 			<value>3</value>
 		</property>
 	</object>
+	<object class="MarkerTrack" id="{3ba65684-169d-41ad-9a5d-2884a8d4c7e3}" />
 	<object class="MarkerTrack" id="{569d7087-6f5c-48c7-9f6a-76966927610f}" />
 	<object class="MarkerTrack" id="{f8068ef7-c849-403f-87d6-c0ba0f5e268f}" />
 	<object class="MarkerTrack" id="{a1c6d12c-e745-4a11-864f-685ed0e9ec11}" />
@@ -149,6 +151,7 @@ shop = overrides everything</value>
 			<destination>{53ad9b35-83c3-44e4-8395-c398cc3011f7}</destination>
 			<destination>{9cffa5b5-1aaf-43c0-801b-8e666c5150e3}</destination>
 			<destination>{6f0d027a-fab8-4f48-bef4-467e8c70fdc9}</destination>
+			<destination>{d6e16867-8c3c-49c5-a35c-c9859a6c5315}</destination>
 		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{2a233211-5212-4092-9fa0-f9957295bf2a}</destination>
@@ -542,6 +545,7 @@ shop = overrides everything</value>
 			<destination>{14215107-fb90-4c25-824a-76cba1557640}</destination>
 			<destination>{bfdc01d9-cfdf-44fd-9461-fbadc42310d9}</destination>
 			<destination>{d4abf027-7566-48c8-b69d-88dd0b806996}</destination>
+			<destination>{d6e16867-8c3c-49c5-a35c-c9859a6c5315}</destination>
 		</relationship>
 		<relationship name="markers">
 			<destination>{f54fae23-1c91-4670-8580-053a3e88d83f}</destination>
@@ -575,6 +579,7 @@ shop = overrides everything</value>
 			<destination>{c3349c57-0c69-4ffa-8e8e-b7ab9222cfd4}</destination>
 			<destination>{cd9607cf-5442-43a7-aa27-1eaa7a2ac2bb}</destination>
 			<destination>{6c091299-715a-4478-95dc-6a94ab12487d}</destination>
+			<destination>{b493f867-11ad-4542-acfb-a1f3bffae970}</destination>
 		</relationship>
 	</object>
 	<object class="ParameterProxy" id="{d6aceb95-5fd3-4766-b16e-6b42b23bc227}">
@@ -700,10 +705,10 @@ shop = overrides everything</value>
 	</object>
 	<object class="CommandSound" id="{d4abf027-7566-48c8-b69d-88dd0b806996}">
 		<property name="start">
-			<value>1.972571195416684</value>
+			<value>1.4508320649819022</value>
 		</property>
 		<property name="length">
-			<value>33.391304347826086</value>
+			<value>0.52173913043478293</value>
 		</property>
 		<property name="name">
 			<value>reset to 0</value>
@@ -766,6 +771,20 @@ shop = overrides everything</value>
 		<property name="length">
 			<value>0</value>
 		</property>
+	</object>
+	<object class="CommandSound" id="{d6e16867-8c3c-49c5-a35c-c9859a6c5315}">
+		<property name="start">
+			<value>1.4508320649819022</value>
+		</property>
+		<property name="length">
+			<value>0.52173913043478293</value>
+		</property>
+		<property name="commandType">
+			<value>3</value>
+		</property>
+		<relationship name="commandTarget">
+			<destination>{98644c0f-c6dc-4038-9521-31cd7e19cc67}</destination>
+		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{2a233211-5212-4092-9fa0-f9957295bf2a}">
 		<property name="name">
@@ -3362,7 +3381,7 @@ shop = overrides everything</value>
 			<destination>{b5728219-f4e9-4081-87d8-e9146c786678}</destination>
 		</relationship>
 		<relationship name="destination">
-			<destination>{b80a9064-5a72-415b-85b5-67a1c7ed8398}</destination>
+			<destination>{b493f867-11ad-4542-acfb-a1f3bffae970}</destination>
 		</relationship>
 		<relationship name="triggerConditions">
 			<destination>{f8086588-ba04-4ab7-9f80-825c11e91813}</destination>
@@ -3408,6 +3427,20 @@ shop = overrides everything</value>
 			<destination>{834d1307-5493-43ad-8979-1e81acea9bfe}</destination>
 		</relationship>
 	</object>
+	<object class="NamedMarker" id="{b493f867-11ad-4542-acfb-a1f3bffae970}">
+		<property name="position">
+			<value>1.4508320649819022</value>
+		</property>
+		<property name="name">
+			<value>Reset</value>
+		</property>
+		<relationship name="timeline">
+			<destination>{165349e2-9281-4876-a2f9-5544c2e17904}</destination>
+		</relationship>
+		<relationship name="markerTrack">
+			<destination>{3ba65684-169d-41ad-9a5d-2884a8d4c7e3}</destination>
+		</relationship>
+	</object>
 	<object class="Automator" id="{2fdde6b0-8672-45a9-a282-03954de66e29}">
 		<property name="nameOfPropertyBeingAutomated">
 			<value>volume</value>
@@ -3415,6 +3448,7 @@ shop = overrides everything</value>
 		<relationship name="automationCurves">
 			<destination>{1ef1a08e-bb7e-4acb-a266-28862de27935}</destination>
 			<destination>{0f2077f9-a371-4cc0-a960-c96a0e8642d7}</destination>
+			<destination>{2b7f3252-581f-4a81-a088-ce982ce67bb4}</destination>
 		</relationship>
 	</object>
 	<object class="ADSRModulator" id="{c0cb364c-6060-4a04-9acb-0c9d9d5eb309}">
@@ -4386,6 +4420,15 @@ shop = overrides everything</value>
 			<destination>{85e96dd0-ae52-4488-b05b-b212878d3ff7}</destination>
 		</relationship>
 	</object>
+	<object class="AutomationCurve" id="{2b7f3252-581f-4a81-a088-ce982ce67bb4}">
+		<relationship name="parameter">
+			<destination>{165349e2-9281-4876-a2f9-5544c2e17904}</destination>
+		</relationship>
+		<relationship name="automationPoints">
+			<destination>{e36c3325-4751-4c35-b21e-973574ae31fc}</destination>
+			<destination>{100725d9-faef-4266-a224-e113cc7ffd51}</destination>
+		</relationship>
+	</object>
 	<object class="MixerBusFader" id="{1e0b33aa-4a1f-462e-a800-c496f69e2c2a}" />
 	<object class="MixerSend" id="{9bd8223e-36a9-44d2-9be2-ef74601655ec}">
 		<property name="inputFormat">
@@ -4753,6 +4796,22 @@ shop = overrides everything</value>
 	<object class="AutomationPoint" id="{85e96dd0-ae52-4488-b05b-b212878d3ff7}">
 		<property name="position">
 			<value>1</value>
+		</property>
+		<property name="value">
+			<value>-80</value>
+		</property>
+	</object>
+	<object class="AutomationPoint" id="{e36c3325-4751-4c35-b21e-973574ae31fc}">
+		<property name="position">
+			<value>1.9725711954166849</value>
+		</property>
+		<property name="value">
+			<value>0</value>
+		</property>
+	</object>
+	<object class="AutomationPoint" id="{100725d9-faef-4266-a224-e113cc7ffd51}">
+		<property name="position">
+			<value>1.4508320649819022</value>
 		</property>
 		<property name="value">
 			<value>-80</value>
