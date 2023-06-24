@@ -32,7 +32,7 @@ public class bgmScript : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-        DontDestroyOnLoad(gameObject);
+        DontDestroyOnLoad(this.gameObject);
 
         // starts playing music
         //Ambience = RuntimeManager.CreateInstance(AmbienceEvent);
@@ -82,5 +82,10 @@ public class bgmScript : MonoBehaviour
     public void Reset()
     {
         Music.setParameterByID(resetParameterId, 1);
+    }
+
+    public void UndoReset()
+    {
+        Music.setParameterByID(resetParameterId, 0);
     }
 }

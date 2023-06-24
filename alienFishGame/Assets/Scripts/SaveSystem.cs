@@ -273,6 +273,15 @@ public class SaveSystem : MonoBehaviour
 
         Debug.Log("load completed!");
 
+        StartCoroutine(waiting());
+
         SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    // waits for a bit, then undos reset
+    IEnumerator waiting()
+    {
+        yield return new WaitForSeconds(2f);
+        bgmScript.instance.UndoReset();
     }
 }
