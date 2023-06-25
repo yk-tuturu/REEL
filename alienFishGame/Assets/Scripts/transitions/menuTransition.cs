@@ -14,8 +14,6 @@ public class menuTransition : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        bgmScript.instance.Reset();
-        bgmScript.instance.SetParameter(0);
         iTween.ValueTo(panel, iTween.Hash("from", 1f, "to", 0f, "time", 1f, "onupdate", "updateColor", "onupdatetarget", this.gameObject));
     }
 

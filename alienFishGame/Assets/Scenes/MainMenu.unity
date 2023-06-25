@@ -2435,6 +2435,7 @@ MonoBehaviour:
     Trap1Capacity: 
     date: 
     saveIndex: 0
+    bossDefeated: 0
   autosaveTime: 2
 --- !u!4 &997407870
 Transform:
@@ -2481,6 +2482,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   noSave: 0
+  bossCleared: 0
   confirmPanel: {fileID: 1045584542}
   loadScreen: {fileID: 1044371720}
   saveDates:
@@ -5199,7 +5201,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2092539227}
   - component: {fileID: 2092539228}
-  - component: {fileID: 2092539230}
   m_Layer: 0
   m_Name: audio
   m_TagString: Untagged
@@ -5248,18 +5249,6 @@ MonoBehaviour:
       Data3: 1160979354
       Data4: -227590951
     Path: event:/Music/Main loop
---- !u!114 &2092539230
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2092539225}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 981f1e06702184e5eb229945436de56f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2092825660
 GameObject:
   m_ObjectHideFlags: 0

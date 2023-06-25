@@ -37,8 +37,9 @@ public class bgmScript : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
 
         // starts playing music
-        //Ambience = RuntimeManager.CreateInstance(AmbienceEvent);
-        //Ambience.start();
+        Debug.Log("beginning to play music");
+        Ambience = RuntimeManager.CreateInstance(AmbienceEvent);
+        Ambience.start();
 
         Music = RuntimeManager.CreateInstance(MusicEvent);
         Music.start();

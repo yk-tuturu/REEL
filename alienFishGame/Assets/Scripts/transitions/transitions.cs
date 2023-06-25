@@ -39,7 +39,6 @@ public class transitions : MonoBehaviour
         }
         
         // plays movement 9, a slight time buffer is placed between the param change and the beginning of the animation
-        bgmScript.instance.Reset();
         bgmScript.instance.SetParameter(9);
 
         yield return new WaitForSeconds(2f);
