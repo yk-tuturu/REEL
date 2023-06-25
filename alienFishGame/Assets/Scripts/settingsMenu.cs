@@ -51,6 +51,7 @@ public class settingsMenu : MonoBehaviour
 
     public void QuitGame()
     {
+        bgmScript.instance.Reset();
         SceneManager.LoadScene("Scenes/MainMenu");
     }
 

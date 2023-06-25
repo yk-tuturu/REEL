@@ -87,6 +87,7 @@ public class commandExtend : MonoBehaviour
                     File.WriteAllText(file, jsonString);
                 }
             }
+            bgmScript.instance.Reset();
         }
 
         var transition = GameObject.Find("transitions");
