@@ -110,8 +110,6 @@ shop = overrides everything</value>
 			<destination>{53581c01-e539-4c02-91e4-dce449cd9c0e}</destination>
 			<destination>{1aa0ed1b-7e5e-4613-9be1-1856362035d1}</destination>
 			<destination>{57a4514a-c730-4257-9708-52845b1b021f}</destination>
-			<destination>{b9d9c39f-0e94-47b4-ac82-9cfc09d3bcd2}</destination>
-			<destination>{ff9bc1d3-209d-4d0e-9c73-258769a06a76}</destination>
 		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{21777420-3f13-45c4-a59a-644472434d14}</destination>
@@ -162,8 +160,6 @@ shop = overrides everything</value>
 			<destination>{9cffa5b5-1aaf-43c0-801b-8e666c5150e3}</destination>
 			<destination>{6f0d027a-fab8-4f48-bef4-467e8c70fdc9}</destination>
 			<destination>{d6e16867-8c3c-49c5-a35c-c9859a6c5315}</destination>
-			<destination>{bdd1588c-e9ae-4617-aa5d-e1d51f51d29b}</destination>
-			<destination>{20c82b72-1af3-4583-9cd5-202c605391ab}</destination>
 		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{2a233211-5212-4092-9fa0-f9957295bf2a}</destination>
@@ -188,8 +184,6 @@ shop = overrides everything</value>
 			<destination>{cef0d82d-dc0f-4cde-8222-8676ce129941}</destination>
 			<destination>{05b59e1f-ee12-4f24-a0cb-bce9db490c44}</destination>
 			<destination>{e6d986ed-0dc2-4959-9d28-18d507620220}</destination>
-			<destination>{67a32647-1a94-4a2c-957c-229a6b0f236f}</destination>
-			<destination>{a2cdb5ef-0c3a-4190-a96c-c58bcd76c1ba}</destination>
 		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{43f707fa-55da-4efc-8454-73b54177195d}</destination>
@@ -215,8 +209,6 @@ shop = overrides everything</value>
 			<destination>{a0e5b812-af66-4d6c-be9c-10a3297ec382}</destination>
 			<destination>{df7965d6-7ccd-4ae1-9cd1-5dbe87abd73a}</destination>
 			<destination>{0d530830-058a-41a4-b7af-4ef1bb54a98f}</destination>
-			<destination>{eff84e85-9de5-498c-93f3-c883ce6c8a99}</destination>
-			<destination>{91302753-a660-486b-bb9e-551dbe8d119a}</destination>
 		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{decd45d1-5bf2-4fc7-8dc5-074e2bfc3acb}</destination>
@@ -242,8 +234,6 @@ shop = overrides everything</value>
 			<destination>{f0be02b3-1490-49c2-9ad4-67bf84152b59}</destination>
 			<destination>{f1130ae0-6799-407f-9976-04b9a15e51df}</destination>
 			<destination>{ebc5ded2-7236-4ad6-a9b6-608de62f1028}</destination>
-			<destination>{39d3d32f-3a04-4c28-aca9-00e5e9fa44fb}</destination>
-			<destination>{d75346f4-c6f0-49be-b7c3-56a9f5371b08}</destination>
 		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{667164a1-e1b8-41b2-b533-1bd3642ce190}</destination>
@@ -268,8 +258,6 @@ shop = overrides everything</value>
 			<destination>{c3b7a5d7-6e36-4a7f-9819-a160f9d538ef}</destination>
 			<destination>{8c0764c6-c55f-43de-8852-6164fc9a3800}</destination>
 			<destination>{74d9c806-62a3-4608-8fc2-c3ae0694e037}</destination>
-			<destination>{3f01a6fb-4e4c-48fe-bace-00cb17df8546}</destination>
-			<destination>{6024f782-6cdb-4a55-a614-ab577f5a86d2}</destination>
 		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{62124cac-9396-41d8-925a-f8cdd193c4af}</destination>
@@ -294,8 +282,6 @@ shop = overrides everything</value>
 			<destination>{4c2e720b-099b-4bef-95b8-c33baee80037}</destination>
 			<destination>{c931581a-29b4-47eb-96dd-2b104ba0171e}</destination>
 			<destination>{f8c29ca7-62bc-4c6b-b028-298c0d596d0b}</destination>
-			<destination>{66f67eb1-0ed3-45a2-be70-96aa48a1167e}</destination>
-			<destination>{2a2be6b7-365f-46d1-8a92-5feb44e5f56b}</destination>
 		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{4ab5898c-97ac-4cfc-a14a-fc1cba604c65}</destination>
@@ -319,8 +305,6 @@ shop = overrides everything</value>
 			<destination>{f970f34f-e487-4353-a7fb-1392e744cac1}</destination>
 			<destination>{1413ca62-eec9-4175-8756-f3c74809e138}</destination>
 			<destination>{b1f98093-78dd-496e-ada6-f45910ca9ece}</destination>
-			<destination>{6c58203d-62d6-405f-93de-718025011ca8}</destination>
-			<destination>{cb6d7a62-b27e-4eef-9cff-a1548ea2d9ef}</destination>
 		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{b8cd9ceb-8a86-4a00-8a57-74c60fa1e45f}</destination>
@@ -340,17 +324,12 @@ shop = overrides everything</value>
 			<destination>{aed60244-fa2f-4661-b6ab-cd68ef55524c}</destination>
 			<destination>{f1a97908-36c7-4669-a37c-97871ba32b36}</destination>
 			<destination>{9464f87f-7a04-41d9-a1e8-0ef84f85b82b}</destination>
-			<destination>{34d7489b-caf4-4ab0-9373-e20461b9261a}</destination>
-			<destination>{44da2818-10f2-4c4c-83bf-c475f4cd87b0}</destination>
 		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{49ceae5c-b182-49ae-b107-eacfecd2a982}</destination>
 		</relationship>
 	</object>
 	<object class="GroupTrack" id="{658ec4c2-9c0f-4d9a-bbfe-31c813d733a4}">
-		<relationship name="automationTracks">
-			<destination>{3c60df7b-f60d-40a8-b389-87dd73556d04}</destination>
-		</relationship>
 		<relationship name="modules">
 			<destination>{f20e95ed-d81f-411c-b204-d3729fe4a982}</destination>
 			<destination>{b0cc6067-4c3c-4b0a-8f8b-6adb7686fdef}</destination>
@@ -365,8 +344,6 @@ shop = overrides everything</value>
 			<destination>{a21bab9a-76f4-4638-a988-c81c91fa3e48}</destination>
 			<destination>{8c232d81-bade-4d27-a484-3326eb7008e5}</destination>
 			<destination>{ed64d8f7-09a9-4639-956a-6662d5317703}</destination>
-			<destination>{2997e678-f74c-4192-918e-c3311859d5ef}</destination>
-			<destination>{4f64dbdf-6166-4bd2-8d3e-a9c6053ad42c}</destination>
 		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{2b731e03-4d55-4496-9d9a-27dd2848ed0c}</destination>
@@ -387,8 +364,6 @@ shop = overrides everything</value>
 			<destination>{b3af4a31-17e2-467d-ad58-bc89c3034aff}</destination>
 			<destination>{a4e83e1f-675d-43ef-ab93-4fd29f3565a4}</destination>
 			<destination>{eac6f8af-cc2a-499c-a900-88d445e7396a}</destination>
-			<destination>{bed95937-dab2-4c90-a354-7281f1cf7671}</destination>
-			<destination>{a38dc9a9-56d3-4b97-8c14-dc3902a516e4}</destination>
 		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{727d6b97-2231-4417-bc70-5dd7286379ae}</destination>
@@ -409,8 +384,6 @@ shop = overrides everything</value>
 			<destination>{b9c4b9e6-59ae-43ee-8f5c-5602570f4a0d}</destination>
 			<destination>{5ce98973-01bf-4cf9-84b2-1ccc2e64b49a}</destination>
 			<destination>{b492d313-7206-4765-981f-d7d876c33584}</destination>
-			<destination>{35bfd928-920b-4536-8e4a-b5018ce5c359}</destination>
-			<destination>{4a21e7ae-d2a5-45ff-ad42-150b018ebba8}</destination>
 		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{d1798392-c254-475f-9199-f3d3c89015f7}</destination>
@@ -429,8 +402,6 @@ shop = overrides everything</value>
 			<destination>{e8dc1a53-30f0-44a6-8b7d-214eb84bd6b4}</destination>
 			<destination>{e7b5b2c0-2856-4298-b2b0-2490ae17b634}</destination>
 			<destination>{0f9b03b3-a1f7-4b5f-b6bc-b2a5c6c3ca44}</destination>
-			<destination>{439d819a-37e4-4e7b-88df-9c4bce22b247}</destination>
-			<destination>{c17c4773-de3f-4af2-94e6-c81285f37f4f}</destination>
 		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{685b961e-5128-4b4c-9eba-8706c968921b}</destination>
@@ -453,8 +424,6 @@ shop = overrides everything</value>
 			<destination>{6445c69f-ff4e-4823-a7ec-f354ab606e9d}</destination>
 			<destination>{c4bc41ab-7b26-4573-afa4-1471f6fb3c0a}</destination>
 			<destination>{0ce255a9-4bfc-4417-aa04-a557140a82df}</destination>
-			<destination>{561ccdd8-f9d5-41b6-b88c-05ba3d26a15a}</destination>
-			<destination>{8881c999-d285-4b77-95d5-56f4906f8c7f}</destination>
 		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{97b43d36-f463-4d3f-a2fd-457a190b1225}</destination>
@@ -474,8 +443,6 @@ shop = overrides everything</value>
 			<destination>{7618125e-8aa5-4bbc-a679-15423caf5d35}</destination>
 			<destination>{482c3155-f136-419b-9279-b3173e8acadc}</destination>
 			<destination>{b9744a99-f973-4201-ad20-1a28ebf842d5}</destination>
-			<destination>{f7490f03-83f4-4e73-b322-ed89830d6a6b}</destination>
-			<destination>{bd23fb96-0d90-4139-898b-743a0c903483}</destination>
 		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{0fee0d13-a076-4d2e-bcb4-d8c59369530c}</destination>
@@ -495,8 +462,6 @@ shop = overrides everything</value>
 			<destination>{925fae23-d628-4cc9-ab2d-64b7ed0eb12b}</destination>
 			<destination>{581ece09-9616-4496-a54d-8697348ebc61}</destination>
 			<destination>{191c336e-5ea1-4ffe-96d3-6b2141aba743}</destination>
-			<destination>{69d8053d-d253-487d-82ff-01672a3bf6e4}</destination>
-			<destination>{c3cf4b66-f472-4a1e-b576-f30f11a00fd2}</destination>
 		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{a701975c-5917-4291-b65c-bc17c9e78178}</destination>
@@ -516,8 +481,6 @@ shop = overrides everything</value>
 			<destination>{1318b189-9869-48d2-b690-b7143d17d05d}</destination>
 			<destination>{99080db9-0ef4-410e-a46d-7eff23148fd8}</destination>
 			<destination>{18ebb2bd-332b-45e0-a2f9-928e2421d3f8}</destination>
-			<destination>{382d7d30-91cc-41e1-82be-fc65b257a640}</destination>
-			<destination>{dd4ba23f-9848-4f85-81d6-087c1b245bad}</destination>
 		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{adbcf858-334d-441f-a0c0-23597f0c37ed}</destination>
@@ -537,8 +500,6 @@ shop = overrides everything</value>
 			<destination>{3e7a2a6d-7657-418d-9cdd-b2b850dd2414}</destination>
 			<destination>{e4c8029e-bcf1-4f63-bd5b-678511321335}</destination>
 			<destination>{a6eceeb5-43cf-45cc-a7c3-060b7e962087}</destination>
-			<destination>{7acff23d-f887-4a8c-ae58-a1bc97fc9459}</destination>
-			<destination>{b258fb3d-7dbc-4473-90eb-988eef9943d8}</destination>
 		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{86f29746-4391-4749-a7ee-7717b122583b}</destination>
@@ -558,8 +519,6 @@ shop = overrides everything</value>
 			<destination>{3e4aa09b-ae6a-4e41-9b5e-e1ba30304f34}</destination>
 			<destination>{7528675e-bb75-4d01-b4b0-18756134ee53}</destination>
 			<destination>{6fb265bb-3abf-453b-a953-9a629a7af41d}</destination>
-			<destination>{beb53496-c797-4106-8def-b7e28986a08a}</destination>
-			<destination>{2d54ceb0-cd3b-4cf8-b789-7561c6c321b8}</destination>
 		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{6fc3f98b-0405-44d4-975d-09eb2f56ba77}</destination>
@@ -579,8 +538,6 @@ shop = overrides everything</value>
 			<destination>{5458e542-4551-494d-9e93-34a68eda6024}</destination>
 			<destination>{28673be9-4c15-4a26-a014-d879fa44ef10}</destination>
 			<destination>{24dd8643-2089-4b51-b3ac-248d4f42c8ae}</destination>
-			<destination>{0ad52cd6-9d29-4a13-9392-1e6b2020b9cc}</destination>
-			<destination>{8c00a7fe-edde-47c2-955f-99c811acacdf}</destination>
 		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{b2f67e0d-ba84-4a56-9ac2-55dcf63767f0}</destination>
@@ -602,8 +559,6 @@ shop = overrides everything</value>
 			<destination>{8015ab37-e47f-41bc-819e-6332f522642d}</destination>
 			<destination>{58f5f377-be39-4877-907c-c67f15546ea6}</destination>
 			<destination>{be9118bd-5a38-476b-b8ab-cc33f2f726d0}</destination>
-			<destination>{2cd274fd-4ee0-4f97-b75c-c730249745ea}</destination>
-			<destination>{c708ab1f-7778-4c59-b70c-a848348b44f9}</destination>
 		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{2f896bc1-30a6-4bd0-bc8b-3f0e68da62f7}</destination>
@@ -815,19 +770,6 @@ shop = overrides everything</value>
 			<value>0</value>
 		</property>
 	</object>
-	<object class="TransitionSourceSound" id="{b9d9c39f-0e94-47b4-ac82-9cfc09d3bcd2}">
-		<property name="length">
-			<value>0</value>
-		</property>
-	</object>
-	<object class="TransitionDestinationSound" id="{ff9bc1d3-209d-4d0e-9c73-258769a06a76}">
-		<property name="start">
-			<value>1.9725711954166845</value>
-		</property>
-		<property name="length">
-			<value>0</value>
-		</property>
-	</object>
 	<object class="MixerBusEffectChain" id="{f3b8bc36-b493-43de-aeb5-bf6f25d0b860}">
 		<relationship name="effects">
 			<destination>{8cb56289-5525-46d4-bb6f-e21a835a334e}</destination>
@@ -929,19 +871,6 @@ shop = overrides everything</value>
 		<relationship name="commandTarget">
 			<destination>{98644c0f-c6dc-4038-9521-31cd7e19cc67}</destination>
 		</relationship>
-	</object>
-	<object class="TransitionSourceSound" id="{bdd1588c-e9ae-4617-aa5d-e1d51f51d29b}">
-		<property name="length">
-			<value>0</value>
-		</property>
-	</object>
-	<object class="TransitionDestinationSound" id="{20c82b72-1af3-4583-9cd5-202c605391ab}">
-		<property name="start">
-			<value>1.9725711954166845</value>
-		</property>
-		<property name="length">
-			<value>0</value>
-		</property>
 	</object>
 	<object class="EventMixerGroup" id="{2a233211-5212-4092-9fa0-f9957295bf2a}">
 		<property name="name">
@@ -1079,19 +1008,6 @@ shop = overrides everything</value>
 		<relationship name="commandTarget">
 			<destination>{e5dd1e99-e7a7-4365-923b-211edc1cba95}</destination>
 		</relationship>
-	</object>
-	<object class="TransitionSourceSound" id="{67a32647-1a94-4a2c-957c-229a6b0f236f}">
-		<property name="length">
-			<value>0</value>
-		</property>
-	</object>
-	<object class="TransitionDestinationSound" id="{a2cdb5ef-0c3a-4190-a96c-c58bcd76c1ba}">
-		<property name="start">
-			<value>1.9725711954166845</value>
-		</property>
-		<property name="length">
-			<value>0</value>
-		</property>
 	</object>
 	<object class="EventMixerGroup" id="{43f707fa-55da-4efc-8454-73b54177195d}">
 		<property name="name">
@@ -1250,19 +1166,6 @@ shop = overrides everything</value>
 			<destination>{f0b8fc87-1dc9-418a-b333-8c3401423be8}</destination>
 		</relationship>
 	</object>
-	<object class="TransitionSourceSound" id="{eff84e85-9de5-498c-93f3-c883ce6c8a99}">
-		<property name="length">
-			<value>0</value>
-		</property>
-	</object>
-	<object class="TransitionDestinationSound" id="{91302753-a660-486b-bb9e-551dbe8d119a}">
-		<property name="start">
-			<value>1.9725711954166845</value>
-		</property>
-		<property name="length">
-			<value>0</value>
-		</property>
-	</object>
 	<object class="EventMixerGroup" id="{decd45d1-5bf2-4fc7-8dc5-074e2bfc3acb}">
 		<property name="name">
 			<value>1</value>
@@ -1414,19 +1317,6 @@ shop = overrides everything</value>
 			<destination>{b15a7186-50b0-44e1-ae41-b925e532d401}</destination>
 		</relationship>
 	</object>
-	<object class="TransitionSourceSound" id="{39d3d32f-3a04-4c28-aca9-00e5e9fa44fb}">
-		<property name="length">
-			<value>0</value>
-		</property>
-	</object>
-	<object class="TransitionDestinationSound" id="{d75346f4-c6f0-49be-b7c3-56a9f5371b08}">
-		<property name="start">
-			<value>1.9725711954166845</value>
-		</property>
-		<property name="length">
-			<value>0</value>
-		</property>
-	</object>
 	<object class="EventMixerGroup" id="{667164a1-e1b8-41b2-b533-1bd3642ce190}">
 		<property name="name">
 			<value>2</value>
@@ -1566,19 +1456,6 @@ shop = overrides everything</value>
 		<relationship name="audioFile">
 			<destination>{360cfe23-ea61-45aa-9045-eade3bda7934}</destination>
 		</relationship>
-	</object>
-	<object class="TransitionSourceSound" id="{3f01a6fb-4e4c-48fe-bace-00cb17df8546}">
-		<property name="length">
-			<value>0</value>
-		</property>
-	</object>
-	<object class="TransitionDestinationSound" id="{6024f782-6cdb-4a55-a614-ab577f5a86d2}">
-		<property name="start">
-			<value>1.9725711954166845</value>
-		</property>
-		<property name="length">
-			<value>0</value>
-		</property>
 	</object>
 	<object class="EventMixerGroup" id="{62124cac-9396-41d8-925a-f8cdd193c4af}">
 		<property name="name">
@@ -1722,19 +1599,6 @@ shop = overrides everything</value>
 		<relationship name="audioFile">
 			<destination>{0462d692-76a2-41d5-a0f0-91d53866c4b9}</destination>
 		</relationship>
-	</object>
-	<object class="TransitionSourceSound" id="{66f67eb1-0ed3-45a2-be70-96aa48a1167e}">
-		<property name="length">
-			<value>0</value>
-		</property>
-	</object>
-	<object class="TransitionDestinationSound" id="{2a2be6b7-365f-46d1-8a92-5feb44e5f56b}">
-		<property name="start">
-			<value>1.9725711954166845</value>
-		</property>
-		<property name="length">
-			<value>0</value>
-		</property>
 	</object>
 	<object class="EventMixerGroup" id="{4ab5898c-97ac-4cfc-a14a-fc1cba604c65}">
 		<property name="name">
@@ -1880,19 +1744,6 @@ shop = overrides everything</value>
 			<value>0</value>
 		</property>
 	</object>
-	<object class="TransitionSourceSound" id="{6c58203d-62d6-405f-93de-718025011ca8}">
-		<property name="length">
-			<value>0</value>
-		</property>
-	</object>
-	<object class="TransitionDestinationSound" id="{cb6d7a62-b27e-4eef-9cff-a1548ea2d9ef}">
-		<property name="start">
-			<value>1.9725711954166845</value>
-		</property>
-		<property name="length">
-			<value>0</value>
-		</property>
-	</object>
 	<object class="EventMixerGroup" id="{b8cd9ceb-8a86-4a00-8a57-74c60fa1e45f}">
 		<property name="name">
 			<value>4</value>
@@ -2012,19 +1863,6 @@ shop = overrides everything</value>
 			<value>0</value>
 		</property>
 	</object>
-	<object class="TransitionSourceSound" id="{34d7489b-caf4-4ab0-9373-e20461b9261a}">
-		<property name="length">
-			<value>0</value>
-		</property>
-	</object>
-	<object class="TransitionDestinationSound" id="{44da2818-10f2-4c4c-83bf-c475f4cd87b0}">
-		<property name="start">
-			<value>1.9725711954166845</value>
-		</property>
-		<property name="length">
-			<value>0</value>
-		</property>
-	</object>
 	<object class="EventMixerGroup" id="{49ceae5c-b182-49ae-b107-eacfecd2a982}">
 		<property name="name">
 			<value>5</value>
@@ -2037,11 +1875,6 @@ shop = overrides everything</value>
 		</relationship>
 		<relationship name="output">
 			<destination>{21777420-3f13-45c4-a59a-644472434d14}</destination>
-		</relationship>
-	</object>
-	<object class="AutomationTrack" id="{3c60df7b-f60d-40a8-b389-87dd73556d04}">
-		<relationship name="automator">
-			<destination>{b17ca3a0-759b-4d1a-9d93-74ad418937bd}</destination>
 		</relationship>
 	</object>
 	<object class="TransitionSourceSound" id="{f20e95ed-d81f-411c-b204-d3729fe4a982}">
@@ -2062,7 +1895,7 @@ shop = overrides everything</value>
 			<value>411.18271612295291</value>
 		</property>
 		<property name="length">
-			<value>92.015238095238089</value>
+			<value>85.333333333333314</value>
 		</property>
 		<property name="volume">
 			<value>2</value>
@@ -2163,19 +1996,6 @@ shop = overrides everything</value>
 			<value>0</value>
 		</property>
 	</object>
-	<object class="TransitionSourceSound" id="{2997e678-f74c-4192-918e-c3311859d5ef}">
-		<property name="length">
-			<value>1.9725711954166845</value>
-		</property>
-	</object>
-	<object class="TransitionDestinationSound" id="{4f64dbdf-6166-4bd2-8d3e-a9c6053ad42c}">
-		<property name="start">
-			<value>1.9725711954166845</value>
-		</property>
-		<property name="length">
-			<value>0</value>
-		</property>
-	</object>
 	<object class="EventMixerGroup" id="{2b731e03-4d55-4496-9d9a-27dd2848ed0c}">
 		<property name="name">
 			<value>6</value>
@@ -2208,7 +2028,7 @@ shop = overrides everything</value>
 			<value>411.18271612295291</value>
 		</property>
 		<property name="length">
-			<value>88</value>
+			<value>85.333333333333314</value>
 		</property>
 		<property name="quantizationInterval">
 			<value>2</value>
@@ -2221,9 +2041,6 @@ shop = overrides everything</value>
 		</relationship>
 		<relationship name="fadeInCurve">
 			<destination>{a0f88650-8b2e-4b85-bb02-ce523c0c161a}</destination>
-		</relationship>
-		<relationship name="fadeOutCurve">
-			<destination>{22903c0c-ce12-40cb-8f8e-14e48ef1deb1}</destination>
 		</relationship>
 		<relationship name="audioFile">
 			<destination>{820e6689-bd0e-441c-902a-b6360699a0d2}</destination>
@@ -2321,19 +2138,6 @@ shop = overrides everything</value>
 			<destination>{820e6689-bd0e-441c-902a-b6360699a0d2}</destination>
 		</relationship>
 	</object>
-	<object class="TransitionSourceSound" id="{bed95937-dab2-4c90-a354-7281f1cf7671}">
-		<property name="length">
-			<value>0</value>
-		</property>
-	</object>
-	<object class="TransitionDestinationSound" id="{a38dc9a9-56d3-4b97-8c14-dc3902a516e4}">
-		<property name="start">
-			<value>1.9725711954166845</value>
-		</property>
-		<property name="length">
-			<value>0</value>
-		</property>
-	</object>
 	<object class="EventMixerGroup" id="{727d6b97-2231-4417-bc70-5dd7286379ae}">
 		<property name="name">
 			<value>7</value>
@@ -2366,7 +2170,7 @@ shop = overrides everything</value>
 			<value>411.18271612295291</value>
 		</property>
 		<property name="length">
-			<value>94.987392290249431</value>
+			<value>85.333333333332973</value>
 		</property>
 		<property name="quantizationInterval">
 			<value>1</value>
@@ -2482,19 +2286,6 @@ shop = overrides everything</value>
 			<value>0</value>
 		</property>
 	</object>
-	<object class="TransitionSourceSound" id="{35bfd928-920b-4536-8e4a-b5018ce5c359}">
-		<property name="length">
-			<value>1.9725711954166845</value>
-		</property>
-	</object>
-	<object class="TransitionDestinationSound" id="{4a21e7ae-d2a5-45ff-ad42-150b018ebba8}">
-		<property name="start">
-			<value>1.9725711954166845</value>
-		</property>
-		<property name="length">
-			<value>0</value>
-		</property>
-	</object>
 	<object class="EventMixerGroup" id="{d1798392-c254-475f-9199-f3d3c89015f7}">
 		<property name="name">
 			<value>8 glitch</value>
@@ -2589,19 +2380,6 @@ shop = overrides everything</value>
 	<object class="TransitionDestinationSound" id="{0f9b03b3-a1f7-4b5f-b6bc-b2a5c6c3ca44}">
 		<property name="start">
 			<value>2.0869565217391304</value>
-		</property>
-		<property name="length">
-			<value>0</value>
-		</property>
-	</object>
-	<object class="TransitionSourceSound" id="{439d819a-37e4-4e7b-88df-9c4bce22b247}">
-		<property name="length">
-			<value>1.9725711954166845</value>
-		</property>
-	</object>
-	<object class="TransitionDestinationSound" id="{c17c4773-de3f-4af2-94e6-c81285f37f4f}">
-		<property name="start">
-			<value>1.9725711954166845</value>
 		</property>
 		<property name="length">
 			<value>0</value>
@@ -2710,19 +2488,6 @@ shop = overrides everything</value>
 			<value>0</value>
 		</property>
 	</object>
-	<object class="TransitionSourceSound" id="{561ccdd8-f9d5-41b6-b88c-05ba3d26a15a}">
-		<property name="length">
-			<value>0</value>
-		</property>
-	</object>
-	<object class="TransitionDestinationSound" id="{8881c999-d285-4b77-95d5-56f4906f8c7f}">
-		<property name="start">
-			<value>1.9725711954166845</value>
-		</property>
-		<property name="length">
-			<value>0</value>
-		</property>
-	</object>
 	<object class="EventMixerGroup" id="{97b43d36-f463-4d3f-a2fd-457a190b1225}">
 		<property name="name">
 			<value>9</value>
@@ -2758,7 +2523,7 @@ shop = overrides everything</value>
 			<value>28.11392290249433</value>
 		</property>
 		<property name="volume">
-			<value>-6</value>
+			<value>-3</value>
 		</property>
 		<relationship name="audioFile">
 			<destination>{87410eac-f292-4da5-8abd-5271397840bf}</destination>
@@ -2831,19 +2596,6 @@ shop = overrides everything</value>
 	<object class="TransitionDestinationSound" id="{b9744a99-f973-4201-ad20-1a28ebf842d5}">
 		<property name="start">
 			<value>2.0869565217391304</value>
-		</property>
-		<property name="length">
-			<value>0</value>
-		</property>
-	</object>
-	<object class="TransitionSourceSound" id="{f7490f03-83f4-4e73-b322-ed89830d6a6b}">
-		<property name="length">
-			<value>0</value>
-		</property>
-	</object>
-	<object class="TransitionDestinationSound" id="{bd23fb96-0d90-4139-898b-743a0c903483}">
-		<property name="start">
-			<value>1.9725711954166845</value>
 		</property>
 		<property name="length">
 			<value>0</value>
@@ -2951,19 +2703,6 @@ shop = overrides everything</value>
 	<object class="TransitionDestinationSound" id="{191c336e-5ea1-4ffe-96d3-6b2141aba743}">
 		<property name="start">
 			<value>2.0869565217391304</value>
-		</property>
-		<property name="length">
-			<value>0</value>
-		</property>
-	</object>
-	<object class="TransitionSourceSound" id="{69d8053d-d253-487d-82ff-01672a3bf6e4}">
-		<property name="length">
-			<value>0</value>
-		</property>
-	</object>
-	<object class="TransitionDestinationSound" id="{c3cf4b66-f472-4a1e-b576-f30f11a00fd2}">
-		<property name="start">
-			<value>1.9725711954166845</value>
 		</property>
 		<property name="length">
 			<value>0</value>
@@ -3085,19 +2824,6 @@ shop = overrides everything</value>
 			<value>0</value>
 		</property>
 	</object>
-	<object class="TransitionSourceSound" id="{382d7d30-91cc-41e1-82be-fc65b257a640}">
-		<property name="length">
-			<value>0</value>
-		</property>
-	</object>
-	<object class="TransitionDestinationSound" id="{dd4ba23f-9848-4f85-81d6-087c1b245bad}">
-		<property name="start">
-			<value>1.9725711954166845</value>
-		</property>
-		<property name="length">
-			<value>0</value>
-		</property>
-	</object>
 	<object class="EventMixerGroup" id="{adbcf858-334d-441f-a0c0-23597f0c37ed}">
 		<property name="name">
 			<value>boss</value>
@@ -3203,19 +2929,6 @@ shop = overrides everything</value>
 	<object class="TransitionDestinationSound" id="{a6eceeb5-43cf-45cc-a7c3-060b7e962087}">
 		<property name="start">
 			<value>2.0869565217391304</value>
-		</property>
-		<property name="length">
-			<value>0</value>
-		</property>
-	</object>
-	<object class="TransitionSourceSound" id="{7acff23d-f887-4a8c-ae58-a1bc97fc9459}">
-		<property name="length">
-			<value>0</value>
-		</property>
-	</object>
-	<object class="TransitionDestinationSound" id="{b258fb3d-7dbc-4473-90eb-988eef9943d8}">
-		<property name="start">
-			<value>1.9725711954166845</value>
 		</property>
 		<property name="length">
 			<value>0</value>
@@ -3331,19 +3044,6 @@ shop = overrides everything</value>
 			<destination>{07f337f5-2033-474b-9bdf-ce211e618cc6}</destination>
 		</relationship>
 	</object>
-	<object class="TransitionSourceSound" id="{beb53496-c797-4106-8def-b7e28986a08a}">
-		<property name="length">
-			<value>0</value>
-		</property>
-	</object>
-	<object class="TransitionDestinationSound" id="{2d54ceb0-cd3b-4cf8-b789-7561c6c321b8}">
-		<property name="start">
-			<value>1.9725711954166845</value>
-		</property>
-		<property name="length">
-			<value>0</value>
-		</property>
-	</object>
 	<object class="EventMixerGroup" id="{6fc3f98b-0405-44d4-975d-09eb2f56ba77}">
 		<property name="name">
 			<value>release</value>
@@ -3450,19 +3150,6 @@ shop = overrides everything</value>
 		<relationship name="audioFile">
 			<destination>{0076a45d-40a7-4178-9591-611a2eaa330f}</destination>
 		</relationship>
-	</object>
-	<object class="TransitionSourceSound" id="{0ad52cd6-9d29-4a13-9392-1e6b2020b9cc}">
-		<property name="length">
-			<value>0</value>
-		</property>
-	</object>
-	<object class="TransitionDestinationSound" id="{8c00a7fe-edde-47c2-955f-99c811acacdf}">
-		<property name="start">
-			<value>1.9725711954166845</value>
-		</property>
-		<property name="length">
-			<value>0</value>
-		</property>
 	</object>
 	<object class="EventMixerGroup" id="{b2f67e0d-ba84-4a56-9ac2-55dcf63767f0}">
 		<property name="volume">
@@ -3607,19 +3294,6 @@ shop = overrides everything</value>
 		<relationship name="commandTarget">
 			<destination>{98644c0f-c6dc-4038-9521-31cd7e19cc67}</destination>
 		</relationship>
-	</object>
-	<object class="TransitionSourceSound" id="{2cd274fd-4ee0-4f97-b75c-c730249745ea}">
-		<property name="length">
-			<value>0</value>
-		</property>
-	</object>
-	<object class="TransitionDestinationSound" id="{c708ab1f-7778-4c59-b70c-a848348b44f9}">
-		<property name="start">
-			<value>1.9725711954166845</value>
-		</property>
-		<property name="length">
-			<value>0</value>
-		</property>
 	</object>
 	<object class="EventMixerGroup" id="{2f896bc1-30a6-4bd0-bc8b-3f0e68da62f7}">
 		<property name="volume">
@@ -4388,17 +4062,11 @@ shop = overrides everything</value>
 		<property name="length">
 			<value>461.1521739130431</value>
 		</property>
-		<property name="quantizationInterval">
-			<value>5</value>
-		</property>
 		<relationship name="timeline">
 			<destination>{165349e2-9281-4876-a2f9-5544c2e17904}</destination>
 		</relationship>
 		<relationship name="markerTrack">
 			<destination>{cbd51255-e023-47c7-aa8d-f57e9c894335}</destination>
-		</relationship>
-		<relationship name="transitionTimeline">
-			<destination>{80453b20-e126-4503-a7c9-6dcdc48c9020}</destination>
 		</relationship>
 		<relationship name="destination">
 			<destination>{fa7ac747-4ab7-408f-a3a1-30250372f382}</destination>
@@ -4720,7 +4388,6 @@ shop = overrides everything</value>
 	<object class="MixerBusEffectChain" id="{1155aba9-6d24-4ea5-8e35-5e4ee0c1dd5f}">
 		<relationship name="effects">
 			<destination>{95505137-08bc-403c-a5be-fc10e685d3b5}</destination>
-			<destination>{603039d2-1e92-43d0-85de-9750a0fc944b}</destination>
 			<destination>{bb65b53f-ce3a-4584-b9be-a29efa388b23}</destination>
 		</relationship>
 	</object>
@@ -4759,14 +4426,6 @@ shop = overrides everything</value>
 		</relationship>
 		<relationship name="endPoint">
 			<destination>{745b99ce-c2ff-48bb-bd1c-fcb581b53ec3}</destination>
-		</relationship>
-	</object>
-	<object class="FadeCurve" id="{22903c0c-ce12-40cb-8f8e-14e48ef1deb1}">
-		<relationship name="startPoint">
-			<destination>{0dd4e6c4-1959-4845-9464-7b3c341c082f}</destination>
-		</relationship>
-		<relationship name="endPoint">
-			<destination>{ae7aa79c-b563-46a9-bf77-03074136f97b}</destination>
 		</relationship>
 	</object>
 	<object class="ParameterCondition" id="{7754d08b-6d86-41fd-b7c7-0278688e7fc4}">
@@ -5573,55 +5232,6 @@ shop = overrides everything</value>
 			<destination>{98644c0f-c6dc-4038-9521-31cd7e19cc67}</destination>
 		</relationship>
 	</object>
-	<object class="TransitionTimeline" id="{80453b20-e126-4503-a7c9-6dcdc48c9020}">
-		<property name="length">
-			<value>1.9725711954166849</value>
-		</property>
-		<relationship name="modules">
-			<destination>{bdd1588c-e9ae-4617-aa5d-e1d51f51d29b}</destination>
-			<destination>{20c82b72-1af3-4583-9cd5-202c605391ab}</destination>
-			<destination>{67a32647-1a94-4a2c-957c-229a6b0f236f}</destination>
-			<destination>{a2cdb5ef-0c3a-4190-a96c-c58bcd76c1ba}</destination>
-			<destination>{eff84e85-9de5-498c-93f3-c883ce6c8a99}</destination>
-			<destination>{91302753-a660-486b-bb9e-551dbe8d119a}</destination>
-			<destination>{39d3d32f-3a04-4c28-aca9-00e5e9fa44fb}</destination>
-			<destination>{d75346f4-c6f0-49be-b7c3-56a9f5371b08}</destination>
-			<destination>{3f01a6fb-4e4c-48fe-bace-00cb17df8546}</destination>
-			<destination>{6024f782-6cdb-4a55-a614-ab577f5a86d2}</destination>
-			<destination>{66f67eb1-0ed3-45a2-be70-96aa48a1167e}</destination>
-			<destination>{2a2be6b7-365f-46d1-8a92-5feb44e5f56b}</destination>
-			<destination>{6c58203d-62d6-405f-93de-718025011ca8}</destination>
-			<destination>{cb6d7a62-b27e-4eef-9cff-a1548ea2d9ef}</destination>
-			<destination>{34d7489b-caf4-4ab0-9373-e20461b9261a}</destination>
-			<destination>{44da2818-10f2-4c4c-83bf-c475f4cd87b0}</destination>
-			<destination>{2997e678-f74c-4192-918e-c3311859d5ef}</destination>
-			<destination>{4f64dbdf-6166-4bd2-8d3e-a9c6053ad42c}</destination>
-			<destination>{bed95937-dab2-4c90-a354-7281f1cf7671}</destination>
-			<destination>{a38dc9a9-56d3-4b97-8c14-dc3902a516e4}</destination>
-			<destination>{35bfd928-920b-4536-8e4a-b5018ce5c359}</destination>
-			<destination>{4a21e7ae-d2a5-45ff-ad42-150b018ebba8}</destination>
-			<destination>{439d819a-37e4-4e7b-88df-9c4bce22b247}</destination>
-			<destination>{c17c4773-de3f-4af2-94e6-c81285f37f4f}</destination>
-			<destination>{561ccdd8-f9d5-41b6-b88c-05ba3d26a15a}</destination>
-			<destination>{8881c999-d285-4b77-95d5-56f4906f8c7f}</destination>
-			<destination>{f7490f03-83f4-4e73-b322-ed89830d6a6b}</destination>
-			<destination>{bd23fb96-0d90-4139-898b-743a0c903483}</destination>
-			<destination>{69d8053d-d253-487d-82ff-01672a3bf6e4}</destination>
-			<destination>{c3cf4b66-f472-4a1e-b576-f30f11a00fd2}</destination>
-			<destination>{382d7d30-91cc-41e1-82be-fc65b257a640}</destination>
-			<destination>{dd4ba23f-9848-4f85-81d6-087c1b245bad}</destination>
-			<destination>{7acff23d-f887-4a8c-ae58-a1bc97fc9459}</destination>
-			<destination>{b258fb3d-7dbc-4473-90eb-988eef9943d8}</destination>
-			<destination>{beb53496-c797-4106-8def-b7e28986a08a}</destination>
-			<destination>{2d54ceb0-cd3b-4cf8-b789-7561c6c321b8}</destination>
-			<destination>{0ad52cd6-9d29-4a13-9392-1e6b2020b9cc}</destination>
-			<destination>{8c00a7fe-edde-47c2-955f-99c811acacdf}</destination>
-			<destination>{2cd274fd-4ee0-4f97-b75c-c730249745ea}</destination>
-			<destination>{c708ab1f-7778-4c59-b70c-a848348b44f9}</destination>
-			<destination>{b9d9c39f-0e94-47b4-ac82-9cfc09d3bcd2}</destination>
-			<destination>{ff9bc1d3-209d-4d0e-9c73-258769a06a76}</destination>
-		</relationship>
-	</object>
 	<object class="ParameterCondition" id="{10bee596-f2ee-459c-9210-e827e182a285}">
 		<property name="minimum">
 			<value>9</value>
@@ -5821,17 +5431,6 @@ shop = overrides everything</value>
 			<destination>{527b02ae-225b-4c59-98c3-3a17c66a2598}</destination>
 		</relationship>
 	</object>
-	<object class="MixerSend" id="{603039d2-1e92-43d0-85de-9750a0fc944b}">
-		<property name="inputFormat">
-			<value>1</value>
-		</property>
-		<relationship name="automators">
-			<destination>{b17ca3a0-759b-4d1a-9d93-74ad418937bd}</destination>
-		</relationship>
-		<relationship name="mixerReturn">
-			<destination>{5d44e6e5-ad0f-4317-a86f-e8b7c79561b1}</destination>
-		</relationship>
-	</object>
 	<object class="MixerBusFader" id="{bb65b53f-ce3a-4584-b9be-a29efa388b23}" />
 	<object class="AutomationPoint" id="{30f5b7a6-5ed1-4fb4-9335-3f800059bda8}">
 		<property name="position">
@@ -5850,25 +5449,6 @@ shop = overrides everything</value>
 		</property>
 		<property name="value">
 			<value>1</value>
-		</property>
-	</object>
-	<object class="AutomationPoint" id="{0dd4e6c4-1959-4845-9464-7b3c341c082f}">
-		<property name="position">
-			<value>499.12549068076771</value>
-		</property>
-		<property name="value">
-			<value>1</value>
-		</property>
-		<property name="curveShape">
-			<value>0.25471893</value>
-		</property>
-	</object>
-	<object class="AutomationPoint" id="{ae7aa79c-b563-46a9-bf77-03074136f97b}">
-		<property name="position">
-			<value>499.18271612295291</value>
-		</property>
-		<property name="value">
-			<value>0</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{df284e71-7153-4eb8-8fa3-d9cf6b9f8fb9}">
@@ -6334,14 +5914,6 @@ shop = overrides everything</value>
 			<value>-80</value>
 		</property>
 	</object>
-	<object class="Automator" id="{b17ca3a0-759b-4d1a-9d93-74ad418937bd}">
-		<property name="nameOfPropertyBeingAutomated">
-			<value>level</value>
-		</property>
-		<relationship name="automationCurves">
-			<destination>{7b554deb-2d33-453c-8b51-6476e3a4cb93}</destination>
-		</relationship>
-	</object>
 	<object class="Automator" id="{a1b2dd25-4611-4b8d-a958-91e4cd927553}">
 		<property name="nameOfPropertyBeingAutomated">
 			<value>lowGain</value>
@@ -6383,15 +5955,6 @@ shop = overrides everything</value>
 		<relationship name="automationPoints">
 			<destination>{030feaf4-efb3-4767-9425-1cd93714df6e}</destination>
 			<destination>{38cb9b6c-db02-4b83-b8a1-f99fc9021911}</destination>
-		</relationship>
-	</object>
-	<object class="AutomationCurve" id="{7b554deb-2d33-453c-8b51-6476e3a4cb93}">
-		<relationship name="parameter">
-			<destination>{80453b20-e126-4503-a7c9-6dcdc48c9020}</destination>
-		</relationship>
-		<relationship name="automationPoints">
-			<destination>{6613ff8e-3165-4cac-8323-fae69d990e06}</destination>
-			<destination>{daee04cb-059a-429c-8adf-0f68150e89a5}</destination>
 		</relationship>
 	</object>
 	<object class="AutomationCurve" id="{637bc2d0-dcba-4662-a547-924a8edd7726}">
@@ -6458,22 +6021,6 @@ shop = overrides everything</value>
 	<object class="AutomationPoint" id="{38cb9b6c-db02-4b83-b8a1-f99fc9021911}">
 		<property name="position">
 			<value>0.25</value>
-		</property>
-		<property name="value">
-			<value>0</value>
-		</property>
-	</object>
-	<object class="AutomationPoint" id="{6613ff8e-3165-4cac-8323-fae69d990e06}">
-		<property name="position">
-			<value>0</value>
-		</property>
-		<property name="value">
-			<value>-80</value>
-		</property>
-	</object>
-	<object class="AutomationPoint" id="{daee04cb-059a-429c-8adf-0f68150e89a5}">
-		<property name="position">
-			<value>1.9725711954166849</value>
 		</property>
 		<property name="value">
 			<value>0</value>
