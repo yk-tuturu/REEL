@@ -27,14 +27,14 @@ public class menuTransition : MonoBehaviour
     {
         bgmScript.instance.SetParameter(1f);
         FMODUnity.RuntimeManager.PlayOneShot(uiMainMenuStartGameEvent, transform.position);
-        iTween.ValueTo(panel, iTween.Hash("from", 0f, "to", 1f, "time", 1f, "onupdate", "updateColor", "onupdatetarget", this.gameObject, "oncomplete", "loadNewScene", "oncompletetarget", this.gameObject));
+        iTween.ValueTo(panel, iTween.Hash("from", 0f, "to", 1f, "time", 2f, "onupdate", "updateColor", "onupdatetarget", this.gameObject, "oncomplete", "loadNewScene", "oncompletetarget", this.gameObject));
     }
 
     public void LoadGame(int index)
     {
         bgmScript.instance.SetParameter(1f);
         FMODUnity.RuntimeManager.PlayOneShot(uiMainMenuStartGameEvent, transform.position);
-        iTween.ValueTo(panel, iTween.Hash("from", 0f, "to", 1f, "time", 1f, "onupdate", "updateColor", "onupdatetarget", this.gameObject, "oncomplete", "loadSaveFile", "oncompletetarget", this.gameObject, "oncompleteparams", index));
+        iTween.ValueTo(panel, iTween.Hash("from", 0f, "to", 1f, "time", 2f, "onupdate", "updateColor", "onupdatetarget", this.gameObject, "oncomplete", "loadSaveFile", "oncompletetarget", this.gameObject, "oncompleteparams", index));
     }
 
     void loadSaveFile(int index)

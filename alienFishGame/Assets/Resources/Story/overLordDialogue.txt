@@ -21,16 +21,16 @@ I was just doing my job.
 
 Overlord
 Flimsy excuses. How would you feel if I devoured everything on this dock right now? Would you remain unconcerned? And yet this is nothing compared to the casualties you have caused to my kingdom. 
-set 10
+set10
 
-The hypothetical situation they described didn't seem too good. Where else would you fish if this entire dock was gone?
+The hypothetical situation it described didn't seem too good. Where else would you fish if this entire dock was gone?
 
 You
 Calm down... maybe we can talk this out?
  
 Overlord
 This injustice must be punished. All of you shall suffer the wrath of the fish!!
-set 11
+set11
 
 There didn't seem to be any room for argument. All you could do was to prepare what equipment you have and attack.
 

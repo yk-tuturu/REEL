@@ -13,6 +13,9 @@ public class FishOPediaPager : MonoBehaviour
     public FMODUnity.EventReference uiFishopediaPageRightEvent;
     public FMODUnity.EventReference uiFishopediaCloseEvent;
 
+    public FMODUnity.EventReference displaySnapshot;
+    FMOD.Studio.EventInstance displayInstance;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -43,12 +46,18 @@ public class FishOPediaPager : MonoBehaviour
 
     public void Open()
     {
+        displayInstance = FMODUnity.RuntimeManager.CreateInstance(displaySnapshot);
+        displayInstance.start();
+
         activePage.SetActive(true);
         LeanTween.scale(activePage, new Vector3(1, 1, 1), 0.15f);
     }
 
     public void Close()
     {
+        displayInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        displayInstance.release();
+        
         LeanTween.scale(activePage, new Vector3(0, 0, 0), 0.15f).setOnComplete(onComplete);
         FMODUnity.RuntimeManager.PlayOneShot(uiFishopediaCloseEvent, transform.position);
     }

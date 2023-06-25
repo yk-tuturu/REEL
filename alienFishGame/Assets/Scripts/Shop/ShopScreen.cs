@@ -14,6 +14,12 @@ public class ShopScreen : MonoBehaviour
     public FMODUnity.EventReference chrShopEnterEvent;
     public FMODUnity.EventReference chrShopExitEvent;
 
+    public FMODUnity.EventReference muteSnapShot;
+    public FMODUnity.EventReference shopMusicEvent;
+
+    FMOD.Studio.EventInstance muteInstance;
+    FMOD.Studio.EventInstance shopMusicInstance;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +36,12 @@ public class ShopScreen : MonoBehaviour
     {
         LeanTween.scale(bgPanel, new Vector3(0, 0, 0), 0.15f).setOnComplete(OnComplete);
         FMODUnity.RuntimeManager.PlayOneShot(chrShopExitEvent, transform.position);
+
+        muteInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        muteInstance.release();
+
+        shopMusicInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        shopMusicInstance.release();
     }
 
     public void OnComplete()
@@ -43,6 +55,13 @@ public class ShopScreen : MonoBehaviour
         LeanTween.scale(bgPanel, new Vector3(1, 1, 1), 0.15f);
 
         FMODUnity.RuntimeManager.PlayOneShot(chrShopEnterEvent, transform.position);
+        
+        // mutes bgm, plays shop music
+        muteInstance = FMODUnity.RuntimeManager.CreateInstance(muteSnapShot);
+        muteInstance.start();
+
+        shopMusicInstance = FMODUnity.RuntimeManager.CreateInstance(shopMusicEvent);
+        shopMusicInstance.start();
 
         // reads the text file
         TextAsset file = (TextAsset)Resources.Load("Story/shopkeep");

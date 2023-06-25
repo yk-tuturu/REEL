@@ -38,7 +38,11 @@ public class attackBar : MonoBehaviour
 
     public void Attack()
     {
-        slider.value += attackValue;
+        if (attackHit != true)
+        {
+            slider.value += attackValue;
+        }
+        
         if (slider.value >= slider.maxValue)
         {
             attackHit = true;
@@ -49,8 +53,9 @@ public class attackBar : MonoBehaviour
     public void OnComplete()
     {
         slider.value = 0.5f;
+        decreaseValue = decreaseValue * 1.15f;
         attackNumber += 1;
-        if (attackNumber == 3)
+        if (attackNumber == 5)
         {
             attackFinished.Invoke();
         }

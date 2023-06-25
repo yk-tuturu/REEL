@@ -251,6 +251,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Banks:
   - Master
+  - Master.strings
   Scene: Scenes/MainMenu
 --- !u!4 &937118847
 Transform:

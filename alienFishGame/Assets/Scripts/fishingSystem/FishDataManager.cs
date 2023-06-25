@@ -163,7 +163,7 @@ public class FishDataManager : MonoBehaviour
 
         if (bossDefeated)
         {
-            param = 15f;
+            param = 14f;
         }
         Debug.Log("fish param is " + param.ToString());
         bgmScript.instance.SetParameter(param);

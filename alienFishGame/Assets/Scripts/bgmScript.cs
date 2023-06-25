@@ -62,6 +62,7 @@ public class bgmScript : MonoBehaviour
         if (timer >= 1.5f)
         {
             Debug.Log(GetParameter());
+            timer = 0;
         }
     }
 

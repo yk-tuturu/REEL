@@ -35,7 +35,7 @@ public class transitions : MonoBehaviour
         var shopScreen = GameObject.Find("ShopScreen");
         if (shopScreen != null)
         {
-            shopScreen.SetActive(false);
+            shopScreen.GetComponent<ShopScreen>().Close();
         }
         
         // plays movement 9, a slight time buffer is placed between the param change and the beginning of the animation
