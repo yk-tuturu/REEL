@@ -351,6 +351,13 @@ MonoBehaviour:
   starContainer: {fileID: 412002022076807518}
   numberOwned: {fileID: 6304944034313648772}
   fishData: {fileID: 0}
+  clickEvent:
+    Guid:
+      Data1: 878842710
+      Data2: 1165943643
+      Data3: -1609063289
+      Data4: -1674672043
+    Path: event:/UI/Pause menu click
 --- !u!1 &5908074379247939786
 GameObject:
   m_ObjectHideFlags: 0

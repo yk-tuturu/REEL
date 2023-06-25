@@ -1813,6 +1813,13 @@ MonoBehaviour:
   soldOverlay: {fileID: 653819209}
   purchaseMenu: {fileID: 2019131443}
   bossUnlocked: 0
+  clickEvent:
+    Guid:
+      Data1: 878842710
+      Data2: 1165943643
+      Data3: -1609063289
+      Data4: -1674672043
+    Path: event:/UI/Pause menu click
 --- !u!114 &303682462
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6169,7 +6176,7 @@ RectTransform:
   m_GameObject: {fileID: 692007998}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2036917137}
@@ -6542,6 +6549,13 @@ MonoBehaviour:
   soldOverlay: {fileID: 1968590611}
   purchaseMenu: {fileID: 2019131443}
   bossUnlocked: 0
+  clickEvent:
+    Guid:
+      Data1: 878842710
+      Data2: 1165943643
+      Data3: -1609063289
+      Data4: -1674672043
+    Path: event:/UI/Pause menu click
 --- !u!114 &712519003
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7715,6 +7729,13 @@ MonoBehaviour:
   soldOverlay: {fileID: 1448120389}
   purchaseMenu: {fileID: 2019131443}
   bossUnlocked: 0
+  clickEvent:
+    Guid:
+      Data1: 878842710
+      Data2: 1165943643
+      Data3: -1609063289
+      Data4: -1674672043
+    Path: event:/UI/Pause menu click
 --- !u!114 &790111041
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10686,6 +10707,13 @@ MonoBehaviour:
   sellFishIcon: {fileID: 5344601620840401231, guid: 45087d2c8b6f68e48b18fd24a075e1f0, type: 3}
   sellPanel: {fileID: 467424227}
   blankIcon: {fileID: 5344601620840401231, guid: 02a6b8237a9cb3844a3e44bc7b56d3f6, type: 3}
+  sellAllEvent:
+    Guid:
+      Data1: 1978581742
+      Data2: 1321397961
+      Data3: 889052606
+      Data4: 1169405624
+    Path: event:/UI/Shop sell all
 --- !u!1 &1155646485
 GameObject:
   m_ObjectHideFlags: 0
@@ -10787,6 +10815,13 @@ MonoBehaviour:
   soldOverlay: {fileID: 297364406}
   purchaseMenu: {fileID: 2019131443}
   bossUnlocked: 0
+  clickEvent:
+    Guid:
+      Data1: 878842710
+      Data2: 1165943643
+      Data3: -1609063289
+      Data4: -1674672043
+    Path: event:/UI/Pause menu click
 --- !u!114 &1155646490
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12298,6 +12333,13 @@ MonoBehaviour:
       Data3: 1169417907
       Data4: -1321141905
     Path: event:/UI/Settings open
+  uiSettingsSaveEvent:
+    Guid:
+      Data1: -2023752395
+      Data2: 1225110762
+      Data3: -1568111177
+      Data4: -1451663046
+    Path: event:/UI/Pause menu file saved
 --- !u!1 &1336910263
 GameObject:
   m_ObjectHideFlags: 0
@@ -16691,6 +16733,13 @@ MonoBehaviour:
   soldOverlay: {fileID: 1202085005}
   purchaseMenu: {fileID: 2019131443}
   bossUnlocked: 0
+  clickEvent:
+    Guid:
+      Data1: 878842710
+      Data2: 1165943643
+      Data3: -1609063289
+      Data4: -1674672043
+    Path: event:/UI/Pause menu click
 --- !u!114 &1561434265
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21842,6 +21891,13 @@ MonoBehaviour:
   soldOverlay: {fileID: 330870313}
   purchaseMenu: {fileID: 2019131443}
   bossUnlocked: 0
+  clickEvent:
+    Guid:
+      Data1: 878842710
+      Data2: 1165943643
+      Data3: -1609063289
+      Data4: -1674672043
+    Path: event:/UI/Pause menu click
 --- !u!114 &2002638482
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22021,6 +22077,34 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   soldOverlay: {fileID: 7119543962363969375, guid: 7120985325a03494c99a484f63ded22b, type: 3}
+  rodPurchaseEvent:
+    Guid:
+      Data1: -1678707929
+      Data2: 1293751087
+      Data3: -222080361
+      Data4: 1808386294
+    Path: event:/UI/Shop upgrade reel
+  trapPurchaseEvent:
+    Guid:
+      Data1: -379860037
+      Data2: 1127301045
+      Data3: 1505313441
+      Data4: -1387189204
+    Path: event:/UI/Shop upgrade trap
+  baitPurchaseEvent:
+    Guid:
+      Data1: -1002032491
+      Data2: 1145523503
+      Data3: 1882513085
+      Data4: 1741090504
+    Path: event:/UI/Shop upgrade bait
+  marketingPurchaseEvent:
+    Guid:
+      Data1: -568004617
+      Data2: 1244199752
+      Data3: 1587766958
+      Data4: 723078897
+    Path: event:/UI/Shop upgrade marketing
 --- !u!114 &2019131444
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23799,6 +23883,26 @@ PrefabInstance:
       propertyPath: sellMenu
       value: 
       objectReference: {fileID: 1135709892}
+    - target: {fileID: 8136125213878932210, guid: 0d6dd78b76d183044b7730ca379e5fde, type: 3}
+      propertyPath: sellEvent.Path
+      value: event:/UI/Shop sell all
+      objectReference: {fileID: 0}
+    - target: {fileID: 8136125213878932210, guid: 0d6dd78b76d183044b7730ca379e5fde, type: 3}
+      propertyPath: sellEvent.Guid.Data1
+      value: 1978581742
+      objectReference: {fileID: 0}
+    - target: {fileID: 8136125213878932210, guid: 0d6dd78b76d183044b7730ca379e5fde, type: 3}
+      propertyPath: sellEvent.Guid.Data2
+      value: 1321397961
+      objectReference: {fileID: 0}
+    - target: {fileID: 8136125213878932210, guid: 0d6dd78b76d183044b7730ca379e5fde, type: 3}
+      propertyPath: sellEvent.Guid.Data3
+      value: 889052606
+      objectReference: {fileID: 0}
+    - target: {fileID: 8136125213878932210, guid: 0d6dd78b76d183044b7730ca379e5fde, type: 3}
+      propertyPath: sellEvent.Guid.Data4
+      value: 1169405624
+      objectReference: {fileID: 0}
     - target: {fileID: 8675009391206700612, guid: 0d6dd78b76d183044b7730ca379e5fde, type: 3}
       propertyPath: m_SizeDelta.x
       value: 125.5678

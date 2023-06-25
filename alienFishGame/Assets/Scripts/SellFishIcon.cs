@@ -16,6 +16,8 @@ public class SellFishIcon : MonoBehaviour
     public TextMeshProUGUI numberOwned;
 
     public FishDataManager fishData;
+
+    public FMODUnity.EventReference clickEvent;
     
     // Start is called before the first frame update
     void Start()
@@ -52,6 +54,7 @@ public class SellFishIcon : MonoBehaviour
 
     public void OnClick()
     {
+        FMODUnity.RuntimeManager.PlayOneShot(clickEvent);
         sellConfirmMenu.SetActive(true);
         sellConfirmMenu.transform.localScale = new Vector3(0, 0, 0);
         LeanTween.scale(sellConfirmMenu, new Vector3(1, 1, 1), 0.2f);

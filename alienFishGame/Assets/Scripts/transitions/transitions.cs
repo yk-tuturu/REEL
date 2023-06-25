@@ -98,4 +98,9 @@ public class transitions : MonoBehaviour
         Image image = blackOutPanel.GetComponent<Image>();
         image.color = new Color(0, 0, 0, val);
     }
+
+    public void FadeToBlack()
+    {
+        iTween.ValueTo(blackOutPanel, iTween.Hash("from", 0f, "to", 1f, "time", 1f, "onupdate", "updateColorBlack", "onupdatetarget", this.gameObject, "oncomplete", "reloadScene", "oncompletetarget", this.gameObject));
+    }
 }

@@ -21,13 +21,13 @@ public class settingsMenu : MonoBehaviour
     // Audio
     public FMODUnity.EventReference uiSettingsCloseEvent;
     public FMODUnity.EventReference uiSettingsOpenEvent;
+    public FMODUnity.EventReference uiSettingsSaveEvent;
 
     // Start is called before the first frame update
     void Start()
     {
         // fetch previous saves
         FetchSaves();
-
     }
 
     public void OpenMenu()
@@ -57,6 +57,7 @@ public class settingsMenu : MonoBehaviour
 
     public void Save(int index)
     {
+        FMODUnity.RuntimeManager.PlayOneShot(uiSettingsSaveEvent);
         SaveSystem.instance.Save(index);
         saveDates[index].text = System.DateTime.UtcNow.ToLocalTime().ToString("dd-MM-yyyy  HH:mm");
         saveImages[index].sprite = bgImage;

@@ -2498,11 +2498,11 @@ MonoBehaviour:
   panelToBeShrunk: {fileID: 0}
   uiMenuHoverEvent:
     Guid:
-      Data1: 186939258
-      Data2: 1245914863
-      Data3: 616051872
-      Data4: 1636089026
-    Path: event:/UI/Pause menu hover
+      Data1: 1803710166
+      Data2: 1268966459
+      Data3: 610145935
+      Data4: -1050019677
+    Path: event:/UI/Pause menu close
   uiMenuClickEvent:
     Guid:
       Data1: 878842710
@@ -2510,6 +2510,13 @@ MonoBehaviour:
       Data3: -1609063289
       Data4: -1674672043
     Path: event:/UI/Pause menu click
+  uiMenuCloseEvent:
+    Guid:
+      Data1: 1803710166
+      Data2: 1268966459
+      Data3: 610145935
+      Data4: -1050019677
+    Path: event:/UI/Pause menu close
 --- !u!4 &1010718708
 Transform:
   m_ObjectHideFlags: 0
