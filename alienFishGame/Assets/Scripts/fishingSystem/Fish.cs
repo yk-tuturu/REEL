@@ -10,7 +10,7 @@ public class Fish
     public int rarity;
     public float price;
     public string description;
-    public string weight;
+    public int weight;
     public string length;
     public int totalCaught;
     public int totalSold;
