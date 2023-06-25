@@ -4,6 +4,9 @@
 		<property name="name">
 			<value>Displays</value>
 		</property>
+		<property name="behavior">
+			<value>1</value>
+		</property>
 		<relationship name="mixer">
 			<destination>{bcc51a38-e3ee-4bb3-b259-8d46e5789ef6}</destination>
 		</relationship>
@@ -22,6 +25,9 @@
 		<relationship name="snapshotProperties">
 			<destination>{2a99a89d-4ea1-4200-b562-ec1cccdb4b51}</destination>
 			<destination>{7bf79264-790a-4762-a125-110acbe4471b}</destination>
+			<destination>{95fb582c-1342-4a65-821d-be7239bb2398}</destination>
+			<destination>{8894b6a6-1d2f-4ec2-b2c7-7b7d57dacc81}</destination>
+			<destination>{53b8723a-72f7-4168-801e-e8845c0497b5}</destination>
 		</relationship>
 		<relationship name="snapshotTracks">
 			<destination>{e00e538f-d1d1-4ebd-82c9-f0879ad489bb}</destination>
@@ -41,7 +47,7 @@
 			<value>highGain</value>
 		</property>
 		<property name="value">
-			<value>-6</value>
+			<value>-9</value>
 		</property>
 		<relationship name="automatableObject">
 			<destination>{5baa7157-2ce5-4aec-877f-ec693a88e4f1}</destination>
@@ -53,6 +59,39 @@
 		</property>
 		<property name="value">
 			<value>-6</value>
+		</property>
+		<relationship name="automatableObject">
+			<destination>{5baa7157-2ce5-4aec-877f-ec693a88e4f1}</destination>
+		</relationship>
+	</object>
+	<object class="SnapshotProperty" id="{95fb582c-1342-4a65-821d-be7239bb2398}">
+		<property name="propertyName">
+			<value>highCrossover</value>
+		</property>
+		<property name="value">
+			<value>800</value>
+		</property>
+		<relationship name="automatableObject">
+			<destination>{5baa7157-2ce5-4aec-877f-ec693a88e4f1}</destination>
+		</relationship>
+	</object>
+	<object class="SnapshotProperty" id="{8894b6a6-1d2f-4ec2-b2c7-7b7d57dacc81}">
+		<property name="propertyName">
+			<value>pitch</value>
+		</property>
+		<property name="value">
+			<value>0</value>
+		</property>
+		<relationship name="automatableObject">
+			<destination>{1f373c6b-6462-4aae-bcb1-ac75ec71bb17}</destination>
+		</relationship>
+	</object>
+	<object class="SnapshotProperty" id="{53b8723a-72f7-4168-801e-e8845c0497b5}">
+		<property name="propertyName">
+			<value>midGain</value>
+		</property>
+		<property name="value">
+			<value>-3</value>
 		</property>
 		<relationship name="automatableObject">
 			<destination>{5baa7157-2ce5-4aec-877f-ec693a88e4f1}</destination>
@@ -73,7 +112,7 @@
 			<value>snapshotIntensity</value>
 		</property>
 		<property name="attackTime">
-			<value>100</value>
+			<value>200</value>
 		</property>
 		<property name="peakValue">
 			<value>100</value>
@@ -82,7 +121,7 @@
 			<value>100</value>
 		</property>
 		<property name="releaseTime">
-			<value>100</value>
+			<value>200</value>
 		</property>
 	</object>
 </objects>
