@@ -78,6 +78,8 @@ public class FishDataManager : MonoBehaviour
             nextMilestone += 50;
             CheckMusicParameters(RodStatManager.instance.baitLevel);
         }
+
+        Debug.Log("all fish caught is " + allFishCaught.ToString());
     }
 
     public void SellFish(int index, int number)

@@ -62,11 +62,6 @@ public class bgmScript : MonoBehaviour
         if (timer >= 1.5f)
         {
             Debug.Log(GetParameter());
-
-            float resetValue;
-            Music.getParameterByID(resetParameterId, out resetValue);
-            Debug.Log(resetValue);
-            timer = 0;
         }
     }
 
