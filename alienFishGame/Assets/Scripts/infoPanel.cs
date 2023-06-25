@@ -6,13 +6,10 @@ using TMPro;
 
 public class infoPanel : MonoBehaviour
 {
-    public TextMeshProUGUI fishName;
-    public TextMeshProUGUI weight;
-    public TextMeshProUGUI length;
     public TextMeshProUGUI description;
-    public Transform starContainer;
     public Image fishImage;
-    public GameObject star;
+
+    public Image infoPanelImage;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,27 +25,18 @@ public class infoPanel : MonoBehaviour
     public void UpdateInfo(int index)
     {
         Fish fish = FishDataManager.instance.GetFish(index);
-        fishName.text = fish.name;
-        weight.text = "Weight: " + fish.weight;
-        length.text = "Length: " + fish.length;
+
+        Sprite sprite = Resources.Load<Sprite>("fishPanels/fish-" + index.ToString());
+
+        infoPanelImage.sprite = sprite;
+        
         description.text = fish.description;
         
-        var sprite = Resources.Load<Sprite>("fishIcons/" + "fish" + index.ToString());
+        var fishSprite = Resources.Load<Sprite>("fishIcons/" + "fish" + index.ToString());
 
-        if (sprite != null)
+        if (fishSprite != null)
         {
-            fishImage.sprite = sprite;
-        }
-
-
-        foreach (Transform child in starContainer)
-        {
-            GameObject.Destroy(child.gameObject);
-        }
-
-        for (int i = 0; i < fish.rarity; i++)
-        {
-            Instantiate(star, new Vector3(0,0,0), Quaternion.identity, starContainer);
+            fishImage.sprite = fishSprite;
         }
     }
 

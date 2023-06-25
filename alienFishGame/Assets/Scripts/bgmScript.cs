@@ -84,6 +84,6 @@ public class bgmScript : MonoBehaviour
 
     public void Reset()
     {
-        Music.setTimelinePosition(0);
+        Music.setParameterByID(resetParameterId, 1);
     }
 }

@@ -38,8 +38,13 @@ public class transitions : MonoBehaviour
             shopScreen.SetActive(false);
         }
         
-        bgmScript.instance.Reset();
+        // plays movement 9, a slight time buffer is placed between the param change and the beginning of the animation
 
+        bgmScript.instance.SetParameter(9);
+
+        yield return new WaitForSeconds(2f);
+
+        // transition begins
         iTween.ShakePosition(gameCamera, new Vector3(20, 20, 20), 6f);
 
         yield return new WaitForSeconds(1f);
@@ -54,7 +59,7 @@ public class transitions : MonoBehaviour
 
         yield return new WaitForSeconds(0.8f);
 
-        bgmScript.instance.SetParameter(9);
+        
 
         iTween.ValueTo(panel, iTween.Hash("from", 0.95f, "to", 0f, "time", 0.6f, "delay", 0.1f, "onupdate", "updateColor", "onupdatetarget", this.gameObject));
 
