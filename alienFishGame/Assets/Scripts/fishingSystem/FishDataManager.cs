@@ -16,6 +16,7 @@ public class FishDataManager : MonoBehaviour
     public int allFishCaught = 0;
     public int rareCaught = 0;
     public bool bossAvailable = false;
+    public bool bossDefeated = false;
 
     public int nextMilestone = 50;
 
@@ -45,16 +46,10 @@ public class FishDataManager : MonoBehaviour
 
     void Update()
     {
-        if (rareCaught >= 1 && allFishCaught >= 300 && !bossAvailable)
+        if (rareCaught >= 1 && allFishCaught >= 300 && !bossAvailable && !bossDefeated)
         {
             unlockBoss.Invoke();
             bossAvailable = true;
-        }
-
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            Debug.Log("i have been called!!");
-            bgmScript.instance.SetParameter(7);
         }
     }
 
@@ -81,7 +76,7 @@ public class FishDataManager : MonoBehaviour
         if (allFishCaught >= nextMilestone)
         {
             nextMilestone += 50;
-            CheckMusicParameters();
+            CheckMusicParameters(RodStatManager.instance.baitLevel);
         }
     }
 
@@ -142,12 +137,14 @@ public class FishDataManager : MonoBehaviour
 
         money = saveData.money;
 
+        bossDefeated = saveData.bossDefeated;
+
         // set audio back to its correct param
         nextMilestone = (int)(Mathf.Floor(allFishCaught / 50) + 1)* 50;
-        CheckMusicParameters();
+        StartCoroutine(Delay());
     }
 
-    public void CheckMusicParameters()
+    public void CheckMusicParameters(int baitLevel)
     {
         float value = allFishCaught / 50;
         float param = Mathf.Min(7, Mathf.Floor(value + 1));
@@ -157,12 +154,22 @@ public class FishDataManager : MonoBehaviour
         }
 
         float currentParam = bgmScript.instance.GetParameter();
-        // if (currentParam > param)
-        // {
-        //     return;
-        // }
+        if (baitLevel == 3 && bossAvailable)
+        {
+            param = 8f;
+        }
 
+        if (bossDefeated)
+        {
+            param = 15f;
+        }
         Debug.Log("fish param is " + param.ToString());
         bgmScript.instance.SetParameter(param);
+    }
+
+    IEnumerator Delay()
+    {
+        yield return new WaitForSeconds(1.5f);
+        CheckMusicParameters(RodStatManager.instance.baitLevel);
     }
 }

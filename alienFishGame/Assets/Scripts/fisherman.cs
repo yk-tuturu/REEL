@@ -13,6 +13,7 @@ public class Fisherman : MonoBehaviour
         {
             if (EventSystem.current.IsPointerOverGameObject()) 
             {
+                Debug.Log("over UI");
                 return;
             }
             FMODUnity.RuntimeManager.PlayOneShot(chrFishermanEvent, transform.position);

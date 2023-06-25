@@ -148,13 +148,13 @@ public class SaveSystem : MonoBehaviour
             Trap0Capacity = Trap0Capacity,
             Trap1Capacity = Trap1Capacity,
             date = System.DateTime.UtcNow.ToLocalTime().ToString("dd-MM-yyyy  HH:mm"),
-            saveIndex = index
+            saveIndex = index,
+            bossDefeated = FishDataManager.instance.bossDefeated
         };
 
         string jsonString = JsonUtility.ToJson(saveData);
         string savePath = saveFolder + "/save" + index.ToString() + ".json";
-        File.WriteAllText(savePath, jsonString);
-        Debug.Log("saved! at " + savePath);
+        File.WriteAllText(savePath, jsonString);;
 
         // JS_FileSystem_Sync();
         // Debug.Log("files synced!");
@@ -213,6 +213,7 @@ public class SaveSystem : MonoBehaviour
 
         bool extraRod = false;
         bool extraTrap = false;
+        bool skipToBoss = false;
         foreach (var upgrade in saveData.upgradeLevels)
         {
             if (upgrade.type == "extra rod" && upgrade.currentLevel == 2)
@@ -222,6 +223,10 @@ public class SaveSystem : MonoBehaviour
             if (upgrade.type == "extra trap" && upgrade.currentLevel == 2)
             {
                 extraTrap = true;
+            }
+            if (upgrade.type == "bait" && upgrade.currentLevel == 4 && !saveData.bossDefeated)
+            {
+                skipToBoss = true;
             }
         }
 
@@ -272,6 +277,12 @@ public class SaveSystem : MonoBehaviour
         }
 
         Debug.Log("load completed!");
+
+        if (skipToBoss)
+        {
+            var transition = GameObject.Find("Transitions");
+            transition.GetComponent<transitions>().transitionToBossFight();
+        }
 
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }

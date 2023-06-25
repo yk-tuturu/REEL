@@ -24137,11 +24137,11 @@ MonoBehaviour:
     Path: event:/Character/Shop enter
   chrShopExitEvent:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -831551656
+      Data2: 1258057995
+      Data3: 259493049
+      Data4: -410368790
+    Path: event:/Character/Shop exit
 --- !u!1 &2129806886
 GameObject:
   m_ObjectHideFlags: 0

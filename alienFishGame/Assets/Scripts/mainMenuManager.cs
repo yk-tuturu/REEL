@@ -10,6 +10,7 @@ public class mainMenuManager : MonoBehaviour
 {
     // if there are no save files, set this bool to true
     public bool noSave = false;
+    public bool bossCleared = false;
 
     public GameObject confirmPanel;
     public GameObject loadScreen;
@@ -101,6 +102,13 @@ public class mainMenuManager : MonoBehaviour
                 Debug.Log(jsonString);
                 saveDates[saveData.saveIndex].text = saveData.date;
                 saveImages[saveData.saveIndex].sprite = bgImage;
+
+                // boss already cleared, changing music to post game
+                if (saveData.saveIndex == 0 && saveData.bossDefeated)
+                {
+                    bossCleared = saveData.bossDefeated;
+                    StartCoroutine(Delay());
+                }
             }
             
             if (counter <= 0)
@@ -142,5 +150,11 @@ public class mainMenuManager : MonoBehaviour
     public void OnHoverExit(GameObject item)
     {
         LeanTween.scale(item, new Vector3(1,1,1), 0.15f);
+    }
+
+    IEnumerator Delay()
+    {
+        yield return new WaitForSeconds(2f);
+        bgmScript.instance.SetParameter(14);
     }
 }

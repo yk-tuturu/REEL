@@ -28,6 +28,11 @@ public class bgmScript : MonoBehaviour
         {
             instance = this;
         }
+        else if (instance!= null && instance != this)
+        {
+            Destroy(this.gameObject);
+            return;
+        }
 
         DontDestroyOnLoad(this.gameObject);
 
@@ -53,7 +58,7 @@ public class bgmScript : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
-        if (timer >= 4f)
+        if (timer >= 1.5f)
         {
             Debug.Log(GetParameter());
 
@@ -66,6 +71,7 @@ public class bgmScript : MonoBehaviour
 
     public void SetParameter(float index)
     {
+        Debug.Log("i have been called!!");
         Music.setParameterByID(musicParameterId, index);
     }
 
@@ -79,10 +85,5 @@ public class bgmScript : MonoBehaviour
     public void Reset()
     {
         Music.setTimelinePosition(0);
-    }
-
-    public void UndoReset()
-    {
-        Music.setParameterByID(resetParameterId, 0);
     }
 }
