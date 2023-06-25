@@ -18,6 +18,11 @@ public class purchaseMenu : MonoBehaviour
 
     public UnityEvent bossTransition;
     public GameObject soldOverlay;
+
+    public FMODUnity.EventReference rodPurchaseEvent;
+    public FMODUnity.EventReference trapPurchaseEvent;
+    public FMODUnity.EventReference baitPurchaseEvent;
+    public FMODUnity.EventReference marketingPurchaseEvent;
     // Start is called before the first frame update
     void Start()
     {
@@ -56,24 +61,29 @@ public class purchaseMenu : MonoBehaviour
         // maybe will change this to a switch statement later
         if (type == "rod")
         {
+            FMODUnity.RuntimeManager.PlayOneShot(rodPurchaseEvent);
             RodStatManager.instance.SetRodLevel(RodStatManager.instance.rodLevel + 1);
         }
         else if (type == "bait")
         {
+            FMODUnity.RuntimeManager.PlayOneShot(baitPurchaseEvent);
             RodStatManager.instance.SetBaitLevel(RodStatManager.instance.baitLevel + 1);
             TrapStatManager.instance.SetBaitLevel(TrapStatManager.instance.baitLevel + 1);
         }
         else if (type == "trap")
         {
+            FMODUnity.RuntimeManager.PlayOneShot(trapPurchaseEvent);
             TrapStatManager.instance.SetTrapLevel(TrapStatManager.instance.trapLevel + 1);
         }
         else if (type == "sales")
         {
+            FMODUnity.RuntimeManager.PlayOneShot(marketingPurchaseEvent);
             FishDataManager.instance.UpgradeSales();
         }
 
         else if (type == "extra rod")
         {
+            FMODUnity.RuntimeManager.PlayOneShot(rodPurchaseEvent);
             foreach(Transform child in fishingRodParent)
             {
                 FishingPole rod = child.GetComponent<FishingPole>();
@@ -87,6 +97,7 @@ public class purchaseMenu : MonoBehaviour
 
         else if (type == "extra trap")
         {
+            FMODUnity.RuntimeManager.PlayOneShot(trapPurchaseEvent);
             foreach(Transform child in fishingRodParent)
             {
                 FishingPole rod = child.GetComponent<FishingPole>();

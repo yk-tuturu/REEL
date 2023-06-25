@@ -27,6 +27,7 @@ public class mainMenuManager : MonoBehaviour
     // Audio
     public FMODUnity.EventReference uiMenuHoverEvent;
     public FMODUnity.EventReference uiMenuClickEvent;
+    public FMODUnity.EventReference uiMenuCloseEvent;
 
     // Start is called before the first frame update
     void Start()
@@ -42,6 +43,7 @@ public class mainMenuManager : MonoBehaviour
 
     public void StartGame()
     {
+        FMODUnity.RuntimeManager.PlayOneShot(uiMenuClickEvent, transform.position);
         if (noSave == false)
         {
             // asks player to overwrite save files
@@ -59,6 +61,7 @@ public class mainMenuManager : MonoBehaviour
     {
         if (!noSave)
         {
+            FMODUnity.RuntimeManager.PlayOneShot(uiMenuClickEvent, transform.position);
             FetchSaves();
             loadScreen.SetActive(true);
             loadScreen.transform.localScale = new Vector3(0, 0, 0);
@@ -78,6 +81,7 @@ public class mainMenuManager : MonoBehaviour
 
     public void CloseConfirmMenu()
     {
+        FMODUnity.RuntimeManager.PlayOneShot(uiMenuCloseEvent);
         Shrink(confirmPanel);
     }
 
@@ -126,6 +130,7 @@ public class mainMenuManager : MonoBehaviour
 
     public void CloseLoadMenu()
     {
+        FMODUnity.RuntimeManager.PlayOneShot(uiMenuCloseEvent);
         Shrink(loadScreen);
     }
 
@@ -138,7 +143,6 @@ public class mainMenuManager : MonoBehaviour
     void OnComplete()
     {
         panelToBeShrunk.SetActive(false);
-        FMODUnity.RuntimeManager.PlayOneShot(uiMenuClickEvent, transform.position);
     }
 
     public void OnHoverEnter(GameObject item)

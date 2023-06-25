@@ -7,6 +7,8 @@ public class SellMenu : MonoBehaviour
     public GameObject sellFishIcon;
     public Transform sellPanel;
     public GameObject blankIcon;
+
+    public FMODUnity.EventReference sellAllEvent;
     // Start is called before the first frame update
     void Start()
     {
@@ -49,7 +51,7 @@ public class SellMenu : MonoBehaviour
 
     public void SellAll()
     {
-        Debug.Log("selling fish");
+        FMODUnity.RuntimeManager.PlayOneShot(sellAllEvent);
         for (var i = 0; i < FishDataManager.instance.fishTypeCount; i++)
         {
             Fish fish = FishDataManager.instance.GetFish(i);

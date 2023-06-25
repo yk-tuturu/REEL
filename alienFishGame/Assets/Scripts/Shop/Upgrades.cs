@@ -19,6 +19,8 @@ public class Upgrades : MonoBehaviour
 
     public bool bossUnlocked;
 
+    public FMODUnity.EventReference clickEvent;
+
     void Awake()
     {
     }
@@ -49,6 +51,7 @@ public class Upgrades : MonoBehaviour
 
     public void OnClick()
     {
+        FMODUnity.RuntimeManager.PlayOneShot(clickEvent);
         purchaseMenu.transform.localScale = new Vector3(0, 0, 0);
         purchaseMenu.gameObject.SetActive(true);
         LeanTween.scale(purchaseMenu.gameObject, new Vector3(1, 1, 1), 0.15f);
@@ -66,7 +69,7 @@ public class Upgrades : MonoBehaviour
             }
         }
 
-        price = basePrice * (int)(Mathf.Pow(2, currentLevel - 1));
+        price = basePrice * (int)(Mathf.Pow(multiplier, currentLevel - 1));
         Debug.Log("on load data, " + upgradeType + "price is " + price.ToString());
 
         if (currentLevel < maxLevel)
