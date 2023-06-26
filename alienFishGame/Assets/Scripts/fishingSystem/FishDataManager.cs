@@ -22,6 +22,13 @@ public class FishDataManager : MonoBehaviour
 
     public UnityEvent unlockBoss;
 
+    // Audio
+    //loop
+    //public FMODUnity.EventReference fishid(iterate 0-20);
+
+    //FMODUnity.RuntimeManager.PlayOneShot(fishidFish[fishid], transform.position);
+    
+
     void Awake()
     {
         if (instance == null)
