@@ -16,6 +16,9 @@ public class captureMenu : MonoBehaviour
     
     public List<int> fishList;
 
+    // Audio
+    public FMODUnity.EventReference uiClickEvent;
+
     public void UpdateInfo(List<int> fishCaught)
     {
         // clear out the panel first
@@ -77,6 +80,7 @@ public class captureMenu : MonoBehaviour
                 rod.currentCapacity = 0;
             }
         }
+        FMODUnity.RuntimeManager.PlayOneShot(uiClickEvent, transform.position);
 
         ClearChildren();
     }

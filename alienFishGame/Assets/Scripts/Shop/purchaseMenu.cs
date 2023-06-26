@@ -23,6 +23,9 @@ public class purchaseMenu : MonoBehaviour
     public FMODUnity.EventReference trapPurchaseEvent;
     public FMODUnity.EventReference baitPurchaseEvent;
     public FMODUnity.EventReference marketingPurchaseEvent;
+    public FMODUnity.EventReference uiCloseEvent;
+    public FMODUnity.EventReference uiDeniedEvent;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -45,6 +48,7 @@ public class purchaseMenu : MonoBehaviour
 
     public void Close()
     {
+        FMODUnity.RuntimeManager.PlayOneShot(uiCloseEvent);
         LeanTween.scale(gameObject, new Vector3(0, 0, 0), 0.15f).setOnComplete(OnComplete);
     }
 
@@ -53,6 +57,7 @@ public class purchaseMenu : MonoBehaviour
         // do nothing if not enough money
         if (FishDataManager.instance.money < price)
         {
+            FMODUnity.RuntimeManager.PlayOneShot(uiDeniedEvent);
             return;
         }
         
@@ -80,7 +85,6 @@ public class purchaseMenu : MonoBehaviour
             FMODUnity.RuntimeManager.PlayOneShot(marketingPurchaseEvent);
             FishDataManager.instance.UpgradeSales();
         }
-
         else if (type == "extra rod")
         {
             FMODUnity.RuntimeManager.PlayOneShot(rodPurchaseEvent);
@@ -94,7 +98,6 @@ public class purchaseMenu : MonoBehaviour
                 }
             }
         }
-
         else if (type == "extra trap")
         {
             FMODUnity.RuntimeManager.PlayOneShot(trapPurchaseEvent);

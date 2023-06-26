@@ -554,6 +554,7 @@ shop = overrides everything</value>
 			<destination>{6fb265bb-3abf-453b-a953-9a629a7af41d}</destination>
 			<destination>{dc061fb4-b1fb-48a8-b648-0b393dd32ead}</destination>
 			<destination>{57d91d98-9153-4862-8439-358066bab5ba}</destination>
+			<destination>{948a6b39-b24c-43be-bcf6-2bddb92bbef1}</destination>
 		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{6fc3f98b-0405-44d4-975d-09eb2f56ba77}</destination>
@@ -677,6 +678,7 @@ shop = overrides everything</value>
 			<destination>{457f3bec-a9a8-4723-bb8f-95a9868464c3}</destination>
 			<destination>{d1199387-6295-42cc-994c-b1dd6de41c9e}</destination>
 			<destination>{fd5fe744-b32d-4306-9851-96a46877fe94}</destination>
+			<destination>{948a6b39-b24c-43be-bcf6-2bddb92bbef1}</destination>
 		</relationship>
 		<relationship name="markers">
 			<destination>{f54fae23-1c91-4670-8580-053a3e88d83f}</destination>
@@ -719,6 +721,10 @@ shop = overrides everything</value>
 			<destination>{efb3406d-140a-4f64-93da-c8be7dfc2de0}</destination>
 			<destination>{9a53dab1-53c5-4756-96c9-4ee612ff4c72}</destination>
 			<destination>{6c4bd5a8-9312-4a82-bd06-5893e1e637eb}</destination>
+			<destination>{1e61fe92-d757-41ff-93de-e95c288c29b7}</destination>
+			<destination>{1d0755c6-64cf-45bc-96a7-0988797011f6}</destination>
+			<destination>{080b9d02-062c-45b5-aac8-36f28087ff60}</destination>
+			<destination>{1e896d67-4cfe-4197-af26-0eb3bec309ef}</destination>
 		</relationship>
 	</object>
 	<object class="ParameterProxy" id="{d6aceb95-5fd3-4766-b16e-6b42b23bc227}">
@@ -835,7 +841,7 @@ shop = overrides everything</value>
 	</object>
 	<object class="TransitionDestinationSound" id="{af96fd15-94e9-409c-be8d-baa84ad28f06}">
 		<property name="start">
-			<value>3</value>
+			<value>2</value>
 		</property>
 		<property name="length">
 			<value>0</value>
@@ -862,10 +868,10 @@ shop = overrides everything</value>
 	</object>
 	<object class="CommandSound" id="{d4abf027-7566-48c8-b69d-88dd0b806996}">
 		<property name="start">
-			<value>1.4508320649819022</value>
+			<value>1.4834407606340763</value>
 		</property>
 		<property name="length">
-			<value>0.52173913043478293</value>
+			<value>0.48913043478260887</value>
 		</property>
 		<property name="name">
 			<value>reset to 0</value>
@@ -931,10 +937,10 @@ shop = overrides everything</value>
 	</object>
 	<object class="CommandSound" id="{d6e16867-8c3c-49c5-a35c-c9859a6c5315}">
 		<property name="start">
-			<value>1.4508320649819022</value>
+			<value>1.4834407606340763</value>
 		</property>
 		<property name="length">
-			<value>0.52173913043478293</value>
+			<value>0.48913043478260887</value>
 		</property>
 		<property name="commandType">
 			<value>3</value>
@@ -950,7 +956,7 @@ shop = overrides everything</value>
 	</object>
 	<object class="TransitionDestinationSound" id="{7f0b2b7f-9b4a-485c-ae0f-779687ced0bc}">
 		<property name="start">
-			<value>3</value>
+			<value>2</value>
 		</property>
 		<property name="length">
 			<value>0</value>
@@ -1100,7 +1106,7 @@ shop = overrides everything</value>
 	</object>
 	<object class="TransitionDestinationSound" id="{5f19d058-f43a-4153-9f2b-4f3f1c5edec5}">
 		<property name="start">
-			<value>3</value>
+			<value>2</value>
 		</property>
 		<property name="length">
 			<value>0</value>
@@ -1251,7 +1257,7 @@ shop = overrides everything</value>
 	</object>
 	<object class="SingleSound" id="{0d530830-058a-41a4-b7af-4ef1bb54a98f}">
 		<property name="start">
-			<value>874.51604945628628</value>
+			<value>910.51604945628469</value>
 		</property>
 		<property name="length">
 			<value>109.89716553287982</value>
@@ -1270,7 +1276,7 @@ shop = overrides everything</value>
 	</object>
 	<object class="TransitionDestinationSound" id="{a338dc0d-9b04-46f2-8420-1b3d398b4966}">
 		<property name="start">
-			<value>3</value>
+			<value>2</value>
 		</property>
 		<property name="length">
 			<value>0</value>
@@ -1407,7 +1413,7 @@ shop = overrides everything</value>
 	</object>
 	<object class="SingleSound" id="{f1130ae0-6799-407f-9976-04b9a15e51df}">
 		<property name="start">
-			<value>874.51604945628628</value>
+			<value>910.51604945628469</value>
 		</property>
 		<property name="length">
 			<value>100.17391304347825</value>
@@ -1418,7 +1424,7 @@ shop = overrides everything</value>
 	</object>
 	<object class="SingleSound" id="{ebc5ded2-7236-4ad6-a9b6-608de62f1028}">
 		<property name="start">
-			<value>974.68996249976453</value>
+			<value>1010.6899624997629</value>
 		</property>
 		<property name="length">
 			<value>102.46678004535147</value>
@@ -1434,7 +1440,7 @@ shop = overrides everything</value>
 	</object>
 	<object class="TransitionDestinationSound" id="{ea2292d1-2470-42a3-87cd-830f80c2e784}">
 		<property name="start">
-			<value>3</value>
+			<value>2</value>
 		</property>
 		<property name="length">
 			<value>0</value>
@@ -1551,7 +1557,7 @@ shop = overrides everything</value>
 	</object>
 	<object class="SingleSound" id="{8c0764c6-c55f-43de-8852-6164fc9a3800}">
 		<property name="start">
-			<value>974.68996249976453</value>
+			<value>1010.6899624997629</value>
 		</property>
 		<property name="length">
 			<value>100.17391304347825</value>
@@ -1562,7 +1568,7 @@ shop = overrides everything</value>
 	</object>
 	<object class="SingleSound" id="{74d9c806-62a3-4608-8fc2-c3ae0694e037}">
 		<property name="start">
-			<value>874.51604945628628</value>
+			<value>910.51604945628469</value>
 		</property>
 		<property name="length">
 			<value>8.1881731243222049</value>
@@ -1587,7 +1593,7 @@ shop = overrides everything</value>
 	</object>
 	<object class="TransitionDestinationSound" id="{16626ee0-5da9-4919-a60b-ce0773460079}">
 		<property name="start">
-			<value>3</value>
+			<value>2</value>
 		</property>
 		<property name="length">
 			<value>0</value>
@@ -1704,7 +1710,7 @@ shop = overrides everything</value>
 	</object>
 	<object class="SingleSound" id="{c931581a-29b4-47eb-96dd-2b104ba0171e}">
 		<property name="start">
-			<value>874.51604945628628</value>
+			<value>910.51604945628469</value>
 		</property>
 		<property name="length">
 			<value>105.4369387755102</value>
@@ -1721,7 +1727,7 @@ shop = overrides everything</value>
 	</object>
 	<object class="SingleSound" id="{f8c29ca7-62bc-4c6b-b028-298c0d596d0b}">
 		<property name="start">
-			<value>974.68996249976453</value>
+			<value>1010.6899624997629</value>
 		</property>
 		<property name="length">
 			<value>105.4369387755102</value>
@@ -1743,7 +1749,7 @@ shop = overrides everything</value>
 	</object>
 	<object class="TransitionDestinationSound" id="{b38d6fc0-534f-44b4-9060-954b3db32008}">
 		<property name="start">
-			<value>3</value>
+			<value>2</value>
 		</property>
 		<property name="length">
 			<value>0</value>
@@ -1900,7 +1906,7 @@ shop = overrides everything</value>
 	</object>
 	<object class="TransitionDestinationSound" id="{6c1a64e4-37e0-4705-a815-520883a7b3d0}">
 		<property name="start">
-			<value>3</value>
+			<value>2</value>
 		</property>
 		<property name="length">
 			<value>0</value>
@@ -2032,7 +2038,7 @@ shop = overrides everything</value>
 	</object>
 	<object class="TransitionDestinationSound" id="{a9e3924e-119d-4295-87a9-4eabe0fd8c30}">
 		<property name="start">
-			<value>3</value>
+			<value>2</value>
 		</property>
 		<property name="length">
 			<value>0</value>
@@ -2181,7 +2187,7 @@ shop = overrides everything</value>
 	</object>
 	<object class="TransitionDestinationSound" id="{f91a05ab-582a-4965-bfa0-846c4fa18f62}">
 		<property name="start">
-			<value>3</value>
+			<value>2</value>
 		</property>
 		<property name="length">
 			<value>0</value>
@@ -2336,7 +2342,7 @@ shop = overrides everything</value>
 	</object>
 	<object class="TransitionDestinationSound" id="{6be689e1-ee01-44a0-945e-6f3ce02b81af}">
 		<property name="start">
-			<value>3</value>
+			<value>2</value>
 		</property>
 		<property name="length">
 			<value>0</value>
@@ -2500,7 +2506,7 @@ shop = overrides everything</value>
 	</object>
 	<object class="TransitionDestinationSound" id="{1880eaa5-79db-40be-82bc-7ea7ab41c59c}">
 		<property name="start">
-			<value>3</value>
+			<value>2</value>
 		</property>
 		<property name="length">
 			<value>0</value>
@@ -2612,7 +2618,7 @@ shop = overrides everything</value>
 	</object>
 	<object class="TransitionDestinationSound" id="{908c4d8b-6034-4969-b98c-e1ccc2eeeb3e}">
 		<property name="start">
-			<value>3</value>
+			<value>2</value>
 		</property>
 		<property name="length">
 			<value>0</value>
@@ -2745,7 +2751,7 @@ shop = overrides everything</value>
 	</object>
 	<object class="TransitionDestinationSound" id="{9b12982b-8884-4809-b6b7-1e5dc6da319a}">
 		<property name="start">
-			<value>3</value>
+			<value>2</value>
 		</property>
 		<property name="length">
 			<value>0</value>
@@ -2854,7 +2860,7 @@ shop = overrides everything</value>
 	</object>
 	<object class="TransitionDestinationSound" id="{69264759-ead2-4385-a6bd-6457790e4b4d}">
 		<property name="start">
-			<value>3</value>
+			<value>2</value>
 		</property>
 		<property name="length">
 			<value>0</value>
@@ -3023,7 +3029,7 @@ shop = overrides everything</value>
 	</object>
 	<object class="TransitionDestinationSound" id="{dbe54611-914c-4e60-b041-90e4f3648708}">
 		<property name="start">
-			<value>3</value>
+			<value>2</value>
 		</property>
 		<property name="length">
 			<value>0</value>
@@ -3146,7 +3152,7 @@ shop = overrides everything</value>
 	</object>
 	<object class="TransitionDestinationSound" id="{c0982569-d522-4316-b4cf-470ac367d6a8}">
 		<property name="start">
-			<value>3</value>
+			<value>2</value>
 		</property>
 		<property name="length">
 			<value>0</value>
@@ -3255,7 +3261,7 @@ shop = overrides everything</value>
 	</object>
 	<object class="TransitionDestinationSound" id="{3464ba48-1282-4f74-8d0a-8a48b30963a9}">
 		<property name="start">
-			<value>3</value>
+			<value>2</value>
 		</property>
 		<property name="length">
 			<value>0</value>
@@ -3295,11 +3301,14 @@ shop = overrides everything</value>
 	</object>
 	<object class="SingleSound" id="{bfdc01d9-cfdf-44fd-9461-fbadc42310d9}">
 		<property name="start">
-			<value>766.51604945628628</value>
+			<value>802.51604945628628</value>
 		</property>
 		<property name="length">
-			<value>60</value>
+			<value>63.000000000001592</value>
 		</property>
+		<relationship name="fadeOutCurve">
+			<destination>{e0e1161d-a5e1-4974-bf7f-e333eeca06a5}</destination>
+		</relationship>
 		<relationship name="audioFile">
 			<destination>{07f337f5-2033-474b-9bdf-ce211e618cc6}</destination>
 		</relationship>
@@ -3358,7 +3367,7 @@ shop = overrides everything</value>
 	</object>
 	<object class="SingleSound" id="{6fb265bb-3abf-453b-a953-9a629a7af41d}">
 		<property name="start">
-			<value>834.51604945628628</value>
+			<value>870.51604945628469</value>
 		</property>
 		<property name="length">
 			<value>29.999999999999957</value>
@@ -3375,16 +3384,30 @@ shop = overrides everything</value>
 	</object>
 	<object class="TransitionSourceSound" id="{dc061fb4-b1fb-48a8-b648-0b393dd32ead}">
 		<property name="length">
-			<value>3</value>
+			<value>2</value>
 		</property>
 	</object>
 	<object class="TransitionDestinationSound" id="{57d91d98-9153-4862-8439-358066bab5ba}">
 		<property name="start">
-			<value>3</value>
+			<value>1.9999999999999973</value>
 		</property>
 		<property name="length">
 			<value>0</value>
 		</property>
+	</object>
+	<object class="SingleSound" id="{948a6b39-b24c-43be-bcf6-2bddb92bbef1}">
+		<property name="isAsync">
+			<value>true</value>
+		</property>
+		<property name="start">
+			<value>766.51604945628628</value>
+		</property>
+		<property name="length">
+			<value>17.999999999999993</value>
+		</property>
+		<relationship name="audioFile">
+			<destination>{19017092-3e56-4651-a9f5-b552c5b194fa}</destination>
+		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{6fc3f98b-0405-44d4-975d-09eb2f56ba77}">
 		<property name="name">
@@ -3467,10 +3490,10 @@ shop = overrides everything</value>
 	</object>
 	<object class="SingleSound" id="{28673be9-4c15-4a26-a014-d879fa44ef10}">
 		<property name="start">
-			<value>821.51604945628628</value>
+			<value>857.51604945628469</value>
 		</property>
 		<property name="length">
-			<value>9.9999999999999503</value>
+			<value>8.0000000000015419</value>
 		</property>
 		<relationship name="fadeOutCurve">
 			<destination>{c1eeeef3-2b81-4f75-8fc6-be69fe655745}</destination>
@@ -3481,7 +3504,7 @@ shop = overrides everything</value>
 	</object>
 	<object class="SingleSound" id="{24dd8643-2089-4b51-b3ac-248d4f42c8ae}">
 		<property name="start">
-			<value>826.01604945628628</value>
+			<value>862.01604945628469</value>
 		</property>
 		<property name="length">
 			<value>19.049455782312926</value>
@@ -3495,12 +3518,12 @@ shop = overrides everything</value>
 	</object>
 	<object class="TransitionSourceSound" id="{f646f6fa-fb24-4910-b533-cb6311b7e04c}">
 		<property name="length">
-			<value>3</value>
+			<value>0</value>
 		</property>
 	</object>
 	<object class="TransitionDestinationSound" id="{7db86e5f-823e-4bdb-a372-52b8fc72e81a}">
 		<property name="start">
-			<value>3</value>
+			<value>2</value>
 		</property>
 		<property name="length">
 			<value>0</value>
@@ -3590,7 +3613,7 @@ shop = overrides everything</value>
 	</object>
 	<object class="SingleSound" id="{85ef0327-fed9-49ce-aa06-25f073fe195b}">
 		<property name="start">
-			<value>874.51604945628628</value>
+			<value>910.51604945628469</value>
 		</property>
 		<property name="length">
 			<value>108.52173913043477</value>
@@ -3604,7 +3627,7 @@ shop = overrides everything</value>
 	</object>
 	<object class="SingleSound" id="{8015ab37-e47f-41bc-819e-6332f522642d}">
 		<property name="start">
-			<value>974.68996249976453</value>
+			<value>1010.6899624997629</value>
 		</property>
 		<property name="length">
 			<value>100.17391304347825</value>
@@ -3618,7 +3641,7 @@ shop = overrides everything</value>
 	</object>
 	<object class="SingleSound" id="{58f5f377-be39-4877-907c-c67f15546ea6}">
 		<property name="start">
-			<value>874.51604945628628</value>
+			<value>910.51604945628469</value>
 		</property>
 		<property name="length">
 			<value>21.414862466725836</value>
@@ -3635,7 +3658,7 @@ shop = overrides everything</value>
 	</object>
 	<object class="CommandSound" id="{be9118bd-5a38-476b-b8ab-cc33f2f726d0}">
 		<property name="start">
-			<value>1066.5160494562863</value>
+			<value>1102.5160494562845</value>
 		</property>
 		<property name="length">
 			<value>8.3478260869565801</value>
@@ -3657,7 +3680,7 @@ shop = overrides everything</value>
 	</object>
 	<object class="TransitionDestinationSound" id="{84d89def-0d6c-4785-9648-3d3e239a2f70}">
 		<property name="start">
-			<value>3</value>
+			<value>2</value>
 		</property>
 		<property name="length">
 			<value>0</value>
@@ -3752,7 +3775,7 @@ shop = overrides everything</value>
 	</object>
 	<object class="TransitionDestinationSound" id="{fd514fc7-3fc6-416f-8e10-96dabd4566ba}">
 		<property name="start">
-			<value>3</value>
+			<value>2</value>
 		</property>
 		<property name="length">
 			<value>0</value>
@@ -4287,7 +4310,7 @@ shop = overrides everything</value>
 	</object>
 	<object class="TransitionRegion" id="{c3349c57-0c69-4ffa-8e8e-b7ab9222cfd4}">
 		<property name="position">
-			<value>1.9725711954166849</value>
+			<value>37.972571195416684</value>
 		</property>
 		<property name="length">
 			<value>1139.6739130434776</value>
@@ -4307,7 +4330,7 @@ shop = overrides everything</value>
 	</object>
 	<object class="NamedMarker" id="{cd9607cf-5442-43a7-aa27-1eaa7a2ac2bb}">
 		<property name="position">
-			<value>874.51604945628628</value>
+			<value>910.51604945628469</value>
 		</property>
 		<property name="name">
 			<value>Post-game</value>
@@ -4358,10 +4381,10 @@ shop = overrides everything</value>
 	</object>
 	<object class="LoopRegion" id="{378df849-60b0-40b4-b3ef-4712bbfb6d67}">
 		<property name="position">
-			<value>826.51604945628628</value>
+			<value>865.51604945628628</value>
 		</property>
 		<property name="length">
-			<value>8</value>
+			<value>4.9999999999984084</value>
 		</property>
 		<property name="name">
 			<value>release loop</value>
@@ -4375,13 +4398,13 @@ shop = overrides everything</value>
 	</object>
 	<object class="TransitionRegion" id="{c827af0d-3096-4fb9-9f80-f5eb7439e5d6}">
 		<property name="position">
-			<value>769.51604945628628</value>
+			<value>805.51604945628469</value>
 		</property>
 		<property name="length">
-			<value>65</value>
+			<value>54.000000000001592</value>
 		</property>
 		<property name="quantizationInterval">
-			<value>2</value>
+			<value>5</value>
 		</property>
 		<relationship name="timeline">
 			<destination>{165349e2-9281-4876-a2f9-5544c2e17904}</destination>
@@ -4401,7 +4424,7 @@ shop = overrides everything</value>
 	</object>
 	<object class="NamedMarker" id="{142eba2a-62d4-4f0a-ae48-1ed9053d27e3}">
 		<property name="position">
-			<value>834.51604945628628</value>
+			<value>870.51604945628469</value>
 		</property>
 		<property name="name">
 			<value>End</value>
@@ -4415,7 +4438,7 @@ shop = overrides everything</value>
 	</object>
 	<object class="LoopRegion" id="{a3cd0f12-a57b-429a-bb75-f7ee330a5fd5}">
 		<property name="position">
-			<value>865.51604945628628</value>
+			<value>901.51604945628469</value>
 		</property>
 		<property name="length">
 			<value>6</value>
@@ -4432,7 +4455,7 @@ shop = overrides everything</value>
 	</object>
 	<object class="TempoMarker" id="{28c43729-b383-49e4-8d6e-37f05012e2bb}">
 		<property name="position">
-			<value>874.51604945628628</value>
+			<value>910.51604945628469</value>
 		</property>
 		<property name="tempo">
 			<value>115</value>
@@ -4446,7 +4469,7 @@ shop = overrides everything</value>
 	</object>
 	<object class="LoopRegion" id="{efb3406d-140a-4f64-93da-c8be7dfc2de0}">
 		<property name="position">
-			<value>874.51604945628628</value>
+			<value>910.51604945628469</value>
 		</property>
 		<property name="length">
 			<value>200.3478260869565</value>
@@ -4463,7 +4486,7 @@ shop = overrides everything</value>
 	</object>
 	<object class="LoopRegion" id="{9a53dab1-53c5-4756-96c9-4ee612ff4c72}">
 		<property name="position">
-			<value>1139.5595277171558</value>
+			<value>1175.559527717154</value>
 		</property>
 		<property name="length">
 			<value>2.0869565217393173</value>
@@ -4498,6 +4521,77 @@ shop = overrides everything</value>
 			<destination>{10bee596-f2ee-459c-9210-e827e182a285}</destination>
 		</relationship>
 	</object>
+	<object class="NamedMarker" id="{1e61fe92-d757-41ff-93de-e95c288c29b7}">
+		<property name="position">
+			<value>802.51604945628628</value>
+		</property>
+		<property name="name">
+			<value>13.5</value>
+		</property>
+		<relationship name="timeline">
+			<destination>{165349e2-9281-4876-a2f9-5544c2e17904}</destination>
+		</relationship>
+		<relationship name="markerTrack">
+			<destination>{a1c6d12c-e745-4a11-864f-685ed0e9ec11}</destination>
+		</relationship>
+	</object>
+	<object class="TransitionRegion" id="{1d0755c6-64cf-45bc-96a7-0988797011f6}">
+		<property name="position">
+			<value>766.51604945628628</value>
+		</property>
+		<property name="length">
+			<value>36</value>
+		</property>
+		<relationship name="timeline">
+			<destination>{165349e2-9281-4876-a2f9-5544c2e17904}</destination>
+		</relationship>
+		<relationship name="markerTrack">
+			<destination>{cbd51255-e023-47c7-aa8d-f57e9c894335}</destination>
+		</relationship>
+		<relationship name="destination">
+			<destination>{1e61fe92-d757-41ff-93de-e95c288c29b7}</destination>
+		</relationship>
+		<relationship name="triggerConditions">
+			<destination>{45ed3db6-5ac1-4ca8-83eb-5e285c6a927d}</destination>
+		</relationship>
+	</object>
+	<object class="LoopRegion" id="{080b9d02-062c-45b5-aac8-36f28087ff60}">
+		<property name="position">
+			<value>766.51604945628628</value>
+		</property>
+		<property name="length">
+			<value>24</value>
+		</property>
+		<property name="name">
+			<value>13.4</value>
+		</property>
+		<relationship name="timeline">
+			<destination>{165349e2-9281-4876-a2f9-5544c2e17904}</destination>
+		</relationship>
+		<relationship name="markerTrack">
+			<destination>{9ef4b85a-8fb9-4946-80ef-fe546f8d0f7c}</destination>
+		</relationship>
+	</object>
+	<object class="TransitionRegion" id="{1e896d67-4cfe-4197-af26-0eb3bec309ef}">
+		<property name="position">
+			<value>859.51604945628628</value>
+		</property>
+		<property name="length">
+			<value>10.999999999998408</value>
+		</property>
+		<relationship name="timeline">
+			<destination>{165349e2-9281-4876-a2f9-5544c2e17904}</destination>
+		</relationship>
+		<relationship name="markerTrack">
+			<destination>{cbd51255-e023-47c7-aa8d-f57e9c894335}</destination>
+		</relationship>
+		<relationship name="destination">
+			<destination>{142eba2a-62d4-4f0a-ae48-1ed9053d27e3}</destination>
+		</relationship>
+		<relationship name="triggerConditions">
+			<destination>{9b3674d2-15f7-4a28-a026-b2416e3dbc9d}</destination>
+		</relationship>
+	</object>
 	<object class="Automator" id="{2fdde6b0-8672-45a9-a282-03954de66e29}">
 		<property name="nameOfPropertyBeingAutomated">
 			<value>volume</value>
@@ -4527,6 +4621,7 @@ shop = overrides everything</value>
 	</object>
 	<object class="MixerBusEffectChain" id="{02f79fc9-6796-40cc-8828-45b3debb041a}">
 		<relationship name="effects">
+			<destination>{d136513d-2663-4b92-bd86-f8668c274b47}</destination>
 			<destination>{1e0b33aa-4a1f-462e-a800-c496f69e2c2a}</destination>
 			<destination>{9bd8223e-36a9-44d2-9be2-ef74601655ec}</destination>
 		</relationship>
@@ -5125,6 +5220,14 @@ shop = overrides everything</value>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{2aa64614-037a-4e59-b9bc-0769b8df2b8d}" />
+	<object class="FadeCurve" id="{e0e1161d-a5e1-4974-bf7f-e333eeca06a5}">
+		<relationship name="startPoint">
+			<destination>{cebd685a-ce3a-4ebd-a9a4-b33049f620e4}</destination>
+		</relationship>
+		<relationship name="endPoint">
+			<destination>{cf5dafaa-01d2-40a3-8e8c-24b45260a15c}</destination>
+		</relationship>
+	</object>
 	<object class="FadeCurve" id="{0de6209d-0172-484e-8171-7ce1d089002f}">
 		<relationship name="startPoint">
 			<destination>{a026e59a-11c2-467a-a0a5-da4c4db27901}</destination>
@@ -5146,9 +5249,6 @@ shop = overrides everything</value>
 		</relationship>
 		<relationship name="endPoint">
 			<destination>{fedf6172-50b8-4abb-86ef-bd30f6df9eba}</destination>
-		</relationship>
-		<relationship name="relatedModule">
-			<destination>{24dd8643-2089-4b51-b3ac-248d4f42c8ae}</destination>
 		</relationship>
 	</object>
 	<object class="FadeCurve" id="{04b49726-0393-40d7-a6b5-3557ca324065}">
@@ -5640,7 +5740,7 @@ shop = overrides everything</value>
 	</object>
 	<object class="TransitionTimeline" id="{12d6cbee-a541-4aee-a023-0b88f91d3a25}">
 		<property name="length">
-			<value>3</value>
+			<value>2</value>
 		</property>
 		<relationship name="modules">
 			<destination>{b3ff4461-162b-4ae7-946f-8e4b33ffc562}</destination>
@@ -5711,6 +5811,28 @@ shop = overrides everything</value>
 			<destination>{98644c0f-c6dc-4038-9521-31cd7e19cc67}</destination>
 		</relationship>
 	</object>
+	<object class="ParameterCondition" id="{45ed3db6-5ac1-4ca8-83eb-5e285c6a927d}">
+		<property name="minimum">
+			<value>13.5</value>
+		</property>
+		<property name="maximum">
+			<value>15</value>
+		</property>
+		<relationship name="parameter">
+			<destination>{98644c0f-c6dc-4038-9521-31cd7e19cc67}</destination>
+		</relationship>
+	</object>
+	<object class="ParameterCondition" id="{9b3674d2-15f7-4a28-a026-b2416e3dbc9d}">
+		<property name="minimum">
+			<value>13.600000381469727</value>
+		</property>
+		<property name="maximum">
+			<value>15</value>
+		</property>
+		<relationship name="parameter">
+			<destination>{98644c0f-c6dc-4038-9521-31cd7e19cc67}</destination>
+		</relationship>
+	</object>
 	<object class="AutomationCurve" id="{1ef1a08e-bb7e-4acb-a266-28862de27935}">
 		<relationship name="parameter">
 			<destination>{e5dd1e99-e7a7-4365-923b-211edc1cba95}</destination>
@@ -5737,6 +5859,11 @@ shop = overrides everything</value>
 			<destination>{e36c3325-4751-4c35-b21e-973574ae31fc}</destination>
 			<destination>{100725d9-faef-4266-a224-e113cc7ffd51}</destination>
 		</relationship>
+	</object>
+	<object class="GainEffect" id="{d136513d-2663-4b92-bd86-f8668c274b47}">
+		<property name="gain">
+			<value>-1</value>
+		</property>
 	</object>
 	<object class="MixerBusFader" id="{1e0b33aa-4a1f-462e-a800-c496f69e2c2a}" />
 	<object class="MixerSend" id="{9bd8223e-36a9-44d2-9be2-ef74601655ec}">
@@ -5819,7 +5946,7 @@ shop = overrides everything</value>
 	<object class="MixerBusFader" id="{55dd0b65-92f8-4d51-a6e1-ffe2441399e4}" />
 	<object class="AutomationPoint" id="{4101185f-dac1-4dc5-a332-72c542b014b4}">
 		<property name="position">
-			<value>974.68996249976453</value>
+			<value>1010.6899624997629</value>
 		</property>
 		<property name="value">
 			<value>1</value>
@@ -5830,7 +5957,7 @@ shop = overrides everything</value>
 	</object>
 	<object class="AutomationPoint" id="{156abaa1-abd5-40a2-9b04-914baf72132a}">
 		<property name="position">
-			<value>979.95298823179644</value>
+			<value>1015.9529882317948</value>
 		</property>
 		<property name="value">
 			<value>0</value>
@@ -5838,7 +5965,7 @@ shop = overrides everything</value>
 	</object>
 	<object class="AutomationPoint" id="{7a947091-ab48-4517-aebd-41fc16b884b7}">
 		<property name="position">
-			<value>974.68996249976453</value>
+			<value>1010.6899624997629</value>
 		</property>
 		<property name="value">
 			<value>0</value>
@@ -5849,7 +5976,7 @@ shop = overrides everything</value>
 	</object>
 	<object class="AutomationPoint" id="{2cd561b6-6f9c-4513-b954-5ce5e7397e1d}">
 		<property name="position">
-			<value>979.95298823179644</value>
+			<value>1015.9529882317948</value>
 		</property>
 		<property name="value">
 			<value>1</value>
@@ -6172,9 +6299,28 @@ shop = overrides everything</value>
 		</property>
 	</object>
 	<object class="MixerBusFader" id="{536d25b9-e846-4c16-aa64-009e022b1709}" />
+	<object class="AutomationPoint" id="{cebd685a-ce3a-4ebd-a9a4-b33049f620e4}">
+		<property name="position">
+			<value>865.39104945628628</value>
+		</property>
+		<property name="value">
+			<value>1</value>
+		</property>
+		<property name="curveShape">
+			<value>0.55395937</value>
+		</property>
+	</object>
+	<object class="AutomationPoint" id="{cf5dafaa-01d2-40a3-8e8c-24b45260a15c}">
+		<property name="position">
+			<value>865.51604945628787</value>
+		</property>
+		<property name="value">
+			<value>0</value>
+		</property>
+	</object>
 	<object class="AutomationPoint" id="{a026e59a-11c2-467a-a0a5-da4c4db27901}">
 		<property name="position">
-			<value>863.51604945628628</value>
+			<value>899.51604945628469</value>
 		</property>
 		<property name="value">
 			<value>1</value>
@@ -6185,7 +6331,7 @@ shop = overrides everything</value>
 	</object>
 	<object class="AutomationPoint" id="{76290089-8508-4901-adf4-9a34e22ce628}">
 		<property name="position">
-			<value>864.51604945628628</value>
+			<value>900.51604945628469</value>
 		</property>
 		<property name="value">
 			<value>0</value>
@@ -6205,7 +6351,7 @@ shop = overrides everything</value>
 	<object class="MixerBusFader" id="{a441e968-f3e9-41cd-8f03-905e026ea5f8}" />
 	<object class="AutomationPoint" id="{bcb9acc8-2371-4941-ab82-d7824060b1c9}">
 		<property name="position">
-			<value>826.01604945628628</value>
+			<value>862.01604945628469</value>
 		</property>
 		<property name="value">
 			<value>1</value>
@@ -6216,7 +6362,7 @@ shop = overrides everything</value>
 	</object>
 	<object class="AutomationPoint" id="{fedf6172-50b8-4abb-86ef-bd30f6df9eba}">
 		<property name="position">
-			<value>831.51604945628628</value>
+			<value>865.51604945628628</value>
 		</property>
 		<property name="value">
 			<value>0</value>
@@ -6224,7 +6370,7 @@ shop = overrides everything</value>
 	</object>
 	<object class="AutomationPoint" id="{18cef381-3c13-4a2b-a99a-30dd6afcf6bb}">
 		<property name="position">
-			<value>826.01604945628628</value>
+			<value>862.01604945628469</value>
 		</property>
 		<property name="value">
 			<value>0</value>
@@ -6235,7 +6381,7 @@ shop = overrides everything</value>
 	</object>
 	<object class="AutomationPoint" id="{f0a55f6a-b279-47ab-86df-1e242ed44e3e}">
 		<property name="position">
-			<value>831.51604945628628</value>
+			<value>865.51604945628628</value>
 		</property>
 		<property name="value">
 			<value>1</value>
@@ -6252,7 +6398,7 @@ shop = overrides everything</value>
 	<object class="MixerBusFader" id="{4366cf99-5024-441d-b417-835403d2135f}" />
 	<object class="AutomationPoint" id="{01cc0539-0898-451a-bed6-3a4d268687c2}">
 		<property name="position">
-			<value>974.68996249976453</value>
+			<value>1010.6899624997629</value>
 		</property>
 		<property name="value">
 			<value>1</value>
@@ -6263,7 +6409,7 @@ shop = overrides everything</value>
 	</object>
 	<object class="AutomationPoint" id="{dfb16f86-0a27-44a8-b4a3-72365a7ed832}">
 		<property name="position">
-			<value>983.03778858672104</value>
+			<value>1019.0377885867194</value>
 		</property>
 		<property name="value">
 			<value>0</value>
@@ -6271,7 +6417,7 @@ shop = overrides everything</value>
 	</object>
 	<object class="AutomationPoint" id="{1909036e-f49e-4c62-b19d-2b727ca6c429}">
 		<property name="position">
-			<value>974.68996249976453</value>
+			<value>1010.6899624997629</value>
 		</property>
 		<property name="value">
 			<value>0</value>
@@ -6282,7 +6428,7 @@ shop = overrides everything</value>
 	</object>
 	<object class="AutomationPoint" id="{81635145-62da-47ed-a12e-dde7f26c03f0}">
 		<property name="position">
-			<value>983.03778858672104</value>
+			<value>1019.0377885867194</value>
 		</property>
 		<property name="value">
 			<value>1</value>
@@ -6324,7 +6470,7 @@ shop = overrides everything</value>
 	</object>
 	<object class="AutomationPoint" id="{e36c3325-4751-4c35-b21e-973574ae31fc}">
 		<property name="position">
-			<value>1.9725711954166849</value>
+			<value>1.4508320649819022</value>
 		</property>
 		<property name="value">
 			<value>0</value>
@@ -6332,7 +6478,7 @@ shop = overrides everything</value>
 	</object>
 	<object class="AutomationPoint" id="{100725d9-faef-4266-a224-e113cc7ffd51}">
 		<property name="position">
-			<value>1.4508320649819022</value>
+			<value>0.92909293454711972</value>
 		</property>
 		<property name="value">
 			<value>-80</value>
@@ -6568,7 +6714,7 @@ shop = overrides everything</value>
 	</object>
 	<object class="AutomationPoint" id="{edad5326-543f-4031-892d-f8dfd2e2d883}">
 		<property name="position">
-			<value>3</value>
+			<value>1</value>
 		</property>
 		<property name="value">
 			<value>0</value>

@@ -21,6 +21,7 @@ public class Upgrades : MonoBehaviour
     public bool bossUnlocked;
 
     public FMODUnity.EventReference clickEvent;
+    public FMODUnity.EventReference hoverEvent;
 
     public Sprite suspiciousSprite;
 
@@ -46,6 +47,7 @@ public class Upgrades : MonoBehaviour
     public void OnHoverEnter()
     {
         LeanTween.scale(gameObject, new Vector3(0.9f, 0.9f, 0.9f), 0.1f);
+        FMODUnity.RuntimeManager.PlayOneShot(hoverEvent, transform.position);
     }
 
     public void OnHoverExit()
@@ -55,7 +57,7 @@ public class Upgrades : MonoBehaviour
 
     public void OnClick()
     {
-        FMODUnity.RuntimeManager.PlayOneShot(clickEvent);
+        FMODUnity.RuntimeManager.PlayOneShot(clickEvent, transform.position);
         purchaseMenu.transform.localScale = new Vector3(0, 0, 0);
         purchaseMenu.gameObject.SetActive(true);
         LeanTween.scale(purchaseMenu.gameObject, new Vector3(1, 1, 1), 0.15f);

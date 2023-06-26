@@ -37,7 +37,7 @@ public class ShopScreen : MonoBehaviour
         LeanTween.scale(bgPanel, new Vector3(0, 0, 0), 0.15f).setOnComplete(OnComplete);
         FMODUnity.RuntimeManager.PlayOneShot(chrShopExitEvent, transform.position);
 
-        muteInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        muteInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         muteInstance.release();
 
         shopMusicInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);

@@ -46,6 +46,7 @@ public class bgmScript : MonoBehaviour
 
         FMOD.Studio.EventDescription musicEventDescription;
         Music.getDescription(out musicEventDescription);
+
         FMOD.Studio.PARAMETER_DESCRIPTION musicParameterDescription;
         musicEventDescription.getParameterDescriptionByName("Music progression", out musicParameterDescription);
         musicParameterId = musicParameterDescription.id;
@@ -53,22 +54,23 @@ public class bgmScript : MonoBehaviour
         FMOD.Studio.PARAMETER_DESCRIPTION resetParameterDescription;
         musicEventDescription.getParameterDescriptionByName("Reset", out resetParameterDescription);
         resetParameterId = resetParameterDescription.id;
+
     }
 
     // Debug function -- prints parameter every 4 secs
     void Update()
     {
-        timer += Time.deltaTime;
-        if (timer >= 1.5f)
-        {
-            Debug.Log(GetParameter());
-            timer = 0;
-        }
+    //     timer += Time.deltaTime;
+    //     if (timer >= 1.5f)
+    //     {
+    //         Debug.Log(GetParameter());
+    //         timer = 0;
+    //     }
     }
 
     public void SetParameter(float index)
     {
-        Debug.Log("i have been called!!");
+    //  Debug.Log("i have been called!!");
         Music.setParameterByID(musicParameterId, index);
     }
 
@@ -83,4 +85,5 @@ public class bgmScript : MonoBehaviour
     {
         Music.setParameterByID(resetParameterId, 1);
     }
+
 }
