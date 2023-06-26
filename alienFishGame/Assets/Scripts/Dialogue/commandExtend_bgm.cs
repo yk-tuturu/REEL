@@ -13,6 +13,7 @@ public class commandExtend_bgm : MonoBehaviour
         commandManager.instance.commandData.Add("set12", new Action(set12));
         commandManager.instance.commandData.Add("set13", new Action(set13));
         commandManager.instance.commandData.Add("set13.5", new Action(set13half));
+        commandManager.instance.commandData.Add("set13.6", new Action(set13six));
     }
 
     // this aint the most elegant of code, but im too lazy to reconfigure this to take in an argument
@@ -39,6 +40,11 @@ public class commandExtend_bgm : MonoBehaviour
     public void set13half()
     {
         bgmScript.instance.SetParameter(13.5f);
+    }
+
+    public void set13six()
+    {
+        bgmScript.instance.SetParameter(13.6f);
     }
 
 }

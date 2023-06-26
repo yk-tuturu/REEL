@@ -1,6 +1,6 @@
 
 Right before you dealt the finishing blow, you felt a slight twinge of hesitation. 
-set13.5
+
 
 It may be true that the overlord poses a menace to both you, and all of the fishermen upon this dock. 
 
@@ -33,7 +33,7 @@ That is... a deal. But please refrain from taking even more fish away from us.
 
 You
 We'll try to control ourselves. 
-mvoeDown
+moveDown
 
 Even though you weren't too sure how much of those words you truly meant.
 
@@ -42,7 +42,7 @@ For humans, there will always be a need for fish. The fish market will never sto
 
 You
 But even so, I suppose we should try our best...
-
+set13.5
 
 
 transitionToReleaseCG
@@ -66,7 +66,6 @@ It only wanted to protect its home, just as you did.
 
 
 Together, you can find that balance you both wish for.
+set13.6, waitToEnd
 
 
-
-backToMenu

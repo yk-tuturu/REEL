@@ -5,6 +5,7 @@ using System;
 using System.IO;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class commandExtend : MonoBehaviour
 {
@@ -23,6 +24,7 @@ public class commandExtend : MonoBehaviour
 
     public GameObject attackCG;
     public GameObject releaseCG;
+    public TextMeshProUGUI thanksText;
 
     
     // Start is called before the first frame update
@@ -35,6 +37,7 @@ public class commandExtend : MonoBehaviour
 
         commandManager.instance.commandData.Add("transitionToAttackCG", new Action(transitionToAttackCG));
         commandManager.instance.commandData.Add("transitionToReleaseCG", new Action(transitionToReleaseCG));
+        commandManager.instance.commandData.Add("waitToEnd", new Action(waitToEnd));
     }
 
     public void onIntroComplete()
@@ -87,9 +90,13 @@ public class commandExtend : MonoBehaviour
         }
 
         var transition = GameObject.Find("transitions");
-        if (transition != null)
+        if (transition != null && bgmScript.instance.GetParameter() == 13f)
         {
             transition.GetComponent<bossTransition>().FadeToBlack();
+        }
+        else
+        {
+            SceneManager.LoadScene("Scenes/MainMenu");
         }
     }
 
@@ -106,6 +113,7 @@ public class commandExtend : MonoBehaviour
     IEnumerator fadeToCG(string endingType)
     {
         dialogueManager.speechText = endingText;
+        
         
         iTween.ValueTo(blackPanel.gameObject, iTween.Hash("from", 0f, "to", 1f, "time", 1f, "onupdate", "updateColor", "onupdatetarget", this.gameObject));
 
@@ -130,5 +138,28 @@ public class commandExtend : MonoBehaviour
     void updateColor(float val)
     {
         blackPanel.color = new Color(blackPanel.color.r, blackPanel.color.g, blackPanel.color.b, val);
+    }
+
+    void updateColorText(float val)
+    {
+        thanksText.color = new Color(1, 1, 1, val);
+    }
+
+    public void waitToEnd()
+    {
+        StartCoroutine(wait());
+    }
+
+    IEnumerator wait()
+    {
+        blackPanel.color = new Vector4(0, 0, 0, 0);
+        thanksText.gameObject.SetActive(true);
+        iTween.ValueTo(blackPanel.gameObject, iTween.Hash("from", 0f, "to", 1f, "time", 3f, "onupdate", "updateColor", "onupdatetarget", this.gameObject));
+        iTween.ValueTo(thanksText.gameObject, iTween.Hash("from", 0f, "to", 1f, "time", 3f, "delay", 2f, "onupdate", "updateColorText", "onupdatetarget", this.gameObject));
+        yield return new WaitForSeconds(12f);
+        iTween.ValueTo(thanksText.gameObject, iTween.Hash("from", 1f, "to", 0f, "time", 3f, "delay", 2f, "onupdate", "updateColorText", "onupdatetarget", this.gameObject));
+        yield return new WaitForSeconds(3f);
+
+        backToMenu();
     }
 }
