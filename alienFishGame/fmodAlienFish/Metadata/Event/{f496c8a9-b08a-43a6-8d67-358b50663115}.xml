@@ -61,7 +61,7 @@
 			<value>1</value>
 		</property>
 		<property name="triggerCooldown">
-			<value>10000</value>
+			<value>2000</value>
 		</property>
 	</object>
 	<object class="MarkerTrack" id="{55fe941d-2641-418e-80db-acf3d0424afd}" />
@@ -98,6 +98,9 @@
 	<object class="MultiSound" id="{d7e3ded7-8b10-41d9-a59b-5f87a50b655b}">
 		<property name="isAsync">
 			<value>true</value>
+		</property>
+		<property name="volume">
+			<value>-1</value>
 		</property>
 		<relationship name="sounds">
 			<destination>{d5163186-ba35-4935-afee-004c482a2996}</destination>
@@ -158,10 +161,19 @@
 	</object>
 	<object class="MixerBusEffectChain" id="{90c56b2d-e91e-4f2d-8755-0ac0506453d9}">
 		<relationship name="effects">
+			<destination>{ed053162-4c88-4ec8-b80a-c8f4abf7a858}</destination>
 			<destination>{55dbe060-2907-4fda-94d6-18d0f4486175}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{5bd2f5ef-f3b7-4979-86af-d7cb19e3b954}" />
 	<object class="MixerBusFader" id="{a6c740f3-2e0b-4870-852f-b0dd8d4150c0}" />
+	<object class="CompressorEffect" id="{ed053162-4c88-4ec8-b80a-c8f4abf7a858}">
+		<property name="threshold">
+			<value>-38</value>
+		</property>
+		<property name="ratio">
+			<value>1.95000005</value>
+		</property>
+	</object>
 	<object class="MixerBusFader" id="{55dbe060-2907-4fda-94d6-18d0f4486175}" />
 </objects>

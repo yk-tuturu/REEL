@@ -61,7 +61,7 @@
 			<value>1</value>
 		</property>
 		<property name="triggerCooldown">
-			<value>10000</value>
+			<value>2000</value>
 		</property>
 	</object>
 	<object class="MarkerTrack" id="{caa2ea43-bcf6-4fec-bf42-6e91d841d62a}" />
@@ -100,7 +100,7 @@
 			<value>true</value>
 		</property>
 		<property name="volume">
-			<value>-12</value>
+			<value>-2</value>
 		</property>
 		<relationship name="sounds">
 			<destination>{8834005b-7413-4563-b43f-b0380791c376}</destination>
@@ -109,7 +109,9 @@
 			<destination>{5e9a9d10-08f4-4ba4-ac68-4d4a181b867a}</destination>
 			<destination>{56828913-98ef-4ee6-a418-fd87a8003878}</destination>
 			<destination>{406db7c8-e894-497c-b3b9-a7a8b4e8edca}</destination>
-			<destination>{7d1a6b37-8895-4513-abf7-d80b78d5a9e9}</destination>
+		</relationship>
+		<relationship name="playPercentages">
+			<destination>{53c85186-f44a-4e5a-882e-583eef9209ed}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{cdb9d2ff-b1bb-444a-b07a-27f0a9995d7e}">
@@ -175,20 +177,29 @@
 			<destination>{37b504fa-b46d-4a97-b725-c3699acaf89a}</destination>
 		</relationship>
 	</object>
-	<object class="SingleSound" id="{7d1a6b37-8895-4513-abf7-d80b78d5a9e9}">
-		<property name="volume">
-			<value>6</value>
+	<object class="PlayPercentage" id="{53c85186-f44a-4e5a-882e-583eef9209ed}">
+		<property name="percentage">
+			<value>1</value>
 		</property>
-		<relationship name="audioFile">
-			<destination>{1d004b35-04e2-4945-ac81-7f617fce5fd6}</destination>
+		<relationship name="sound">
+			<destination>{406db7c8-e894-497c-b3b9-a7a8b4e8edca}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusEffectChain" id="{375b2d07-a522-4ccd-b5d7-3f769b3c8370}">
 		<relationship name="effects">
+			<destination>{085ca7d3-48ea-42b3-91c2-1f56f0a1f453}</destination>
 			<destination>{fe67d2ad-76b3-41f4-b353-691fee1d6968}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{b3a4533e-32b0-4935-98aa-85703783b8b9}" />
 	<object class="MixerBusFader" id="{a8ddbe18-1a2b-4d51-97a4-2164a5d77b68}" />
+	<object class="CompressorEffect" id="{085ca7d3-48ea-42b3-91c2-1f56f0a1f453}">
+		<property name="threshold">
+			<value>-38</value>
+		</property>
+		<property name="ratio">
+			<value>2</value>
+		</property>
+	</object>
 	<object class="MixerBusFader" id="{fe67d2ad-76b3-41f4-b353-691fee1d6968}" />
 </objects>
