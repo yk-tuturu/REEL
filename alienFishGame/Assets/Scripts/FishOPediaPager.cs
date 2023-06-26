@@ -54,6 +54,7 @@ public class FishOPediaPager : MonoBehaviour
         displayInstance.start();
 
         activePage.SetActive(true);
+        activePage.transform.localScale = new Vector3(0, 0, 0);
         LeanTween.scale(activePage, new Vector3(1, 1, 1), 0.15f);
     }
 

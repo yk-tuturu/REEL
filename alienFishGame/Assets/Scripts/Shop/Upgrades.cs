@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class Upgrades : MonoBehaviour
 {
@@ -21,6 +22,8 @@ public class Upgrades : MonoBehaviour
 
     public FMODUnity.EventReference clickEvent;
 
+    public Sprite suspiciousSprite;
+
     void Awake()
     {
     }
@@ -30,7 +33,8 @@ public class Upgrades : MonoBehaviour
     {
         if (upgradeType == "bait" && maxLevel == 4 && currentLevel == 3 && !bossUnlocked)
         {
-            upgradeDescription = "A mysterious aura emanates from the bait. You wonder what wondrous fish you might fish up with this.";
+            GetComponent<Image>().sprite = suspiciousSprite;
+            upgradeDescription = "A mysterious aura emanates from the bait. You wonder what new things you might fish up with this";
             price = 3000;
             bgmScript.instance.SetParameter(8);
 

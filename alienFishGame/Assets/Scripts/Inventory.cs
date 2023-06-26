@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
     public Transform gridContainer;
     public GameObject fishIcon;
+    public GameObject blankIcon;
 
     // Audio
     public FMODUnity.EventReference uiInventoryOpenEvent;
@@ -39,9 +40,16 @@ public class Inventory : MonoBehaviour
             GameObject.Destroy(child.gameObject);
         }
 
+        int counter = 0;
         for (int i = 0 ; i < FishDataManager.instance.fishTypeCount; i++)
         {
             Fish fish = FishDataManager.instance.GetFish(i);
+
+            if (fish.type == "boss")
+            {
+                continue;
+            }
+
             if (fish.totalCaught - fish.totalSold > 0)
             {
                 GameObject temp = Instantiate(fishIcon, new Vector3(0,0,0), Quaternion.identity, gridContainer);
@@ -50,7 +58,17 @@ public class Inventory : MonoBehaviour
                 icon.UpdateFishDisplayed();
                 icon.starContainer.gameObject.SetActive(true);
                 icon.stackDisplay.SetActive(true);
+                
+                Image bgSlot = temp.GetComponent<Image>();
+                bgSlot.color = new Vector4(1, 1, 1, 1);
+
+                counter += 1;
             }
+        }
+
+        for (int j = 0; j < 18 - counter; j++)
+        {
+            Instantiate(blankIcon, new Vector3(0, 0, 0), Quaternion.identity, gridContainer);
         }
     }
 

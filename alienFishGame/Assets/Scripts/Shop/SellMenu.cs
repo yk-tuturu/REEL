@@ -33,6 +33,11 @@ public class SellMenu : MonoBehaviour
         for (var i = 0; i < FishDataManager.instance.fishTypeCount; i++)
         {
             Fish fish = FishDataManager.instance.GetFish(i);
+            if (fish.type == "boss")
+            {
+                continue;
+            }
+            
             if (fish.totalCaught - fish.totalSold > 0)
             {
                 GameObject icon = Instantiate(sellFishIcon, new Vector3(0, 0, 0), Quaternion.identity, sellPanel);

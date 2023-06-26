@@ -18,7 +18,7 @@ public class FishDataManager : MonoBehaviour
     public bool bossAvailable = false;
     public bool bossDefeated = false;
 
-    public int nextMilestone = 50;
+    public int nextMilestone = 70;
 
     public UnityEvent unlockBoss;
 
@@ -53,7 +53,7 @@ public class FishDataManager : MonoBehaviour
 
     void Update()
     {
-        if (rareCaught >= 1 && allFishCaught >= 300 && !bossAvailable && !bossDefeated)
+        if (rareCaught >= 3 && allFishCaught >= 400 && !bossAvailable && !bossDefeated)
         {
             unlockBoss.Invoke();
             bossAvailable = true;
@@ -95,7 +95,7 @@ public class FishDataManager : MonoBehaviour
 
         if (allFishCaught >= nextMilestone)
         {
-            nextMilestone += 50;
+            nextMilestone += 70;
             CheckMusicParameters(RodStatManager.instance.baitLevel);
         }
 
@@ -168,9 +168,9 @@ public class FishDataManager : MonoBehaviour
 
     public void CheckMusicParameters(int baitLevel)
     {
-        float value = allFishCaught / 50;
+        float value = allFishCaught / 70;
         float param = Mathf.Min(7, Mathf.Floor(value + 1));
-        if (allFishCaught >= 250)
+        if (allFishCaught >= 350)
         {
             param = 7f;
         }

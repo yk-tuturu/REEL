@@ -10,6 +10,8 @@ public class infoPanel : MonoBehaviour
     public Image fishImage;
 
     public Image infoPanelImage;
+
+    public FMODUnity.EventReference creatureEvent;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,23 +31,27 @@ public class infoPanel : MonoBehaviour
         Sprite sprite = Resources.Load<Sprite>("fishPanels/fish-" + index.ToString());
 
         // slight exception for the overlord
-        if (index != 21)
-        {
-            infoPanelImage.sprite = sprite;
-        }
-        else 
-        {
-            infoPanelImage.color = new Color(1, 1, 1, 0);
-        }
+        infoPanelImage.sprite = sprite;
         
         description.text = fish.description;
         
         var fishSprite = Resources.Load<Sprite>("fishIcons/" + "fish" + index.ToString());
 
-        if (fishSprite != null)
+        if (index != 21)
         {
+            fishImage.color = new Color(1, 1, 1, 1);
             fishImage.sprite = fishSprite;
         }
+        else 
+        {
+            fishImage.color = new Color(1, 1, 1, 0);
+        }
+
+        // play audio corresponding to fish
+        FMOD.Studio.EventInstance instance = FMODUnity.RuntimeManager.CreateInstance(creatureEvent);
+        instance.setParameterByName("Fish ID", index);
+        instance.start();
+        instance.release();
     }
 
     public void Close()

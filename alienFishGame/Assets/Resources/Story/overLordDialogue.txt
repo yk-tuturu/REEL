@@ -1,6 +1,6 @@
 ?????
 Who dares lay a finger on my underlings??
-shake
+shake, playOverlordSnarl
 
 The shadowy figure you had just fished up from the depths snarled, clearly displeased at this predicament.
 
@@ -30,7 +30,7 @@ Calm down... maybe we can talk this out?
  
 Overlord
 This injustice must be punished. All of you shall suffer the wrath of the fish!!
-set11, shakeBoss
+set11, shakeBoss, playOverlordSnarl
 
 There didn't seem to be any room for argument. All you could do was to prepare what equipment you have and attack.
 

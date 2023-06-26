@@ -27,7 +27,6 @@ public class FishIcon : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        image = GetComponent<Image>();
         sprite = Resources.Load<Sprite>("fishIcons/" + "fish" + index.ToString());
         image.sprite = sprite;
         fish = FishDataManager.instance.GetFish(index);
@@ -50,7 +49,6 @@ public class FishIcon : MonoBehaviour
 
     public void UpdateFishDisplayed()
     {
-        image = GetComponent<Image>();
         sprite = Resources.Load<Sprite>("fishIcons/" + "fish" + index.ToString());
         image.sprite = sprite;
         fish = FishDataManager.instance.GetFish(index);

@@ -34,6 +34,7 @@ public class settingsMenu : MonoBehaviour
     {
         FMODUnity.RuntimeManager.PlayOneShot(uiSettingsOpenEvent, transform.position);
         gameObject.SetActive(true);
+        mainPanel.transform.localScale = new Vector3(0, 0, 0);
         LeanTween.scale(mainPanel, new Vector3(1, 1, 1), 0.15f);
         FetchSaves();
     }

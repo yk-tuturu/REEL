@@ -71,6 +71,7 @@ public class commandExtend : MonoBehaviour
                 {
                     Debug.Log("found autosave file!");
                     saveData.bossDefeated = true;
+                    saveData.totalCaught[21] = 1;
 
                     if (bgmScript.instance.GetParameter() == 13f)
                     {
