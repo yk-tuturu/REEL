@@ -54,23 +54,21 @@ public class transitions : MonoBehaviour
 
         finalRect = panel;
 
-        iTween.ValueTo(panel, iTween.Hash("from", 0.1f, "to", 0.95f, "time", 0.6f, "onupdate", "updateColor", "onupdatetarget", this.gameObject));
+        iTween.ValueTo(panel, iTween.Hash("from", 0.1f, "to", 0.95f, "time", 0.85f, "onupdate", "updateColor", "onupdatetarget", this.gameObject));
 
-        yield return new WaitForSeconds(0.8f);
+        yield return new WaitForSeconds(1f);
 
-        
+        iTween.ValueTo(panel, iTween.Hash("from", 0.95f, "to", 0f, "time", 0.85f, "delay", 0.1f, "onupdate", "updateColor", "onupdatetarget", this.gameObject));
 
-        iTween.ValueTo(panel, iTween.Hash("from", 0.95f, "to", 0f, "time", 0.6f, "delay", 0.1f, "onupdate", "updateColor", "onupdatetarget", this.gameObject));
+        yield return new WaitForSeconds(1f);
 
-        yield return new WaitForSeconds(0.8f);
+        iTween.ValueTo(panel, iTween.Hash("from", 0f, "to", 0.95f, "time", 0.85f, "delay", 0.1f, "onupdate", "updateColor", "onupdatetarget", this.gameObject));
 
-        iTween.ValueTo(panel, iTween.Hash("from", 0f, "to", 0.95f, "time", 0.6f, "delay", 0.1f, "onupdate", "updateColor", "onupdatetarget", this.gameObject));
+        yield return new WaitForSeconds(1f);
 
-        yield return new WaitForSeconds(0.8f);
+        iTween.ValueTo(panel, iTween.Hash("from", 0.95f, "to", 0f, "time", 0.85f, "delay", 0.1f, "onupdate", "updateColor", "onupdatetarget", this.gameObject));
 
-        iTween.ValueTo(panel, iTween.Hash("from", 0.95f, "to", 0f, "time", 0.6f, "delay", 0.1f, "onupdate", "updateColor", "onupdatetarget", this.gameObject));
-
-        yield return new WaitForSeconds(1.1f);
+        yield return new WaitForSeconds(1f);
 
         iTween.ValueTo(panel, iTween.Hash("from", 0f, "to", 1f, "time", 1.2f, "delay", 0.1f, "onupdate", "updateColor", "onupdatetarget", this.gameObject, "oncomplete", "changeScene", "oncompletetarget", this.gameObject));
     }

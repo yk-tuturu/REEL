@@ -66,6 +66,19 @@ public class FishDataManager : MonoBehaviour
         return (fishes[index]);
     }
 
+    public List<int> GetFishPool(string type, int rarity)
+    {
+        var fishList = new List<int>();
+        foreach(Fish fish in fishes)
+        {
+            if (fish.rarity == rarity && fish.type == type)
+            {
+                fishList.Add(fish.index);
+            }
+        }
+        return fishList;
+    }
+
     public void ClaimFish(List<int> fishCaught)
     {
         foreach(var index in fishCaught)

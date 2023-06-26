@@ -33,6 +33,12 @@ public class SellFishIcon : MonoBehaviour
         fish = FishDataManager.instance.GetFish(index);
         numberOwned.text = (fish.totalCaught - fish.totalSold).ToString();
 
+        // clears out any leftover stars
+        foreach (Transform child in starContainer)
+        {
+            GameObject.Destroy(child.gameObject);
+        }
+
         for (var i = 0; i < fish.rarity; i++)
         {
             Instantiate(star, new Vector3(0,0,0), Quaternion.identity, starContainer);

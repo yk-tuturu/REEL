@@ -14,4 +14,5 @@ public class Fish
     public string length;
     public int totalCaught;
     public int totalSold;
+    public string type;
 }

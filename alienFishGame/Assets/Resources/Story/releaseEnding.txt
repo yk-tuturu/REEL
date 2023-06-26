@@ -21,10 +21,10 @@ Have you finally come to your senses, human? Have you finally realized the weigh
 
 
 You didn't particularly think you did anything wrong. But maybe just this once...
-
+moveDown
 You
 Fine. I won't kill you. But you must promise you won't come back and hurt us ever again. 
-
+moveUp
 
 The overlord opened its mouth, seemingly in protest, but then backed down. It gritted its teeth, grudgingly saying the words that followed. 
 
@@ -33,7 +33,7 @@ That is... a deal. But please refrain from taking even more fish away from us.
 
 You
 We'll try to control ourselves. 
-
+mvoeDown
 
 Even though you weren't too sure how much of those words you truly meant.
 
@@ -41,7 +41,31 @@ Even though you weren't too sure how much of those words you truly meant.
 For humans, there will always be a need for fish. The fish market will never stop running. 
 
 You
-(Eh, whatever. As long as it pleases the overlord...)
+But even so, I suppose we should try our best...
+
+
+
+transitionToReleaseCG
+
+After a fierce, spontaneous battle, you decide to let The Overlord swim free.
+
+
+After all, these are its waters. Why would you want to disrupt the balance of nature?
+
+
+You and the other fishermen watch as the creature dives under the surface.
+
+
+Its two tail fins shimmer as the distant sun rises above the horizon.
+
+
+Despite everything, you feel a sense of respect for this ancient being and its unwavering strength.
+
+
+It only wanted to protect its home, just as you did.
+
+
+Together, you can find that balance you both wish for.
 
 
 

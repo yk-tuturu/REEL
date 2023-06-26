@@ -54,6 +54,7 @@ public class SellConfirmMenu : MonoBehaviour
     {
         FMODUnity.RuntimeManager.PlayOneShot(sellEvent);
         FishDataManager.instance.SellFish(fish.index, numberToSell);
+        numberToSell = 1;
         LeanTween.scale(gameObject, new Vector3(0, 0, 0), 0.15f).setOnComplete(OnComplete);
         sellMenu.UpdateSellInfo();
     }

@@ -29,6 +29,7 @@ public class FishIcon : MonoBehaviour
     {
         image = GetComponent<Image>();
         sprite = Resources.Load<Sprite>("fishIcons/" + "fish" + index.ToString());
+        image.sprite = sprite;
         fish = FishDataManager.instance.GetFish(index);
     }
 
@@ -53,6 +54,11 @@ public class FishIcon : MonoBehaviour
         sprite = Resources.Load<Sprite>("fishIcons/" + "fish" + index.ToString());
         image.sprite = sprite;
         fish = FishDataManager.instance.GetFish(index);
+
+        foreach (Transform child in starContainer)
+        {
+            GameObject.Destroy(this.gameObject);
+        }
         
         for (var i = 0; i < fish.rarity; i++)
         {

@@ -7,6 +7,7 @@ public class FishOPediaPager : MonoBehaviour
     public GameObject page1;
     public GameObject page2;
     public GameObject activePage;
+    public GameObject overlordSprite;
 
     // Audio
     public FMODUnity.EventReference uiFishopediaPageLeftEvent;
@@ -19,7 +20,10 @@ public class FishOPediaPager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        if (FishDataManager.instance.bossDefeated)
+        {
+            overlordSprite.SetActive(true);
+        }
     }
 
     // Update is called once per frame

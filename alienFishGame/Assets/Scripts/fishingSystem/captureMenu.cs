@@ -10,6 +10,8 @@ public class captureMenu : MonoBehaviour
     public GameObject blankIcon;
     public GameObject scrollPanel;
     public GameObject fishingrods;
+    public Transform bgGrid;
+    public GameObject iconBG;
 
     
     public List<int> fishList;
@@ -23,10 +25,13 @@ public class captureMenu : MonoBehaviour
         foreach (var index in fishCaught)
         {
             GameObject listItem = Instantiate(fishIcon, new Vector3(0, 0, 0), Quaternion.identity, scrollPanel.transform);
+
             FishIcon icon = listItem.GetComponent<FishIcon>();
             icon.index = index;
             icon.UpdateFishDisplayed();
             icon.starContainer.gameObject.SetActive(true);
+
+            Instantiate(iconBG, new Vector3(0, 0, 0), Quaternion.identity, bgGrid);
         }
 
         // hacky fix for the scrollbar 
@@ -39,6 +44,11 @@ public class captureMenu : MonoBehaviour
     public void ClearChildren()
     {
         foreach (Transform child in scrollPanel.transform)
+        {
+            GameObject.Destroy(child.gameObject);
+        }
+
+        foreach (Transform child in bgGrid)
         {
             GameObject.Destroy(child.gameObject);
         }

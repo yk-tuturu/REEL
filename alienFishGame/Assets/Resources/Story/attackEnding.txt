@@ -1,17 +1,35 @@
 
 Without hesitation, you plunge the tip of your fishing rod into its heart.
-shake, set13
+set13, shakeBossStrong
 You
 Well, I guess this is gonna sell for a whole lot of cash on the auction market. 
-
+moveDown
 
 Maybe he was right that you had taken away the lives of many fish. But it attacked first. This is just the ending it deserves. 
+
+
+According to the records, this is an entirely undocumented species. Just imagining all the money and attention that would come to you the moment you brought back the overlord's body, fills you with elation. 
 
 
 And with this, you won't have to worry about paying the bills in a long, long while. 
 
 
-+5000 fishbucks added to inventory
+
+transitionToAttackCG
+
+The Overlord’s reign is over. It wanted a battle, and you gave it a war.
+
+
+Without this ancient being lurking in these waters, you’re able to live comfortably with a full wallet and an even fuller stomach.
+
+
+The room fills with joyous laughter as you share your freshly caught dinner with the other fishermen, drinking and telling stories of your times at sea.
+
+
+This alien world is still new to you, but you’ve found a sense of pride in your achievements.
+
+
+The shoreline has always been your home, and now, you’ve conquered it.
 
 
 

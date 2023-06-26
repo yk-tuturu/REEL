@@ -43,12 +43,9 @@ public class FishingPole : MonoBehaviour
     // Audio
     public FMODUnity.EventReference fishPoleClickEvent;
     public FMODUnity.EventReference fishTrapClickEvent;
-    public FMODUnity.EventReference fishCatchSmallCommonEvent;
-    public FMODUnity.EventReference fishCatchSmallUncommonEvent;
-    public FMODUnity.EventReference fishCatchSmallRareEvent;
-    public FMODUnity.EventReference fishCatchLargeCommonEvent;
-    public FMODUnity.EventReference fishCatchLargeUncommonEvent;
-    public FMODUnity.EventReference fishCatchLargeRareEvent;
+
+    public List<FMODUnity.EventReference> smallCatchEventList = new List<FMODUnity.EventReference>();
+    public List<FMODUnity.EventReference> largeCatchEventList = new List<FMODUnity.EventReference>();
 
     // Start is called before the first frame update
     void Start()
@@ -73,34 +70,52 @@ public class FishingPole : MonoBehaviour
             timer = 0;
             timeToNextFish = Random.Range(minTime, maxTime);
 
-            float rng = Random.value;
-            if (rng < rareProb)
-            {
-                AddFish(4, 4);
-            }
-            else if (rng < uncommonProb)
-            {
-                AddFish(3, 3);
-            }
-            else 
-            {
-                AddFish(0, 3);
-            }
+            AddFish();
         }
         panel_text.text = currentCapacity.ToString() + "/" + maxCapacity.ToString();
     }
 
-    // might need to change this to take in a list of fish afterwards
-    void AddFish(int minIndex, int maxIndex)
+    // calculates some rng and picks a fish to add
+    void AddFish()
     {
-        int fishIndex = Random.Range(minIndex, maxIndex);
+        int rarity = 0;
+        float rng = Random.value;
+        if (rng < rareProb)
+        {
+            rarity = 3;
+        }
+        else if (rng < uncommonProb)
+        {
+            rarity = 2;
+        }
+        else 
+        {
+            rarity = 1;
+        }
+
+        var fishList = FishDataManager.instance.GetFishPool(type, rarity);
+
+        int listIndex = Random.Range(0, fishList.Count);
+
+        var fishIndex = fishList[listIndex];
 
         fishCaught.Add(fishIndex);
 
         currentCapacity += 1;
 
         // Possible code to differentiate large & small fish, rare fish
-        FMODUnity.RuntimeManager.PlayOneShot(fishCatchSmallCommonEvent, transform.position);
+        // Possible code to differentiate large & small fish, rare fish
+        Fish fish = FishDataManager.instance.GetFish(fishIndex);
+        if (fish.weight <= 1)
+        {
+            var eventref = smallCatchEventList[rarity - 1];
+            FMODUnity.RuntimeManager.PlayOneShot(eventref, transform.position);
+        }
+        else
+        {
+            var eventref = largeCatchEventList[rarity - 1];
+            FMODUnity.RuntimeManager.PlayOneShot(eventref, transform.position);
+        }
 
         // If the menu was open while a fish is caught
         if (menuOpen)

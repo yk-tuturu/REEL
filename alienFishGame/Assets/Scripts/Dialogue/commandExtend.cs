@@ -3,43 +3,38 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using System.IO;
+using UnityEngine.UI;
+using TMPro;
 
 public class commandExtend : MonoBehaviour
 {
     public GameObject attackPanel;
     public GameObject dialoguePanel;
     public GameObject choicePanel;
+
+    public GameObject overlord;
+    public Material none;
+    public Sprite overlordDim;
+    public Sprite overlordBright;
+
+    public TextMeshProUGUI endingText;
+    public DialogueManager dialogueManager;
+    public Image blackPanel;
+
+    public GameObject attackCG;
+    public GameObject releaseCG;
+
+    
     // Start is called before the first frame update
     void Start()
     {
-        commandManager.instance.commandData.Add("debug", new Action(DebugTest));
-        commandManager.instance.commandData.Add("shake", new Action(Shake));
         commandManager.instance.commandData.Add("onIntroComplete", new Action(onIntroComplete));
         commandManager.instance.commandData.Add("onAttackLanded", new Action(onAttackLanded));
         commandManager.instance.commandData.Add("onAttackFinished", new Action(onAttackFinished));
         commandManager.instance.commandData.Add("backToMenu", new Action(backToMenu));
 
-        commandManager.instance.commandData.Add("set10", new Action(set10));
-        commandManager.instance.commandData.Add("set11", new Action(set11));
-        commandManager.instance.commandData.Add("set12", new Action(set12));
-        commandManager.instance.commandData.Add("set13", new Action(set13));
-        commandManager.instance.commandData.Add("set13.5", new Action(set13half));
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    void DebugTest()
-    {
-        Debug.Log("testing if delegate works");
-    }
-
-    public void Shake()
-    {
-        iTween.ShakePosition(dialoguePanel, new Vector3(15, 15, 15), 0.25f);
+        commandManager.instance.commandData.Add("transitionToAttackCG", new Action(transitionToAttackCG));
+        commandManager.instance.commandData.Add("transitionToReleaseCG", new Action(transitionToReleaseCG));
     }
 
     public void onIntroComplete()
@@ -97,29 +92,42 @@ public class commandExtend : MonoBehaviour
         }
     }
 
-    // this aint the most elegant of code, but im too lazy to reconfigure this to take in an argument
-    public void set10()
+    public void transitionToAttackCG()
     {
-        bgmScript.instance.SetParameter(10);
+        StartCoroutine(fadeToCG("attack"));
     }
 
-    public void set11()
+    public void transitionToReleaseCG()
     {
-        bgmScript.instance.SetParameter(11);
+        StartCoroutine(fadeToCG("release"));
     }
 
-    public void set12()
+    IEnumerator fadeToCG(string endingType)
     {
-        bgmScript.instance.SetParameter(12);
+        dialogueManager.speechText = endingText;
+        
+        iTween.ValueTo(blackPanel.gameObject, iTween.Hash("from", 0f, "to", 1f, "time", 1f, "onupdate", "updateColor", "onupdatetarget", this.gameObject));
+
+        yield return new WaitForSeconds(1.05f);
+
+        overlord.SetActive(false);
+        dialoguePanel.SetActive(false);
+
+        if (endingType == "attack")
+        {
+            attackCG.SetActive(true);
+        }
+        else if (endingType == "release")
+        {
+            releaseCG.SetActive(true);
+        }
+
+        iTween.ValueTo(blackPanel.gameObject, iTween.Hash("from", 1f, "to", 0f, "time", 1f, "onupdate", "updateColor", "onupdatetarget", this.gameObject));
     }
 
-    public void set13()
+    // on update functions for the tweens, just ignore them
+    void updateColor(float val)
     {
-        bgmScript.instance.SetParameter(13);
-    }
-
-    public void set13half()
-    {
-        bgmScript.instance.SetParameter(13.5f);
+        blackPanel.color = new Color(blackPanel.color.r, blackPanel.color.g, blackPanel.color.b, val);
     }
 }
