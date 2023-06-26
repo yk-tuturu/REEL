@@ -3560,20 +3560,48 @@ MonoBehaviour:
       Data3: 1299539124
       Data4: 1338628451
     Path: event:/Character/Trap
-  fishCatchSmallEvent:
+  fishCatchSmallCommonEvent:
     Guid:
-      Data1: 511818313
-      Data2: 1296885140
-      Data3: -1547712882
-      Data4: -314924451
-    Path: event:/Character/Fish catch small
-  fishCatchLargeEvent:
+      Data1: -1552919432
+      Data2: 1200239887
+      Data3: -143395665
+      Data4: -1169038432
+    Path: event:/Character/Fish catch small common
+  fishCatchSmallUncommonEvent:
     Guid:
-      Data1: 1507940812
-      Data2: 1171924964
-      Data3: -642288740
-      Data4: -431154611
-    Path: event:/Character/Fish catch large
+      Data1: -1420932543
+      Data2: 1243516110
+      Data3: 30202046
+      Data4: -480787708
+    Path: event:/Character/Fish catch small uncommon
+  fishCatchSmallRareEvent:
+    Guid:
+      Data1: -726823658
+      Data2: 1297569374
+      Data3: 2108917889
+      Data4: -1056010896
+    Path: event:/Character/Fish catch small rare
+  fishCatchLargeCommonEvent:
+    Guid:
+      Data1: -712342570
+      Data2: 1214712258
+      Data3: 1275508404
+      Data4: -1087027868
+    Path: event:/Character/Fish catch large common
+  fishCatchLargeUncommonEvent:
+    Guid:
+      Data1: -496901324
+      Data2: 1334259036
+      Data3: 238648501
+      Data4: 2001716911
+    Path: event:/Character/Fish catch large uncommon
+  fishCatchLargeRareEvent:
+    Guid:
+      Data1: 757899024
+      Data2: 1275950764
+      Data3: -2096199770
+      Data4: -1381988236
+    Path: event:/Character/Fish catch large rare
 --- !u!212 &485310159
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -12815,20 +12843,48 @@ MonoBehaviour:
       Data3: 1299539124
       Data4: 1338628451
     Path: event:/Character/Trap
-  fishCatchSmallEvent:
+  fishCatchSmallCommonEvent:
     Guid:
-      Data1: 511818313
-      Data2: 1296885140
-      Data3: -1547712882
-      Data4: -314924451
-    Path: event:/Character/Fish catch small
-  fishCatchLargeEvent:
+      Data1: -1552919432
+      Data2: 1200239887
+      Data3: -143395665
+      Data4: -1169038432
+    Path: event:/Character/Fish catch small common
+  fishCatchSmallUncommonEvent:
     Guid:
-      Data1: 1507940812
-      Data2: 1171924964
-      Data3: -642288740
-      Data4: -431154611
-    Path: event:/Character/Fish catch large
+      Data1: -1420932543
+      Data2: 1243516110
+      Data3: 30202046
+      Data4: -480787708
+    Path: event:/Character/Fish catch small uncommon
+  fishCatchSmallRareEvent:
+    Guid:
+      Data1: -726823658
+      Data2: 1297569374
+      Data3: 2108917889
+      Data4: -1056010896
+    Path: event:/Character/Fish catch small rare
+  fishCatchLargeCommonEvent:
+    Guid:
+      Data1: -712342570
+      Data2: 1214712258
+      Data3: 1275508404
+      Data4: -1087027868
+    Path: event:/Character/Fish catch large common
+  fishCatchLargeUncommonEvent:
+    Guid:
+      Data1: -496901324
+      Data2: 1334259036
+      Data3: 238648501
+      Data4: 2001716911
+    Path: event:/Character/Fish catch large uncommon
+  fishCatchLargeRareEvent:
+    Guid:
+      Data1: 757899024
+      Data2: 1275950764
+      Data3: -2096199770
+      Data4: -1381988236
+    Path: event:/Character/Fish catch large rare
 --- !u!212 &1362690521
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13908,20 +13964,48 @@ MonoBehaviour:
       Data3: 1299539124
       Data4: 1338628451
     Path: event:/Character/Trap
-  fishCatchSmallEvent:
+  fishCatchSmallCommonEvent:
     Guid:
-      Data1: 511818313
-      Data2: 1296885140
-      Data3: -1547712882
-      Data4: -314924451
-    Path: event:/Character/Fish catch small
-  fishCatchLargeEvent:
+      Data1: -1552919432
+      Data2: 1200239887
+      Data3: -143395665
+      Data4: -1169038432
+    Path: event:/Character/Fish catch small common
+  fishCatchSmallUncommonEvent:
     Guid:
-      Data1: 1507940812
-      Data2: 1171924964
-      Data3: -642288740
-      Data4: -431154611
-    Path: event:/Character/Fish catch large
+      Data1: -1420932543
+      Data2: 1243516110
+      Data3: 30202046
+      Data4: -480787708
+    Path: event:/Character/Fish catch small uncommon
+  fishCatchSmallRareEvent:
+    Guid:
+      Data1: -726823658
+      Data2: 1297569374
+      Data3: 2108917889
+      Data4: -1056010896
+    Path: event:/Character/Fish catch small rare
+  fishCatchLargeCommonEvent:
+    Guid:
+      Data1: -712342570
+      Data2: 1214712258
+      Data3: 1275508404
+      Data4: -1087027868
+    Path: event:/Character/Fish catch large common
+  fishCatchLargeUncommonEvent:
+    Guid:
+      Data1: -496901324
+      Data2: 1334259036
+      Data3: 238648501
+      Data4: 2001716911
+    Path: event:/Character/Fish catch large uncommon
+  fishCatchLargeRareEvent:
+    Guid:
+      Data1: 757899024
+      Data2: 1275950764
+      Data3: -2096199770
+      Data4: -1381988236
+    Path: event:/Character/Fish catch large rare
 --- !u!212 &1376530692
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -15157,20 +15241,48 @@ MonoBehaviour:
       Data3: 1299539124
       Data4: 1338628451
     Path: event:/Character/Trap
-  fishCatchSmallEvent:
+  fishCatchSmallCommonEvent:
     Guid:
-      Data1: 511818313
-      Data2: 1296885140
-      Data3: -1547712882
-      Data4: -314924451
-    Path: event:/Character/Fish catch small
-  fishCatchLargeEvent:
+      Data1: -1552919432
+      Data2: 1200239887
+      Data3: -143395665
+      Data4: -1169038432
+    Path: event:/Character/Fish catch small common
+  fishCatchSmallUncommonEvent:
     Guid:
-      Data1: 1507940812
-      Data2: 1171924964
-      Data3: -642288740
-      Data4: -431154611
-    Path: event:/Character/Fish catch large
+      Data1: -1420932543
+      Data2: 1243516110
+      Data3: 30202046
+      Data4: -480787708
+    Path: event:/Character/Fish catch small uncommon
+  fishCatchSmallRareEvent:
+    Guid:
+      Data1: -726823658
+      Data2: 1297569374
+      Data3: 2108917889
+      Data4: -1056010896
+    Path: event:/Character/Fish catch small rare
+  fishCatchLargeCommonEvent:
+    Guid:
+      Data1: -712342570
+      Data2: 1214712258
+      Data3: 1275508404
+      Data4: -1087027868
+    Path: event:/Character/Fish catch large common
+  fishCatchLargeUncommonEvent:
+    Guid:
+      Data1: -496901324
+      Data2: 1334259036
+      Data3: 238648501
+      Data4: 2001716911
+    Path: event:/Character/Fish catch large uncommon
+  fishCatchLargeRareEvent:
+    Guid:
+      Data1: 757899024
+      Data2: 1275950764
+      Data3: -2096199770
+      Data4: -1381988236
+    Path: event:/Character/Fish catch large rare
 --- !u!212 &1489500034
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -43,8 +43,12 @@ public class FishingPole : MonoBehaviour
     // Audio
     public FMODUnity.EventReference fishPoleClickEvent;
     public FMODUnity.EventReference fishTrapClickEvent;
-    public FMODUnity.EventReference fishCatchSmallEvent;
-    public FMODUnity.EventReference fishCatchLargeEvent;
+    public FMODUnity.EventReference fishCatchSmallCommonEvent;
+    public FMODUnity.EventReference fishCatchSmallUncommonEvent;
+    public FMODUnity.EventReference fishCatchSmallRareEvent;
+    public FMODUnity.EventReference fishCatchLargeCommonEvent;
+    public FMODUnity.EventReference fishCatchLargeUncommonEvent;
+    public FMODUnity.EventReference fishCatchLargeRareEvent;
 
     // Start is called before the first frame update
     void Start()
@@ -95,8 +99,8 @@ public class FishingPole : MonoBehaviour
 
         currentCapacity += 1;
 
-        // Possible code to differentiate large & small fish
-        FMODUnity.RuntimeManager.PlayOneShot(fishCatchSmallEvent, transform.position);
+        // Possible code to differentiate large & small fish, rare fish
+        FMODUnity.RuntimeManager.PlayOneShot(fishCatchSmallCommonEvent, transform.position);
 
         // If the menu was open while a fish is caught
         if (menuOpen)
