@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using TMPro;
 
 public class FishDataManager : MonoBehaviour
 {
@@ -21,6 +22,8 @@ public class FishDataManager : MonoBehaviour
     public int nextMilestone = 70;
 
     public UnityEvent unlockBoss;
+
+    public TextMeshProUGUI allFishText;
 
     // Audio
     //loop
@@ -100,6 +103,7 @@ public class FishDataManager : MonoBehaviour
         }
 
         Debug.Log("all fish caught is " + allFishCaught.ToString());
+        allFishText.text = "All Fish Caught: \n" + allFishCaught.ToString();
     }
 
     public void SellFish(int index, int number)
