@@ -56,6 +56,16 @@ public class bgmScript : MonoBehaviour
         resetParameterId = resetParameterDescription.id;
     }
 
+    void Update()
+    {
+        timer += Time.deltaTime;
+        if (timer >= 2f)
+        {
+            Debug.Log(GetParameter());
+            timer = 0;
+        }
+    }
+
     public void SetParameter(float index)
     {
     //  Debug.Log("i have been called!!");
