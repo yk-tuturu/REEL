@@ -5658,7 +5658,7 @@ shop = overrides everything</value>
 	</object>
 	<object class="ParameterCondition" id="{43fceea7-a54c-4600-a6fc-14f31e85df06}">
 		<property name="minimum">
-			<value>13.5</value>
+			<value>13.40000057220459</value>
 		</property>
 		<property name="maximum">
 			<value>13.90000057220459</value>
