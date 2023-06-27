@@ -28,7 +28,7 @@ public class infoPanel : MonoBehaviour
     {
         Fish fish = FishDataManager.instance.GetFish(index);
 
-        Sprite sprite = Resources.Load<Sprite>("fishPanels/fish-" + index.ToString());
+        Sprite sprite = Resources.Load<Sprite>("fishPanels/fish-" + index.ToString() + "_1");
 
         // slight exception for the overlord
         infoPanelImage.sprite = sprite;

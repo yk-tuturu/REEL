@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class FishOPediaPager : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class FishOPediaPager : MonoBehaviour
     public GameObject page2;
     public GameObject activePage;
     public GameObject overlordSprite;
+
+    public Sprite bookAfterBoss;
 
     // Audio
     public FMODUnity.EventReference uiFishopediaPageLeftEvent;
@@ -23,6 +26,7 @@ public class FishOPediaPager : MonoBehaviour
         if (FishDataManager.instance.bossDefeated)
         {
             overlordSprite.SetActive(true);
+            page2.GetComponent<Image>().sprite = bookAfterBoss;
         }
     }
 
