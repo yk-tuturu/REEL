@@ -40,6 +40,7 @@ public class commandExtend_bgm : MonoBehaviour
 
     public void set13four()
     {
+        Debug.Log("13.4 has been set");
         bgmScript.instance.SetParameter(13.4f);
     }
 
