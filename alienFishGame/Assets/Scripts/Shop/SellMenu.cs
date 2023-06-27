@@ -7,7 +7,6 @@ public class SellMenu : MonoBehaviour
     public GameObject sellFishIcon;
     public Transform sellPanel;
     public GameObject blankIcon;
-    public List<int> fishList;
 
     public FMODUnity.EventReference uiDeniedEvent;
     public FMODUnity.EventReference sellAllEvent;
@@ -58,20 +57,25 @@ public class SellMenu : MonoBehaviour
     }
 
     public void SellAll()
-    {
-        if (fishList == null)
-        {
-            FMODUnity.RuntimeManager.PlayOneShot(uiDeniedEvent);
-            return;
-        }
-
-        FMODUnity.RuntimeManager.PlayOneShot(sellAllEvent);
-
+    {       
+        var counter = 0;
         for (var i = 0; i < FishDataManager.instance.fishTypeCount; i++)
         {
             Fish fish = FishDataManager.instance.GetFish(i);
+            if (fish.totalCaught - fish.totalSold != 0)
+            {
+                counter += 1;
+            }
             FishDataManager.instance.SellFish(i, fish.totalCaught - fish.totalSold);
             UpdateSellInfo();
+        }
+        if (counter != 0)
+        {
+            FMODUnity.RuntimeManager.PlayOneShot(sellAllEvent);
+        }
+        else
+        {
+            FMODUnity.RuntimeManager.PlayOneShot(uiDeniedEvent);
         }
     }
 }
