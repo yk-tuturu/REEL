@@ -22,6 +22,7 @@ public class purchaseMenu : MonoBehaviour
     public FMODUnity.EventReference rodPurchaseEvent;
     public FMODUnity.EventReference trapPurchaseEvent;
     public FMODUnity.EventReference baitPurchaseEvent;
+    public FMODUnity.EventReference susBaitPurchaseEvent;
     public FMODUnity.EventReference marketingPurchaseEvent;
     public FMODUnity.EventReference uiCloseEvent;
     public FMODUnity.EventReference uiDeniedEvent;
@@ -71,7 +72,6 @@ public class purchaseMenu : MonoBehaviour
         }
         else if (type == "bait")
         {
-            FMODUnity.RuntimeManager.PlayOneShot(baitPurchaseEvent);
             RodStatManager.instance.SetBaitLevel(RodStatManager.instance.baitLevel + 1);
             TrapStatManager.instance.SetBaitLevel(TrapStatManager.instance.baitLevel + 1);
         }
@@ -144,7 +144,12 @@ public class purchaseMenu : MonoBehaviour
 
                 if (type == "bait" && upgrade.currentLevel == 4)
                 {
+                    FMODUnity.RuntimeManager.PlayOneShot(susBaitPurchaseEvent);
                     bossTransition.Invoke();
+                }
+                else if (type == "bait")
+                {
+                    FMODUnity.RuntimeManager.PlayOneShot(baitPurchaseEvent);
                 }
             }
         }

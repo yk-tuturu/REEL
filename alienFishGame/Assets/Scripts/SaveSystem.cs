@@ -17,8 +17,8 @@ public struct Upgrade{
 
 public class SaveSystem : MonoBehaviour
 {
-    [DllImport("__Internal")]
-    private static extern void JS_FileSystem_Sync();
+    //[DllImport("__Internal")]
+    //private static extern void JS_FileSystem_Sync();
 
     public string saveFolder;
     public int loadIndex;
@@ -156,7 +156,7 @@ public class SaveSystem : MonoBehaviour
         string savePath = saveFolder + "/save" + index.ToString() + ".json";
         File.WriteAllText(savePath, jsonString);;
 
-        JS_FileSystem_Sync();
+        //JS_FileSystem_Sync();
         // Debug.Log("files synced!");
     }
 

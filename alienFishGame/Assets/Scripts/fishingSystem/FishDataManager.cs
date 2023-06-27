@@ -102,8 +102,7 @@ public class FishDataManager : MonoBehaviour
             CheckMusicParameters(RodStatManager.instance.baitLevel);
         }
 
-        Debug.Log("all fish caught is " + allFishCaught.ToString());
-        allFishText.text = "All Fish Caught: \n" + allFishCaught.ToString();
+        allFishText.text = "Total Fish Caught: \n" + allFishCaught.ToString();
     }
 
     public void SellFish(int index, int number)

@@ -54,7 +54,6 @@ public class bgmScript : MonoBehaviour
         FMOD.Studio.PARAMETER_DESCRIPTION resetParameterDescription;
         musicEventDescription.getParameterDescriptionByName("Reset", out resetParameterDescription);
         resetParameterId = resetParameterDescription.id;
-
     }
 
     public void SetParameter(float index)
