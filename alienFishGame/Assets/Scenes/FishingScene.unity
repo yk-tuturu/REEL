@@ -23020,18 +23020,18 @@ MonoBehaviour:
     Path: event:/UI/Shop upgrade trap
   baitPurchaseEvent:
     Guid:
-      Data1: -1678707929
-      Data2: 1293751087
-      Data3: -222080361
-      Data4: 1808386294
-    Path: event:/UI/Shop upgrade reel
-  susBaitPurchaseEvent:
-    Guid:
       Data1: -1002032491
       Data2: 1145523503
       Data3: 1882513085
       Data4: 1741090504
     Path: event:/UI/Shop upgrade bait
+  susBaitPurchaseEvent:
+    Guid:
+      Data1: -2091339481
+      Data2: 1115590253
+      Data3: 459247508
+      Data4: 2029640741
+    Path: event:/UI/Shop upgrade susbait
   marketingPurchaseEvent:
     Guid:
       Data1: -568004617
