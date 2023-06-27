@@ -3975,10 +3975,10 @@ shop = overrides everything</value>
 	</object>
 	<object class="TransitionRegion" id="{70ad500b-2e1f-4e32-8fdf-ac12604b318a}">
 		<property name="position">
-			<value>499.84938278961954</value>
+			<value>496.51604945628588</value>
 		</property>
 		<property name="length">
-			<value>104.66666666666666</value>
+			<value>108.00000000000031</value>
 		</property>
 		<relationship name="timeline">
 			<destination>{165349e2-9281-4876-a2f9-5544c2e17904}</destination>
@@ -4100,10 +4100,10 @@ shop = overrides everything</value>
 	</object>
 	<object class="TransitionRegion" id="{367b382c-394b-4f59-9eb7-2536cd213155}">
 		<property name="position">
-			<value>499.84938278961954</value>
+			<value>496.51604945628588</value>
 		</property>
 		<property name="length">
-			<value>172.66666666666677</value>
+			<value>176.00000000000043</value>
 		</property>
 		<relationship name="timeline">
 			<destination>{165349e2-9281-4876-a2f9-5544c2e17904}</destination>
@@ -4168,10 +4168,10 @@ shop = overrides everything</value>
 	</object>
 	<object class="TransitionRegion" id="{0d24c190-53c4-4f02-9d23-cf59b1ae0758}">
 		<property name="position">
-			<value>676.51604945628628</value>
+			<value>672.91604945628626</value>
 		</property>
 		<property name="length">
-			<value>52</value>
+			<value>55.600000000000023</value>
 		</property>
 		<property name="quantizationInterval">
 			<value>5</value>
@@ -4310,10 +4310,10 @@ shop = overrides everything</value>
 	</object>
 	<object class="TransitionRegion" id="{c3349c57-0c69-4ffa-8e8e-b7ab9222cfd4}">
 		<property name="position">
-			<value>37.972571195416684</value>
+			<value>35.36387554324277</value>
 		</property>
 		<property name="length">
-			<value>1139.6739130434776</value>
+			<value>1142.2826086956516</value>
 		</property>
 		<relationship name="timeline">
 			<destination>{165349e2-9281-4876-a2f9-5544c2e17904}</destination>
@@ -4862,6 +4862,9 @@ shop = overrides everything</value>
 		</property>
 		<property name="initialValue">
 			<value>-80</value>
+		</property>
+		<property name="attackTime">
+			<value>20</value>
 		</property>
 		<property name="finalValue">
 			<value>-80</value>
@@ -5655,7 +5658,7 @@ shop = overrides everything</value>
 	</object>
 	<object class="ParameterCondition" id="{43fceea7-a54c-4600-a6fc-14f31e85df06}">
 		<property name="minimum">
-			<value>13.5</value>
+			<value>13.40000057220459</value>
 		</property>
 		<property name="maximum">
 			<value>13.90000057220459</value>
