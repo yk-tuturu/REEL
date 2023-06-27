@@ -3400,10 +3400,13 @@ shop = overrides everything</value>
 			<value>true</value>
 		</property>
 		<property name="start">
-			<value>766.51604945628628</value>
+			<value>766.76604945628628</value>
 		</property>
 		<property name="length">
 			<value>16.999999999999993</value>
+		</property>
+		<property name="volume">
+			<value>3</value>
 		</property>
 		<relationship name="audioFile">
 			<destination>{19017092-3e56-4651-a9f5-b552c5b194fa}</destination>
