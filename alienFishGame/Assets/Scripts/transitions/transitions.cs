@@ -16,15 +16,6 @@ public class transitions : MonoBehaviour
         FadeIn();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            transitionToBossFight();
-        }
-    }
-
     public void transitionToBossFight()
     {
         StartCoroutine(transition());

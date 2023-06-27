@@ -57,17 +57,6 @@ public class bgmScript : MonoBehaviour
 
     }
 
-    // Debug function -- prints parameter every 4 secs
-    void Update()
-    {
-    //     timer += Time.deltaTime;
-    //     if (timer >= 1.5f)
-    //     {
-    //         Debug.Log(GetParameter());
-    //         timer = 0;
-    //     }
-    }
-
     public void SetParameter(float index)
     {
     //  Debug.Log("i have been called!!");
