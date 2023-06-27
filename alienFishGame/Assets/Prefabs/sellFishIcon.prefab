@@ -359,6 +359,8 @@ MonoBehaviour:
       Data3: -1609063289
       Data4: -1674672043
     Path: event:/UI/Pause menu click
+  hoverLabelPrefab: {fileID: 9174143741689569418, guid: 2d3521a942dc47d40878156255c83bba, type: 3}
+  hoverLabel: {fileID: 0}
 --- !u!1 &5908074379247939786
 GameObject:
   m_ObjectHideFlags: 0

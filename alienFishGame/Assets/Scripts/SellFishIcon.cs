@@ -18,6 +18,10 @@ public class SellFishIcon : MonoBehaviour
     public FishDataManager fishData;
 
     public FMODUnity.EventReference clickEvent;
+
+    public GameObject hoverLabelPrefab;
+    public GameObject hoverLabel;
+
     
     // Start is called before the first frame update
     void Start()
@@ -51,6 +55,15 @@ public class SellFishIcon : MonoBehaviour
     public void OnHoverEnter()
     {
         LeanTween.scale(gameObject, new Vector3(0.9f, 0.9f, 0.9f), 0.1f);
+
+        var height = GetComponent<RectTransform>().sizeDelta.y;
+        hoverLabel = Instantiate(hoverLabelPrefab, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity, transform);
+        var rect = hoverLabel.GetComponent<RectTransform>();
+        var pos = rect.anchoredPosition;
+        rect.anchoredPosition = new Vector2(pos.x, pos.y + height/2);
+
+        var text = hoverLabel.transform.GetChild(0).GetComponent<TextMeshProUGUI>();
+        text.text = FishDataManager.instance.GetFish(index).name;
     }
 
     public void OnHoverExit()
@@ -70,7 +83,7 @@ public class SellFishIcon : MonoBehaviour
     public void OnExit()
     {
         LeanTween.scale(sellConfirmMenu, new Vector3(0, 0, 0), 0.2f).setOnComplete(OnTweenComplete);
-        
+        GameObject.Destroy(hoverLabel);
     }
 
     void OnTweenComplete()
