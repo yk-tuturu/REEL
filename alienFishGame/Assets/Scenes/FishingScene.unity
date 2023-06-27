@@ -5128,6 +5128,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7120985325a03494c99a484f63ded22b, type: 3}
+--- !u!114 &502256627 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2194843988279555287, guid: 0d6dd78b76d183044b7730ca379e5fde, type: 3}
+  m_PrefabInstance: {fileID: 2574972233373449573}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -7006,7 +7017,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 3cbcda9034ef6b149bc09a4f6d76b195, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5735952ba7dbf954bad9b5ef4527ad70, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -11399,7 +11410,6 @@ MonoBehaviour:
   sellFishIcon: {fileID: 5344601620840401231, guid: 45087d2c8b6f68e48b18fd24a075e1f0, type: 3}
   sellPanel: {fileID: 467424227}
   blankIcon: {fileID: 5344601620840401231, guid: 02a6b8237a9cb3844a3e44bc7b56d3f6, type: 3}
-  fishList: 
   uiDeniedEvent:
     Guid:
       Data1: -1340016361
@@ -23978,6 +23988,10 @@ PrefabInstance:
       propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2873664414062981609, guid: 0d6dd78b76d183044b7730ca379e5fde, type: 3}
+      propertyPath: image
+      value: 
+      objectReference: {fileID: 502256627}
     - target: {fileID: 2899175488005546698, guid: 0d6dd78b76d183044b7730ca379e5fde, type: 3}
       propertyPath: m_Type
       value: 0
@@ -24057,6 +24071,14 @@ PrefabInstance:
     - target: {fileID: 4395491957768263377, guid: 0d6dd78b76d183044b7730ca379e5fde, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -5.387
+      objectReference: {fileID: 0}
+    - target: {fileID: 4672148542698452484, guid: 0d6dd78b76d183044b7730ca379e5fde, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4672148542698452484, guid: 0d6dd78b76d183044b7730ca379e5fde, type: 3}
+      propertyPath: m_Color.a
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4825707272638744210, guid: 0d6dd78b76d183044b7730ca379e5fde, type: 3}
       propertyPath: m_fontAsset

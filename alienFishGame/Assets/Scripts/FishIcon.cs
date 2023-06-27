@@ -55,7 +55,7 @@ public class FishIcon : MonoBehaviour
 
         foreach (Transform child in starContainer)
         {
-            GameObject.Destroy(this.gameObject);
+            GameObject.Destroy(child.gameObject);
         }
         
         for (var i = 0; i < fish.rarity; i++)

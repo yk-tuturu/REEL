@@ -54,6 +54,14 @@ public class SellMenu : MonoBehaviour
         {
             GameObject icon = Instantiate(blankIcon, new Vector3(0, 0, 0), Quaternion.identity, sellPanel);
         }
+
+        // fix for the scroll positioning
+        if (iconCounter >= 13)
+        {
+            var rect = sellPanel.GetComponent<RectTransform>();
+            var ogPos = rect.anchoredPosition;
+            rect.anchoredPosition = new Vector2(ogPos.x, -61);
+        }
     }
 
     public void SellAll()
@@ -65,10 +73,10 @@ public class SellMenu : MonoBehaviour
             if (fish.totalCaught - fish.totalSold != 0)
             {
                 counter += 1;
+                FishDataManager.instance.SellFish(i, fish.totalCaught - fish.totalSold);
             }
-            FishDataManager.instance.SellFish(i, fish.totalCaught - fish.totalSold);
-            UpdateSellInfo();
         }
+        UpdateSellInfo();
         if (counter != 0)
         {
             FMODUnity.RuntimeManager.PlayOneShot(sellAllEvent);

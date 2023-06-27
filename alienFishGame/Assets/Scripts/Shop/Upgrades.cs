@@ -25,8 +25,9 @@ public class Upgrades : MonoBehaviour
 
     public Sprite suspiciousSprite;
 
-    void Awake()
+    void Start()
     {
+    
     }
 
     // checks for the ultimate bait upgrade
