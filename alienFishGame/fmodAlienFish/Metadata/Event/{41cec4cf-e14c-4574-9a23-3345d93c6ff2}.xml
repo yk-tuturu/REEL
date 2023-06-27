@@ -5647,7 +5647,7 @@ shop = overrides everything</value>
 			<value>13</value>
 		</property>
 		<property name="maximum">
-			<value>13.40000057220459</value>
+			<value>13.300000190734863</value>
 		</property>
 		<relationship name="parameter">
 			<destination>{98644c0f-c6dc-4038-9521-31cd7e19cc67}</destination>
