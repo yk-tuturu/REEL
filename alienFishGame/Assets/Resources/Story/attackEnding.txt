@@ -1,17 +1,17 @@
 
-Without hesitation, you plunge the tip of your fishing rod into its heart.
+Without hesitation, you pierce the creature's heart with the tip of your fishing rod.
 set13, shakeBossStrong
 You
-Well, I guess this is gonna sell for a whole lot of cash on the auction market. 
+Well, I guess this will sell for a whole lot of cash. 
 moveDown
 
-Maybe he was right that you had taken away the lives of many fish. But it attacked first. This is just the ending it deserves. 
+Maybe it was right that you had taken away the lives of many fish, but we have our reasons. We need to survive. 
 
 
-According to the records, this is an entirely undocumented species. Just imagining all the money and attention that would come to you the moment you brought back the overlord's body, fills you with elation. 
+According to historical records, this is an entirely undocumented species. Just imagining the profit and attention you'd recieve after hauling the creature onto land fills you with elation. 
 
 
-And with this, you won't have to worry about paying the bills in a long, long while. 
+And with this, you won't have to worry about paying the bills for a long, long time.
 
 
 

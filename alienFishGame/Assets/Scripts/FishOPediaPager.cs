@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class FishOPediaPager : MonoBehaviour
 {
@@ -12,10 +13,13 @@ public class FishOPediaPager : MonoBehaviour
 
     public Sprite bookAfterBoss;
 
+    public TextMeshProUGUI allFishText;
+
     // Audio
     public FMODUnity.EventReference uiFishopediaPageLeftEvent;
     public FMODUnity.EventReference uiFishopediaPageRightEvent;
     public FMODUnity.EventReference uiFishopediaCloseEvent;
+    public FMODUnity.EventReference uiFishopediaOpenEvent;
 
     public FMODUnity.EventReference displaySnapshot;
     FMOD.Studio.EventInstance displayInstance;
@@ -54,12 +58,17 @@ public class FishOPediaPager : MonoBehaviour
 
     public void Open()
     {
+        // add fishopedia open sound
+        FMODUnity.RuntimeManager.PlayOneShot(uiFishopediaOpenEvent, transform.position);
+
         displayInstance = FMODUnity.RuntimeManager.CreateInstance(displaySnapshot);
         displayInstance.start();
 
         activePage.SetActive(true);
         activePage.transform.localScale = new Vector3(0, 0, 0);
         LeanTween.scale(activePage, new Vector3(1, 1, 1), 0.15f);
+
+        allFishText.text = "Total Fish Caught: \n" + FishDataManager.instance.allFishCaught.ToString();
     }
 
     public void Close()
@@ -74,5 +83,6 @@ public class FishOPediaPager : MonoBehaviour
     void onComplete()
     {
         activePage.SetActive(false);
+        gameObject.SetActive(false);
     }
 }

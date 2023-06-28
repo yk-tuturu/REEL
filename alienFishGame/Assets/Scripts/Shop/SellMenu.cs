@@ -58,9 +58,9 @@ public class SellMenu : MonoBehaviour
         // fix for the scroll positioning
         if (iconCounter >= 13)
         {
-            var rect = sellPanel.GetComponent<RectTransform>();
-            var ogPos = rect.anchoredPosition;
-            rect.anchoredPosition = new Vector2(ogPos.x, -61);
+            var sellRect = sellPanel.GetComponent<RectTransform>();
+            var ogPos = sellRect.anchoredPosition;
+            sellRect.anchoredPosition = new Vector2(ogPos.x, ogPos.y - 200);
         }
     }
 

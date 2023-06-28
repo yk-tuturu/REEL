@@ -33,8 +33,10 @@ public class captureMenu : MonoBehaviour
             icon.index = index;
             icon.UpdateFishDisplayed();
             icon.starContainer.gameObject.SetActive(true);
-
-            Instantiate(iconBG, new Vector3(0, 0, 0), Quaternion.identity, bgGrid);
+            
+            Image bgGrid = icon.bgGrid.GetComponent<Image>();
+            bgGrid.color = new Vector4(1, 1, 1, 1);
+            
         }
 
         // hacky fix for the scrollbar 

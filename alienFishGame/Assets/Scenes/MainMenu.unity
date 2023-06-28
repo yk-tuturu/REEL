@@ -521,7 +521,7 @@ MonoBehaviour:
           m_MethodName: OnHoverEnter
           m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 94419368}
+            m_ObjectArgument: {fileID: 340411142}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
@@ -537,7 +537,7 @@ MonoBehaviour:
           m_MethodName: OnHoverExit
           m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 94419368}
+            m_ObjectArgument: {fileID: 340411142}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
@@ -1250,7 +1250,7 @@ GameObject:
   - component: {fileID: 340411145}
   - component: {fileID: 340411144}
   m_Layer: 5
-  m_Name: Exit
+  m_Name: exit_text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3544,7 +3544,7 @@ MonoBehaviour:
           m_MethodName: OnHoverEnter
           m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 1531068182}
+            m_ObjectArgument: {fileID: 2072775246}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
@@ -3560,7 +3560,7 @@ MonoBehaviour:
           m_MethodName: OnHoverExit
           m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 1531068182}
+            m_ObjectArgument: {fileID: 2072775246}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
@@ -4094,7 +4094,7 @@ GameObject:
   - component: {fileID: 1732281535}
   - component: {fileID: 1732281534}
   m_Layer: 5
-  m_Name: Start
+  m_Name: start_text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4655,7 +4655,7 @@ MonoBehaviour:
           m_MethodName: OnHoverEnter
           m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 1894809891}
+            m_ObjectArgument: {fileID: 1732281532}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
@@ -4671,7 +4671,7 @@ MonoBehaviour:
           m_MethodName: OnHoverExit
           m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 1894809891}
+            m_ObjectArgument: {fileID: 1732281532}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
@@ -5177,7 +5177,7 @@ GameObject:
   - component: {fileID: 2072775249}
   - component: {fileID: 2072775248}
   m_Layer: 5
-  m_Name: Load
+  m_Name: load_text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

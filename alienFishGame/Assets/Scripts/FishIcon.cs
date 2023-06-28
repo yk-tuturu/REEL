@@ -11,6 +11,7 @@ public class FishIcon : MonoBehaviour
     public Image image;
     public Sprite sprite;
     public GameObject infoPanel;
+    public GameObject bgGrid;
 
     public GameObject star;
     public Transform starContainer;
@@ -34,6 +35,7 @@ public class FishIcon : MonoBehaviour
 
     // Update is called once per frame
     // mainly to handle fishopedia shenanigans
+    // comment this out to do a performance test later
     void Update()
     {
         if (fish.totalCaught == 0 && infoPanel != null)
@@ -68,7 +70,7 @@ public class FishIcon : MonoBehaviour
 
     public void OnHoverEnter()
     {
-        LeanTween.scale(gameObject, new Vector3(0.9f, 0.9f, 0.9f), 0.1f);
+        LeanTween.scale(bgGrid, new Vector3(0.9f, 0.9f, 0.9f), 0.1f);
 
         if (infoPanel != null && fish.totalCaught == 0)
         {
@@ -78,7 +80,7 @@ public class FishIcon : MonoBehaviour
         // name displayed when you hover over the icon
         // yeah that's a lot of calcs to figure out the position of the label
         var height = GetComponent<RectTransform>().sizeDelta.y;
-        hoverLabel = Instantiate(hoverLabelPrefab, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity, transform);
+        hoverLabel = Instantiate(hoverLabelPrefab, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity, bgGrid.transform);
         var rect = hoverLabel.GetComponent<RectTransform>();
         var pos = rect.anchoredPosition;
         rect.anchoredPosition = new Vector2(pos.x, pos.y + height/2);
@@ -89,7 +91,7 @@ public class FishIcon : MonoBehaviour
 
     public void OnHoverExit()
     {
-        LeanTween.scale(gameObject, new Vector3(1f, 1f, 1f), 0.1f);
+        LeanTween.scale(bgGrid, new Vector3(1f, 1f, 1f), 0.1f);
         GameObject.Destroy(hoverLabel);
     }
 

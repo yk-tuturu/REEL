@@ -10,6 +10,9 @@ public class ShopScreen : MonoBehaviour
     public GameObject bgPanel;
     public TextMeshProUGUI dialogueText;
 
+    public GameObject sellConfirmMenu;
+    public GameObject buyConfirmMenu;
+
     // Audio
     public FMODUnity.EventReference chrShopEnterEvent;
     public FMODUnity.EventReference chrShopExitEvent;
@@ -62,6 +65,9 @@ public class ShopScreen : MonoBehaviour
 
         shopMusicInstance = FMODUnity.RuntimeManager.CreateInstance(shopMusicEvent);
         shopMusicInstance.start();
+
+        sellConfirmMenu.SetActive(false);
+        buyConfirmMenu.SetActive(false);
 
         // reads the text file
         TextAsset file = (TextAsset)Resources.Load("Story/shopkeep");

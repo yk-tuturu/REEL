@@ -58,12 +58,12 @@ public class bgmScript : MonoBehaviour
 
     void Update()
     {
-        timer += Time.deltaTime;
-        if (timer >= 2f)
-        {
-            Debug.Log(GetParameter());
-            timer = 0;
-        }
+        // timer += Time.deltaTime;
+        // if (timer >= 2f)
+        // {
+        //     Debug.Log(GetParameter());
+        //     timer = 0;
+        // }
     }
 
     public void SetParameter(float index)

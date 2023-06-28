@@ -11,7 +11,8 @@ public class Upgrades : MonoBehaviour
     public int multiplier;
     public string upgradeType;
     public string upgradeDescription;
-    // remove this later
+    public GameObject image;
+    
     public int currentLevel = 1;
     public int maxLevel;
     public GameObject soldOverlay;
@@ -35,7 +36,7 @@ public class Upgrades : MonoBehaviour
     {
         if (upgradeType == "bait" && maxLevel == 4 && currentLevel == 3 && !bossUnlocked)
         {
-            GetComponent<Image>().sprite = suspiciousSprite;
+            image.GetComponent<Image>().sprite = suspiciousSprite;
             upgradeDescription = "A mysterious aura emanates from the bait. You wonder what new things you might fish up with this";
             price = 3000;
             bgmScript.instance.SetParameter(8);
@@ -47,13 +48,14 @@ public class Upgrades : MonoBehaviour
     
     public void OnHoverEnter()
     {
-        LeanTween.scale(gameObject, new Vector3(0.9f, 0.9f, 0.9f), 0.1f);
+        LeanTween.scale(image, new Vector3(0.9f, 0.9f, 0.9f), 0.1f);
         FMODUnity.RuntimeManager.PlayOneShot(hoverEvent, transform.position);
     }
 
     public void OnHoverExit()
     {
-        LeanTween.scale(gameObject, new Vector3(1, 1 , 1), 0.1f);
+        Debug.Log("hover exit");
+        LeanTween.scale(image, new Vector3(1, 1 , 1), 0.1f);
     }
 
     public void OnClick()

@@ -30,6 +30,10 @@ public class fishOPediaButton : MonoBehaviour
 
     void OnMouseEnter()
     {
+        if (EventSystem.current.IsPointerOverGameObject()) 
+        {
+            return;
+        }
         maxScale = originalScale * multiplier;
         LeanTween.scale(gameObject, maxScale, 0.1f);
     }

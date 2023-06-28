@@ -34,6 +34,9 @@ public class transitions : MonoBehaviour
 
         yield return new WaitForSeconds(2f);
 
+        // double making sure the file has been saved
+        SaveSystem.instance.Save(0);
+
         // transition begins
         iTween.ShakePosition(gameCamera, new Vector3(20, 20, 20), 6f);
 

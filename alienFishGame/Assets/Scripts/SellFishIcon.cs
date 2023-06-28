@@ -15,6 +15,8 @@ public class SellFishIcon : MonoBehaviour
     public Transform starContainer;
     public TextMeshProUGUI numberOwned;
 
+    public GameObject bgGrid;
+
     public FishDataManager fishData;
 
     public FMODUnity.EventReference clickEvent;
@@ -54,12 +56,12 @@ public class SellFishIcon : MonoBehaviour
 
     public void OnHoverEnter()
     {
-        LeanTween.scale(gameObject, new Vector3(0.9f, 0.9f, 0.9f), 0.1f);
+        LeanTween.scale(bgGrid, new Vector3(0.9f, 0.9f, 0.9f), 0.1f);
     }
 
     public void OnHoverExit()
     {
-        LeanTween.scale(gameObject, new Vector3(1f, 1f, 1f), 0.1f);
+        LeanTween.scale(bgGrid, new Vector3(1f, 1f, 1f), 0.1f);
     }
 
     public void OnClick()

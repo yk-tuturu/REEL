@@ -1,35 +1,32 @@
 
-Right before you dealt the finishing blow, you felt a slight twinge of hesitation. 
+As you readied your fishing rod, you felt a hint of hesitation. 
 
 
-It may be true that the overlord poses a menace to both you, and all of the fishermen upon this dock. 
+The Overlord might be your supposed rival.. but the consequences of defeating him are still unknown.
 set13.3
 
-And yet, to this day, very little is understood about the overall ecosystems of these waters. 
+If the overlord truly claimed to be the ancestor of all fish, what consequences would arise if you killed it here? 
 
 
-If the overlord truly claimed to be the progenitor of all fish, what consequences would arise if you killed it here? 
-
-
-What if the ecosystem became permanently disrupted? What if the seemingly neverending supply of fish disappeared due to the death of its lord? 
+What if the ecosystem became permanently damaged? What if the seemingly neverending supply of fish disappeared due to the death of their leader? 
 
 You
-... Then how am I going to pay the bills if I can't fish anymore? 
+... How am I going to make a living if I can't fish anymore? 
 
 Overlord
-Have you finally come to your senses, human? Have you finally realized the weight of your crimes? 
+Have you finally come to your senses, human? Have you finally noticed the repercussions of your actions? 
 
 
-You didn't particularly think you did anything wrong. But maybe just this once...
+You didn't particularly feel your intentions were evil, But you understood the hurt this creature must be feeling.
 moveDown
 You
-Fine. I won't kill you. But you must promise you won't come back and hurt us ever again. 
+Fine. I won't kill you. But promise you won't come back and hurt us again. 
 moveUp
 
-The overlord opened its mouth, seemingly in protest, but then backed down. It gritted its teeth, grudgingly saying the words that followed. 
+The overlord opened its three mouths, seemingly in protest, then hesitated. It reluctantly gritted its sharp teeth. 
 
 Overlord
-That is... a deal. But please refrain from taking even more fish away from us. 
+That is... a deal. But you must refrain from taking even more fish away from my seas. 
 
 You
 We'll try to control ourselves. 
@@ -38,10 +35,10 @@ moveDown
 Even though you weren't too sure how much of those words you truly meant.
 
 
-For humans, there will always be a need for fish. The fish market will never stop running. 
+For humans, there will always be a need for fish. The fish market has, and will likely, run forever. 
 
 You
-But even so, I suppose we should try our best...
+But even so, I guess we should try our best...
 set13.5
 
 
@@ -66,6 +63,9 @@ It only wanted to protect its home, just as you did.
 
 
 Together, you can find that balance you both wish for.
+
+
+Maybe you and The Overlord are more alike than you think.
 
 
 

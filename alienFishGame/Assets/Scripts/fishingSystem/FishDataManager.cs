@@ -101,8 +101,6 @@ public class FishDataManager : MonoBehaviour
             nextMilestone += 70;
             CheckMusicParameters(RodStatManager.instance.baitLevel);
         }
-
-        allFishText.text = "Total Fish Caught: \n" + allFishCaught.ToString();
     }
 
     public void SellFish(int index, int number)

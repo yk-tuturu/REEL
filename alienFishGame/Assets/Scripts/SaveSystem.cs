@@ -27,7 +27,7 @@ public class SaveSystem : MonoBehaviour
     public SaveData currentSaveData;
     public static SaveSystem instance;
 
-    public float autosaveTime = 2f;
+    public float autosaveTime = 5f;
     private float timer;
 
     void Awake()

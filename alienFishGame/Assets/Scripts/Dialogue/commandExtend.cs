@@ -163,10 +163,10 @@ public class commandExtend : MonoBehaviour
         nameText.gameObject.SetActive(true);
         iTween.ValueTo(blackPanel.gameObject, iTween.Hash("from", 0f, "to", 1f, "time", 3f, "onupdate", "updateColor", "onupdatetarget", this.gameObject));
         iTween.ValueTo(thanksText.gameObject, iTween.Hash("from", 0f, "to", 1f, "time", 3f, "delay", 2f, "onupdate", "updateColorText", "onupdatetarget", this.gameObject));
-        iTween.ValueTo(nameText.gameObject, iTween.Hash("from", 0f, "to", 1f, "time", 3f, "delay", 6f, "onupdate", "updateColorText2", "onupdatetarget", this.gameObject));
+        iTween.ValueTo(nameText.gameObject, iTween.Hash("from", 0f, "to", 1f, "time", 3f, "delay", 7f, "onupdate", "updateColorText2", "onupdatetarget", this.gameObject));
         yield return new WaitForSeconds(12f);
-        iTween.ValueTo(thanksText.gameObject, iTween.Hash("from", 1f, "to", 0f, "time", 3f, "delay", 2f, "onupdate", "updateColorText", "onupdatetarget", this.gameObject));
-        iTween.ValueTo(nameText.gameObject, iTween.Hash("from", 1f, "to", 0f, "time", 3f, "delay", 3f, "onupdate", "updateColorText2", "onupdatetarget", this.gameObject));
+        iTween.ValueTo(thanksText.gameObject, iTween.Hash("from", 1f, "to", 0f, "time", 3f, "onupdate", "updateColorText", "onupdatetarget", this.gameObject));
+        iTween.ValueTo(nameText.gameObject, iTween.Hash("from", 1f, "to", 0f, "time", 3f, "onupdate", "updateColorText2", "onupdatetarget", this.gameObject));
         yield return new WaitForSeconds(3f);
 
         backToMenu();
