@@ -54,7 +54,6 @@ public class Upgrades : MonoBehaviour
 
     public void OnHoverExit()
     {
-        Debug.Log("hover exit");
         LeanTween.scale(image, new Vector3(1, 1 , 1), 0.1f);
     }
 
