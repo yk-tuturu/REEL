@@ -28,15 +28,15 @@ public class infoPanel : MonoBehaviour
     {
         Fish fish = FishDataManager.instance.GetFish(index);
 
-        Sprite sprite = Resources.Load<Sprite>("fishPanels/fish-" + index.ToString() + "_1");
+        Sprite sprite = FishDataManager.instance.infoPanelSpriteDict["fish-" + index.ToString() + "_1"];
 
-        // slight exception for the overlord
         infoPanelImage.sprite = sprite;
         
         description.text = fish.description;
         
         var fishSprite = Resources.Load<Sprite>("fishIcons/" + "fish" + index.ToString());
 
+        // slight exception for overlord
         if (index != 21)
         {
             fishImage.color = new Color(1, 1, 1, 1);

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using TMPro;
+using System.Linq;
 
 public class FishDataManager : MonoBehaviour
 {
@@ -24,6 +25,10 @@ public class FishDataManager : MonoBehaviour
     public UnityEvent unlockBoss;
 
     public TextMeshProUGUI allFishText;
+
+    // List of sprites that will be accessed by the rest of the scripts-- so we only have to resources.load once
+    public Dictionary<string, Sprite> fishSpriteDict = new Dictionary<string, Sprite>();
+    public Dictionary<string, Sprite> infoPanelSpriteDict = new Dictionary<string, Sprite>();
 
     // Audio
     //loop
@@ -47,6 +52,20 @@ public class FishDataManager : MonoBehaviour
 
         fishes = fishList.fishes;
         fishTypeCount = fishes.Length;
+
+        // loads fish sprites and info panels
+        var fishSpriteList = Resources.LoadAll("fishIcons", typeof(Sprite)).Cast<Sprite>().ToArray();
+        var infoPanelSpriteList = Resources.LoadAll("fishPanels", typeof(Sprite)).Cast<Sprite>().ToArray();
+
+        foreach (Sprite sprite in fishSpriteList)
+        {
+            fishSpriteDict.Add(sprite.name, sprite);
+        }
+
+        foreach (Sprite sprite in infoPanelSpriteList)
+        {
+            infoPanelSpriteDict.Add(sprite.name, sprite);
+        }
     }
  
     void Start()

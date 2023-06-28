@@ -8132,7 +8132,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0b8c6083bcb0a0a4499e393a37020191, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 502a12f4b41ad844f9d7e6f35160b9c8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -11343,7 +11343,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sellFishIcon: {fileID: 5344601620840401231, guid: 45087d2c8b6f68e48b18fd24a075e1f0, type: 3}
   sellPanel: {fileID: 467424227}
-  scrollRect: {fileID: 52313681}
   blankIcon: {fileID: 5344601620840401231, guid: 02a6b8237a9cb3844a3e44bc7b56d3f6, type: 3}
   uiDeniedEvent:
     Guid:
@@ -20092,7 +20091,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gridContainer: {fileID: 12407024}
-  scrollRect: {fileID: 531645022}
   fishIcon: {fileID: 5214003376819968407, guid: 0272ee0654138e64a9ea783b5657180e, type: 3}
   blankIcon: {fileID: 5344601620840401231, guid: 02a6b8237a9cb3844a3e44bc7b56d3f6, type: 3}
   mainPanel: {fileID: 738747202}

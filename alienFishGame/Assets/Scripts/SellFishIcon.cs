@@ -28,13 +28,14 @@ public class SellFishIcon : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        sprite = Resources.Load<Sprite>("fishIcons/" + "fish" + index.ToString());
+        sprite = FishDataManager.instance.fishSpriteDict["fish" + index.ToString()];
         fish = FishDataManager.instance.GetFish(index);
     }
 
     public void UpdateFishDisplayed()
     {
-        sprite = Resources.Load<Sprite>("fishIcons/" + "fish" + index.ToString());
+        sprite = FishDataManager.instance.fishSpriteDict["fish" + index.ToString()];
+        
         image.sprite = sprite;
         fish = FishDataManager.instance.GetFish(index);
         numberOwned.text = (fish.totalCaught - fish.totalSold).ToString();
