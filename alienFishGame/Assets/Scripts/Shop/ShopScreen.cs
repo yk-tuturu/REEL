@@ -19,6 +19,7 @@ public class ShopScreen : MonoBehaviour
 
     public FMODUnity.EventReference muteSnapShot;
     public FMODUnity.EventReference shopMusicEvent;
+    public FMODUnity.EventReference shopMusicEvent2;
 
     FMOD.Studio.EventInstance muteInstance;
     FMOD.Studio.EventInstance shopMusicInstance;
@@ -63,7 +64,15 @@ public class ShopScreen : MonoBehaviour
         muteInstance = FMODUnity.RuntimeManager.CreateInstance(muteSnapShot);
         muteInstance.start();
 
-        shopMusicInstance = FMODUnity.RuntimeManager.CreateInstance(shopMusicEvent);
+        if (!FishDataManager.instance.bossDefeated)
+        {
+            shopMusicInstance = FMODUnity.RuntimeManager.CreateInstance(shopMusicEvent);
+        }
+        else
+        {
+            shopMusicInstance = FMODUnity.RuntimeManager.CreateInstance(shopMusicEvent2);
+        }
+        
         shopMusicInstance.start();
 
         sellConfirmMenu.SetActive(false);

@@ -22858,6 +22858,13 @@ MonoBehaviour:
       Data3: -1088333175
       Data4: -1520977467
     Path: event:/Music/Shop
+  shopMusicEvent2:
+    Guid:
+      Data1: -2126160277
+      Data2: 1075994646
+      Data3: -514584407
+      Data4: -882456436
+    Path: event:/Music/Shop postgame
 --- !u!1 &2129806886
 GameObject:
   m_ObjectHideFlags: 0
