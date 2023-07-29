@@ -133,3 +133,6 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 [Aa]ssets/[Ss]treamingAssets/aa.meta
 [Aa]ssets/[Ss]treamingAssets/aa/*
+alienFishGame/fmod_editor.log
+alienFishGame/idbfs/alienFishSaves69420727/save1.json
+alienFishGame/idbfs/alienFishSaves69420727/save0.json

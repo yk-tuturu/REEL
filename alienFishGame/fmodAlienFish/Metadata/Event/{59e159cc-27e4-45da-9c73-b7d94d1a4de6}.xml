@@ -60,6 +60,9 @@
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{f45fb062-7770-4de5-b79a-aebbd7842cea}">
+		<property name="maxVoices">
+			<value>2</value>
+		</property>
 		<property name="triggerCooldown">
 			<value>1000</value>
 		</property>
@@ -147,7 +150,7 @@
 	</object>
 	<object class="EventMixerGroup" id="{4bc9f3b0-6cb0-4c8b-be81-85a4527206bd}">
 		<property name="volume">
-			<value>-6</value>
+			<value>-11.5</value>
 		</property>
 		<property name="name">
 			<value>Audio 1</value>

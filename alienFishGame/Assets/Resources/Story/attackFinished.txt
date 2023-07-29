@@ -1,0 +1,24 @@
+Overlord
+How....??! You cannot defeat me-- not like this--!!
+shake, set12, shakeBossStrong, playBossDefeat
+
+The Overlord is weakened. Its fins are tattered with patches of injured scales. 
+moveDown
+
+It seems like you've won.
+ 
+Overlord
+You--pitiful--- human!!
+moveUp
+You
+(I wonder which one of us looks more pitiful right now...)
+moveDown
+
+The overlord struggles in the net you've trapped it in, visibly desperate. You're ready to land the finishing blow. 
+moveUp
+
+What do you do now?
+
+
+
+onAttackFinished

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 using UnityEngine.SceneManagement;
+using System.Runtime.InteropServices;
+
 
 // have to use this to circumvent the fact that WE CANT FUCKING PUT A DICT IN A JSON FILE
 [System.Serializable]
@@ -11,16 +13,21 @@ public struct Upgrade{
     public int currentLevel;
 }
 
+
+
 public class SaveSystem : MonoBehaviour
 {
-    public string saveFolder = Application.dataPath + "/Saves";
+    //[DllImport("__Internal")]
+    //private static extern void JS_FileSystem_Sync();
+
+    public string saveFolder;
     public int loadIndex;
     public Upgrades[] upgradeList;
     public FishingPole[] fishingRodList;
     public SaveData currentSaveData;
     public static SaveSystem instance;
 
-    public float autosaveTime = 2f;
+    public float autosaveTime = 5f;
     private float timer;
 
     void Awake()
@@ -37,20 +44,23 @@ public class SaveSystem : MonoBehaviour
 
         DontDestroyOnLoad(this.gameObject);
         Debug.Log("awake function called");
+
+        saveFolder = "idbfs/alienFishSaves69420727";
+
+        Debug.Log(saveFolder);
+        if (!Directory.Exists(saveFolder))
+        {
+            Directory.CreateDirectory("idbfs/alienFishSaves69420727");
+        }
     }
 
     void Start()
     {
         Debug.Log("start function called");
         // change this to persistent file path later
-        saveFolder = Application.dataPath + "/Saves";
-        Debug.Log(saveFolder);
-        if (!Directory.Exists(saveFolder))
-        {
-            Directory.CreateDirectory(saveFolder);
-        }
-
-        LoadData();
+        
+        // remove this line later!!!!
+        // LoadData();
         
     }
 
@@ -67,6 +77,11 @@ public class SaveSystem : MonoBehaviour
 
     public void Save(int index = 0)
     {
+        if (!SceneManager.GetSceneByName("FishingScene").isLoaded)
+        {
+            return;
+        }
+
         List<int> totalCaught = new List<int>();
         List<int> totalSold = new List<int>();
         for (int i = 0; i < FishDataManager.instance.fishTypeCount; i++)
@@ -84,7 +99,7 @@ public class SaveSystem : MonoBehaviour
         {
             Upgrade temp = new Upgrade() {
                 type = upgrade.upgradeType,
-                currentLevel = upgrade.nextLevel - 1,
+                currentLevel = upgrade.currentLevel
             };
             upgradeLevels.Add(temp);
         }
@@ -133,13 +148,16 @@ public class SaveSystem : MonoBehaviour
             Trap0Capacity = Trap0Capacity,
             Trap1Capacity = Trap1Capacity,
             date = System.DateTime.UtcNow.ToLocalTime().ToString("dd-MM-yyyy  HH:mm"),
-            saveIndex = index
+            saveIndex = index,
+            bossDefeated = FishDataManager.instance.bossDefeated
         };
 
         string jsonString = JsonUtility.ToJson(saveData);
         string savePath = saveFolder + "/save" + index.ToString() + ".json";
-        File.WriteAllText(savePath, jsonString);
-        Debug.Log("saved! at " + savePath);
+        File.WriteAllText(savePath, jsonString);;
+
+        //JS_FileSystem_Sync();
+        // Debug.Log("files synced!");
     }
 
     public void Load(int index = 0)
@@ -153,7 +171,6 @@ public class SaveSystem : MonoBehaviour
         }
 
         loadIndex = index;
-        Debug.Log(loadIndex);
 
         // reloads scene to refresh everything
         SceneManager.LoadScene("Scenes/FishingScene");
@@ -167,7 +184,6 @@ public class SaveSystem : MonoBehaviour
 
     public void LoadData()
     {
-        Debug.Log("after reload, load index is " + loadIndex.ToString());
         string savePath = saveFolder + "/save" + loadIndex.ToString() + ".json";
         Debug.Log(savePath);
         if (!File.Exists(savePath))
@@ -190,16 +206,14 @@ public class SaveSystem : MonoBehaviour
         RodStatManager.instance.LoadData(currentSaveData);
         TrapStatManager.instance.LoadData(currentSaveData);
 
-        Debug.Log("fish data loaded successfully");
-
         foreach (var upgrade in upgradeList)
         {
             upgrade.LoadData(saveData);
-            Debug.Log("loading upgrade");
         }
 
         bool extraRod = false;
         bool extraTrap = false;
+        bool skipToBoss = false;
         foreach (var upgrade in saveData.upgradeLevels)
         {
             if (upgrade.type == "extra rod" && upgrade.currentLevel == 2)
@@ -210,9 +224,11 @@ public class SaveSystem : MonoBehaviour
             {
                 extraTrap = true;
             }
+            if (upgrade.type == "bait" && upgrade.currentLevel == 4 && !saveData.bossDefeated)
+            {
+                skipToBoss = true;
+            }
         }
-
-        Debug.Log("checked if rods and traps unlocked");
 
         foreach (var rod in fishingRodList)
         {
@@ -258,10 +274,16 @@ public class SaveSystem : MonoBehaviour
                     rod.currentCapacity = rod.fishCaught.Count;
                 }
             }
-
-            Debug.Log("loaded data for rod" + rod.index.ToString());
         }
 
         Debug.Log("load completed!");
+
+        if (skipToBoss)
+        {
+            var transition = GameObject.Find("Transitions");
+            transition.GetComponent<transitions>().transitionToBossFight();
+        }
+
+        SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 }

@@ -1,0 +1,6 @@
+
+Overlord was hit by Fisherman's attack! It seems to be effective!
+shakeBoss, playAttackSuccess
+
+
+onAttackLanded

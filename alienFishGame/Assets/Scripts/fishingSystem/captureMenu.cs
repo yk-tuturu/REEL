@@ -7,11 +7,17 @@ using TMPro;
 public class captureMenu : MonoBehaviour
 {
     public GameObject fishIcon;
+    public GameObject blankIcon;
     public GameObject scrollPanel;
     public GameObject fishingrods;
+    public Transform bgGrid;
+    public GameObject iconBG;
 
-    // may not need this variable anymore, but just in case
+    
     public List<int> fishList;
+
+    // Audio
+    public FMODUnity.EventReference uiClickEvent;
 
     public void UpdateInfo(List<int> fishCaught)
     {
@@ -22,16 +28,32 @@ public class captureMenu : MonoBehaviour
         foreach (var index in fishCaught)
         {
             GameObject listItem = Instantiate(fishIcon, new Vector3(0, 0, 0), Quaternion.identity, scrollPanel.transform);
+
             FishIcon icon = listItem.GetComponent<FishIcon>();
             icon.index = index;
             icon.UpdateFishDisplayed();
             icon.starContainer.gameObject.SetActive(true);
+            
+            Image bgGrid = icon.bgGrid.GetComponent<Image>();
+            bgGrid.color = new Vector4(1, 1, 1, 1);
+            
         }
+
+        // hacky fix for the scrollbar 
+        // for (int i = 0; i < 9 - counter; i++)
+        // {
+        //     Instantiate(blankIcon, new Vector3(0, 0, 0), Quaternion.identity, scrollPanel.transform);
+        // }
     }
 
     public void ClearChildren()
     {
         foreach (Transform child in scrollPanel.transform)
+        {
+            GameObject.Destroy(child.gameObject);
+        }
+
+        foreach (Transform child in bgGrid)
         {
             GameObject.Destroy(child.gameObject);
         }
@@ -60,6 +82,7 @@ public class captureMenu : MonoBehaviour
                 rod.currentCapacity = 0;
             }
         }
+        FMODUnity.RuntimeManager.PlayOneShot(uiClickEvent, transform.position);
 
         ClearChildren();
     }

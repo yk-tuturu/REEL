@@ -1,0 +1,40 @@
+?????
+Who dares lay a finger on my underlings??
+shake, playOverlordSnarl
+
+The colossal figure you had just summoned from the depths snarles, visibly steaming with rage.
+
+
+This could've just been a typical calm night of fishing. Maybe you shouldn't have bought that suspicious bait from the shopkeeper after all. 
+
+Overlord
+They call me the ruler of the seas, the elder of all fish--
+
+Overlord
+You tarnish these waters with your barbaric actions. You've taken hundreds of my underlings away from their home, and yet you feel no remorse. 
+shakeBoss
+
+You didn't understand. You were only trying to make a living. Just as people needed food and income, so did you. 
+moveDown
+You
+I was just doing my job. 
+
+Overlord
+Poor excuses. How would you feel if I devoured this dock as we speak? Would you remain indifferent? Yet that would be incomparable to the casualties my kingdom has suffered. 
+set10, moveUp
+
+The destruction it proposed didn't seem favorable. Where else would you fish if this entire dock was wiped out?
+
+You
+Calm down... maybe we can talk this out?
+ 
+Overlord
+This injustice shall not go unpunished. You shall suffer the wrath of The Overlord!!
+set11, shakeBoss, playOverlordSnarl
+
+There is no room for argument. All you can do is prepare what equipment you have and attack.
+
+
+
+onIntroComplete
+ 

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{14e5492a-b2e7-48e4-8f32-5c76fba29ca9}">
+		<property name="name">
+			<value>Upgrade type</value>
+		</property>
+		<relationship name="folder">
+			<destination>{2205353c-0254-442d-8bde-81d690e9309b}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{f7cf1e1f-f447-4d39-80bc-01dbe3dcb965}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{f7cf1e1f-f447-4d39-80bc-01dbe3dcb965}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>4</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>Reel</value>
+			<value>Trap</value>
+			<value>Bait</value>
+			<value>Marketing</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

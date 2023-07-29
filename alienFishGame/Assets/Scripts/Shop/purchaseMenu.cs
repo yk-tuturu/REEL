@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using UnityEngine.Events;
 
 public class purchaseMenu : MonoBehaviour
 {
@@ -14,6 +15,18 @@ public class purchaseMenu : MonoBehaviour
 
     public Transform fishingRodParent;
     public Transform upgradeParent;
+
+    public UnityEvent bossTransition;
+    public GameObject soldOverlay;
+
+    public FMODUnity.EventReference rodPurchaseEvent;
+    public FMODUnity.EventReference trapPurchaseEvent;
+    public FMODUnity.EventReference baitPurchaseEvent;
+    public FMODUnity.EventReference susBaitPurchaseEvent;
+    public FMODUnity.EventReference marketingPurchaseEvent;
+    public FMODUnity.EventReference uiCloseEvent;
+    public FMODUnity.EventReference uiDeniedEvent;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,6 +49,7 @@ public class purchaseMenu : MonoBehaviour
 
     public void Close()
     {
+        FMODUnity.RuntimeManager.PlayOneShot(uiCloseEvent);
         LeanTween.scale(gameObject, new Vector3(0, 0, 0), 0.15f).setOnComplete(OnComplete);
     }
 
@@ -44,32 +58,36 @@ public class purchaseMenu : MonoBehaviour
         // do nothing if not enough money
         if (FishDataManager.instance.money < price)
         {
+            FMODUnity.RuntimeManager.PlayOneShot(uiDeniedEvent);
             return;
         }
         
-        // I am aware of how yandev-style this is but pls bear with me
+        // I am aware of how horrible this is but pls bear with me
         // unfortunately i cant think of any better way to do this
         // maybe will change this to a switch statement later
         if (type == "rod")
         {
-            RodStatManager.instance.UpgradeRod();
+            FMODUnity.RuntimeManager.PlayOneShot(rodPurchaseEvent);
+            RodStatManager.instance.SetRodLevel(RodStatManager.instance.rodLevel + 1);
         }
         else if (type == "bait")
         {
-            RodStatManager.instance.UpgradeBait();
-            TrapStatManager.instance.UpgradeBait();
+            RodStatManager.instance.SetBaitLevel(RodStatManager.instance.baitLevel + 1);
+            TrapStatManager.instance.SetBaitLevel(TrapStatManager.instance.baitLevel + 1);
         }
         else if (type == "trap")
         {
-            TrapStatManager.instance.UpgradeTrap();
+            FMODUnity.RuntimeManager.PlayOneShot(trapPurchaseEvent);
+            TrapStatManager.instance.SetTrapLevel(TrapStatManager.instance.trapLevel + 1);
         }
         else if (type == "sales")
         {
+            FMODUnity.RuntimeManager.PlayOneShot(marketingPurchaseEvent);
             FishDataManager.instance.UpgradeSales();
         }
-
         else if (type == "extra rod")
         {
+            FMODUnity.RuntimeManager.PlayOneShot(rodPurchaseEvent);
             foreach(Transform child in fishingRodParent)
             {
                 FishingPole rod = child.GetComponent<FishingPole>();
@@ -80,9 +98,9 @@ public class purchaseMenu : MonoBehaviour
                 }
             }
         }
-
         else if (type == "extra trap")
         {
+            FMODUnity.RuntimeManager.PlayOneShot(trapPurchaseEvent);
             foreach(Transform child in fishingRodParent)
             {
                 FishingPole rod = child.GetComponent<FishingPole>();
@@ -104,6 +122,7 @@ public class purchaseMenu : MonoBehaviour
             rod.fetchStats();
         }
 
+        // finds the correct upgrade instance and updates its data
         foreach(Transform child in upgradeParent)
         {
             Upgrades upgrade = child.GetComponent<Upgrades>();
@@ -111,13 +130,26 @@ public class purchaseMenu : MonoBehaviour
             {
                 // spends money and increases price
                 FishDataManager.instance.SpendMoney(price);
-                upgrade.price = price * 2;
+                upgrade.price = price * upgrade.multiplier;
 
-                upgrade.nextLevel += 1;
-                if (upgrade.nextLevel > upgrade.maxLevel)
+                upgrade.currentLevel += 1;
+
+                // if max level reached
+                if (upgrade.currentLevel >= upgrade.maxLevel)
                 {
                     upgrade.enabled = false;
                     child.GetComponent<EventTrigger>().enabled = false;
+                    upgrade.soldOverlay.SetActive(true);
+                }
+
+                if (type == "bait" && upgrade.currentLevel == 4)
+                {
+                    FMODUnity.RuntimeManager.PlayOneShot(susBaitPurchaseEvent);
+                    bossTransition.Invoke();
+                }
+                else if (type == "bait")
+                {
+                    FMODUnity.RuntimeManager.PlayOneShot(baitPurchaseEvent);
                 }
             }
         }

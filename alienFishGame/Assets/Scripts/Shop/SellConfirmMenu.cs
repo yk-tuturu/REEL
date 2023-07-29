@@ -11,6 +11,8 @@ public class SellConfirmMenu : MonoBehaviour
     public int numberToSell = 1;
     public FishIcon fishIcon;
     public SellMenu sellMenu;
+
+    public FMODUnity.EventReference sellEvent;
     // Start is called before the first frame update
     void Start()
     {
@@ -50,7 +52,9 @@ public class SellConfirmMenu : MonoBehaviour
 
     public void SellFish()
     {
+        FMODUnity.RuntimeManager.PlayOneShot(sellEvent);
         FishDataManager.instance.SellFish(fish.index, numberToSell);
+        numberToSell = 1;
         LeanTween.scale(gameObject, new Vector3(0, 0, 0), 0.15f).setOnComplete(OnComplete);
         sellMenu.UpdateSellInfo();
     }

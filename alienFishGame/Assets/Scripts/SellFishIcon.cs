@@ -15,23 +15,36 @@ public class SellFishIcon : MonoBehaviour
     public Transform starContainer;
     public TextMeshProUGUI numberOwned;
 
+    public GameObject bgGrid;
+
     public FishDataManager fishData;
+
+    public FMODUnity.EventReference clickEvent;
+
+    public GameObject hoverLabelPrefab;
+    public GameObject hoverLabel;
+
     
     // Start is called before the first frame update
     void Start()
     {
-        image = GetComponent<Image>();
-        sprite = Resources.Load<Sprite>("fishIcons/" + "fish" + index.ToString());
+        sprite = FishDataManager.instance.fishSpriteDict["fish" + index.ToString()];
         fish = FishDataManager.instance.GetFish(index);
     }
 
     public void UpdateFishDisplayed()
     {
-        image = GetComponent<Image>();
-        sprite = Resources.Load<Sprite>("fishIcons/" + "fish" + index.ToString());
+        sprite = FishDataManager.instance.fishSpriteDict["fish" + index.ToString()];
+        
         image.sprite = sprite;
         fish = FishDataManager.instance.GetFish(index);
         numberOwned.text = (fish.totalCaught - fish.totalSold).ToString();
+
+        // clears out any leftover stars
+        foreach (Transform child in starContainer)
+        {
+            GameObject.Destroy(child.gameObject);
+        }
 
         for (var i = 0; i < fish.rarity; i++)
         {
@@ -39,23 +52,24 @@ public class SellFishIcon : MonoBehaviour
         }
 
         // very skull emoji line of code
-        sellConfirmMenu = transform.parent.parent.parent.Find("sellConfirmMenu").gameObject;
+        sellConfirmMenu = transform.parent.parent.parent.parent.Find("sellConfirmMenu").gameObject;
     }
 
     public void OnHoverEnter()
     {
-        LeanTween.scale(gameObject, new Vector3(0.9f, 0.9f, 0.9f), 0.1f);
+        LeanTween.scale(bgGrid, new Vector3(0.9f, 0.9f, 0.9f), 0.1f);
     }
 
     public void OnHoverExit()
     {
-        LeanTween.scale(gameObject, new Vector3(1f, 1f, 1f), 0.1f);
+        LeanTween.scale(bgGrid, new Vector3(1f, 1f, 1f), 0.1f);
     }
 
     public void OnClick()
     {
-        Debug.Log("clicked");
+        FMODUnity.RuntimeManager.PlayOneShot(clickEvent);
         sellConfirmMenu.SetActive(true);
+        sellConfirmMenu.transform.localScale = new Vector3(0, 0, 0);
         LeanTween.scale(sellConfirmMenu, new Vector3(1, 1, 1), 0.2f);
         sellConfirmMenu.GetComponent<SellConfirmMenu>().UpdateInfo(index);
     }
@@ -63,7 +77,7 @@ public class SellFishIcon : MonoBehaviour
     public void OnExit()
     {
         LeanTween.scale(sellConfirmMenu, new Vector3(0, 0, 0), 0.2f).setOnComplete(OnTweenComplete);
-        
+        GameObject.Destroy(hoverLabel);
     }
 
     void OnTweenComplete()

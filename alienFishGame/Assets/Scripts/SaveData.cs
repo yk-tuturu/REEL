@@ -19,4 +19,6 @@ public class SaveData
 
     public string date;
     public int saveIndex;
+
+    public bool bossDefeated;
 }

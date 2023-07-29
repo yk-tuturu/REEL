@@ -1,0 +1,36 @@
+
+Without hesitation, you pierce the creature's heart with the tip of your fishing rod.
+set13, shakeBossStrong
+You
+Well, I guess this will sell for a whole lot of cash. 
+moveDown
+
+Maybe it was right that you had taken away the lives of many fish, but we have our reasons. We need to survive. 
+
+
+According to historical records, this is an entirely undocumented species. Just imagining the profit and attention you'd recieve after hauling the creature onto land fills you with elation. 
+
+
+And with this, you won't have to worry about paying the bills for a long, long time.
+
+
+
+transitionToAttackCG
+
+The Overlord’s reign is over. It wanted a battle, and you gave it a war.
+
+
+Without this ancient being lurking in these waters, you’re able to live comfortably with a full wallet and an even fuller stomach.
+
+
+The room fills with joyous laughter as you share your freshly caught dinner with the other fishermen, drinking and telling stories of your times at sea.
+
+
+This alien world is still new to you, but you’ve found a sense of pride in your achievements.
+
+
+The shoreline has always been your home, and now, you’ve conquered it.
+
+
+
+backToMenu

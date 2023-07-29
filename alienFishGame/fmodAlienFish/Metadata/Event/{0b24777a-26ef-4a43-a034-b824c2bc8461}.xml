@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{0b24777a-26ef-4a43-a034-b824c2bc8461}">
 		<property name="name">
-			<value>Hover</value>
+			<value>Pause menu hover</value>
 		</property>
 		<property name="outputFormat">
 			<value>1</value>
@@ -62,7 +62,11 @@
 			<destination>{fa03937e-8ce1-4de6-a06f-b96adb45239b}</destination>
 		</relationship>
 	</object>
-	<object class="EventAutomatableProperties" id="{faeaf827-d3e8-460e-aa30-1b05afee32f4}" />
+	<object class="EventAutomatableProperties" id="{faeaf827-d3e8-460e-aa30-1b05afee32f4}">
+		<property name="triggerCooldown">
+			<value>40</value>
+		</property>
+	</object>
 	<object class="MarkerTrack" id="{d6e9aa09-2b8c-46f2-b5ae-e7912d882d4a}" />
 	<object class="GroupTrack" id="{6df29050-bbf2-45dd-8671-e9d293801cf0}">
 		<relationship name="mixerGroup">
@@ -92,7 +96,7 @@
 	</object>
 	<object class="MultiSound" id="{7e243a21-16bb-4a1d-b6b2-a6412d975ae6}">
 		<relationship name="sounds">
-			<destination>{2a385472-5c18-4785-9377-c90fb33c9c0c}</destination>
+			<destination>{b06cc087-9b85-47dc-ae48-044b6f1b2587}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusEffectChain" id="{61327e8e-2db8-4162-94e9-b1ad2ac74fcd}">
@@ -121,7 +125,7 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{1ceda95e-80bf-4dfb-b775-b879b778d4ea}" />
-	<object class="SingleSound" id="{2a385472-5c18-4785-9377-c90fb33c9c0c}">
+	<object class="SingleSound" id="{b06cc087-9b85-47dc-ae48-044b6f1b2587}">
 		<relationship name="audioFile">
 			<destination>{e1c1b6b9-553e-4094-9a6a-4a42396ad2e9}</destination>
 		</relationship>

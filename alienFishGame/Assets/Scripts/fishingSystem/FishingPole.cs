@@ -34,15 +34,25 @@ public class FishingPole : MonoBehaviour
     public Transform labelSpawner;
 
     private float timer;
+
+    private Vector3 ogScale;
     
     // dictionary, key is the fishIndex and value is how many caught
     public List<int> fishCaught = new List<int>();
+
+    // Audio
+    public FMODUnity.EventReference fishPoleClickEvent;
+    public FMODUnity.EventReference fishTrapClickEvent;
+
+    public List<FMODUnity.EventReference> smallCatchEventList = new List<FMODUnity.EventReference>();
+    public List<FMODUnity.EventReference> largeCatchEventList = new List<FMODUnity.EventReference>();
 
     // Start is called before the first frame update
     void Start()
     {
         fetchStats();
 
+        ogScale = transform.localScale;
         timeToNextFish = Random.Range(minTime, maxTime);
         panel_text = panel.transform.GetChild(0).GetComponent<TextMeshProUGUI>();
     }
@@ -60,31 +70,52 @@ public class FishingPole : MonoBehaviour
             timer = 0;
             timeToNextFish = Random.Range(minTime, maxTime);
 
-            float rng = Random.value;
-            if (rng < rareProb)
-            {
-                AddFish(4, 4);
-            }
-            else if (rng < uncommonProb)
-            {
-                AddFish(3, 3);
-            }
-            else 
-            {
-                AddFish(0, 3);
-            }
+            AddFish();
         }
-
         panel_text.text = currentCapacity.ToString() + "/" + maxCapacity.ToString();
     }
 
-    void AddFish(int minIndex, int maxIndex)
+    // calculates some rng and picks a fish to add
+    void AddFish()
     {
-        int fishIndex = Random.Range(minIndex, maxIndex);
+        int rarity = 0;
+        float rng = Random.value;
+        if (rng < rareProb)
+        {
+            rarity = 3;
+        }
+        else if (rng < uncommonProb)
+        {
+            rarity = 2;
+        }
+        else 
+        {
+            rarity = 1;
+        }
+
+        var fishList = FishDataManager.instance.GetFishPool(type, rarity);
+
+        int listIndex = Random.Range(0, fishList.Count);
+
+        var fishIndex = fishList[listIndex];
 
         fishCaught.Add(fishIndex);
 
         currentCapacity += 1;
+
+        // Possible code to differentiate large & small fish, rare fish
+        // Possible code to differentiate large & small fish, rare fish
+        Fish fish = FishDataManager.instance.GetFish(fishIndex);
+        if (fish.weight <= 1)
+        {
+            var eventref = smallCatchEventList[rarity - 1];
+            FMODUnity.RuntimeManager.PlayOneShot(eventref, transform.position);
+        }
+        else
+        {
+            var eventref = largeCatchEventList[rarity - 1];
+            FMODUnity.RuntimeManager.PlayOneShot(eventref, transform.position);
+        }
 
         // If the menu was open while a fish is caught
         if (menuOpen)
@@ -96,18 +127,21 @@ public class FishingPole : MonoBehaviour
         GameObject temp = Instantiate(plusOneLabel, labelSpawner.position, Quaternion.identity, panel.transform.parent);
         temp.transform.localPosition = labelSpawner.localPosition;
         temp.GetComponent<tween>().tweenIn();
-
-        // updates the stat managers
     }
 
     void OnMouseEnter()
     {
         LeanTween.scale(panel, new Vector3(1.2f, 1.2f, 1.2f), 0.1f);
+
+        
+        var endScale = ogScale * 1.1f; 
+        LeanTween.scale(gameObject, endScale, 0.1f);
     }
 
     void OnMouseExit()
     {
         LeanTween.scale(panel, new Vector3(1f, 1f, 1f), 0.1f);
+        LeanTween.scale(gameObject, ogScale, 0.1f);
     }
 
     void OnMouseOver()
@@ -127,6 +161,15 @@ public class FishingPole : MonoBehaviour
             // some code to update the menu info
             capturesMenu.GetComponent<captureMenu>().UpdateInfo(fishCaught);
             menuOpen = true;
+
+            if (type == "rod")
+            {
+                FMODUnity.RuntimeManager.PlayOneShot(fishPoleClickEvent, transform.position);
+            }
+            else if (type == "trap")
+            {
+                FMODUnity.RuntimeManager.PlayOneShot(fishTrapClickEvent, transform.position);
+            }
         }
     } 
 
