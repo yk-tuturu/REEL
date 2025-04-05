@@ -1,8 +1,11 @@
 Welcome to REEL
 ========================
-![Screenshot of gameplay](https://i.imgur.com/F0rrmDg.jpeg)
+<p float="left">
+  <img src="https://i.imgur.com/F0rrmDg.jpeg" alt="Screenshot of gameplay" width="450" />
+  <img src="https://i.imgur.com/oJpvilv.png" alt="Screenshot of gameplay" width="450" />
+</p>
 <p>This was a gamejam submission to the Summer Slow Jam 2023 hosted by PIGSquad! In this browser-friendly idle game, you can discover strange fish on a distant alien planet and upgrade your equipment to get bigger catches!</p>
-<p>Coded in Unity with the FMOD plugin</p>
+<p>Made in Unity with the FMOD plugin</p>
 <p>Play the game here--> https://luhdurr.itch.io/reel</p>
 <br> 
 <h3>Contributors:</h3>
