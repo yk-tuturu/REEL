@@ -1,8 +1,8 @@
 Welcome to REEL
 ========================
 <p float="left">
-  <img src="https://i.imgur.com/F0rrmDg.jpeg" alt="Screenshot of gameplay" width=300/>
-  <img src="https://i.imgur.com/oJpvilv.png" alt="Screenshot of gameplay" width=300/>
+  <img src="https://img.itch.zone/aW1hZ2UvMjEyNjE2Ny8xMjU5NDkyNC5wbmc=/original/KA8%2Fyo.png" alt="Screenshot of gameplay" width=300/>
+  <img src="https://img.itch.zone/aW1hZ2UvMjEyNjE2Ny8xMjU5NDkyNS5wbmc=/original/QAR814.png" alt="Screenshot of gameplay" width=300/>
 </p>
 <p>This was a gamejam submission to the Summer Slow Jam 2023 hosted by PIGSquad! In this browser-friendly idle game, you can discover strange fish on a distant alien planet and upgrade your equipment to get bigger catches!</p>
 <p>Made in Unity with the FMOD plugin</p>
