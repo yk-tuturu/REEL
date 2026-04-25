@@ -28,7 +28,7 @@ public class fishOPediaButton : MonoBehaviour
         
     }
 
-    void OnMouseEnter()
+    public void OnMouseEnter()
     {
         if (EventSystem.current.IsPointerOverGameObject()) 
         {
